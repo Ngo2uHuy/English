@@ -21,10 +21,16 @@ import { renderYouTubePage } from './pages/youtube.js';
 import { renderGamesPage } from './pages/games.js';
 
 // ---- Initialize ----
-function init() {
+async function init() {
   // Apply saved theme
   const theme = StorageService.getTheme();
   document.documentElement.setAttribute('data-theme', theme);
+
+  // Initialize Supabase Cloud Sync asynchronously
+  StorageService.initSupabaseSync().then(() => {
+    // Re-render active route if data updated
+    handleRoute();
+  });
 
   // Start router
   window.addEventListener('hashchange', handleRoute);

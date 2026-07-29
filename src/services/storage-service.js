@@ -1,6 +1,4 @@
-// ========================================
-// Storage Service — LocalStorage wrapper
-// ========================================
+import { getSupabaseClient, isSupabaseConfigured } from './supabase-client.js';
 
 export const PROVIDERS = [
   {
@@ -78,6 +76,26 @@ const KEYS = {
   GAME_STATS: 'grammarai_game_stats',
 };
 
+async function saveToSupabase(key, value) {
+  if (!isSupabaseConfigured()) return;
+  const client = getSupabaseClient();
+  if (!client) return;
+
+  try {
+    const { error } = await client
+      .from('user_app_data')
+      .upsert(
+        { data_key: key, data_value: value, updated_at: new Date().toISOString() },
+        { onConflict: 'data_key' }
+      );
+    if (error) {
+      console.warn('[Supabase Sync Warning] Failed to save key:', key, error.message);
+    }
+  } catch (err) {
+    console.error('[Supabase Sync Error]:', err);
+  }
+}
+
 function get(key, fallback = null) {
   try {
     const val = localStorage.getItem(key);
@@ -90,6 +108,8 @@ function get(key, fallback = null) {
 function set(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
+    // Asynchronously sync with Supabase cloud storage
+    saveToSupabase(key, value);
   } catch (e) {
     console.error('Storage error:', e);
   }
@@ -104,13 +124,24 @@ export const StorageService = {
     set(KEYS.PROVIDER, provider);
   },
 
-  // API Key per provider (with legacy fallback)
+  // API Key per provider (with legacy & env fallbacks)
   getApiKey(targetProvider = null) {
     const provider = targetProvider || this.getProvider();
     const keys = get(KEYS.API_KEYS, {});
     if (keys[provider]) return keys[provider];
-    if (provider === 'gemini') return get(KEYS.API_KEY, '');
-    return '';
+    if (provider === 'gemini' && get(KEYS.API_KEY, '')) {
+      return get(KEYS.API_KEY, '');
+    }
+
+    // Fallback to Vite environment variables if available
+    const envKeyMap = {
+      gemini: import.meta.env?.VITE_GEMINI_API_KEY || import.meta.env?.VITE_API_KEY || '',
+      groq: import.meta.env?.VITE_GROQ_API_KEY || '',
+      openrouter: import.meta.env?.VITE_OPENROUTER_API_KEY || '',
+      mistral: import.meta.env?.VITE_MISTRAL_API_KEY || '',
+    };
+
+    return envKeyMap[provider] || '';
   },
   setApiKey(key, targetProvider = null) {
     const provider = targetProvider || this.getProvider();
@@ -483,4 +514,83 @@ export const StorageService = {
       return false;
     }
   },
+
+  // Supabase Cloud Synchronization
+  async syncFromSupabase() {
+    if (!isSupabaseConfigured()) return false;
+    const client = getSupabaseClient();
+    if (!client) return false;
+
+    try {
+      const { data, error } = await client
+        .from('user_app_data')
+        .select('data_key, data_value');
+
+      if (error || !data) {
+        console.warn('[Supabase Sync Error]:', error?.message);
+        return false;
+      }
+
+      data.forEach(item => {
+        if (item.data_key && item.data_value !== undefined) {
+          localStorage.setItem(item.data_key, JSON.stringify(item.data_value));
+        }
+      });
+
+      // Apply theme if restored
+      const restoredTheme = get(KEYS.THEME);
+      if (restoredTheme) {
+        document.documentElement.setAttribute('data-theme', restoredTheme);
+      }
+
+      return true;
+    } catch (err) {
+      console.error('[Supabase Pull Exception]:', err);
+      return false;
+    }
+  },
+
+  async syncAllToSupabase() {
+    if (!isSupabaseConfigured()) return { success: false, message: 'Supabase is not configured' };
+    const client = getSupabaseClient();
+    if (!client) return { success: false, message: 'Supabase client error' };
+
+    try {
+      const itemsToPush = Object.values(KEYS).map(key => {
+        const value = get(key);
+        if (value === null) return null;
+        return {
+          data_key: key,
+          data_value: value,
+          updated_at: new Date().toISOString(),
+        };
+      }).filter(Boolean);
+
+      if (itemsToPush.length === 0) {
+        return { success: true, count: 0, message: 'No local data to push.' };
+      }
+
+      const { error } = await client
+        .from('user_app_data')
+        .upsert(itemsToPush, { onConflict: 'data_key' });
+
+      if (error) {
+        return { success: false, message: error.message };
+      }
+
+      return { success: true, count: itemsToPush.length, message: `Uploaded ${itemsToPush.length} data items to Supabase!` };
+    } catch (err) {
+      return { success: false, message: err.message };
+    }
+  },
+
+  async initSupabaseSync() {
+    if (!isSupabaseConfigured()) return;
+    try {
+      await this.syncFromSupabase();
+    } catch (e) {
+      console.error('[Supabase Init Sync Failed]:', e);
+    }
+  },
 };
+
