@@ -10,14 +10,14 @@ const STORAGE_KEYS = {
 };
 
 // Default from Vite env vars if available
-const ENV_URL = import.meta.env?.VITE_SUPABASE_URL || '';
-const ENV_KEY = import.meta.env?.VITE_SUPABASE_ANON_KEY || '';
+const ENV_URL = String(import.meta.env?.VITE_SUPABASE_URL || '').trim();
+const ENV_KEY = String(import.meta.env?.VITE_SUPABASE_ANON_KEY || '').trim();
 
 let supabaseInstance = null;
 
 function sanitizeUrl(url) {
   if (!url) return '';
-  let clean = url.trim();
+  let clean = String(url).trim();
   // Remove /rest/v1 or /rest/v1/ at the end if user copied REST endpoint URL
   clean = clean.replace(/\/rest\/v1\/?$/, '');
   // Remove trailing slashes
@@ -26,8 +26,8 @@ function sanitizeUrl(url) {
 }
 
 export function getSupabaseConfig() {
-  const customUrl = localStorage.getItem(STORAGE_KEYS.URL) || '';
-  const customKey = localStorage.getItem(STORAGE_KEYS.ANON_KEY) || '';
+  const customUrl = String(localStorage.getItem(STORAGE_KEYS.URL) || '').trim();
+  const customKey = String(localStorage.getItem(STORAGE_KEYS.ANON_KEY) || '').trim();
 
   return {
     url: sanitizeUrl(customUrl || ENV_URL),

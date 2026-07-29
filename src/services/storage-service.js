@@ -6,12 +6,11 @@ export const PROVIDERS = [
     name: 'Google Gemini AI Studio',
     badge: '100% Free',
     freeKeyUrl: 'https://aistudio.google.com/app/apikey',
-    defaultModel: 'gemini-2.5-flash',
+    defaultModel: 'gemini-2.0-flash',
     models: [
-      { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash (Recommended - Fast & Free)' },
-      { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro (Powerful)' },
-      { id: 'gemini-2.0-flash', name: 'Gemini 2.0 Flash' },
-      { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash' },
+      { id: 'gemini-2.0-flash', name: 'Gemini 2.0 Flash (Recommended - Fast & Free)' },
+      { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash (Fast & Reliable)' },
+      { id: 'gemini-1.5-pro', name: 'Gemini 1.5 Pro (Powerful)' },
     ],
   },
   {
@@ -128,17 +127,20 @@ export const StorageService = {
   getApiKey(targetProvider = null) {
     const provider = targetProvider || this.getProvider();
     const keys = get(KEYS.API_KEYS, {});
-    if (keys[provider]) return keys[provider];
-    if (provider === 'gemini' && get(KEYS.API_KEY, '')) {
-      return get(KEYS.API_KEY, '');
+    const savedKey = keys[provider] ? String(keys[provider]).trim() : '';
+    if (savedKey) return savedKey;
+
+    if (provider === 'gemini') {
+      const legacyKey = String(get(KEYS.API_KEY, '') || '').trim();
+      if (legacyKey) return legacyKey;
     }
 
     // Fallback to Vite environment variables if available
     const envKeyMap = {
-      gemini: import.meta.env?.VITE_GEMINI_API_KEY || import.meta.env?.VITE_API_KEY || '',
-      groq: import.meta.env?.VITE_GROQ_API_KEY || '',
-      openrouter: import.meta.env?.VITE_OPENROUTER_API_KEY || '',
-      mistral: import.meta.env?.VITE_MISTRAL_API_KEY || '',
+      gemini: String(import.meta.env?.VITE_GEMINI_API_KEY || import.meta.env?.VITE_API_KEY || '').trim(),
+      groq: String(import.meta.env?.VITE_GROQ_API_KEY || '').trim(),
+      openrouter: String(import.meta.env?.VITE_OPENROUTER_API_KEY || '').trim(),
+      mistral: String(import.meta.env?.VITE_MISTRAL_API_KEY || '').trim(),
     };
 
     return envKeyMap[provider] || '';
@@ -146,10 +148,10 @@ export const StorageService = {
   setApiKey(key, targetProvider = null) {
     const provider = targetProvider || this.getProvider();
     const keys = get(KEYS.API_KEYS, {});
-    keys[provider] = key;
+    keys[provider] = String(key || '').trim();
     set(KEYS.API_KEYS, keys);
     if (provider === 'gemini') {
-      set(KEYS.API_KEY, key);
+      set(KEYS.API_KEY, String(key || '').trim());
     }
   },
 
@@ -157,13 +159,19 @@ export const StorageService = {
   getModel(targetProvider = null) {
     const provider = targetProvider || this.getProvider();
     const models = get(KEYS.MODELS, {});
-    if (models[provider]) return models[provider];
-
+    let selectedModel = models[provider] ? String(models[provider]).trim() : '';
     const providerObj = PROVIDERS.find(p => p.id === provider);
-    if (provider === 'gemini') {
-      return get(KEYS.MODEL, providerObj?.defaultModel || 'gemini-2.5-flash');
+
+    if (!selectedModel && provider === 'gemini') {
+      selectedModel = String(get(KEYS.MODEL, '') || '').trim();
     }
-    return providerObj?.defaultModel || '';
+
+    // Migration for outdated / non-existent gemini models
+    if (provider === 'gemini' && (selectedModel === 'gemini-2.5-flash' || selectedModel === 'gemini-2.5-pro' || !selectedModel)) {
+      selectedModel = providerObj?.defaultModel || 'gemini-2.0-flash';
+    }
+
+    return selectedModel || providerObj?.defaultModel || '';
   },
   setModel(model, targetProvider = null) {
     const provider = targetProvider || this.getProvider();
