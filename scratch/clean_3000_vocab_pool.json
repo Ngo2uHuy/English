@@ -1,0 +1,3657 @@
+[
+  {
+    "en": "Ability",
+    "vn": "khả năng, năng lực",
+    "category": "Education"
+  },
+  {
+    "en": "Able",
+    "vn": "có thể, có khả năng",
+    "category": "Education"
+  },
+  {
+    "en": "About",
+    "vn": "về, khoảng",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Above",
+    "vn": "ở trên, phía trên",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Abroad",
+    "vn": "ở nước ngoài",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Absence",
+    "vn": "sự vắng mặt",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Absolute",
+    "vn": "tuyệt đối, hoàn toàn",
+    "category": "Psychology"
+  },
+  {
+    "en": "Absorb",
+    "vn": "hấp thụ, thẩm thấu",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Abstract",
+    "vn": "trừu tượng",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Abundant",
+    "vn": "dồi dào, phong phú",
+    "category": "Environment"
+  },
+  {
+    "en": "Academic",
+    "vn": "thuộc học thuật",
+    "category": "Education"
+  },
+  {
+    "en": "Accelerate",
+    "vn": "gia tốc, làm nhanh hơn",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Accent",
+    "vn": "giọng điệu",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Accept",
+    "vn": "chấp nhận, đồng ý",
+    "category": "Psychology"
+  },
+  {
+    "en": "Acceptable",
+    "vn": "có thể chấp nhận",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Access",
+    "vn": "quyền truy cập, tiếp cận",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Accessible",
+    "vn": "dễ tiếp cận, có thể sử dụng",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Accident",
+    "vn": "tai nạn, sự cố",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Accommodate",
+    "vn": "cung cấp chỗ ở, đáp ứng",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Accommodation",
+    "vn": "chỗ ở, nơi lưu trú",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Accompany",
+    "vn": "đi cùng, đồng hành",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Accomplish",
+    "vn": "hoàn thành, đạt được",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Accordance",
+    "vn": "sự phù hợp, theo đúng",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "According",
+    "vn": "theo như",
+    "category": "News & Society"
+  },
+  {
+    "en": "Account",
+    "vn": "tài khoản, bản kê khai",
+    "category": "Finance"
+  },
+  {
+    "en": "Accountant",
+    "vn": "nhân viên kế toán",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Accumulate",
+    "vn": "tích lũy, tích tụ",
+    "category": "Finance"
+  },
+  {
+    "en": "Accuracy",
+    "vn": "sự chính xác",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Accurate",
+    "vn": "chính xác, chuẩn xác",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Achieve",
+    "vn": "đạt được, thành công",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Achievement",
+    "vn": "thành tựu, kết quả đạt được",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Acknowledge",
+    "vn": "công nhận, thừa nhận",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Acquire",
+    "vn": "thu được, có được",
+    "category": "Education"
+  },
+  {
+    "en": "Acquisition",
+    "vn": "sự thâu tóm, sự có được",
+    "category": "Finance"
+  },
+  {
+    "en": "Across",
+    "vn": "băng qua, phía bên kia",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Action",
+    "vn": "hành động",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Active",
+    "vn": "năng động, chủ động",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Activity",
+    "vn": "hoạt động",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Actor",
+    "vn": "nam diễn viên",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Actress",
+    "vn": "nữ diễn viên",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Actual",
+    "vn": "thực tế, thực sự",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Adapt",
+    "vn": "thích nghi, thích ứng",
+    "category": "Psychology"
+  },
+  {
+    "en": "Addition",
+    "vn": "sự thêm vào, phép cộng",
+    "category": "Education"
+  },
+  {
+    "en": "Additional",
+    "vn": "bổ sung, thêm vào",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Address",
+    "vn": "địa chỉ, bài phát biểu",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Adequate",
+    "vn": "đầy đủ, thỏa đáng",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Adjust",
+    "vn": "điều chỉnh, chỉnh sửa",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Administer",
+    "vn": "quản lý, điều hành",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Administration",
+    "vn": "sự quản lý, ban quản trị",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Admire",
+    "vn": "khâm phục, ngưỡng mộ",
+    "category": "Psychology"
+  },
+  {
+    "en": "Admission",
+    "vn": "sự nhận vào, vé vào cửa",
+    "category": "Education"
+  },
+  {
+    "en": "Admit",
+    "vn": "thừa nhận, nhận vào",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Adopt",
+    "vn": "nhận làm con nuôi, áp dụng",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Adult",
+    "vn": "người trưởng thành",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Advance",
+    "vn": "tiến bộ, ứng trước",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Advanced",
+    "vn": "nâng cao, tiên tiến",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Advantage",
+    "vn": "lợi thế, ưu điểm",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Adventure",
+    "vn": "chuyến phiêu lưu",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Advertisement",
+    "vn": "quảng cáo",
+    "category": "Shopping & Style"
+  },
+  {
+    "en": "Advice",
+    "vn": "lời khuyên",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Advise",
+    "vn": "khuyên bảo, tư vấn",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Advocate",
+    "vn": "ủng hộ, người biện hộ",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Aesthetic",
+    "vn": "thuộc thẩm mỹ",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Affair",
+    "vn": "việc, sự vụ",
+    "category": "News & Society"
+  },
+  {
+    "en": "Affect",
+    "vn": "ảnh hưởng đến",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Affection",
+    "vn": "sự yêu thương, tình cảm",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Afford",
+    "vn": "có đủ khả năng chi trả",
+    "category": "Finance"
+  },
+  {
+    "en": "Affordable",
+    "vn": "giá cả phải chăng",
+    "category": "Shopping & Style"
+  },
+  {
+    "en": "Afraid",
+    "vn": "lo sợ, e ngại",
+    "category": "Psychology"
+  },
+  {
+    "en": "Afternoon",
+    "vn": "buổi chiều",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Agency",
+    "vn": "đại lý, cơ quan",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Agenda",
+    "vn": "chương trình nghị sự",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Agent",
+    "vn": "người đại diện, tác nhân",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Aggressive",
+    "vn": "hung hăng, quyết đoán",
+    "category": "Psychology"
+  },
+  {
+    "en": "Agile",
+    "vn": "nhanh nhẹn, linh hoạt",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Agreement",
+    "vn": "hợp đồng, sự thỏa thuận",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Agriculture",
+    "vn": "nông nghiệp",
+    "category": "Environment"
+  },
+  {
+    "en": "Ahead",
+    "vn": "phía trước",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Aircraft",
+    "vn": "máy bay, phi cơ",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Airline",
+    "vn": "hãng hàng không",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Airport",
+    "vn": "sân bay",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Alarm",
+    "vn": "chuông báo động",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Algorithm",
+    "vn": "thuật toán",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Alien",
+    "vn": "người ngoài hành tinh, xa lạ",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Alignment",
+    "vn": "sự căn chỉnh, liên minh",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Allegation",
+    "vn": "sự cáo buộc",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Alleviate",
+    "vn": "xoa dịu, giảm bớt",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Alliance",
+    "vn": "sự liên minh",
+    "category": "News & Society"
+  },
+  {
+    "en": "Allocate",
+    "vn": "phân bổ, phân phối",
+    "category": "Finance"
+  },
+  {
+    "en": "Allowance",
+    "vn": "tiền trợ cấp, phụ cấp",
+    "category": "Finance"
+  },
+  {
+    "en": "Ally",
+    "vn": "đồng minh",
+    "category": "History & World"
+  },
+  {
+    "en": "Almost",
+    "vn": "hầu như, gần như",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Alone",
+    "vn": "một mình, cô đơn",
+    "category": "Psychology"
+  },
+  {
+    "en": "Alongside",
+    "vn": "bên cạnh, cùng với",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Alphabet",
+    "vn": "bảng chữ cái",
+    "category": "Education"
+  },
+  {
+    "en": "Alteration",
+    "vn": "sự thay đổi, chỉnh sửa",
+    "category": "Shopping & Style"
+  },
+  {
+    "en": "Alternative",
+    "vn": "lựa chọn thay thế",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Altitude",
+    "vn": "độ cao so với mặt nước biển",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Altogether",
+    "vn": "nhìn chung, hoàn toàn",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Altruism",
+    "vn": "lòng vị tha",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Aluminum",
+    "vn": "nhôm",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Amateur",
+    "vn": "nghiệp dư",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Amazement",
+    "vn": "sự kinh ngạc",
+    "category": "Psychology"
+  },
+  {
+    "en": "Ambassador",
+    "vn": "đại sứ",
+    "category": "News & Society"
+  },
+  {
+    "en": "Ambiguity",
+    "vn": "sự mơ hồ, không rõ ràng",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Ambiguous",
+    "vn": "mơ hồ, nhập nhằng",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Ambition",
+    "vn": "tham vọng, hoài bão",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Ambitious",
+    "vn": "có tham vọng lớn",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Ambulance",
+    "vn": "xe cấp cứu",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Amend",
+    "vn": "sửa đổi, bổ sung (luật)",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Amendment",
+    "vn": "tu chính án, sự sửa đổi",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Amenity",
+    "vn": "tiện nghi (khách sạn, khu nhà)",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Amiable",
+    "vn": "hòa nhã, dễ thương",
+    "category": "Psychology"
+  },
+  {
+    "en": "Amount",
+    "vn": "số lượng, khoản tiền",
+    "category": "Finance"
+  },
+  {
+    "en": "Ample",
+    "vn": "dồi dào, dư dả",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Analogy",
+    "vn": "sự tương tự, phép ví von",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Analyse",
+    "vn": "phân tích",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Analysis",
+    "vn": "bản phân tích",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Analyst",
+    "vn": "chuyên viên phân tích",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Analytical",
+    "vn": "có tính phân tích",
+    "category": "Education"
+  },
+  {
+    "en": "Anarchy",
+    "vn": "tình trạng vô chính phủ",
+    "category": "History & World"
+  },
+  {
+    "en": "Anatomy",
+    "vn": "giải phẫu học",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Ancestor",
+    "vn": "ông bà tổ tiên",
+    "category": "History & World"
+  },
+  {
+    "en": "Anchorage",
+    "vn": "nơi neo đậu tàu thuyền",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Ancient",
+    "vn": "cổ kính, cổ xưa",
+    "category": "History & World"
+  },
+  {
+    "en": "Anecdote",
+    "vn": "câu chuyện phiếm, giai thoại",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Anesthesia",
+    "vn": "sự gây mê, thuốc mê",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Angel",
+    "vn": "thiên thần",
+    "category": "Festivals"
+  },
+  {
+    "en": "Angle",
+    "vn": "góc độ",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Anguish",
+    "vn": "sự đau đớn dằn dặt",
+    "category": "Psychology"
+  },
+  {
+    "en": "Animal",
+    "vn": "động vật",
+    "category": "Pets & Animals"
+  },
+  {
+    "en": "Animation",
+    "vn": "phim hoạt hình, hiệu ứng động",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Ankle",
+    "vn": "cổ chân",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Anniversary",
+    "vn": "ngày kỷ niệm",
+    "category": "Festivals"
+  },
+  {
+    "en": "Announce",
+    "vn": "thông báo, tuyên bố",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Announcement",
+    "vn": "lời thông báo",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Annoyance",
+    "vn": "sự phiền hà, bực mình",
+    "category": "Psychology"
+  },
+  {
+    "en": "Annual",
+    "vn": "hàng năm",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Annually",
+    "vn": "mỗi năm một lần",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Anonymous",
+    "vn": "ẩn danh, giấu tên",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Answer",
+    "vn": "câu trả lời",
+    "category": "Education"
+  },
+  {
+    "en": "Antagonism",
+    "vn": "sự phản kháng, đối đầu",
+    "category": "Psychology"
+  },
+  {
+    "en": "Anticipate",
+    "vn": "dự đoán, lường trước",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Anticipation",
+    "vn": "sự mong đợi, dự đoán",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Anxiety",
+    "vn": "sự lo âu, trăn trở",
+    "category": "Psychology"
+  },
+  {
+    "en": "Anxious",
+    "vn": "lo âu, sốt sắng",
+    "category": "Psychology"
+  },
+  {
+    "en": "Apartment",
+    "vn": "căn hộ",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Apologize",
+    "vn": "xin lỗi",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Apology",
+    "vn": "lời xin lỗi",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Apparatus",
+    "vn": "thiết bị, bộ máy",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Apparent",
+    "vn": "rõ ràng, hiển nhiên",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Appeal",
+    "vn": "sự lôi cuốn, sự kháng cáo",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Appear",
+    "vn": "xuất hiện, hình như",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Appearance",
+    "vn": "nội ngoại hình, sự xuất hiện",
+    "category": "Shopping & Style"
+  },
+  {
+    "en": "Appetite",
+    "vn": "sự thèm ăn, khẩu vị",
+    "category": "Food & Dining"
+  },
+  {
+    "en": "Applaud",
+    "vn": "vỗ tay tán thưởng",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Applause",
+    "vn": "tiếng vỗ tay",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Apple",
+    "vn": "quả táo",
+    "category": "Food & Dining"
+  },
+  {
+    "en": "Appliance",
+    "vn": "thiết bị gia dụng",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Applicant",
+    "vn": "ứng viên xin việc",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Application",
+    "vn": "đơn xin việc, ứng dụng",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Apply",
+    "vn": "nộp đơn, áp dụng",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Appoint",
+    "vn": "bổ nhiệm, chỉ định",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Appointment",
+    "vn": "cuộc hẹn, sự bổ nhiệm",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Appraisal",
+    "vn": "sự đánh giá, thẩm định",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Appreciate",
+    "vn": "trân trọng, đánh giá cao",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Appreciation",
+    "vn": "sự trân trọng, biết ơn",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Apprehension",
+    "vn": "sự e sợ, mối e ngại",
+    "category": "Psychology"
+  },
+  {
+    "en": "Approach",
+    "vn": "tiếp cận, phương pháp",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Appropriate",
+    "vn": "thích hợp, phù hợp",
+    "category": "Education"
+  },
+  {
+    "en": "Approval",
+    "vn": "sự phê duyệt, chấp thuận",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Approve",
+    "vn": "phê duyệt, tán thành",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Approximate",
+    "vn": "xấp xỉ, ước chừng",
+    "category": "Finance"
+  },
+  {
+    "en": "Aptitude",
+    "vn": "năng khiếu, tố chất",
+    "category": "Education"
+  },
+  {
+    "en": "Aquarium",
+    "vn": "thủy cung, bể cá",
+    "category": "Pets & Animals"
+  },
+  {
+    "en": "Arbitrary",
+    "vn": "tùy hứng, độc đoán",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Arbitration",
+    "vn": "sự trọng tài phân xử",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Archaeology",
+    "vn": "khảo cổ học",
+    "category": "History & World"
+  },
+  {
+    "en": "Architect",
+    "vn": "kiến trúc sư",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Architecture",
+    "vn": "kiến trúc",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Archive",
+    "vn": "kho lưu trữ",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Arduous",
+    "vn": "gian gian, cực khổ",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Arguable",
+    "vn": "có thể gây tranh cãi",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Argue",
+    "vn": "tranh luận, cãi nhau",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Argument",
+    "vn": "lập luận, sự tranh cãi",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Arise",
+    "vn": "nảy sinh, mọc lên",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Aristocracy",
+    "vn": "tầng lớp quý tộc",
+    "category": "History & World"
+  },
+  {
+    "en": "Arithmetic",
+    "vn": "số học",
+    "category": "Education"
+  },
+  {
+    "en": "Aroma",
+    "vn": "hương thơm dễ chịu",
+    "category": "Food & Dining"
+  },
+  {
+    "en": "Arouse",
+    "vn": "gợi lên, khơi dậy",
+    "category": "Psychology"
+  },
+  {
+    "en": "Arrange",
+    "vn": "sắp xếp, thu xếp",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Arrangement",
+    "vn": "sự sắp đặt, thỏa thuận",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Array",
+    "vn": "mảng, danh sách dài",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Arrest",
+    "vn": "bắt giữ",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Arrival",
+    "vn": "sự đến nơi",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Arrive",
+    "vn": "đến nơi",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Arrogant",
+    "vn": "kiêu ngạo, ngạo mạn",
+    "category": "Psychology"
+  },
+  {
+    "en": "Article",
+    "vn": "bài báo, điều khoản",
+    "category": "News & Society"
+  },
+  {
+    "en": "Articulate",
+    "vn": "diễn đạt trôi chảy, rõ ràng",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Artificial",
+    "vn": "nhân tạo",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Artist",
+    "vn": "họa sĩ, nghệ sĩ",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Artistic",
+    "vn": "có tính nghệ thuật",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Ascend",
+    "vn": "trèo lên, thăng tiến",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Ascertain",
+    "vn": "xác minh, tìm hiểu chắc chắn",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Ashamed",
+    "vn": "hổ thẹn, xấu hổ",
+    "category": "Psychology"
+  },
+  {
+    "en": "Aside",
+    "vn": "sang một bên",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Aspect",
+    "vn": "khía cạnh",
+    "category": "Education"
+  },
+  {
+    "en": "Aspiration",
+    "vn": "khát vọng, ước nguyện",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Aspire",
+    "vn": "khao khao, hướng tới",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Assault",
+    "vn": "sự tấn công, hành hung",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Assemble",
+    "vn": "lắp ráp, tập hợp",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Assembly",
+    "vn": "hội đồng, sự lắp ráp",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Assert",
+    "vn": "khẳng định, quả quyết",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Assertion",
+    "vn": "sự khẳng định",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Assess",
+    "vn": "đánh giá, định giá",
+    "category": "Education"
+  },
+  {
+    "en": "Assessment",
+    "vn": "bài đánh giá, sự định giá",
+    "category": "Education"
+  },
+  {
+    "en": "Asset",
+    "vn": "tài sản, thế mạnh",
+    "category": "Finance"
+  },
+  {
+    "en": "Assign",
+    "vn": "giao việc, phân công",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Assignment",
+    "vn": "nhiệm vụ, bài tập",
+    "category": "Education"
+  },
+  {
+    "en": "Assimilate",
+    "vn": "đồng hóa, tiếp thu",
+    "category": "News & Society"
+  },
+  {
+    "en": "Assist",
+    "vn": "hỗ trợ, giúp đỡ",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Assistance",
+    "vn": "sự hỗ trợ",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Assistant",
+    "vn": "trợ lý",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Associate",
+    "vn": "liên kết, đối tác",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Association",
+    "vn": "hiệp hội, sự liên kết",
+    "category": "News & Society"
+  },
+  {
+    "en": "Assume",
+    "vn": "cho rằng, đảm nhận",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Assumption",
+    "vn": "giả định, sự thừa nhận",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Assurance",
+    "vn": "sự cam đoan, bảo đảm",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Assure",
+    "vn": "cam đoan, quả quyết",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Astonish",
+    "vn": "làm kinh ngạc",
+    "category": "Psychology"
+  },
+  {
+    "en": "Astronomy",
+    "vn": "thiên văn học",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Astrophysics",
+    "vn": "vật lý thiên văn",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Athlete",
+    "vn": "vận động viên",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Athletic",
+    "vn": "khỏe khoắn, điền kinh",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Atmosphere",
+    "vn": "bầu không khí",
+    "category": "Environment"
+  },
+  {
+    "en": "Atom",
+    "vn": "nguyên tử",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Atomic",
+    "vn": "thuộc nguyên tử",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Atrocity",
+    "vn": "tội ác dã man",
+    "category": "History & World"
+  },
+  {
+    "en": "Attach",
+    "vn": "đính kèm, dán vào",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Attachment",
+    "vn": "tệp đính kèm, sự gắn bó",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Attack",
+    "vn": "tấn công",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Attain",
+    "vn": "đạt được, tới mức",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Attempt",
+    "vn": "nỗ lực, sự thử sức",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Attend",
+    "vn": "tham dự, chú ý",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Attendance",
+    "vn": "sự có mặt, điểm danh",
+    "category": "Education"
+  },
+  {
+    "en": "Attendant",
+    "vn": "tiếp viên, người phục vụ",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Attention",
+    "vn": "sự chú ý",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Attitude",
+    "vn": "thái độ",
+    "category": "Psychology"
+  },
+  {
+    "en": "Attorney",
+    "vn": "luật sư",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Attract",
+    "vn": "thu hút, hấp dẫn",
+    "category": "Shopping & Style"
+  },
+  {
+    "en": "Attraction",
+    "vn": "điểm tham quan, sự thu hút",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Attractive",
+    "vn": "hấp dẫn, lôi cuốn",
+    "category": "Shopping & Style"
+  },
+  {
+    "en": "Attribute",
+    "vn": "thuộc tính, cho là do",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Auction",
+    "vn": "buổi đấu giá",
+    "category": "Finance"
+  },
+  {
+    "en": "Audience",
+    "vn": "thính giả, khán giả",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Audit",
+    "vn": "kiểm toán, sự kiểm tra",
+    "category": "Finance"
+  },
+  {
+    "en": "Auditorium",
+    "vn": "hội trường lớn",
+    "category": "Education"
+  },
+  {
+    "en": "Augment",
+    "vn": "tăng cường, gia tăng",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Authentic",
+    "vn": "dính thực, đích thực",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Authenticity",
+    "vn": "tính chân thực",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Author",
+    "vn": "tác giả",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Authority",
+    "vn": "chính quyền, quyền lực",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Authorization",
+    "vn": "sự cấp phép, ủy quyền",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Authorize",
+    "vn": "ủy quyền, cho phép",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Auto",
+    "vn": "tự động, ô tô",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Autobiography",
+    "vn": "tự truyện",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Automate",
+    "vn": "tự động hóa",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Automated",
+    "vn": "được tự động hóa",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Automatic",
+    "vn": "tự động",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Automation",
+    "vn": "sự tự động hóa",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Automobile",
+    "vn": "xe hơi, ô tô",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Autonomous",
+    "vn": "tự chủ, tự hành",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Autonomy",
+    "vn": "quyền tự chủ",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Availability",
+    "vn": "sự có sẵn, khả năng đáp ứng",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Available",
+    "vn": "có sẵn, rảnh rỗi",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Avalanche",
+    "vn": "tuyết lở",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Avenue",
+    "vn": "đại lộ",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Average",
+    "vn": "trung bình",
+    "category": "Math"
+  },
+  {
+    "en": "Avert",
+    "vn": "ngăn chặn, đẩy lùi",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Aviation",
+    "vn": "ngành hàng không",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Avoid",
+    "vn": "tránh né",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Avoidance",
+    "vn": "sự tránh né",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Await",
+    "vn": "chờ đợi",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Awake",
+    "vn": "thức giấc, tỉnh táo",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Award",
+    "vn": "thưởng, giải thưởng",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Aware",
+    "vn": "nhận thức được",
+    "category": "Psychology"
+  },
+  {
+    "en": "Awareness",
+    "vn": "sự nhận thức",
+    "category": "Psychology"
+  },
+  {
+    "en": "Awesome",
+    "vn": "tuyệt vời, đáng ngạc nhiên",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Awful",
+    "vn": "tồi tệ, kinh khủng",
+    "category": "Daily Life"
+  },
+  {
+    "en": "Awkward",
+    "vn": "ngượng ngùng, vụng về",
+    "category": "Psychology"
+  },
+  {
+    "en": "Substantial",
+    "vn": "Đáng kể, quan trọng",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Implement",
+    "vn": "Thực thi, áp dụng",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Prosperous",
+    "vn": "Thịnh vượng, phồn vinh",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Reluctant",
+    "vn": "Miễn cưỡng, ngần ngại",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Meticulous",
+    "vn": "Tỉ mỉ, kỹ lưỡng",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Mandatory",
+    "vn": "Bắt buộc",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Incentive",
+    "vn": "Khuyến khích, sự kích thích",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Feasible",
+    "vn": "Khả thi, làm được",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Diligent",
+    "vn": "Siêng năng, cần cù",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Efficient",
+    "vn": "Hiệu quả, năng suất",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Essential",
+    "vn": "Thiết yếu, quan trọng",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Obstacle",
+    "vn": "Chướng ngại vật",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Patience",
+    "vn": "Sự kiên nhẫn",
+    "category": "Beginner"
+  },
+  {
+    "en": "Confidence",
+    "vn": "Sự tự tin",
+    "category": "Beginner"
+  },
+  {
+    "en": "Opportunity",
+    "vn": "Cơ hội",
+    "category": "Beginner"
+  },
+  {
+    "en": "Curious",
+    "vn": "Tò mò, ham học hỏi",
+    "category": "Beginner"
+  },
+  {
+    "en": "Challenge",
+    "vn": "Thử thách",
+    "category": "Beginner"
+  },
+  {
+    "en": "Compensate",
+    "vn": "Bồi thường, bù đắp",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Designate",
+    "vn": "Chỉ định, bổ nhiệm",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Facilitate",
+    "vn": "Tạo điều kiện, làm cho dễ dàng",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Negotiate",
+    "vn": "Đàm phán, thương lượng",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Reconcile",
+    "vn": "Hòa giải, làm cho nhất trí",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Simultaneous",
+    "vn": "Đồng thời, cùng một lúc",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Threshold",
+    "vn": "Ngưỡng cửa, mức tối thiểu",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Unprecedented",
+    "vn": "Chưa từng có tiền lệ",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Vulnerable",
+    "vn": "Dễ bị tổn thương",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Withstand",
+    "vn": "Chịu đựng, chống lại",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Arise - arose - arisen",
+    "vn": "nảy sinh, mọc lên",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Awake - awoke - awoken",
+    "vn": "thức giấc",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Bear - bore - borne",
+    "vn": "chịu đựng, mang",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Beat - beat - beaten",
+    "vn": "đánh, đập",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Become - became - become",
+    "vn": "trở thành",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Begin - began - begun",
+    "vn": "bắt đầu",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Bend - bent - bent",
+    "vn": "bẻ cong, cúi xuống",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Bet - bet - bet",
+    "vn": "đánh cược",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Bind - bound - bound",
+    "vn": "trói, buộc, gắn kết",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Bite - bit - bitten",
+    "vn": "cắn, ngoạm",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Bleed - bled - bled",
+    "vn": "chảy máu",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Blow - blew - blown",
+    "vn": "thổi",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Break - broke - broken",
+    "vn": "làm vỡ, bẻ gãy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Breed - bred - bred",
+    "vn": "nuôi dưỡng, sinh sản",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Bring - brought - brought",
+    "vn": "mang lại, mang đến",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Broadcast - broadcast - broadcast",
+    "vn": "phát sóng truyền hình",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Build - built - built",
+    "vn": "xây dựng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Burn - burnt - burnt",
+    "vn": "đốt cháy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Buy - bought - bought",
+    "vn": "mua",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Catch - caught - caught",
+    "vn": "bắt lấy, nắm bắt",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Choose - chose - chosen",
+    "vn": "lựa chọn",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Cling - clung - clung",
+    "vn": "bám chặt, khăng khăng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Come - came - come",
+    "vn": "đến, tới",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Cost - cost - cost",
+    "vn": "có giá là",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Creep - crept - crept",
+    "vn": "bò, trườn",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Cut - cut - cut",
+    "vn": "cắt, thái",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Deal - dealt - dealt",
+    "vn": "giao dịch, giải quyết",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Dig - dug - dug",
+    "vn": "đào đất",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Do - did - done",
+    "vn": "làm, thực hiện",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Draw - drew - drawn",
+    "vn": "vẽ, kéo",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Dream - dreamt - dreamt",
+    "vn": "mơ ước",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Drink - drank - drunk",
+    "vn": "uống",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Drive - drove - driven",
+    "vn": "lái xe",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Eat - ate - eaten",
+    "vn": "ăn",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Fall - fell - fallen",
+    "vn": "rơi, ngã",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Feed - fed - fed",
+    "vn": "cho ăn",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Feel - felt - felt",
+    "vn": "cảm thấy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Fight - fought - fought",
+    "vn": "chiến đấu",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Find - found - found",
+    "vn": "tìm thấy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Flee - fled - fled",
+    "vn": "chạy trốn",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Fly - flew - flown",
+    "vn": "bay",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Forbid - forbade - forbidden",
+    "vn": "cấm đoán",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Forget - forgot - forgotten",
+    "vn": "quên",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Forgive - forgave - forgiven",
+    "vn": "tha thứ",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Freeze - froze - frozen",
+    "vn": "đóng băng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Get - got - gotten",
+    "vn": "có được, nhận được",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Give - gave - given",
+    "vn": "cho, tặng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Go - went - gone",
+    "vn": "đi",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Grow - grew - grown",
+    "vn": "phát triển, trồng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Hang - hung - hung",
+    "vn": "treo lên",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Have - had - had",
+    "vn": "có",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Hear - heard - heard",
+    "vn": "nghe thấy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Hide - hid - hidden",
+    "vn": "trốn, giấu",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Hit - hit - hit",
+    "vn": "đánh, va chạm",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Hold - held - held",
+    "vn": "cầm, nắm, tổ chức",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Hurt - hurt - hurt",
+    "vn": "làm đau",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Keep - kept - kept",
+    "vn": "giữ, duy trì",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Know - knew - known",
+    "vn": "biết, hiểu",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Lay - laid - laid",
+    "vn": "đặt, để, đẻ trứng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Lead - led - led",
+    "vn": "dẫn dắt, lãnh đạo",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Learn - learnt - learnt",
+    "vn": "học hỏi",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Leave - left - left",
+    "vn": "rời đi, bỏ lại",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Lend - lent - lent",
+    "vn": "cho vay, cho mượn",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Let - let - let",
+    "vn": "cho phép",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Lie - lay - lain",
+    "vn": "nằm",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Light - lit - lit",
+    "vn": "thắp sáng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Lose - lost - lost",
+    "vn": "thua, đánh mất",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Make - made - made",
+    "vn": "làm, chế tạo",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Mean - meant - meant",
+    "vn": "có nghĩa là",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Meet - met - met",
+    "vn": "gặp gỡ",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Pay - paid - paid",
+    "vn": "thanh toán, trả tiền",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Put - put - put",
+    "vn": "đặt, để",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Read - read - read",
+    "vn": "đọc",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Ride - rode - ridden",
+    "vn": "cưỡi xe, đi xe",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Ring - rang - rung",
+    "vn": "rung chuông",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Rise - rose - risen",
+    "vn": "gia tăng, mọc lên",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Run - ran - run",
+    "vn": "chạy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Say - said - said",
+    "vn": "nói",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "See - saw - seen",
+    "vn": "nhìn thấy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Seek - sought - sought",
+    "vn": "tìm kiếm",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Sell - sold - sold",
+    "vn": "bán",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Send - sent - sent",
+    "vn": "gửi đi",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Set - set - set",
+    "vn": "thiết lập, cài đặt",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Shake - shook - shaken",
+    "vn": "bắt tay, rung lắc",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Shine - shone - shone",
+    "vn": "tỏa sáng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Shoot - shot - shot",
+    "vn": "bắn",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Show - showed - shown",
+    "vn": "hiển thị, cho xem",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Shrink - shrank - shrunk",
+    "vn": "co lại, thu nhỏ",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Shut - shut - shut",
+    "vn": "đóng lại",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Sing - sang - sung",
+    "vn": "hát",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Sink - sank - sunk",
+    "vn": "chìm xuống",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Sit - sat - sat",
+    "vn": "ngồi",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Sleep - slept - slept",
+    "vn": "ngủ",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Slide - slid - slid",
+    "vn": "trượt",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Speak - spoke - spoken",
+    "vn": "nói chuyện",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Spend - spent - spent",
+    "vn": "dành thời gian / chi tiền",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Stand - stood - stood",
+    "vn": "đứng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Steal - stole - stolen",
+    "vn": "trộm cắp",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Stick - stuck - stuck",
+    "vn": "dán, dính",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Strike - struck - struck",
+    "vn": "đình công, bãi công, đánh",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Swear - swore - sworn",
+    "vn": "tuyên thệ, thề",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Swim - swam - swum",
+    "vn": "bơi lội",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Take - took - taken",
+    "vn": "cầm, lấy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Teach - taught - taught",
+    "vn": "giảng dạy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Tear - tore - torn",
+    "vn": "xé rách",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Tell - told - told",
+    "vn": "kể, bảo",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Think - thought - thought",
+    "vn": "suy nghĩ",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Throw - threw - thrown",
+    "vn": "ném, quăng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Understand - understood - understood",
+    "vn": "thấu hiểu",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Wake - woke - woken",
+    "vn": "thức dậy",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Wear - wore - worn",
+    "vn": "mặc đồ",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Win - won - won",
+    "vn": "chiến thắng",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "Write - wrote - written",
+    "vn": "viết bài",
+    "category": "Irregular Verbs"
+  },
+  {
+    "en": "...",
+    "vn": "...",
+    "category": "General"
+  },
+  {
+    "en": "Abandon",
+    "vn": "Từ bỏ, ruồng bỏ",
+    "category": "General"
+  },
+  {
+    "en": "Abbreviate",
+    "vn": "Viết tắt, rút ngắn",
+    "category": "Academic"
+  },
+  {
+    "en": "Abdicating",
+    "vn": "Từ vị, nhường ngôi",
+    "category": "Law & History"
+  },
+  {
+    "en": "Abdomen",
+    "vn": "Vùng bụng",
+    "category": "Health & Medical"
+  },
+  {
+    "en": "Abduct",
+    "vn": "Bắt cóc, bắt đi",
+    "category": "Law & Society"
+  },
+  {
+    "en": "Aberration",
+    "vn": "Sự lệch lạc, sự khác thường",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Abide",
+    "vn": "Tuân theo, chịu đựng",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Ablaze",
+    "vn": "Rực cháy, bùng cháy",
+    "category": "Nature & Elements"
+  },
+  {
+    "en": "Abnormal",
+    "vn": "Bất thường, khác thường",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Aboard",
+    "vn": "Trên tàu/máy bay",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Abolish",
+    "vn": "Bãi bỏ, hủy bỏ",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Abominable",
+    "vn": "Tồi tệ, đáng ghét",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Abound",
+    "vn": "Có rất nhiều, dồi dào",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Abrasive",
+    "vn": "Thô ráp, gây khó chịu",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Abreast",
+    "vn": "Sóng hàng, cập nhật tin tức",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Abridge",
+    "vn": "Tóm tắt, rút ngắn sách",
+    "category": "Academic"
+  },
+  {
+    "en": "Abrupt",
+    "vn": "Đột ngột, bất ngờ",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Absolve",
+    "vn": "Tuyên án vô tội, xá tội",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Abstain",
+    "vn": "Kiêng nhịn, nhẫn nại",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Absurd",
+    "vn": "Vô lý, ngớ ngẩn",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Abundance",
+    "vn": "Sự phong phú, dồi dào",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Abuse",
+    "vn": "Lạm dụng, ngược đãi",
+    "category": "Law & Society"
+  },
+  {
+    "en": "Accessory",
+    "vn": "Phụ kiện, đồ kèm theo",
+    "category": "Shopping & Fashion"
+  },
+  {
+    "en": "Acclaim",
+    "vn": "Sự hoan hô, ca ngợi",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Acclimate",
+    "vn": "Thích nghi thời tiết",
+    "category": "Environment"
+  },
+  {
+    "en": "Accord",
+    "vn": "Hiệp định, sự hòa hợp",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Accreditation",
+    "vn": "Sự kiểm định chất lượng",
+    "category": "Education"
+  },
+  {
+    "en": "Accuse",
+    "vn": "Buộc tội, cáo buộc",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Accustom",
+    "vn": "Làm cho quen thuộc",
+    "category": "Psychology"
+  },
+  {
+    "en": "Acid",
+    "vn": "A-xít, chất chua",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Acquaintance",
+    "vn": "Người quen",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Acquit",
+    "vn": "Tuyên bố trắng án",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Acrimonious",
+    "vn": "Gay gắt, đắng chát",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Acronym",
+    "vn": "Từ viết tắt chữ đầu",
+    "category": "Academic"
+  },
+  {
+    "en": "Activate",
+    "vn": "Kích hoạt",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Actuary",
+    "vn": "Chuyên viên định phí",
+    "category": "Finance"
+  },
+  {
+    "en": "Acute",
+    "vn": "Cấp tính, sắc bén",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Adaptable",
+    "vn": "Có thể thích nghi",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Adaptation",
+    "vn": "Sự thích nghi, tác phẩm chuyển thể",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Addiction",
+    "vn": "Sự nghiện ngập",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Adhere",
+    "vn": "Dính chặt, tuân thủ quy tắc",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Adhesive",
+    "vn": "Chất dính, keo dán",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Adjacent",
+    "vn": "Kế bên, liền kề",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Adjourn",
+    "vn": "Tạm dừng phiên họp",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Adjustment",
+    "vn": "Sự điều chỉnh",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Admirable",
+    "vn": "Đáng khâm phục",
+    "category": "Psychology"
+  },
+  {
+    "en": "Admiration",
+    "vn": "Sự khâm phục, ngưỡng mộ",
+    "category": "Psychology"
+  },
+  {
+    "en": "Adolescent",
+    "vn": "Thanh thiếu niên",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Adoration",
+    "vn": "Sự sùng bái, yêu thương",
+    "category": "Psychology"
+  },
+  {
+    "en": "Adorn",
+    "vn": "Trang trí, làm đẹp",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Adrenaline",
+    "vn": "Hormone kích thích",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Adulterate",
+    "vn": "Pha trộn làm giảm chất lượng",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Advancement",
+    "vn": "Sự thăng tiến",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Advantageous",
+    "vn": "Có lợi, thuận lợi",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Advent",
+    "vn": "Sự xuất hiện, sự đến",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Adversary",
+    "vn": "Đối thủ, kẻ thù",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Adverse",
+    "vn": "Bất lợi, tồi tệ",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Adversity",
+    "vn": "Sự nghịch cảnh, khó khăn",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Advertise",
+    "vn": "Quảng cáo",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Adviser",
+    "vn": "Cố vấn",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Advocacy",
+    "vn": "Sự bào chữa, sự vận động",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Aerial",
+    "vn": "Trên không, ăng-ten",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Aerodynamics",
+    "vn": "Khí động học",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Aerosol",
+    "vn": "Bình xịt hơi",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Affable",
+    "vn": "Lịch sự, niềm nở",
+    "category": "Psychology"
+  },
+  {
+    "en": "Affiliate",
+    "vn": "Chi nhánh, gia nhập",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Affinity",
+    "vn": "Sự cuốn hút, mối quan hệ gần gũi",
+    "category": "Psychology"
+  },
+  {
+    "en": "Affirm",
+    "vn": "Xác nhận, khẳng định",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Affirmation",
+    "vn": "Sự khẳng định",
+    "category": "Psychology"
+  },
+  {
+    "en": "Affliction",
+    "vn": "Tai họa, sự đau đớn",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Affluent",
+    "vn": "Giàu có, dồi dào",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Afforestation",
+    "vn": "Sự trồng rừng",
+    "category": "Environment"
+  },
+  {
+    "en": "Aftermath",
+    "vn": "Hậu quả sau thiên tai/sự cố",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Aggravate",
+    "vn": "Làm trầm trọng thêm",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Aggregate",
+    "vn": "Tổng số, gộp lại",
+    "category": "Finance"
+  },
+  {
+    "en": "Aggression",
+    "vn": "Sự xâm lược, sự hung hăng",
+    "category": "Psychology"
+  },
+  {
+    "en": "Agility",
+    "vn": "Sự nhanh nhạy",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Agitate",
+    "vn": "Kích động, làm xáo động",
+    "category": "Psychology"
+  },
+  {
+    "en": "Agony",
+    "vn": "Sự đau đớn dữ dội",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Agree",
+    "vn": "Đồng ý",
+    "category": "Beginner"
+  },
+  {
+    "en": "Agreeable",
+    "vn": "Dễ chịu, đồng ý",
+    "category": "Psychology"
+  },
+  {
+    "en": "Aid",
+    "vn": "Sự viện trợ, trợ giúp",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Ailment",
+    "vn": "Bệnh tật nhẹ",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Aim",
+    "vn": "Mục tiêu, nhắm vào",
+    "category": "Beginner"
+  },
+  {
+    "en": "Airborne",
+    "vn": "Ở trên không, truyền qua không khí",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Aisle",
+    "vn": "Lối đi giữa các hàng ghế",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Albeit",
+    "vn": "Mặc dù, dù rằng",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Album",
+    "vn": "Tập bản đồ, album ảnh/nhạc",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Alchemy",
+    "vn": "Thuật luyện kim",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Alcohol",
+    "vn": "Rượu, cồn",
+    "category": "Food & Dining"
+  },
+  {
+    "en": "Alert",
+    "vn": "Cảnh giác, thông báo",
+    "category": "Safety & Emergency"
+  },
+  {
+    "en": "Alias",
+    "vn": "Bí danh, tên giả",
+    "category": "Law & Society"
+  },
+  {
+    "en": "Alienate",
+    "vn": "Xa lánh, làm rạn nứt",
+    "category": "Psychology"
+  },
+  {
+    "en": "Align",
+    "vn": "Căn chỉnh, sắp hàng",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Alike",
+    "vn": "Giống nhau, tương tự",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Allege",
+    "vn": "Cáo buộc, cho rằng",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Allegiance",
+    "vn": "Lòng trung thành",
+    "category": "Law & History"
+  },
+  {
+    "en": "Allegory",
+    "vn": "Truyện ngụ ngôn",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Allergy",
+    "vn": "Sự dị ứng",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Allocation",
+    "vn": "Sự phân bổ",
+    "category": "Finance"
+  },
+  {
+    "en": "Allotment",
+    "vn": "Phần được giao, thửa đất",
+    "category": "Finance"
+  },
+  {
+    "en": "Allow",
+    "vn": "Cho phép",
+    "category": "Beginner"
+  },
+  {
+    "en": "Alloy",
+    "vn": "Hợp kim",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Allure",
+    "vn": "Sự quyến rũ, sức hút",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Allusion",
+    "vn": "Sự ám chỉ, ẩn ý",
+    "category": "Academic"
+  },
+  {
+    "en": "Almanac",
+    "vn": "Niên giám",
+    "category": "Academic"
+  },
+  {
+    "en": "Almighty",
+    "vn": "Toàn năng, tối cao",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Along",
+    "vn": "Dọc theo",
+    "category": "Beginner"
+  },
+  {
+    "en": "Aloof",
+    "vn": "Xa cách, lạnh nhạt",
+    "category": "Psychology"
+  },
+  {
+    "en": "Already",
+    "vn": "Đã... rồi",
+    "category": "Beginner"
+  },
+  {
+    "en": "Alter",
+    "vn": "Thay đổi, sửa đổi",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Alternate",
+    "vn": "Luân phiên, thay thế",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Aluminium",
+    "vn": "Nhôm",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Always",
+    "vn": "Luôn luôn",
+    "category": "Beginner"
+  },
+  {
+    "en": "Amass",
+    "vn": "Tích góp, chất đống",
+    "category": "Finance"
+  },
+  {
+    "en": "Amaze",
+    "vn": "Làm kinh ngạc",
+    "category": "Beginner"
+  },
+  {
+    "en": "Amazing",
+    "vn": "Tuyệt vời, kinh ngạc",
+    "category": "Beginner"
+  },
+  {
+    "en": "Ambience",
+    "vn": "Bầu không khí quán/phòng",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Ambivalence",
+    "vn": "Mối mâu thuẫn trong tư tưởng",
+    "category": "Psychology"
+  },
+  {
+    "en": "Ambush",
+    "vn": "Cuộc phục kích",
+    "category": "Law & History"
+  },
+  {
+    "en": "Ameliorate",
+    "vn": "Cải thiện, làm tốt hơn",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Amenable",
+    "vn": "Dễ bị ảnh hưởng, tuân theo",
+    "category": "Psychology"
+  },
+  {
+    "en": "Amicable",
+    "vn": "Thân thiện, hòa giải",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Amid",
+    "vn": "Ở giữa, giữa lúc",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Ammunition",
+    "vn": "Đạn dược",
+    "category": "Law & History"
+  },
+  {
+    "en": "Amnesty",
+    "vn": "Sự ân xá",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Amortization",
+    "vn": "Sự khấu hao tài sản",
+    "category": "Finance"
+  },
+  {
+    "en": "Amplify",
+    "vn": "Khuếch đại âm thanh/tín hiệu",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Amplitude",
+    "vn": "Biên độ sóng",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Amputate",
+    "vn": "Cắt bỏ bộ phận cơ thể",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Amuse",
+    "vn": "Làm giải trí, làm vui",
+    "category": "Beginner"
+  },
+  {
+    "en": "Amusement",
+    "vn": "Trò giải trí",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Anachronism",
+    "vn": "Sự sai lệch thời đại",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Anaesthesia",
+    "vn": "Sự gây mê",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Anagram",
+    "vn": "Từ đảo chữ",
+    "category": "Education"
+  },
+  {
+    "en": "Analyses",
+    "vn": "Các sự phân tích (số nhiều)",
+    "category": "Academic"
+  },
+  {
+    "en": "Analyze",
+    "vn": "Phân tích dữ liệu",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Ancestry",
+    "vn": "Dòng họ, nguồn gốc",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Anchor",
+    "vn": "Mỏ neo, người dẫn chương trình",
+    "category": "News & Media"
+  },
+  {
+    "en": "Ancillary",
+    "vn": "Phụ thuộc, bổ trợ",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Anger",
+    "vn": "Cơn tức giận",
+    "category": "Psychology"
+  },
+  {
+    "en": "Angry",
+    "vn": "Tức giận",
+    "category": "Beginner"
+  },
+  {
+    "en": "Angular",
+    "vn": "Góc cạnh",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Animate",
+    "vn": "Làm nhộn nhịp, tạo hoạt họa",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Animosity",
+    "vn": "Lòng thù hận",
+    "category": "Psychology"
+  },
+  {
+    "en": "Annex",
+    "vn": "Phụ lục, sáp nhập lãnh thổ",
+    "category": "Law & History"
+  },
+  {
+    "en": "Annihilate",
+    "vn": "Têu diệt hoàn toàn",
+    "category": "Law & History"
+  },
+  {
+    "en": "Annotate",
+    "vn": "Chú giải, chú thích",
+    "category": "Academic"
+  },
+  {
+    "en": "Annotation",
+    "vn": "Sự ghi chú",
+    "category": "Academic"
+  },
+  {
+    "en": "Announcer",
+    "vn": "Người phát thanh",
+    "category": "News & Media"
+  },
+  {
+    "en": "Annoy",
+    "vn": "Làm bực mình",
+    "category": "Beginner"
+  },
+  {
+    "en": "Annuity",
+    "vn": "Tiền trợ cấp hàng năm",
+    "category": "Finance"
+  },
+  {
+    "en": "Annulment",
+    "vn": "Sự bãi bỏ hợp đồng/hôn nhân",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Anode",
+    "vn": "Cực dương",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Anomalous",
+    "vn": "Bất thường, dị thường",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Anomaly",
+    "vn": "Sự dị thường",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Antagonist",
+    "vn": "Nhân vật phản diện, đối thủ",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Antarctic",
+    "vn": "Thuộc Nam Cực",
+    "category": "Environment"
+  },
+  {
+    "en": "Antecedent",
+    "vn": "Tiền đề, lai lịch",
+    "category": "Academic"
+  },
+  {
+    "en": "Antelope",
+    "vn": "Linh dương",
+    "category": "Pets & Animals"
+  },
+  {
+    "en": "Antenna",
+    "vn": "Ăng-ten, râu côn trùng",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Anthem",
+    "vn": "Bài quốc ca/thánh ca",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Anthology",
+    "vn": "Tuyển tập văn học",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Anthropology",
+    "vn": "Nhân học",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Antibiotic",
+    "vn": "Thuốc kháng sinh",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Antibody",
+    "vn": "Kháng thể",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Anticlimax",
+    "vn": "Sự giảm hưng phấn đột ngột",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Antidote",
+    "vn": "Thuốc giải độc",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Antipathetic",
+    "vn": "Ác cảm, không thích",
+    "category": "Psychology"
+  },
+  {
+    "en": "Antipathy",
+    "vn": "Sự ác cảm",
+    "category": "Psychology"
+  },
+  {
+    "en": "Antiquated",
+    "vn": "Lỗi thời, cổ xơ",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Antique",
+    "vn": "Đồ cổ",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Antiquity",
+    "vn": "Thời cổ đại",
+    "category": "History & World"
+  },
+  {
+    "en": "Antiseptic",
+    "vn": "Chất sát trùng",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Antisocial",
+    "vn": "Chống đối xã hội",
+    "category": "Psychology"
+  },
+  {
+    "en": "Antithesis",
+    "vn": "Sự đối lập hoàn toàn",
+    "category": "Academic"
+  },
+  {
+    "en": "Antonym",
+    "vn": "Từ trái nghĩa",
+    "category": "Education"
+  },
+  {
+    "en": "Anybody",
+    "vn": "Bất kỳ ai",
+    "category": "Beginner"
+  },
+  {
+    "en": "Anymore",
+    "vn": "Nữa (không còn... nữa)",
+    "category": "Beginner"
+  },
+  {
+    "en": "Anyone",
+    "vn": "Bất kỳ ai",
+    "category": "Beginner"
+  },
+  {
+    "en": "Anything",
+    "vn": "Bất kỳ điều gì",
+    "category": "Beginner"
+  },
+  {
+    "en": "Anyway",
+    "vn": "Dù sao đi nữa",
+    "category": "Beginner"
+  },
+  {
+    "en": "Anywhere",
+    "vn": "Bất kỳ đâu",
+    "category": "Beginner"
+  },
+  {
+    "en": "Apathy",
+    "vn": "Sự thờ ơ, vô cảm",
+    "category": "Psychology"
+  },
+  {
+    "en": "Apex",
+    "vn": "Đỉnh cao, điểm cao nhất",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Aphorism",
+    "vn": "Thành ngữ, ngạn ngữ",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Apologetic",
+    "vn": "Xin lỗi, hối hận",
+    "category": "Psychology"
+  },
+  {
+    "en": "Appalling",
+    "vn": "Kinh hãi, dở tệ",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Apparel",
+    "vn": "Trang phục, quần áo",
+    "category": "Shopping & Fashion"
+  },
+  {
+    "en": "Apparently",
+    "vn": "Hình như, có vẻ như",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Appealing",
+    "vn": "Hấp dẫn, lôi cuốn",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Appease",
+    "vn": "Xoa dịu, nhượng bộ",
+    "category": "Law & History"
+  },
+  {
+    "en": "Append",
+    "vn": "Đính kèm vào cuối",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Appendix",
+    "vn": "Phụ lục sách, ruột thừa",
+    "category": "Academic"
+  },
+  {
+    "en": "Appetizer",
+    "vn": "Món khai vị",
+    "category": "Food & Dining"
+  },
+  {
+    "en": "Applicable",
+    "vn": "Có thể áp dụng",
+    "category": "TOEIC Mastery"
+  },
+  {
+    "en": "Applied",
+    "vn": "Được ứng dụng",
+    "category": "Academic"
+  },
+  {
+    "en": "Appraise",
+    "vn": "Đánh giá giá trị",
+    "category": "Finance"
+  },
+  {
+    "en": "Appreciable",
+    "vn": "Đáng kể, thấy rõ",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Apprehend",
+    "vn": "Bắt giữ, thấu hiểu",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Apprentice",
+    "vn": "Người học việc",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Appropriation",
+    "vn": "Sự chiếm đoạt, sự cấp vốn",
+    "category": "Finance"
+  },
+  {
+    "en": "Approximately",
+    "vn": "Khoảng chừng",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Apron",
+    "vn": "Tạp dề",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Aquatic",
+    "vn": "Dưới nước",
+    "category": "Pets & Animals"
+  },
+  {
+    "en": "Aqueduct",
+    "vn": "Cầu dẫn nước cổ",
+    "category": "History & World"
+  },
+  {
+    "en": "Arbitrate",
+    "vn": "Phân giải trọng tài",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Arbitrator",
+    "vn": "Trọng tài hòa giải",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Arcade",
+    "vn": "Khu vui chơi giải trí",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Archaic",
+    "vn": "Cổ xưa, lỗi thời",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Architectural",
+    "vn": "Thuộc kiến trúc",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Ardent",
+    "vn": "Nhiệt thành, hăng hái",
+    "category": "Psychology"
+  },
+  {
+    "en": "Area",
+    "vn": "Khu vực, diện tích",
+    "category": "Beginner"
+  },
+  {
+    "en": "Arena",
+    "vn": "Đấu trường, sàn đấu",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Arid",
+    "vn": "Khô hạn, cằn cỗi",
+    "category": "Environment"
+  },
+  {
+    "en": "Armor",
+    "vn": "Áo giáp",
+    "category": "History & World"
+  },
+  {
+    "en": "Armpit",
+    "vn": "Nách",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Aromatic",
+    "vn": "Thơm tho",
+    "category": "Food & Dining"
+  },
+  {
+    "en": "Arraign",
+    "vn": "Thắt tố, buộc tội",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Arrear",
+    "vn": "Khoản nợ quá hạn",
+    "category": "Finance"
+  },
+  {
+    "en": "Arrogance",
+    "vn": "Sự ngông cuồng, kiêu ngạo",
+    "category": "Psychology"
+  },
+  {
+    "en": "Arrow",
+    "vn": "Mũi tên",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Arsenal",
+    "vn": "Kho vũ khí",
+    "category": "Law & History"
+  },
+  {
+    "en": "Arson",
+    "vn": "Tội cố ý phóng hỏa",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Art",
+    "vn": "Nghệ thuật",
+    "category": "Beginner"
+  },
+  {
+    "en": "Artery",
+    "vn": "Động mạch",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Artful",
+    "vn": "Xảo quyệt, tinh xảo",
+    "category": "Psychology"
+  },
+  {
+    "en": "Artifact",
+    "vn": "Cổ vật",
+    "category": "History & World"
+  },
+  {
+    "en": "Artillery",
+    "vn": "Pháo binh",
+    "category": "Law & History"
+  },
+  {
+    "en": "Artisan",
+    "vn": "Thợ thủ công",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Artistry",
+    "vn": "Tay nghề nghệ thuật",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Ascent",
+    "vn": "Sự trèo lên, sự phát triển",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Ascetic",
+    "vn": "Khổ hạnh",
+    "category": "Philosophy"
+  },
+  {
+    "en": "Ascribe",
+    "vn": "Gán cho, quy cho",
+    "category": "Academic"
+  },
+  {
+    "en": "Ashes",
+    "vn": "Tro tàn",
+    "category": "Nature & Elements"
+  },
+  {
+    "en": "Ashore",
+    "vn": "Lên bờ",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Aspirin",
+    "vn": "Thuốc giảm đau aspirin",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Assailant",
+    "vn": "Kẻ tấn công",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Assassin",
+    "vn": "Sát thủ",
+    "category": "Law & History"
+  },
+  {
+    "en": "Assassinate",
+    "vn": "Ám sát",
+    "category": "Law & History"
+  },
+  {
+    "en": "Assertive",
+    "vn": "Quả quyết, quyết đoán",
+    "category": "Psychology"
+  },
+  {
+    "en": "Annihilated",
+    "vn": "Bị tiêu diệt hoàn toàn",
+    "category": "Law & History"
+  },
+  {
+    "en": "Assortment",
+    "vn": "Sự phối hợp đủ loại",
+    "category": "Shopping & Fashion"
+  },
+  {
+    "en": "Asteroid",
+    "vn": "Tiểu hành tinh",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Asthma",
+    "vn": "Bệnh hen suyễn",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Astonishing",
+    "vn": "Đáng kinh ngạc",
+    "category": "Intermediate"
+  },
+  {
+    "en": "Astonishment",
+    "vn": "Sự ngạc nhiên lớn",
+    "category": "Psychology"
+  },
+  {
+    "en": "Astray",
+    "vn": "Lạc đường, chệch hướng",
+    "category": "Travel & Tourism"
+  },
+  {
+    "en": "Astute",
+    "vn": "Sắc sảo, tinh khôn",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Asylum",
+    "vn": "Sự tị nạn chính trị",
+    "category": "Law & History"
+  },
+  {
+    "en": "Asymmetric",
+    "vn": "Bất đối xứng",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Athletics",
+    "vn": "Môn điền kinh",
+    "category": "Sports & Hobbies"
+  },
+  {
+    "en": "Atlas",
+    "vn": "Tập bản đồ",
+    "category": "Education"
+  },
+  {
+    "en": "Atmospheric",
+    "vn": "Thuộc khí quyển",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Attainable",
+    "vn": "Có thể đạt được",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Attentive",
+    "vn": "Chăm chú, ân cần",
+    "category": "Psychology"
+  },
+  {
+    "en": "Attest",
+    "vn": "Chứng nhận, làm chứng",
+    "category": "Law & Ethics"
+  },
+  {
+    "en": "Attic",
+    "vn": "Gác xép",
+    "category": "Home & Living"
+  },
+  {
+    "en": "Audacious",
+    "vn": "Táo bạo, liều lĩnh",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Audacity",
+    "vn": "Sự táo bạo",
+    "category": "Advanced Vocab"
+  },
+  {
+    "en": "Audible",
+    "vn": "Có thể nghe thấy",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Audio",
+    "vn": "Âm thanh",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Audition",
+    "vn": "Buổi thử giọng/thử vai",
+    "category": "Arts & Culture"
+  },
+  {
+    "en": "Augmented",
+    "vn": "Được tăng cường (AR)",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "August",
+    "vn": "Tháng 8, uy nghi",
+    "category": "Beginner"
+  },
+  {
+    "en": "Aunt",
+    "vn": "Cô, dì, bác gái",
+    "category": "Beginner"
+  },
+  {
+    "en": "Authoritative",
+    "vn": "Có thẩm quyền, hống hách",
+    "category": "Work & Career"
+  },
+  {
+    "en": "Autopsy",
+    "vn": "Sự khám nghiệm tử thi",
+    "category": "Health & Mind"
+  },
+  {
+    "en": "Autumn",
+    "vn": "Mùa thu",
+    "category": "Beginner"
+  },
+  {
+    "en": "Auxiliary",
+    "vn": "Bổ trợ, trợ lực",
+    "category": "Academic"
+  },
+  {
+    "en": "Aversion",
+    "vn": "Sự ác cảm, ghét",
+    "category": "Psychology"
+  },
+  {
+    "en": "Avid",
+    "vn": "Khao khát, say mê",
+    "category": "Psychology"
+  },
+  {
+    "en": "Awkwardly",
+    "vn": "Một cách vụng về",
+    "category": "Psychology"
+  },
+  {
+    "en": "Axis",
+    "vn": "Trục xoay",
+    "category": "Science & Space"
+  },
+  {
+    "en": "Family",
+    "vn": "gia đình",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Father",
+    "vn": "bố, cha",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Mother",
+    "vn": "mẹ",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Brother",
+    "vn": "anh/em trai",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Sister",
+    "vn": "chị/em gái",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Parent",
+    "vn": "phụ huynh, cha mẹ",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Child",
+    "vn": "đứa trẻ, con cái",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Children",
+    "vn": "trẻ em, các con",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Husband",
+    "vn": "chồng",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Wife",
+    "vn": "vợ",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Grandfather",
+    "vn": "ông",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Grandmother",
+    "vn": "bà",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Uncle",
+    "vn": "chú, bác, cậu",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Cousin",
+    "vn": "anh chị em họ",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Nephew",
+    "vn": "cháu trai (họ)",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Niece",
+    "vn": "cháu gái (họ)",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Descendant",
+    "vn": "hậu duệ, con cháu",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Guardianship",
+    "vn": "sự giám hộ",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Adaptability",
+    "vn": "Khả năng thích ứng linh hoạt",
+    "category": "Psychology"
+  },
+  {
+    "en": "Adoptive",
+    "vn": "Thuộc về nhận làm con nuôi",
+    "category": "Family & Life"
+  },
+  {
+    "en": "Argumentative",
+    "vn": "Thích tranh luận, hay tranh cãi",
+    "category": "Public Speaking"
+  },
+  {
+    "en": "Ascendancy",
+    "vn": "Vị thế thế lực đi lên",
+    "category": "History & World"
+  },
+  {
+    "en": "Attainment",
+    "vn": "Thành tựu đạt được",
+    "category": "Future & Goals"
+  },
+  {
+    "en": "Augmentation",
+    "vn": "Sự tăng cường gia tăng",
+    "category": "Tech & AI"
+  },
+  {
+    "en": "Awakening",
+    "vn": "Sự thức tỉnh nhận thức",
+    "category": "Psychology"
+  },
+  {
+    "en": "Awkwardness",
+    "vn": "Sự ngượng ngùng vụng về",
+    "category": "Psychology"
+  }
+]
