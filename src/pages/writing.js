@@ -5,6 +5,7 @@
 import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
 import { renderLifeTopicsSelectOptions } from '../data/life-topics-data.js';
+import { WRITING_EXERCISES } from '../data/skills-exercises-data.js';
 
 let currentPrompt = null;
 let timerSeconds = 0;
@@ -21,7 +22,11 @@ export function renderWritingPage() {
         <h1>Writing Studio</h1>
       </div>
       <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-        <select id="writing-cat-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;">
+        <select id="writing-preset-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;border-color:var(--color-primary);">
+          <option value="">📚 Kho 250+ Bài tập Viết (Data Bank)</option>
+          ${WRITING_EXERCISES.map(ex => `<option value="${ex.id}">✍️ ${ex.title} (${ex.category})</option>`).join('')}
+        </select>
+        <select id="writing-cat-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
           <optgroup label="✍️ Standard Formats">
             <option value="IELTS Task 2" selected>IELTS Task 2 Essay</option>
             <option value="IELTS Task 1 - Chart">IELTS Task 1 - Chart Analysis</option>
@@ -82,6 +87,17 @@ export function renderWritingPage() {
   `;
 
   document.getElementById('btn-generate-writing')?.addEventListener('click', loadNewPrompt);
+  document.getElementById('writing-preset-select')?.addEventListener('change', (e) => {
+    const selectedId = e.target.value;
+    if (selectedId) {
+      const preset = WRITING_EXERCISES.find(ex => ex.id === selectedId);
+      if (preset) {
+        currentPrompt = preset;
+        StorageService.saveWritingSession(currentPrompt, preset.category, '');
+        renderPromptContent();
+      }
+    }
+  });
   document.getElementById('essay-textarea')?.addEventListener('input', updateWordCount);
   document.getElementById('btn-save-draft')?.addEventListener('click', saveDraft);
   document.getElementById('btn-evaluate-writing')?.addEventListener('click', evaluateEssay);
@@ -139,10 +155,22 @@ function renderPromptContent() {
 
   card.innerHTML = `
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-      <span class="badge badge-amber">${currentPrompt.category}</span>
+      <span class="badge badge-amber">${currentPrompt.category || 'Writing Topic'}</span>
+      ${currentPrompt.level ? `<span class="badge badge-cyan">${currentPrompt.level}</span>` : ''}
     </div>
-    <h3 style="font-size:1.2rem;margin-bottom:8px;">${currentPrompt.topic}</h3>
-    <p style="font-size:0.92rem;color:var(--text-secondary);">${currentPrompt.prompt}</p>
+    <h3 style="font-size:1.2rem;margin-bottom:8px;">${currentPrompt.title || currentPrompt.topic}</h3>
+    <p style="font-size:0.95rem;line-height:1.6;color:var(--text-primary);margin-bottom:12px;">${currentPrompt.prompt}</p>
+
+    ${currentPrompt.sampleModelEssay ? `
+      <details style="margin-top:12px;background:var(--bg-tertiary);padding:12px 16px;border-radius:var(--radius-md);">
+        <summary style="cursor:pointer;font-weight:700;color:var(--color-primary);font-size:0.9rem;">
+          🌟 Xem Bài Viết Mẫu Band 8.0 (Model Answer)
+        </summary>
+        <div style="margin-top:10px;font-size:0.9rem;line-height:1.7;color:var(--text-secondary);white-space:pre-line;border-top:1px solid var(--border-color);padding-top:10px;">
+          ${currentPrompt.sampleModelEssay}
+        </div>
+      </details>
+    ` : ''}
   `;
 
   if (outlineList) {

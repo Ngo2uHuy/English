@@ -6,6 +6,7 @@ import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
 import { IpaService } from '../services/ipa-service.js';
 import { renderLifeTopicsSelectOptions } from '../data/life-topics-data.js';
+import { SPEAKING_EXERCISES } from '../data/skills-exercises-data.js';
 
 let currentPrompt = null;
 let currentMode = 'pronunciation'; // 'pronunciation' | 'cuecard' | 'roleplay'
@@ -23,7 +24,11 @@ export function renderSpeakingPage() {
         <h1>Speaking Studio</h1>
       </div>
       <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-        <select id="speaking-topic-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;">
+        <select id="speaking-preset-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;border-color:var(--color-primary);">
+          <option value="">📚 Kho 250+ Bài tập Nói (Data Bank)</option>
+          ${SPEAKING_EXERCISES.map(ex => `<option value="${ex.id}">🗣️ ${ex.title} (${ex.level})</option>`).join('')}
+        </select>
+        <select id="speaking-topic-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
           ${renderLifeTopicsSelectOptions('Family & Relationships')}
         </select>
         <button id="btn-generate-speaking" class="btn btn-primary btn-sm">New Prompt</button>
@@ -45,6 +50,17 @@ export function renderSpeakingPage() {
   `;
 
   document.getElementById('btn-generate-speaking')?.addEventListener('click', loadNewTopic);
+  document.getElementById('speaking-preset-select')?.addEventListener('change', (e) => {
+    const selectedId = e.target.value;
+    if (selectedId) {
+      const preset = SPEAKING_EXERCISES.find(ex => ex.id === selectedId);
+      if (preset) {
+        currentPrompt = preset;
+        StorageService.saveSpeakingSession(currentPrompt, preset.topic);
+        renderCurrentMode();
+      }
+    }
+  });
 
   container.querySelectorAll('.filter-pill').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -223,12 +239,277 @@ function renderCueCardMode(workspace) {
   `;
 }
 
+let conversationHistory = [];
+let isAiThinking = false;
+
 function renderRoleplayMode(workspace) {
+  const currentTopic = currentPrompt ? (currentPrompt.topic || currentPrompt.title) : 'Daily Conversation';
+  
+  if (conversationHistory.length === 0) {
+    conversationHistory = [
+      {
+        role: 'ai',
+        text: `Hello! I'm your AI English Tutor. Today we are practicing conversation about "${currentTopic}". How are you feeling today, and what would you like to discuss regarding this topic?`,
+        translation: `Xin chào! Tôi là Trợ lý AI luyện nói Tiếng Anh của bạn. Hôm nay chúng ta sẽ luyện tập giao tiếp về chủ đề "${currentTopic}". Bạn cảm thấy thế nào hôm nay và bạn muốn trao đổi điều gì về chủ đề này?`,
+        suggestedReplies: [
+          `I'm excited to practice speaking about ${currentTopic}!`,
+          `Could you ask me a question about ${currentTopic} to get started?`,
+          `I'd like to share my personal experience regarding ${currentTopic}.`
+        ],
+        feedback: null
+      }
+    ];
+  }
+
   workspace.innerHTML = `
-    <div class="card">
-      <h3 style="font-size:1.15rem;margin-bottom:12px;">AI Oral Scenario: ${currentPrompt.topic}</h3>
-      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:20px;">Practice natural conversation by responding to real-time prompt scenarios.</p>
-      <button class="btn btn-primary">Start Interactive Session</button>
+    <div class="workspace-single">
+      <!-- Header Banner -->
+      <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg, rgba(99,102,241,0.1), rgba(168,85,247,0.05));border-color:var(--color-primary-light);">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--color-primary);text-transform:uppercase;letter-spacing:0.5px;">🤖 AI Conversation Laboratory</div>
+            <h3 style="font-size:1.2rem;margin-top:2px;margin-bottom:4px;">Training Giao Tiếp AI — ${currentTopic}</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin:0;">Luyện nói trực tiếp bằng Giọng nói (Microphone) hoặc Gõ phím. AI sẽ phản hồi bằng Giọng đọc Chuẩn + Nhận xét ngữ pháp tức thì.</p>
+          </div>
+          <button id="btn-reset-conversation" class="btn btn-secondary btn-sm" style="gap:6px;">
+            🔄 Đổi Kịch bản / Reset Session
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Chat Stream -->
+      <div class="card" style="padding:20px;display:flex;flex-direction:column;gap:16px;max-height:520px;overflow-y:auto;" id="chat-messages-container">
+        ${renderChatMessagesHTML()}
+      </div>
+
+      <!-- Quick Suggested Reply Chips -->
+      <div id="suggested-chips-container" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;">
+        ${renderSuggestedChipsHTML()}
+      </div>
+
+      <!-- Input Controls Box -->
+      <div class="card" style="margin-top:16px;padding:16px;">
+        <div style="display:flex;gap:10px;align-items:center;">
+          <button id="btn-mic-talk" class="btn btn-primary" style="padding:12px 20px;flex-shrink:0;">
+            🎙️ Nói vào Mic
+          </button>
+          <input type="text" id="input-roleplay-msg" class="input-field" placeholder="Nhập câu trả lời bằng tiếng Anh hoặc bấm Nói vào Mic..." style="flex:1;padding:12px 16px;font-size:0.95rem;">
+          <button id="btn-send-roleplay" class="btn btn-primary" style="padding:12px 20px;flex-shrink:0;">
+            🚀 Gửi AI
+          </button>
+        </div>
+        <div id="roleplay-status-hint" style="font-size:0.8rem;color:var(--text-secondary);margin-top:8px;display:flex;justify-content:space-between;align-items:center;">
+          <span>💡 Mẹo: Bấm nút 🔊 ở mỗi tin nhắn AI để nghe phát âm chuẩn Native Voice.</span>
+          <span id="mic-live-indicator" style="color:var(--color-rose);font-weight:600;display:none;">🔴 Đang thu âm giọng nói...</span>
+        </div>
+      </div>
     </div>
   `;
+
+  bindRoleplayEvents(workspace);
+  scrollToBottomChat();
 }
+
+function renderChatMessagesHTML() {
+  return conversationHistory.map((msg, idx) => {
+    if (msg.role === 'ai') {
+      return `
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">
+            🤖
+          </div>
+          <div style="flex:1;background:var(--bg-secondary);padding:14px 18px;border-radius:16px;border:1px solid var(--border-subtle);box-shadow:var(--shadow-xs);">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-weight:700;font-size:0.85rem;color:var(--color-primary);">AI Tutor Partner</span>
+              <button class="btn btn-ghost btn-sm btn-speak-ai" data-text="${encodeURIComponent(msg.text)}" style="padding:2px 8px;font-size:0.8rem;">
+                🔊 Read Aloud
+              </button>
+            </div>
+            <div style="font-size:1rem;line-height:1.55;color:var(--text-primary);margin-bottom:8px;">${msg.text}</div>
+            ${msg.translation ? `<div style="font-size:0.85rem;color:var(--text-secondary);font-style:italic;border-top:1px dashed var(--border-subtle);padding-top:6px;">🇻🇳 ${msg.translation}</div>` : ''}
+          </div>
+        </div>
+      `;
+    } else {
+      return `
+        <div style="display:flex;gap:12px;align-items:flex-start;justify-content:flex-end;">
+          <div style="max-width:80%;background:var(--color-primary);color:#fff;padding:14px 18px;border-radius:16px;box-shadow:var(--shadow-xs);">
+            <div style="font-size:0.75rem;font-weight:600;opacity:0.9;margin-bottom:4px;text-align:right;">You (Learner)</div>
+            <div style="font-size:0.98rem;line-height:1.5;word-break:break-word;">${msg.text}</div>
+            ${msg.feedback && msg.feedback.hasCorrection ? `
+              <div style="margin-top:10px;padding:8px 12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:0.82rem;color:#fef08a;">
+                ⚠️ <strong>Gợi ý sửa lỗi:</strong> ${msg.feedback.correctedSentence}<br>
+                💡 <em>${msg.feedback.tip || ''}</em>
+              </div>
+            ` : ''}
+          </div>
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--color-emerald);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">
+            👤
+          </div>
+        </div>
+      `;
+    }
+  }).join('');
+}
+
+function renderSuggestedChipsHTML() {
+  const lastAiMsg = [...conversationHistory].reverse().find(m => m.role === 'ai');
+  if (!lastAiMsg || !lastAiMsg.suggestedReplies) return '';
+
+  return `
+    <div style="font-size:0.8rem;color:var(--text-secondary);width:100%;margin-bottom:2px;">💬 Gợi ý nhanh câu trả lời tiếp theo:</div>
+    ${lastAiMsg.suggestedReplies.map(reply => `
+      <button class="badge badge-indigo btn-suggested-chip" style="cursor:pointer;padding:6px 12px;font-size:0.82rem;border:1px solid var(--border-subtle);transition:all 0.2s;" data-reply="${encodeURIComponent(reply)}">
+        👉 "${reply}"
+      </button>
+    `).join('')}
+  `;
+}
+
+function bindRoleplayEvents(workspace) {
+  const inputEl = document.getElementById('input-roleplay-msg');
+  const btnSend = document.getElementById('btn-send-roleplay');
+  const btnMic = document.getElementById('btn-mic-talk');
+  const btnReset = document.getElementById('btn-reset-conversation');
+  const micIndicator = document.getElementById('mic-live-indicator');
+
+  btnReset?.addEventListener('click', () => {
+    conversationHistory = [];
+    renderRoleplayMode(workspace);
+  });
+
+  btnSend?.addEventListener('click', () => sendUserRoleplayMessage());
+  inputEl?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendUserRoleplayMessage();
+  });
+
+  // Read Aloud AI messages
+  workspace.querySelectorAll('.btn-speak-ai').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const text = decodeURIComponent(e.currentTarget.dataset.text);
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utt = new SpeechSynthesisUtterance(text);
+        utt.lang = 'en-US';
+        utt.rate = 0.95;
+        window.speechSynthesis.speak(utt);
+      }
+    });
+  });
+
+  // Suggested reply chips
+  workspace.querySelectorAll('.btn-suggested-chip').forEach(chip => {
+    chip.addEventListener('click', (e) => {
+      const reply = decodeURIComponent(e.currentTarget.dataset.reply);
+      if (inputEl) inputEl.value = reply;
+      sendUserRoleplayMessage();
+    });
+  });
+
+  // Voice Mic recording
+  btnMic?.addEventListener('click', () => {
+    if (!recognition) {
+      alert('Trình duyệt của bạn chưa hỗ trợ nhận diện giọng nói Speech Recognition API.');
+      return;
+    }
+
+    if (isRecording) {
+      recognition.stop();
+      isRecording = false;
+      if (btnMic) btnMic.innerHTML = '🎙️ Nói vào Mic';
+      if (micIndicator) micIndicator.style.display = 'none';
+    } else {
+      if (micIndicator) micIndicator.style.display = 'inline';
+      if (btnMic) btnMic.innerHTML = '⏹ Đang nghe... (Bấm để gửi)';
+
+      recognition.onresult = (e) => {
+        let text = '';
+        for (let i = e.resultIndex; i < e.results.length; i++) {
+          text += e.results[i][0].transcript;
+        }
+        if (inputEl) inputEl.value = text;
+      };
+
+      recognition.onend = () => {
+        isRecording = false;
+        if (btnMic) btnMic.innerHTML = '🎙️ Nói vào Mic';
+        if (micIndicator) micIndicator.style.display = 'none';
+      };
+
+      recognition.start();
+      isRecording = true;
+    }
+  });
+}
+
+async function sendUserRoleplayMessage() {
+  const inputEl = document.getElementById('input-roleplay-msg');
+  const userText = inputEl?.value?.trim();
+  if (!userText || isAiThinking) return;
+
+  isAiThinking = true;
+  if (inputEl) inputEl.value = '';
+
+  const currentTopic = currentPrompt ? (currentPrompt.topic || currentPrompt.title) : 'General Practice';
+
+  // Push user turn
+  conversationHistory.push({
+    role: 'user',
+    text: userText,
+    feedback: null
+  });
+
+  const workspace = document.getElementById('speaking-workspace');
+  if (workspace) renderRoleplayMode(workspace);
+
+  // Call Gemini AI for response
+  try {
+    const aiResponse = await GeminiService.generateAiRoleplayTurn(currentTopic, conversationHistory, userText);
+
+    // Attach feedback to last user message if any
+    if (aiResponse.feedback && aiResponse.feedback.hasCorrection) {
+      conversationHistory[conversationHistory.length - 1].feedback = aiResponse.feedback;
+    }
+
+    // Push AI reply
+    conversationHistory.push({
+      role: 'ai',
+      text: aiResponse.replyText,
+      translation: aiResponse.vietnameseMeaning,
+      suggestedReplies: aiResponse.suggestedReplies,
+      feedback: null
+    });
+
+    // Auto speak AI response
+    if ('speechSynthesis' in window && aiResponse.replyText) {
+      window.speechSynthesis.cancel();
+      const utt = new SpeechSynthesisUtterance(aiResponse.replyText);
+      utt.lang = 'en-US';
+      utt.rate = 0.95;
+      window.speechSynthesis.speak(utt);
+    }
+  } catch (err) {
+    conversationHistory.push({
+      role: 'ai',
+      text: `Thank you for sharing that! Practice makes perfect in ${currentTopic}. What else would you like to add?`,
+      translation: `Cảm ơn bạn đã chia sẻ! Luyện tập tạo nên sự hoàn hảo về ${currentTopic}. Bạn có muốn bổ sung thêm điều gì không?`,
+      suggestedReplies: [
+        "I'd like to share another thought.",
+        "Could we move on to another topic?",
+        "Thank you for the guidance!"
+      ],
+      feedback: null
+    });
+  } finally {
+    isAiThinking = false;
+    if (workspace) renderRoleplayMode(workspace);
+  }
+}
+
+function scrollToBottomChat() {
+  const container = document.getElementById('chat-messages-container');
+  if (container) {
+    container.scrollTop = container.scrollHeight;
+  }
+}
+

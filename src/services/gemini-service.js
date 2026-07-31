@@ -3,6 +3,7 @@
 // ========================================
 
 import { StorageService, PROVIDERS } from './storage-service.js';
+import { getRandomPresetExercise, getPresetExercisesBySkill } from '../data/skills-exercises-data.js';
 
 const EXERCISE_PROMPTS = {
   'fill-blanks': (topic, level, count) => `You are an English grammar exercise generator. Create exactly ${count} fill-in-the-blank exercises about "${topic}" at ${level} level.
@@ -321,32 +322,9 @@ Return ONLY valid JSON (no markdown, no code fences):
       return await this.callAPI(prompt);
     } catch (err) {
       console.warn('AI call failed, using high-quality fallback for listening:', err);
-      return {
-        title: `Daily Life & Communication: ${topic}`,
-        transcript: `Welcome to today's audio episode. Effective communication requires active listening and structured thinking. When practicing English listening, try to focus on key content words like nouns, main verbs, and adjectives rather than getting stuck on every single word. Daily practice with varied topics like technology, work, and culture will expand your vocabulary and improve your accent comprehension dramatically over time.`,
-        speaker: 'English Coach',
-        blanks: [
-          { id: 1, word: 'communication', hint: 'The sharing of information' },
-          { id: 2, word: 'listening', hint: 'Paying attention to sounds' },
-          { id: 3, word: 'vocabulary', hint: 'Words in a language' }
-        ],
-        questions: [
-          {
-            id: 1,
-            question: "What should you focus on when practicing listening?",
-            options: ["Every single word", "Key content words like nouns and main verbs", "Grammar rules only", "Translation to native language"],
-            answer: "Key content words like nouns and main verbs",
-            explanation: "Focusing on content words helps you grasp main ideas without fatigue."
-          },
-          {
-            id: 2,
-            question: "What is the benefit of daily practice across varied topics?",
-            options: ["Faster typing speed", "Expanded vocabulary & better accent comprehension", "Fewer grammar tests", "Less need for reading"],
-            answer: "Expanded vocabulary & better accent comprehension",
-            explanation: "Varied exposure builds rich contextual vocabulary."
-          }
-        ]
-      };
+      const presetList = getPresetExercisesBySkill('listening');
+      const matched = presetList.find(item => item.topic.toLowerCase().includes(topic.toLowerCase()) || topic.toLowerCase().includes(item.topic.toLowerCase()));
+      return matched || getRandomPresetExercise('listening');
     }
   },
 
@@ -367,16 +345,9 @@ Return ONLY valid JSON (no markdown, no code fences):
     try {
       return await this.callAPI(prompt);
     } catch (err) {
-      return {
-        title: `Describe a Goal You Achieved (${topic})`,
-        cueCard: `You should say:\n- What the goal was\n- How you worked towards achieving it\n- What challenges you faced\n- And explain how you felt when you achieved it`,
-        keywords: ['accomplishment', 'perseverance', 'milestone', 'dedication'],
-        sampleAnswer: `One goal I recently achieved was improving my English fluency. I set a daily habit of speaking out loud for 15 minutes, learning 10 new words, and completing interactive exercises. Though consistency was challenging at first, overcoming hesitation gave me immense self-confidence.`,
-        followUpQuestions: [
-          "Why is setting personal goals important for young people?",
-          "Do you think success is measured by achievements or effort?"
-        ]
-      };
+      const presetList = getPresetExercisesBySkill('speaking');
+      const matched = presetList.find(item => item.topic.toLowerCase().includes((topic || '').toLowerCase()) || (topic || '').toLowerCase().includes(item.topic.toLowerCase()));
+      return matched || getRandomPresetExercise('speaking');
     }
   },
 
@@ -442,34 +413,9 @@ Return ONLY valid JSON (no markdown, no code fences):
     try {
       return await this.callAPI(prompt);
     } catch (err) {
-      return {
-        title: `The Science of Habit Formation (${topic})`,
-        topic,
-        level,
-        content: `Habit formation is the process by which behaviors become automatic through repetition. Modern neuroscience reveals that habits are stored in a part of the brain called the basal ganglia, which operates efficiently to conserve mental energy.\n\nEvery habit consists of a three-step loop: the cue, the routine, and the reward. The cue acts as a trigger that signals your brain to enter an automatic mode. The routine is the behavior itself, which can be physical, mental, or emotional. Finally, the reward helps your brain determine if a particular loop is worth remembering for the future.\n\nTo build positive habits, such as daily English practice, habit stacking is an effective technique. By pairing a new practice with an established daily routine—such as listening to an English podcast while making morning coffee—you greatly increase your consistency and long-term retention.`,
-        wordCount: 154,
-        keyVocab: [
-          { word: "neuroscience", ipa: "/ˈnjʊə.rəʊˌsaɪ.əns/", translation: "Khoa học thần kinh", definition: "The scientific study of the nervous system and brain." },
-          { word: "routine", ipa: "/ruːˈtiːn/", translation: "Thói quen hàng ngày", definition: "A sequence of actions regularly followed." },
-          { word: "retention", ipa: "/rɪˈten.ʃən/", translation: "Sự ghi nhớ / duy trì", definition: "The continued use, existence, or possession of something." }
-        ],
-        questions: [
-          {
-            id: 1,
-            question: "According to the passage, which part of the brain stores habit loops?",
-            options: ["Prefrontal cortex", "Basal ganglia", "Cerebellum", "Hippocampus"],
-            answer: "Basal ganglia",
-            explanation: "The text explicitly states habits are stored in the basal ganglia to conserve energy."
-          },
-          {
-            id: 2,
-            question: "What are the three components of the habit loop?",
-            options: ["Start, Middle, End", "Cue, Routine, Reward", "Thought, Action, Result", "Focus, Practice, Mastery"],
-            answer: "Cue, Routine, Reward",
-            explanation: "The 3-step loop consists of the cue, the routine, and the reward."
-          }
-        ]
-      };
+      const presetList = getPresetExercisesBySkill('reading');
+      const matched = presetList.find(item => item.topic.toLowerCase().includes((topic || '').toLowerCase()) || (topic || '').toLowerCase().includes(item.topic.toLowerCase()));
+      return matched || getRandomPresetExercise('reading');
     }
   },
 
@@ -523,20 +469,9 @@ Return ONLY valid JSON (no markdown, no code fences):
     try {
       return await this.callAPI(prompt);
     } catch (err) {
-      return {
-        title: "Impact of Artificial Intelligence on Future Jobs",
-        category: category || "Academic Essay",
-        level: level || "B2",
-        prompt: "Some people believe that artificial intelligence will replace human jobs, while others argue that it will create new career opportunities. Discuss both views and give your own opinion.",
-        outline: [
-          "Introduction: Paraphrase prompt + State thesis (AI replaces routine tasks but opens innovative roles)",
-          "Body Paragraph 1: Concerns regarding automation of traditional jobs",
-          "Body Paragraph 2: Opportunities created by AI tech (AI operators, data analysts, creative roles)",
-          "Conclusion: Reiterate opinion on balanced collaboration between humans and AI"
-        ],
-        keyVocab: ["automation", "career trajectory", "indispensable", "technological paradigm"],
-        minWords: 200
-      };
+      const presetList = getPresetExercisesBySkill('writing');
+      const matched = presetList.find(item => item.category === category || item.topic.toLowerCase().includes((category || '').toLowerCase()));
+      return matched || getRandomPresetExercise('writing');
     }
   },
 
@@ -590,4 +525,52 @@ Return ONLY valid JSON (no markdown, no code fences):
       };
     }
   },
+
+  // ---- 🗣️ AI CONVERSATION & ROLEPLAY TRAINING ----
+  async generateAiRoleplayTurn(topic, history = [], userMessage = '') {
+    const prompt = `You are an encouraging, fluent native English AI conversation partner training the user in English speaking about "${topic}".
+User's Latest Statement: "${userMessage}"
+Conversation History: ${JSON.stringify(history.slice(-6))}
+
+Your Goal:
+1. Respond naturally to continue the conversation (2-3 sentences).
+2. Provide a clear Vietnamese translation of your response.
+3. Offer 3 suggested quick replies the user could say next.
+4. Check user input for any grammar or vocabulary mistakes and provide a polite correction if needed.
+
+Return ONLY valid JSON (no markdown, no code fences):
+{
+  "replyText": "Natural native response in English...",
+  "vietnameseMeaning": "Dịch nghĩa tiếng Việt...",
+  "suggestedReplies": [
+    "Suggested response 1...",
+    "Suggested response 2...",
+    "Suggested response 3..."
+  ],
+  "feedback": {
+    "hasCorrection": true,
+    "correctedSentence": "Corrected user sentence if there was an error",
+    "tip": "Constructive advice on grammar, vocabulary, or natural phrasing"
+  }
+}`;
+    try {
+      return await this.callAPI(prompt);
+    } catch (err) {
+      return {
+        replyText: `That's a very insightful point about ${topic}! Could you elaborate on what inspired your perspective?`,
+        vietnameseMeaning: `Đó là một góc nhìn rất sâu sắc về ${topic}! Bạn có thể nói rõ hơn điều gì đã truyền cảm hứng cho quan điểm của bạn không?`,
+        suggestedReplies: [
+          `I started learning about ${topic} because of my daily experiences.`,
+          `In my opinion, ${topic} is becoming more important every day.`,
+          "To be honest, I'd love to hear your thoughts on this first!"
+        ],
+        feedback: {
+          hasCorrection: false,
+          correctedSentence: "",
+          tip: "Your sentence is clear and natural! Keep expressing your thoughts with confidence."
+        }
+      };
+    }
+  }
 };
+

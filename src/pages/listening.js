@@ -5,6 +5,7 @@
 import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
 import { renderLifeTopicsSelectOptions } from '../data/life-topics-data.js';
+import { LISTENING_EXERCISES } from '../data/skills-exercises-data.js';
 
 let currentPassage = null;
 let currentMode = 'dictation'; // 'dictation' | 'shadowing' | 'quiz'
@@ -22,10 +23,14 @@ export function renderListeningPage() {
         <h1>Listening Mastery Studio</h1>
       </div>
       <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-        <select id="listening-topic-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;">
+        <select id="listening-preset-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;border-color:var(--color-primary);">
+          <option value="">📚 Kho 250+ Bài tập Nghe (Data Bank)</option>
+          ${LISTENING_EXERCISES.map(ex => `<option value="${ex.id}">🎧 ${ex.title} (${ex.level})</option>`).join('')}
+        </select>
+        <select id="listening-topic-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
           ${renderLifeTopicsSelectOptions('Daily Routine & Home Life')}
         </select>
-        <select id="listening-level-select" class="input-field" style="max-width:140px;padding:8px 12px;font-size:0.85rem;">
+        <select id="listening-level-select" class="input-field" style="max-width:130px;padding:8px 12px;font-size:0.85rem;">
           <option value="A2">A2 Elementary</option>
           <option value="B1" selected>B1 Intermediate</option>
           <option value="B2">B2 Upper-Int</option>
@@ -55,6 +60,18 @@ export function renderListeningPage() {
 
   // Bind Events
   document.getElementById('btn-generate-listening')?.addEventListener('click', loadNewPassage);
+  document.getElementById('listening-preset-select')?.addEventListener('change', (e) => {
+    const selectedId = e.target.value;
+    if (selectedId) {
+      const preset = LISTENING_EXERCISES.find(ex => ex.id === selectedId);
+      if (preset) {
+        stopAudio();
+        currentPassage = preset;
+        StorageService.saveListeningSession(currentPassage, preset.topic, preset.level);
+        renderCurrentMode();
+      }
+    }
+  });
 
   container.querySelectorAll('.filter-pill').forEach(btn => {
     btn.addEventListener('click', (e) => {

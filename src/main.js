@@ -19,6 +19,7 @@ import { renderReadingPage } from './pages/reading.js';
 import { renderWritingPage } from './pages/writing.js';
 import { renderYouTubePage } from './pages/youtube.js';
 import { renderGamesPage } from './pages/games.js';
+import { renderExamCenterPage } from './pages/exam-center.js';
 
 // ---- Initialize ----
 async function init() {
@@ -144,6 +145,13 @@ function handleRoute() {
       renderNavbar(activePage);
       hideSidebar();
       renderStatistics();
+      break;
+
+    case 'exam-center':
+      activePage = 'exam-center';
+      renderNavbar(activePage);
+      hideSidebar();
+      renderExamCenterPage();
       break;
 
     case 'settings':
