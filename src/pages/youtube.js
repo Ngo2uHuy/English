@@ -6,6 +6,7 @@ import { YOUTUBE_CATEGORIES, YOUTUBE_VIDEOS, getYouTubeVideoById, extractYouTube
 import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
 import { IpaService } from '../services/ipa-service.js';
+import { DictionaryService } from '../services/dictionary-service.js';
 import { showToast } from '../components/toast.js';
 
 let currentVideo = YOUTUBE_VIDEOS[0];
@@ -487,7 +488,7 @@ Return strictly a JSON array of objects with fields: start (number seconds), end
   }
 }
 
-function handleWordClick(word) {
+async function handleWordClick(word) {
   if (!word) return;
   const modal = document.getElementById('word-modal');
   const wordText = document.getElementById('modal-word-text');
@@ -496,28 +497,43 @@ function handleWordClick(word) {
   const saveBtn = document.getElementById('save-vocab-btn');
   const speechBtn = document.getElementById('modal-speech-btn');
 
-  if (wordText) wordText.textContent = word;
-  if (phonetic) phonetic.textContent = IpaService.getIPA(word);
-  if (meaning) meaning.textContent = `Nghĩa tiếng Việt của "${word}" (Bấm để tra cứu nhanh & lưu vào từ điển)`;
+  const cleanWord = String(word).toLowerCase().replace(/[^a-z0-9'-]/gi, '').trim();
+
+  if (wordText) wordText.textContent = cleanWord;
+  if (phonetic) phonetic.textContent = IpaService.getIPA(cleanWord);
+  if (meaning) meaning.textContent = 'Đang tìm nghĩa Tiếng Việt...';
+  if (modal) modal.style.display = 'flex';
+
+  const info = await DictionaryService.lookupWord(cleanWord);
+  if (!info) return;
+
+  if (wordText) wordText.textContent = info.word;
+  if (phonetic) phonetic.textContent = `${info.partOfSpeech ? info.partOfSpeech.toUpperCase() + ' • ' : ''}${info.ipa}`;
+  if (meaning) {
+    meaning.innerHTML = `
+      <div style="color:var(--color-success, #10b981);font-weight:700;font-size:1.1rem;margin-bottom:4px;">${info.vietnamese}</div>
+      ${info.definition ? `<div style="font-size:0.85rem;color:var(--text-secondary);font-weight:normal;">${info.definition}</div>` : ''}
+    `;
+  }
 
   if (speechBtn) {
     speechBtn.onclick = () => {
-      const utter = new SpeechSynthesisUtterance(word);
-      utter.lang = 'en-US';
-      window.speechSynthesis.speak(utter);
+      DictionaryService.speakWord(info.word, info.audioUrl);
     };
   }
 
   if (saveBtn) {
     saveBtn.onclick = () => {
-      StorageService.saveWord({ word, definition: `Meaning of ${word}`, example: currentVideo.subtitles[activeSubtitleIdx]?.en || '' });
-      showToast(`💾 Saved "${word}" to Vocabulary Notebook!`);
+      StorageService.saveWord({
+        word: info.word,
+        ipa: info.ipa,
+        definition: info.vietnamese,
+        enDefinition: info.definition,
+        example: currentVideo?.subtitles?.[activeSubtitleIdx]?.en || info.example || ''
+      });
+      showToast(`💾 Đã lưu từ "${info.word}" (${info.vietnamese}) vào Notebook!`);
       if (modal) modal.style.display = 'none';
     };
-  }
-
-  if (modal) {
-    modal.style.display = 'flex';
   }
 }
 

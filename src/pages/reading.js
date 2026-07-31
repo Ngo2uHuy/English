@@ -4,6 +4,7 @@
 
 import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
+import { DictionaryService } from '../services/dictionary-service.js';
 import { renderLifeTopicsSelectOptions } from '../data/life-topics-data.js';
 import { READING_EXERCISES } from '../data/skills-exercises-data.js';
 
@@ -156,35 +157,15 @@ function renderArticleContent() {
   document.getElementById('btn-finish-reading')?.addEventListener('click', calculateReadingWpm);
 }
 
-function lookupWord(word) {
+async function lookupWord(word) {
   if (!word) return;
   const modal = document.getElementById('word-modal');
   const modalBody = document.getElementById('modal-word-body');
   if (!modal || !modalBody) return;
 
   modal.style.display = 'flex';
-  modalBody.innerHTML = `
-    <div style="font-size:0.8rem;font-weight:700;color:var(--color-primary);text-transform:uppercase;margin-bottom:4px;">Word Lookup</div>
-    <h2 style="font-size:1.8rem;margin-bottom:8px;">${word}</h2>
-    <p style="color:var(--text-secondary);font-size:0.9rem;">Fetching definition and translation...</p>
-  `;
-
-  setTimeout(() => {
-    modalBody.innerHTML = `
-      <div style="font-size:0.8rem;font-weight:700;color:var(--color-primary);text-transform:uppercase;margin-bottom:4px;">Vocabulary Definition</div>
-      <h2 style="font-size:1.8rem;margin-bottom:8px;">${word}</h2>
-      <div style="padding:12px;background:var(--bg-secondary);border-radius:var(--radius-md);margin-bottom:14px;">
-        <p style="font-weight:600;font-size:0.95rem;color:var(--text-primary);">Vietnamese: / definition of ${word}</p>
-      </div>
-      <button id="btn-save-vocab" class="btn btn-primary btn-sm" style="width:100%;">Save to Notebook</button>
-    `;
-
-    document.getElementById('btn-save-vocab')?.addEventListener('click', () => {
-      StorageService.saveVocabWord({ word, definition: `Definition of ${word}` });
-      renderVocabNotebook();
-      modal.style.display = 'none';
-    });
-  }, 300);
+  await DictionaryService.renderModalContent(modalBody, word);
+  renderVocabNotebook();
 }
 
 function calculateReadingWpm() {
