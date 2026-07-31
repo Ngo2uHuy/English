@@ -5,6 +5,7 @@
 import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
 import { renderLifeTopicsSelectOptions } from '../data/life-topics-data.js';
+import { READING_EXERCISES } from '../data/skills-exercises-data.js';
 
 let currentArticle = null;
 let readingStartTime = null;
@@ -21,10 +22,14 @@ export function renderReadingPage() {
         <h1>Active Reading Studio</h1>
       </div>
       <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-        <select id="reading-topic-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;">
+        <select id="reading-preset-select" class="input-field" style="max-width:280px;padding:8px 12px;font-size:0.85rem;border-color:var(--color-primary);">
+          <option value="">📚 Kho 250+ Bài tập Đọc (Data Bank)</option>
+          ${READING_EXERCISES.map(ex => `<option value="${ex.id}">📖 ${ex.title} (${ex.level})</option>`).join('')}
+        </select>
+        <select id="reading-topic-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
           ${renderLifeTopicsSelectOptions('Emotions & Psychology')}
         </select>
-        <select id="reading-level-select" class="input-field" style="max-width:140px;padding:8px 12px;font-size:0.85rem;">
+        <select id="reading-level-select" class="input-field" style="max-width:130px;padding:8px 12px;font-size:0.85rem;">
           <option value="B1">B1 Intermediate</option>
           <option value="B2" selected>B2 Upper-Int</option>
           <option value="C1">C1 Advanced</option>
@@ -77,6 +82,17 @@ export function renderReadingPage() {
   `;
 
   document.getElementById('btn-generate-reading')?.addEventListener('click', loadNewArticle);
+  document.getElementById('reading-preset-select')?.addEventListener('change', (e) => {
+    const selectedId = e.target.value;
+    if (selectedId) {
+      const preset = READING_EXERCISES.find(ex => ex.id === selectedId);
+      if (preset) {
+        currentArticle = preset;
+        StorageService.saveReadingSession(currentArticle, preset.topic, preset.level);
+        renderArticleContent();
+      }
+    }
+  });
   document.getElementById('btn-close-modal')?.addEventListener('click', () => {
     const modal = document.getElementById('word-modal');
     if (modal) modal.style.display = 'none';
