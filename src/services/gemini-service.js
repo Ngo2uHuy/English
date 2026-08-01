@@ -246,15 +246,28 @@ export const GeminiService = {
       throw new Error(`Empty response from ${providerObj.name}`);
     }
 
-    // Parse JSON, handling possible markdown code fences
+    // Parse JSON, handling possible markdown code fences and conversational wrappers
     let cleaned = content.trim();
-    if (cleaned.startsWith('```')) {
-      cleaned = cleaned.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
+    if (cleaned.includes('```')) {
+      const match = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+      if (match && match[1]) {
+        cleaned = match[1].trim();
+      } else {
+        cleaned = cleaned.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
+      }
     }
 
     try {
       return JSON.parse(cleaned);
     } catch (e) {
+      const jsonMatch = cleaned.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+      if (jsonMatch) {
+        try {
+          return JSON.parse(jsonMatch[0]);
+        } catch (e2) {
+          // Fallback failed
+        }
+      }
       console.error('Failed to parse API response:', cleaned);
       throw new Error(`Failed to parse response from ${providerObj.name}. Please try again.`);
     }

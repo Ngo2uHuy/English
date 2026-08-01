@@ -4,6 +4,7 @@
 
 import { IpaService } from './ipa-service.js';
 import { StorageService } from './storage-service.js';
+import { SoundService } from './sound-service.js';
 import { showToast } from '../components/toast.js';
 
 const dictionaryCache = new Map();
@@ -58,10 +59,10 @@ export const DictionaryService = {
           const entry = dictData[0];
 
           if (entry.phonetic) {
-            result.ipa = entry.phonetic;
+            result.ipa = `/${IpaService.formatToOxfordIPA(entry.phonetic)}/`;
           } else if (Array.isArray(entry.phonetics)) {
             const ph = entry.phonetics.find(p => p.text);
-            if (ph) result.ipa = ph.text;
+            if (ph) result.ipa = `/${IpaService.formatToOxfordIPA(ph.text)}/`;
           }
 
           if (Array.isArray(entry.phonetics)) {
@@ -107,12 +108,7 @@ export const DictionaryService = {
   },
 
   speakTTS(text) {
-    if (!text || !('speechSynthesis' in window)) return;
-    window.speechSynthesis.cancel();
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = 'en-US';
-    utter.rate = 0.9;
-    window.speechSynthesis.speak(utter);
+    SoundService.speakText(text, { rate: 0.9 });
   },
 
   /**

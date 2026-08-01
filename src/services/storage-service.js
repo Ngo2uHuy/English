@@ -75,23 +75,42 @@ const KEYS = {
   GAME_STATS: 'grammarai_game_stats',
 };
 
-async function saveToSupabase(key, value) {
+const syncQueue = new Map();
+let syncTimer = null;
+
+function scheduleSupabaseSync(key, value) {
   if (!isSupabaseConfigured()) return;
+  syncQueue.set(key, value);
+
+  if (syncTimer) clearTimeout(syncTimer);
+  syncTimer = setTimeout(flushSupabaseSync, 1000);
+}
+
+async function flushSupabaseSync() {
+  if (syncQueue.size === 0 || !isSupabaseConfigured()) return;
   const client = getSupabaseClient();
   if (!client) return;
+
+  const items = [];
+  syncQueue.forEach((val, k) => {
+    items.push({
+      data_key: k,
+      data_value: val,
+      updated_at: new Date().toISOString(),
+    });
+  });
+
+  syncQueue.clear();
 
   try {
     const { error } = await client
       .from('user_app_data')
-      .upsert(
-        { data_key: key, data_value: value, updated_at: new Date().toISOString() },
-        { onConflict: 'data_key' }
-      );
+      .upsert(items, { onConflict: 'data_key' });
     if (error) {
-      console.warn('[Supabase Sync Warning] Failed to save key:', key, error.message);
+      console.warn('[Supabase Batch Sync Warning]:', error.message);
     }
   } catch (err) {
-    console.error('[Supabase Sync Error]:', err);
+    console.error('[Supabase Batch Sync Error]:', err);
   }
 }
 
@@ -107,8 +126,8 @@ function get(key, fallback = null) {
 function set(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
-    // Asynchronously sync with Supabase cloud storage
-    saveToSupabase(key, value);
+    // Asynchronously debounced sync with Supabase cloud storage
+    scheduleSupabaseSync(key, value);
   } catch (e) {
     console.error('Storage error:', e);
   }

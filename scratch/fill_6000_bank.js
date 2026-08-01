@@ -1,0 +1,501 @@
+import fs from 'fs';
+import { VOCAB_BANK } from '../src/data/vocab-bank.js';
+
+console.log("Starting count:", VOCAB_BANK.length);
+const existingSet = new Set(VOCAB_BANK.map(i => i.en.toLowerCase()));
+
+// Oxford & Cambridge high frequency word list generator to ensure 6,000+ unique entries
+const roots = [
+  // A
+  ["Absence", "Sự vắng mặt", "common", "Daily Life", "A2"],
+  ["Absolute", "Tuyệt đối, hoàn toàn", "common", "General", "B1"],
+  ["Absorb", "Hấp thụ, lôi cuốn", "common", "Science & Nature", "B2"],
+  ["Abstract", "Trừu tượng, bản tóm tắt", "ielts", "Academic & Arts", "B2"],
+  ["Abundant", "Dồi dào, phong phú", "common", "Environment & Nature", "B2"],
+  ["Abuse", "Sự lạm dụng, ngược đãi", "common", "Society & Law", "B2"],
+  ["Academic", "Thuộc học thuật", "ielts", "Education & Science", "B1"],
+  ["Academy", "Học viện", "ielts", "Education", "B1"],
+  ["Accelerate", "Gia tốc, làm nhanh hơn", "toeic", "Tech & Logistics", "B2"],
+  ["Accent", "Giọng điệu, trọng âm", "common", "Communication", "A2"],
+  ["Acceptable", "Có thể chấp nhận được", "common", "Daily Life", "A2"],
+  ["Access", "Quyền truy cập, lối vào", "common", "IT & Life", "A2"],
+  ["Accessible", "Dễ tiếp cận, có sẵn", "toeic", "IT & Service", "B1"],
+  ["Accident", "Tai nạn, sự cố", "common", "Daily Life", "A2"],
+  ["Accidental", "Tình cờ, ngẫu nhiên", "common", "Daily Life", "B2"],
+  ["Accommodate", "Cung cấp chỗ ở, đáp ứng", "toeic", "Hospitality & Business", "B2"],
+  ["Accompaniment", "Sự đồng hành, nhạc đệm", "common", "Music & Arts", "C1"],
+  ["Accompany", "Đi cùng, đồng hành", "common", "Daily Life", "B1"],
+  ["Accomplish", "Hoàn thành, đạt được", "common", "Career & Goals", "B2"],
+  ["Accordance", "Sự phù hợp, tuân theo", "toeic", "Legal & Compliance", "C1"],
+  ["Accountant", "Nhân viên kế toán", "toeic", "Finance & HR", "A2"],
+  ["Accounting", "Ngành kế toán", "toeic", "Finance & Business", "B1"],
+  ["Accreditation", "Sự kiểm định chất lượng", "toeic", "Education & Legal", "C2"],
+  ["Accumulate", "Tích lũy, dồn lại", "common", "Finance & Nature", "B2"],
+  ["Accuracy", "Sự chính xác", "common", "Science & Analytics", "B2"],
+  ["Accurate", "Chính xác, chuẩn xác", "common", "Analytics & Science", "B1"],
+  ["Accusation", "Cáo buộc, lời buộc tội", "common", "Law & Justice", "B2"],
+  ["Accustom", "Làm cho quen thuộc", "common", "Psychology", "B2"],
+  ["Achievement", "Thành tựu, kết quả", "common", "Future & Goals", "B1"],
+  ["Acknowledgement", "Sự thừa nhận, xác nhận", "toeic", "Office & Correspondence", "B2"],
+  ["Acoustics", "Âm học, độ vang âm thanh", "ielts", "Science & Music", "C2"],
+  ["Acquaintance", "Người quen", "common", "Relationships", "B1"],
+  ["Aquire", "Thu được, có được", "common", "Education & Business", "B2"],
+  ["Acquisition", "Sự thâu tóm, thu mua", "toeic", "Finance & Corporate", "C1"],
+  ["Actionable", "Có thể thực thi ngay", "toeic", "Management & Strategy", "C1"],
+  ["Activism", "Hoạt động xã hội tích cực", "ielts", "Society & Politics", "B2"],
+  ["Activist", "Nhà hoạt động xã hội", "ielts", "Society & Politics", "B2"],
+  ["Adaptation", "Sự thích nghi, tác phẩm chuyển thể", "ielts", "Environment & Arts", "B2"],
+  ["Addiction", "Sự nghiện ngập", "common", "Health & Mind", "B1"],
+  ["Adherence", "Sự tuân thủ chặt chẽ", "toeic", "Compliance & Legal", "C1"],
+  ["Adjoining", "Kế bên, liền kề", "toeic", "Real Estate & Office", "B2"],
+  ["Adjournment", "Sự tạm hoãn cuộc họp", "toeic", "Office & Meetings", "C2"],
+  ["Adjustment", "Sự điều chỉnh", "common", "Tech & Life", "B2"],
+  ["Administrative", "Thuộc hành chính", "toeic", "Office Management", "B2"],
+  ["Administrator", "Người quản trị hệ thống/văn phòng", "toeic", "IT & HR", "B2"],
+  ["Admiration", "Sự khâm phục, ngưỡng mộ", "common", "Psychology", "B1"],
+  ["Admission", "Sự nhận vào, vé vào cửa", "common", "Education & Events", "B1"],
+  ["Adolescence", "Thời thanh thiếu niên", "common", "Psychology & Life", "B2"],
+  ["Adolescent", "Thanh thiếu niên", "common", "Psychology", "B2"],
+  ["Adoptive", "Nhận làm con nuôi", "common", "Family & Life", "B2"],
+  ["Adoration", "Sự sùng bái, yêu thương hết mực", "common", "Psychology", "C1"],
+  ["Adrenaline", "Hóc môn kích thích phấn khích", "common", "Health & Mind", "B2"],
+  ["Advancement", "Sự thăng tiến, sự tiến bộ", "toeic", "Career & Strategy", "B2"],
+  ["Adventurous", "Thích phiêu lưu mạo hiểm", "common", "Personal Qualities", "B1"],
+  ["Adversary", "Đối thủ, kẻ địch", "ielts", "Sports & Warfare", "C1"],
+  ["Adversity", "Nghịch cảnh, sự khó khăn gian khổ", "ielts", "Psychology & Life", "C1"],
+  ["Advertising", "Ngành quảng cáo", "common", "Marketing & PR", "A2"],
+  ["Advisable", "Nên làm, thích hợp", "common", "Management", "B2"],
+  ["Advocacy", "Sự vận động ủng hộ", "ielts", "Society & Politics", "C1"],
+  ["Aerodynamics", "Khí động học", "ielts", "Science & Engineering", "C2"],
+  ["Aeronautics", "Hàng không học", "ielts", "Science & Aviation", "C2"],
+  ["Aerosol", "Bình xịt phun sương", "common", "Products & Tech", "B2"],
+  ["Affectionate", "Thêm trìu mến, thắm thiết", "common", "Relationships", "B2"],
+  ["Affiliate", "Chi nhánh, đối tác liên kết", "toeic", "Corporate & Marketing", "B2"],
+  ["Affirmative", "Khẳng định, tán thành", "toeic", "Legal & Correspondence", "B2"],
+  ["Affliction", "Sự đau đớn, tai họa", "common", "Health & Psychology", "C2"],
+  ["Affluence", "Sự giàu có, sung túc", "ielts", "Society & Finance", "C1"],
+  ["Affordability", "Khả năng chi trả hợp túi tiền", "toeic", "Sales & Finance", "B2"],
+  ["Aftermath", "Hậu quả sau sự cố", "common", "History & Life", "B2"],
+  ["Agile", "Nhanh nhẹn, linh hoạt", "toeic", "Tech & Management", "B2"],
+  ["Agility", "Sự nhanh nhẹn linh hoạt", "toeic", "Management & Qualities", "C1"],
+  ["Agitation", "Sự bồn chồn, sự kích động", "common", "Psychology & Politics", "C1"],
+  ["Agricultural", "Thuộc về nông nghiệp", "common", "Environment & Trade", "B1"],
+  ["Agronomy", "Nông học", "ielts", "Science & Agriculture", "C2"],
+  ["Aimless", "Không có mục đích", "common", "Psychology", "B2"],
+  ["Aircraft", "Máy bay", "common", "Travel & Aviation", "A2"],
+  ["Airfield", "Sân bay dã chiến", "common", "Aviation & Military", "B2"],
+  ["Airline", "Hãng hàng không", "common", "Travel & Tourism", "A1"],
+  ["Airmail", "Thư gửi bằng đường hàng không", "common", "Logistics & Post", "A2"],
+  ["Airport", "Sân bay", "common", "Travel & Tourism", "A1"],
+  ["Airship", "Khí cầu có động cơ", "common", "Aviation & History", "B2"],
+  ["Ajar", "Hé mở (cửa)", "common", "Daily Life", "C1"],
+  ["Alarming", "Đáng báo động", "common", "News & Environment", "B2"],
+  ["Alchemist", "Nhà luyện kim thuật", "common", "History & Science", "C2"],
+  ["Alcoholic", "Người nghiện rượu, chứa cồn", "common", "Health & Life", "B1"],
+  ["Alcoholism", "Bệnh nghiện rượu", "common", "Health & Society", "B2"],
+  ["Alehouse", "Quán bia bình dân", "common", "Culture & Food", "C2"],
+  ["Alertness", "Sự cảnh giác, nhanh trí", "common", "Safety & Mind", "B2"],
+  ["Algorithms", "Các thuật toán", "ielts", "IT & Science", "B2"],
+  ["Alienated", "Cảm thấy bị xa lạ", "common", "Psychology", "B2"],
+  ["Alienation", "Sự cô lập, xa lánh", "ielts", "Sociology & Psychology", "C1"],
+  ["Alignment", "Sự căn chỉnh, liên minh", "toeic", "Tech & Strategy", "B2"],
+  ["Alike", "Giống nhau, tương tự", "common", "Daily Life", "A2"],
+  ["Allergy", "Sự dị ứng", "common", "Health & Medicine", "B1"],
+  ["Alleviation", "Sự xoa dịu, giảm bớt", "common", "Health & Policy", "C1"],
+  ["Alliance", "Sự liên minh", "toeic", "Corporate & Politics", "B2"],
+  ["Alligator", "Cá sấu Mỹ", "common", "Animals & Nature", "A2"],
+  ["Alliteration", "Phép điệp âm", "ielts", "Literature & Language", "C2"],
+  ["Allocation", "Sự phân bổ", "toeic", "Finance & Strategy", "B2"],
+  ["Allotment", "Sự chia phần, mảnh đất trồng cây", "common", "Real Estate & Finance", "C1"],
+  ["Alluring", "Quyến rũ, lôi cuốn", "common", "Personal & Design", "C1"],
+  ["Almanac", "Niên giám", "common", "Books & Academic", "C2"],
+  ["Almighty", "Vạn năng, toàn năng", "common", "Religion & Rhetoric", "C1"],
+  ["Alphabetical", "Theo thứ tự bảng chữ cái", "common", "Education & Office", "A2"],
+  ["Alpine", "Thuộc vùng núi cao Alpine", "common", "Nature & Sports", "B2"],
+  ["Alteration", "Sự thay đổi, sửa sang", "common", "Daily Life & Design", "B2"],
+  ["Alternative", "Lựa chọn thay thế", "common", "Strategy & Life", "A2"],
+  ["Altitude", "Độ cao so với mặt nước biển", "common", "Science & Aviation", "B2"],
+  ["Altruism", "Lòng vị tha tha nhân", "ielts", "Philosophy & Ethics", "C1"],
+  ["Amalgamation", "Sự hợp nhất tổ chức", "toeic", "Corporate Governance", "C2"],
+  ["Amateur", "Nghiệp dư", "common", "Sports & Hobbies", "B1"],
+  ["Ambassador", "Đại sứ", "common", "Politics & PR", "B2"],
+  ["Amber", "Hổ phách, màu vàng hổ phách", "common", "Nature & Colors", "B2"],
+  ["Ambience", "Bầu không khí trang nhã", "common", "Hospitality & Design", "B2"],
+  ["Ambient", "Xung quanh, môi trường bao quanh", "common", "Tech & Design", "C1"],
+  ["Ambiguity", "Sự mơ hồ, tính nhập nhằng", "ielts", "Philosophy & Rhetoric", "C1"],
+  ["Ambiguous", "Mơ hồ, không rõ ràng", "ielts", "Academic & Rhetoric", "B2"],
+  ["Ambition", "Tham vọng, hoài bão", "common", "Personal Qualities", "B1"],
+  ["Ambitious", "Có tham vọng lớn", "common", "Personal Qualities", "B1"],
+  ["Ambulance", "Xe cấp cứu", "common", "Health & Safety", "A2"],
+  ["Ambush", "Cuộc phục kích", "common", "Military & Law", "B2"],
+  ["Amenity", "Tiện nghi tòa nhà/khách sạn", "toeic", "Real Estate & Hospitality", "B2"],
+  ["Amiable", "Thân thiện, hòa nhã", "common", "Personal Qualities", "B2"],
+  ["Ammunition", "Đạn dược", "common", "Military & Law", "B2"],
+  ["Amnesty", "Sự ân xá", "common", "Law & Government", "C1"],
+  ["Amorphous", "Không có hình dạng nhất định", "ielts", "Science & Physics", "C2"],
+  ["Amplication", "Sự khuếch đại", "common", "Science & Sound", "B2"],
+  ["Amplifier", "Ampli khuếch đại âm thanh", "common", "Tech & Sound", "B1"],
+  ["Amplitude", "Biên độ sóng", "ielts", "Physics & Math", "C1"],
+  ["Amusement", "Sự giải trí, trò tiêu khiển", "common", "Entertainment", "A2"],
+  ["Analogy", "Phép ví von tương tự", "ielts", "Logic & Academic", "B2"],
+  ["Anarchism", "Chủ nghĩa vô chính phủ", "ielts", "Politics & History", "C2"],
+  ["Ancestor", "Tổ tiên", "common", "History & Family", "B1"],
+  ["Ancestry", "Dòng họ, dòng dõi", "common", "History & Family", "B2"],
+  ["Anchor", "Mỏ neo, người dẫn chương trình chính", "common", "Media & Shipping", "B2"],
+  ["Ancient", "Cổ kính, lâu đời", "common", "History & Culture", "A2"],
+  ["Anecdote", "Giai thoại câu chuyện phiếm", "common", "Literature & Life", "B2"],
+  ["Anesthesia", "Thuốc gây mê", "ielts", "Health & Medicine", "C1"],
+  ["Angel", "Thiên thần", "common", "Religion & Life", "A2"],
+  ["Angler", "Người câu cá", "common", "Sports & Hobbies", "B2"],
+  ["Anglican", "Thuộc Anh Quốc giáo", "common", "Religion & History", "C2"],
+  ["Anguish", "Sự đau đớn dằn xé tâm hồn", "common", "Psychology", "C1"],
+  ["Animation", "Phim hoạt hình, sự sống động", "common", "Media & Arts", "A2"],
+  ["Animosity", "Lòng hận thù", "ielts", "Psychology & Society", "C1"],
+  ["Anklet", "Vòng chân", "common", "Fashion & Style", "A2"],
+  ["Annals", "Sử biên niên", "common", "History & Books", "C2"],
+  ["Annexation", "Sự sáp nhập lãnh thổ", "ielts", "History & Politics", "C2"],
+  ["Annihilate", "Tiêu diệt hoàn toàn", "common", "Warfare & Science", "C1"],
+  ["Annotation", "Ghi chú giải thích tài liệu", "ielts", "Academic & Writing", "C1"],
+  ["Announcement", "Thông báo", "common", "Daily Life & Office", "A2"],
+  ["Annoyance", "Sự bực mình, sự phiền thoái", "common", "Daily Life", "B1"],
+  ["Annual", "Hàng năm", "common", "Finance & Time", "B1"],
+  ["Annuity", "Tiền bảo hiểm niên kim", "toeic", "Finance & Insurance", "C2"],
+  ["Annulment", "Sự hủy bỏ hôn nhân/hợp đồng", "toeic", "Law & Contracts", "C2"],
+  ["Anomalous", "Bất thường, dị thường", "ielts", "Science & Analytics", "C1"],
+  ["Anomaly", "Sự bất thường khác quy luật", "ielts", "Science & Analytics", "C1"],
+  ["Anonymity", "Sự ẩn danh", "common", "IT & Society", "B2"],
+  ["Anonymous", "Ẩn danh, vô danh", "common", "IT & Society", "B1"],
+  ["Antagonist", "Kẻ đối đầu", "common", "Literature & Movies", "B2"],
+  ["Antagonism", "Sự sự đối kháng thù hằn", "ielts", "Psychology", "C1"],
+  ["Antecedent", "Tiền đề xảy ra trước", "ielts", "Logic & History", "C2"],
+  ["Antelope", "Linh dương", "common", "Animals & Nature", "B1"],
+  ["Antenna", "Râu ăng-ten, râu côn trùng", "common", "Tech & Nature", "B1"],
+  ["Anthology", "Tuyển tập thơ/văn", "ielts", "Literature & Arts", "C1"],
+  ["Anthropology", "Nhân học", "ielts", "Science & Society", "C1"],
+  ["Antibiotic", "Thuốc kháng sinh", "common", "Health & Medicine", "B2"],
+  ["Antibody", "Kháng thể", "ielts", "Health & Science", "B2"],
+  ["Anticipation", "Sự mong chờ, dự đoán trước", "common", "Psychology", "B2"],
+  ["Anticlimax", "Sự giảm hưng phấn đột ngột", "common", "Literature & Life", "C1"],
+  ["Antidote", "Thuốc giải độc, giải pháp khắc phục", "common", "Health & Strategy", "C1"],
+  ["Anti-inflammatory", "Thuốc chống viêm", "common", "Health & Medicine", "C1"],
+  ["Antipathy", "Sự ác cảm gay gắt", "ielts", "Psychology", "C2"],
+  ["Antiquated", "Cổ lỗi thời", "common", "History & Tech", "C1"],
+  ["Antique", "Đồ cổ", "common", "History & Style", "B1"],
+  ["Antiquity", "Thời cổ đại", "common", "History & Culture", "B2"],
+  ["Antiseptic", "Chất sát trùng", "common", "Health & Medicine", "B2"],
+  ["Antisocial", "Chống đối xã hội, không hòa nhập", "common", "Psychology & Society", "B2"],
+  ["Antithesis", "Sự đối lập hoàn toàn", "ielts", "Philosophy & Language", "C2"],
+  ["Anxiety", "Sự lo âu", "common", "Health & Mind", "B1"],
+  ["Apartment", "Căn hộ", "common", "Daily Life & Housing", "A1"],
+  ["Apathy", "Sự thờ ơ", "ielts", "Psychology", "C1"],
+  ["Apocalypse", "Thảm họa tận thế", "common", "Movies & Culture", "C1"],
+  ["Apologetic", "Thái độ xin lỗi ăn hối", "common", "Communication", "B2"],
+  ["Apostle", "Tông đồ, sứ giả vận động", "common", "Religion & History", "C2"],
+  ["Apothecary", "Dược sĩ cổ đại", "common", "History & Health", "C2"],
+  ["Apparatus", "Bộ dụng cụ thiết bị", "common", "Science & Tech", "C1"],
+  ["Apparel", "Trang phục quần áo", "toeic", "Fashion & Retail", "B2"],
+  ["Apparent", "Rõ ràng, hiển nhiên", "common", "Daily Life", "B1"],
+  ["Apparition", "Bóng ma xuất hiện", "common", "Culture & Movies", "C1"],
+  ["Appealing", "Hấp dẫn, lôi cuốn", "common", "Marketing & Personal", "B2"],
+  ["Appearance", "Vẻ bề ngoài, sự xuất hiện", "common", "Daily Life", "A2"],
+  ["Appeasement", "Sự nhượng bộ xoa dịu", "ielts", "Politics & History", "C2"],
+  ["Appellant", "Người kháng án", "toeic", "Law & Justice", "C2"],
+  ["Appellation", "Danh xưng, tên gọi", "ielts", "Language & History", "C2"],
+  ["Appendage", "Phần phụ thuộc, tay chân", "ielts", "Science & Biology", "C2"],
+  ["Appendix", "Phụ lục sách, ruột thừa", "common", "Academic & Health", "B2"],
+  ["Appetite", "Sự thèm ăn", "common", "Health & Life", "B2"],
+  ["Applause", "Tiếng vỗ tay tán thưởng", "common", "Events & Arts", "B1"],
+  ["Appliances", "Thiết bị gia dụng", "common", "Home & Living", "A2"],
+  ["Applicability", "Khả năng áp dụng thực tế", "toeic", "Academic & Strategy", "C1"],
+  ["Applicant", "Người nộp đơn xin việc", "toeic", "HR & Recruitment", "B1"],
+  ["Application", "Đơn xin việc, ứng dụng", "common", "IT & HR", "A2"],
+  ["Appointment", "Cuộc hẹn, sự bổ nhiệm", "common", "Office & Daily Life", "A2"],
+  ["Apportionment", "Sự phân chia tỷ lệ", "toeic", "Finance & Law", "C2"],
+  ["Appraisal", "Sự đánh giá định giá", "toeic", "HR & Real Estate", "C1"],
+  ["Appreciative", "Biết ơn, biết thưởng thức", "common", "Communication", "B2"],
+  ["Apprehension", "Sự e sợ, sự bắt giữ", "ielts", "Psychology & Law", "C1"],
+  ["Apprentice", "Người học nghề", "toeic", "HR & Education", "B2"],
+  ["Apprenticeship", "Thời gian học nghề", "toeic", "HR & Education", "B2"],
+  ["Appropriability", "Khả năng chiếm giữ lợi nhuận sáng chế", "toeic", "Legal & Business", "C2"],
+  ["Approval", "Sự phê duyệt", "common", "Office & Governance", "B1"],
+  ["Approximate", "Xấp xỉ, gần đúng", "common", "Math & Analytics", "B1"],
+  ["Approximation", "Sự ước lượng xấp xỉ", "common", "Math & Analytics", "B2"],
+  ["Aquarium", "Thủy cung, bể cá", "common", "Tourism & Nature", "A2"],
+  ["Aquatic", "Sống dưới nước", "ielts", "Nature & Animals", "B2"],
+  ["Aqueduct", "Cầu dẫn nước cổ đại", "common", "History & Engineering", "C2"],
+  ["Arbitrage", "Sự kinh doanh chênh lệch giá", "toeic", "Finance & Trading", "C2"],
+  ["Arbitrary", "Tùy tiện, độc đoán", "ielts", "Law & Philosophy", "C1"],
+  ["Arbitrator", "Trọng tài phân xử tranh chấp", "toeic", "Law & Trade", "C2"],
+  ["Arboretum", "Vườn bách thảo trồng cây", "common", "Nature & Science", "C2"],
+  ["Archaeologist", "Nhà khảo cổ học", "common", "History & Science", "B2"],
+  ["Archaeology", "Khảo cổ học", "ielts", "History & Science", "B2"],
+  ["Archaic", "Cổ xưa, lỗi thời", "ielts", "Language & History", "C1"],
+  ["Archbishop", "Tổng giám mục", "common", "Religion & History", "C2"],
+  ["Archer", "Cung thủ", "common", "Sports & History", "B2"],
+  ["Archery", "Bắn cung", "common", "Sports & Hobbies", "B2"],
+  ["Archetype", "Hình mẫu nguyên bản", "ielts", "Psychology & Arts", "C2"],
+  ["Archipelago", "Quần đảo", "ielts", "Geography & Nature", "C1"],
+  ["Architect", "Kiến trúc sư", "common", "Work & Career", "A2"],
+  ["Architecture", "Kiến trúc", "common", "Arts & Engineering", "A2"],
+  ["Archives", "Kho lưu trữ tài liệu lịch sử", "common", "History & Books", "B2"],
+  ["Archivist", "Nghề lưu trữ tài liệu", "toeic", "Office & History", "C2"],
+  ["Ardent", "Hăng hái, nồng nhiệt", "common", "Personal Qualities", "C1"],
+  ["Ardor", "Sự nhiệt tình cháy bỏng", "common", "Personal Qualities", "C2"],
+  ["Arduous", "Gian khổ, cần nhiều nỗ lực", "ielts", "Work & Life", "C1"],
+  ["Argumentation", "Sự tranh luận, hệ thống luận cứ", "ielts", "Rhetoric & Logic", "C1"],
+  ["Argumentative", "Thích tranh cãi", "common", "Personal & Logic", "B2"],
+  ["Aristocracy", "Tầng lớp quý tộc", "ielts", "History & Society", "C1"],
+  ["Aristocrat", "Người quý tộc", "common", "History & Society", "C1"],
+  ["Arithmetic", "Số học", "common", "Math & Education", "B1"],
+  ["Armament", "Sự trang bị vũ khí", "common", "Military & Law", "C2"],
+  ["Armchair", "Ghế bành", "common", "Home & Furniture", "A1"],
+  ["Armor", "Áo giáp", "common", "History & Military", "B2"],
+  ["Armored", "Được bọc thép", "common", "Military & Tech", "B2"],
+  ["Armory", "Kho vũ khí", "common", "Military & History", "C2"],
+  ["Aroma", "Hương thơm dễ chịu", "common", "Food & Nature", "B2"],
+  ["Aromatherapy", "Liệu pháp hương thơm", "common", "Health & Mind", "B2"],
+  ["Aromatic", "Có mùi thơm", "common", "Food & Chemistry", "C1"],
+  ["Arraignment", "Sự buộc tội tại tòa", "toeic", "Law & Justice", "C2"],
+  ["Arrangement", "Sự sắp xếp, thỏa thuận", "common", "Daily Life & Music", "A2"],
+  ["Array", "Mảng dữ liệu, dải rộng", "toeic", "IT & Analytics", "B2"],
+  ["Arrears", "Khoản nợ chưa thanh toán", "toeic", "Finance & Accounting", "C2"],
+  ["Arrest", "Sự bắt giữ", "common", "Law & Order", "A2"],
+  ["Arrival", "Sự đến nơi", "common", "Travel & Tourism", "A1"],
+  ["Arrogance", "Sự kiêu ngạo", "common", "Psychology", "B2"],
+  ["Arrow", "Mũi tên", "common", "Daily Life & Sports", "A2"],
+  ["Arsenal", "Kho kho khí tài quân sự", "common", "Military & Sports", "B2"],
+  ["Arson", "Tội cố ý đốt nhà", "common", "Law & Order", "C1"],
+  ["Artefact", "Cổ vật do con người tạo ra", "ielts", "History & Science", "B2"],
+  ["Artery", "Động mạch", "common", "Health & Medicine", "B2"],
+  ["Artfulness", "Sự xảo quyệt, tinh xảo", "common", "Psychology & Art", "C2"],
+  ["Arthritis", "Bệnh viêm khớp", "common", "Health & Medicine", "B2"],
+  ["Articulation", "Sự phát âm rõ ràng, khớp nối", "ielts", "Language & Anatomy", "C1"],
+  ["Artifact", "Cổ vật", "ielts", "History & Culture", "B2"],
+  ["Artificial", "Nhân tạo", "common", "Tech & Nature", "A2"],
+  ["Artillery", "Pháo binh", "common", "Military & History", "C1"],
+  ["Artisan", "Thợ thủ công", "common", "Arts & Culture", "B2"],
+  ["Artist", "Nghệ sĩ", "common", "Arts & Culture", "A1"],
+  ["Artistic", "Thuộc nghệ thuật", "common", "Arts & Style", "B1"],
+  ["Ascendance", "Uy thế thăng tiến", "common", "Politics & History", "C2"],
+  ["Ascendant", "Đang đi lên, có ảnh hưởng tăng", "common", "Politics & Astrology", "C2"],
+  ["Ascent", "Sự trèo lên, sự đi lên", "common", "Nature & Career", "B2"],
+  ["Ascertain", "Xác minh tìm hiểu chắc chắn", "ielts", "Academic & Science", "C1"],
+  ["Ascetic", "Người khổ hạnh", "ielts", "Religion & Philosophy", "C2"],
+  ["Ascription", "Sự gán cho, gán tội", "ielts", "Philosophy & Legal", "C2"],
+  ["Ashamed", "Xấu hổ", "common", "Daily Life", "A2"],
+  ["Asymmetry", "Tính bất đối xứng", "common", "Science & Math", "B2"],
+  ["Aspiration", "Hoài bão", "common", "Personal Qualities", "B2"],
+  ["Aspirant", "Người khao khát thăng tiến", "toeic", "HR & Career", "C1"],
+  ["Aspirin", "Thuốc giảm đau aspirin", "common", "Health & Medicine", "A2"],
+  ["Assassin", "Kẻ sát thủ", "common", "History & Law", "B2"],
+  ["Assassination", "Vụ ám sát chính trị", "common", "History & Politics", "B2"],
+  ["Assault", "Cuộc tấn công hành hung", "common", "Law & Military", "B2"],
+  ["Assemblage", "Sự tập hợp nhóm lại", "common", "Arts & Tech", "C1"],
+  ["Assembly", "Lễ chào cờ, dây chuyền lắp ráp", "toeic", "Manufacturing & Education", "B2"],
+  ["Assertive", "Quả quyết, tự tin", "common", "Personal Qualities", "B2"],
+  ["Assessment", "Sự đánh giá", "common", "Education & Analytics", "B2"],
+  ["Asset", "Tài sản", "toeic", "Finance & Business", "B2"],
+  ["Assassinate", "Ám sát", "common", "History & Politics", "B2"],
+  ["Assignee", "Người được ủy nhiệm", "toeic", "Legal & Office", "C1"],
+  ["Assignment", "Nhiệm vụ được giao", "common", "Education & Work", "A2"],
+  ["Assimilation", "Sự đồng hóa", "ielts", "Society & Biology", "C1"],
+  ["Assistance", "Sự giúp đỡ", "common", "Daily Life", "B1"],
+  ["Assistant", "Trợ lý", "common", "Office & Career", "A2"],
+  ["Associate", "Đồng nghiệp, cộng sự", "toeic", "Corporate & HR", "B1"],
+  ["Association", "Hiệp hội, sự liên tưởng", "common", "Organization & Mind", "B1"],
+  ["Assonance", "Phép điệp nguyên âm", "ielts", "Literature & Rhetoric", "C2"],
+  ["Assortment", "Sự loại tổng hợp nhiều thứ", "toeic", "Retail & Shopping", "B2"],
+  ["Assumption", "Giả định", "common", "Academic & Logic", "B2"],
+  ["Assurance", "Sự bảo đảm", "toeic", "Business & Finance", "B2"],
+  ["Astroid", "Tiểu hành tinh", "common", "Science & Space", "B2"],
+  ["Astrology", "Chiêm tinh học", "common", "Science & Culture", "B2"],
+  ["Astronaut", "Phi hành gia", "common", "Science & Space", "A2"],
+  ["Astronomer", "Nhà thiên văn học", "common", "Science & Space", "B1"],
+  ["Astronomy", "Thiên văn học", "ielts", "Science & Space", "B2"],
+  ["Astrophysics", "Vật lý thiên văn", "ielts", "Science & Space", "C1"],
+  ["Astuteness", "Sự sắc sảo tinh khôn", "toeic", "Business & Mind", "C2"],
+  ["Asylum", "Sự tị nạn chính trị, nhà thương", "common", "Politics & Health", "C1"],
+  ["Asymmetry", "Tính không đối xứng", "common", "Science & Math", "B2"],
+  ["Atheism", "Thuyết vô thần", "ielts", "Philosophy & Religion", "C1"],
+  ["Athlete", "Vận động viên", "common", "Sports & Health", "A2"],
+  ["Athletic", "Thuộc điền kinh, khỏe khoắn", "common", "Sports & Health", "B1"],
+  ["Athletics", "Môn điền kinh", "common", "Sports & Health", "A2"],
+  ["Atlas", "Tập bản đồ", "common", "Geography & Books", "A2"],
+  ["Atmosphere", "Bầu khí quyển, không khí", "common", "Science & Nature", "A2"],
+  ["Atmospheric", "Thuộc khí quyển", "common", "Science & Nature", "B2"],
+  ["Atom", "Nguyên tử", "common", "Science & Chemistry", "B1"],
+  ["Atomic", "Thuộc nguyên tử", "common", "Science & Chemistry", "B1"],
+  ["Atonement", "Sự chuộc lỗi", "common", "Ethics & Religion", "C2"],
+  ["Atrocity", "Hành động tàn bạo", "common", "History & Law", "C1"],
+  ["Atrophy", "Sự teo cơ, suy giảm", "ielts", "Health & Biology", "C2"],
+  ["Attainment", "Sự đạt thành tựu", "common", "Education & Goals", "B2"],
+  ["Attendance", "Sự tham dự", "common", "Education & Office", "B1"],
+  ["Attendant", "Người phục vụ (máy bay/bãi xe)", "common", "Service & Travel", "B1"],
+  ["Attention", "Sự chú ý", "common", "Daily Life", "A2"],
+  ["Attentive", "Chăm chú, chu đáo", "common", "Personal Qualities", "B2"],
+  ["Attenuation", "Sự làm suy giảm độ mạnh", "ielts", "Physics & Tech", "C2"],
+  ["Attestation", "Sự chứng nhận bằng cấp/chữ ký", "toeic", "Legal & HR", "C2"],
+  ["Attic", "Gác xếp tầng mái", "common", "Home & Housing", "A2"],
+  ["Attitude", "Thái độ", "common", "Psychology", "A2"],
+  ["Attorney", "Luật sư ủy quyền", "toeic", "Law & Justice", "B2"],
+  ["Attraction", "Điểm thu hút du lịch, lực hút", "common", "Tourism & Science", "A2"],
+  ["Attractiveness", "Sức hút hấp dẫn", "common", "Personal & Design", "B2"],
+  ["Attribution", "Sự quy gán tác quyền", "ielts", "Academic & Legal", "C1"],
+  ["Audacity", "Sự táo bạo cả gan", "common", "Personal Qualities", "C1"],
+  ["Audibility", "Khả năng nghe rõ", "common", "Sound & Tech", "B2"],
+  ["Audience", "Khán giả", "common", "Events & Media", "A2"],
+  ["Audio", "Âm thanh", "common", "Tech & Sound", "A1"],
+  ["Audiovisual", "Nghhe nhìn (dụng cụ dạy học)", "common", "Education & Tech", "B2"],
+  ["Audit", "Cuộc kiểm toán", "toeic", "Finance & Accounting", "B2"],
+  ["Audition", "Buổi thử giọng/diễn xuất", "common", "Arts & Entertainment", "B1"],
+  ["Auditor", "Kiểm toán viên", "toeic", "Finance & Office", "B2"],
+  ["Auditorium", "Giảng đường lớn, khán phòng", "common", "Education & Events", "B2"],
+  ["Auditory", "Thuộc thính giác", "ielts", "Science & Health", "C1"],
+  ["Augmentation", "Sự tăng cường gia tăng", "common", "Tech & Strategy", "C1"],
+  ["Augur", "Điềm báo trước", "common", "Culture & History", "C2"],
+  ["August", "Tháng tám", "common", "Calendar", "A1"],
+  ["Aunt", "Cô, dì, bác gái", "common", "Family", "A1"],
+  ["Aura", "Hào quang khí chất", "common", "Psychology & Culture", "C1"],
+  ["Aural", "Thuộc về tai", "ielts", "Health & Sound", "C1"],
+  ["Aurora", "Cực quang trên trời", "common", "Science & Nature", "B2"],
+  ["Austerity", "Chính sách thắt lưng buộc bụng", "ielts", "Economics & Politics", "C1"],
+  ["Authenticity", "Tính chân thật xác thực", "common", "PR & Security", "B2"],
+  ["Author", "Tác giả", "common", "Books & Literature", "A2"],
+  ["Authoritarian", "Độc tài", "ielts", "Politics & Government", "C1"],
+  ["Authority", "Cơ quan có thẩm quyền, uy quyền", "common", "Legal & Government", "B1"],
+  ["Authorization", "Sự cấp phép", "toeic", "Legal & Office", "B2"],
+  ["Authorship", "Tác quyền tác giả", "ielts", "Literature & Law", "C1"],
+  ["Autobiography", "Tự truyện", "common", "Books & Literature", "B2"],
+  ["Autocracy", "Chế độ chuyên chế", "ielts", "Politics & History", "C2"],
+  ["Autocrat", "Kẻ cầm quyền chuyên chế", "common", "Politics", "C2"],
+  ["Autograph", "Chữ ký lưu niệm idol", "common", "Culture & Fans", "A2"],
+  ["Automaker", "Hãng sản xuất ô tô", "common", "Industry & Business", "B2"],
+  ["Automaton", "Robot tự động cổ đại", "common", "Tech & History", "C2"],
+  ["Autonomy", "Quyền tự trị", "ielts", "Politics & Law", "C1"],
+  ["Autopsy", "Cuộc khám nghiệm tử thi", "common", "Law & Medicine", "C1"],
+  ["Availability", "Tính sẵn có để phục vụ", "toeic", "Customer Service & IT", "B1"],
+  ["Avalanche", "Tuyết lở", "common", "Nature & Hazards", "B2"],
+  ["Avant-garde", "Nghệ thuật tiên phong", "ielts", "Arts & Culture", "C2"],
+  ["Avarice", "Lòng tham kiệt xuất", "common", "Psychology", "C2"],
+  ["Avatar", "Hình đại diện", "common", "IT & Social Media", "A1"],
+  ["Avenue", "Đại lộ", "common", "City & Travel", "A2"],
+  ["Average", "Mức trung bình", "common", "Math & Daily Life", "A2"],
+  ["Aversion", "Sự ác cảm ghét bỏ", "common", "Psychology", "C1"],
+  ["Aviation", "Ngành hàng không", "common", "Travel & Transport", "B2"],
+  ["Avocado", "Quả bơ", "common", "Food & Dining", "A2"],
+  ["Awakening", "Sự thức tỉnh", "common", "Psychology & Mind", "B2"],
+  ["Award", "Giải thưởng", "common", "Daily Life & Events", "A2"],
+  ["Awareness", "Sự nhận thức", "common", "Psychology & Policy", "B1"],
+  ["Awe", "Sự kính cẩn nể sợ", "common", "Psychology", "C1"],
+  ["Awkwardness", "Sự vụng về, gượng gạo", "common", "Daily Life & Mind", "B2"],
+  ["Awning", "Mái che nắng mưa", "common", "Home & Retail", "B2"],
+  ["Axiom", "Tiên đề tự nhiên đúng", "ielts", "Math & Logic", "C2"],
+  ["Axis", "Trục tọa độ/quay", "common", "Science & Math", "B2"],
+  ["Axle", "Trục xe", "common", "Engineering & Auto", "B2"],
+  ["Azalea", "Hoa đỗ quyên", "common", "Nature & Plants", "B2"],
+  ["Azure", "Màu xanh da trời trong", "common", "Nature & Colors", "C1"]
+];
+
+roots.forEach(item => {
+  const key = item[0].toLowerCase();
+  if (!existingSet.has(key)) {
+    VOCAB_BANK.push({
+      id: `v-${VOCAB_BANK.length + 1}`,
+      en: item[0],
+      vn: item[1],
+      pool: item[2],
+      category: item[3],
+      level: item[4]
+    });
+    existingSet.add(key);
+  }
+});
+
+console.log("FINAL TOTAL VOCABULARY COUNT:", VOCAB_BANK.length);
+
+const fileHeader = `// ==========================================================================
+// CENTRALIZED VOCABULARY BANK — COMPREHENSIVE VOCABULARY & TRAINING POOL
+// Covers TOEIC, IELTS, and 6,000 Common General English Words (A1-C2)
+// ==========================================================================
+
+export const VOCAB_BANK = ${JSON.stringify(VOCAB_BANK, null, 2)};
+
+/**
+ * Filter vocabulary by Pool, Level, Category, and Count
+ */
+export function getVocabPool({ pool = 'all', level = 'all', category = 'all', count = null } = {}) {
+  let filtered = VOCAB_BANK;
+
+  if (pool && pool !== 'all') {
+    filtered = filtered.filter(item => item.pool === pool);
+  }
+
+  if (level && level !== 'all') {
+    filtered = filtered.filter(item => item.level.toLowerCase() === level.toLowerCase());
+  }
+
+  if (category && category !== 'all') {
+    filtered = filtered.filter(item => item.category && item.category.toLowerCase().includes(category.toLowerCase()));
+  }
+
+  if (count && typeof count === 'number' && count > 0) {
+    return [...filtered].sort(() => 0.5 - Math.random()).slice(0, count);
+  }
+
+  return filtered;
+}
+
+/**
+ * Get pairs for Speed Word Match Game
+ */
+export function getSpeedMatchPairs({ pool = 'all', level = 'all', category = 'all', count = 10 } = {}) {
+  const poolItems = getVocabPool({ pool, level, category, count });
+  return poolItems.map(item => ({
+    id: item.id,
+    en: item.en,
+    vn: item.vn,
+    pool: item.pool,
+    category: item.category,
+    level: item.level
+  }));
+}
+
+/**
+ * Get Databank Stats Summary
+ */
+export function getVocabStats() {
+  const total = VOCAB_BANK.length;
+  const toeic = VOCAB_BANK.filter(item => item.pool === 'toeic').length;
+  const ielts = VOCAB_BANK.filter(item => item.pool === 'ielts').length;
+  const common = VOCAB_BANK.filter(item => item.pool === 'common').length;
+
+  const levels = {
+    A1: VOCAB_BANK.filter(i => i.level === 'A1').length,
+    A2: VOCAB_BANK.filter(i => i.level === 'A2').length,
+    B1: VOCAB_BANK.filter(i => i.level === 'B1').length,
+    B2: VOCAB_BANK.filter(i => i.level === 'B2').length,
+    C1: VOCAB_BANK.filter(i => i.level === 'C1').length,
+    C2: VOCAB_BANK.filter(i => i.level === 'C2').length,
+  };
+
+  return { total, toeic, ielts, common, levels };
+}
+
+/**
+ * Get Available Categories for a Pool
+ */
+export function getAvailableCategories(pool = 'all') {
+  let items = VOCAB_BANK;
+  if (pool !== 'all') {
+    items = items.filter(i => i.pool === pool);
+  }
+  const cats = new Set();
+  items.forEach(i => {
+    if (i.category) cats.add(i.category);
+  });
+  return Array.from(cats).sort();
+}
+`;
+
+fs.writeFileSync('./src/data/vocab-bank.js', fileHeader, 'utf8');
+console.log("Successfully updated src/data/vocab-bank.js!");

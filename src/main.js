@@ -1,25 +1,83 @@
 // ========================================
-// GrammarAI — Main Entry Point & Router
+// GrammarAI — Main Entry Point & Router (Dynamic Code-Splitting)
 // ========================================
 
 import './style.css';
 import { StorageService } from './services/storage-service.js';
 import { renderNavbar } from './components/navbar.js';
 import { renderSidebar, showSidebar, hideSidebar } from './components/sidebar.js';
-import { renderDashboard } from './pages/dashboard.js';
-import { renderLessons } from './pages/lessons.js';
-import { renderLessonDetail } from './pages/lesson-detail.js';
-import { renderExercisesPage } from './pages/exercises.js';
-import { renderFlashcardsPage } from './pages/flashcards.js';
-import { renderStatistics } from './pages/statistics.js';
-import { renderSettings } from './pages/settings.js';
-import { renderListeningPage } from './pages/listening.js';
-import { renderSpeakingPage } from './pages/speaking.js';
-import { renderReadingPage } from './pages/reading.js';
-import { renderWritingPage } from './pages/writing.js';
-import { renderYouTubePage } from './pages/youtube.js';
-import { renderGamesPage } from './pages/games.js';
-import { renderExamCenterPage } from './pages/exam-center.js';
+
+// Router Cache for Dynamic Imports
+const moduleCache = new Map();
+
+async function loadPageModule(routeKey) {
+  if (moduleCache.has(routeKey)) {
+    return moduleCache.get(routeKey);
+  }
+
+  const pageContainer = document.getElementById('page-container');
+  if (pageContainer) {
+    pageContainer.innerHTML = `
+      <div class="flex-center" style="min-height: 50vh; flex-direction: column; gap: 16px;">
+        <div class="spinner"></div>
+        <p style="color: var(--text-secondary); font-weight: 500; font-size: 0.9rem;">Loading page studio...</p>
+      </div>
+    `;
+  }
+
+  let modulePromise;
+  switch (routeKey) {
+    case 'dashboard':
+      modulePromise = import('./pages/dashboard.js');
+      break;
+    case 'lessons':
+      modulePromise = import('./pages/lessons.js');
+      break;
+    case 'lesson-detail':
+      modulePromise = import('./pages/lesson-detail.js');
+      break;
+    case 'exercises':
+      modulePromise = import('./pages/exercises.js');
+      break;
+    case 'flashcards':
+      modulePromise = import('./pages/flashcards.js');
+      break;
+    case 'statistics':
+      modulePromise = import('./pages/statistics.js');
+      break;
+    case 'settings':
+      modulePromise = import('./pages/settings.js');
+      break;
+    case 'listening':
+      modulePromise = import('./pages/listening.js');
+      break;
+    case 'speaking':
+      modulePromise = import('./pages/speaking.js');
+      break;
+    case 'reading':
+      modulePromise = import('./pages/reading.js');
+      break;
+    case 'writing':
+      modulePromise = import('./pages/writing.js');
+      break;
+    case 'youtube':
+      modulePromise = import('./pages/youtube.js');
+      break;
+    case 'games':
+      modulePromise = import('./pages/games.js');
+      break;
+    case 'exam-center':
+      modulePromise = import('./pages/exam-center.js');
+      break;
+    default:
+      modulePromise = import('./pages/dashboard.js');
+      break;
+  }
+
+  const mod = await modulePromise;
+  moduleCache.set(routeKey, mod);
+  return mod;
+}
 
 // ---- Initialize ----
 async function init() {
@@ -33,13 +91,30 @@ async function init() {
     handleRoute();
   });
 
+  // Global ESC key listener to close all open modals
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      const modals = document.querySelectorAll('#word-modal, .modal-backdrop, .modal, .game-over-modal, .game-setup-modal');
+      modals.forEach(modal => {
+        if (modal) modal.style.display = 'none';
+      });
+    }
+  });
+
+  // Global backdrop click listener to close modal when clicking outside content
+  window.addEventListener('click', (e) => {
+    if (e.target && (e.target.id === 'word-modal' || e.target.classList.contains('modal-backdrop'))) {
+      e.target.style.display = 'none';
+    }
+  });
+
   // Start router
   window.addEventListener('hashchange', handleRoute);
   handleRoute();
 }
 
 // ---- Router ----
-function handleRoute() {
+async function handleRoute() {
   const hash = window.location.hash || '#/';
   const [path, queryString] = hash.slice(1).split('?');
   const params = new URLSearchParams(queryString || '');
@@ -55,118 +130,159 @@ function handleRoute() {
   // Close mobile sidebar on navigation
   document.getElementById('sidebar')?.classList.remove('open');
 
-  // Route handling
-  switch (route) {
-    case '':
-      activePage = 'dashboard';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderDashboard();
-      break;
-
-    case 'lessons':
-      activePage = 'lessons';
-      renderNavbar(activePage);
-      if (subRoute) {
-        // Lesson detail page
-        showSidebar();
-        renderSidebar(subRoute);
-        renderLessonDetail(subRoute);
-      } else {
-        // Lessons list
+  try {
+    switch (route) {
+      case '':
+      case 'dashboard': {
+        activePage = 'dashboard';
+        renderNavbar(activePage);
         hideSidebar();
-        const level = params.get('level');
-        renderLessons(level);
+        const mod = await loadPageModule('dashboard');
+        mod.renderDashboard();
+        break;
       }
-      break;
 
-    case 'games':
-      activePage = 'games';
-      renderNavbar(activePage);
-      hideSidebar();
-      const gameMode = params.get('mode');
-      renderGamesPage(gameMode);
-      break;
+      case 'lessons': {
+        activePage = 'lessons';
+        renderNavbar(activePage);
+        if (subRoute) {
+          showSidebar();
+          renderSidebar(subRoute);
+          const mod = await loadPageModule('lesson-detail');
+          mod.renderLessonDetail(subRoute);
+        } else {
+          hideSidebar();
+          const level = params.get('level');
+          const mod = await loadPageModule('lessons');
+          mod.renderLessons(level);
+        }
+        break;
+      }
 
-    case 'listening':
-      activePage = 'listening';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderListeningPage();
-      break;
+      case 'games': {
+        activePage = 'games';
+        renderNavbar(activePage);
+        hideSidebar();
+        const gameMode = params.get('mode');
+        const mod = await loadPageModule('games');
+        mod.renderGamesPage(gameMode);
+        break;
+      }
 
-    case 'speaking':
-      activePage = 'speaking';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderSpeakingPage();
-      break;
+      case 'listening': {
+        activePage = 'listening';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('listening');
+        mod.renderListeningPage();
+        break;
+      }
 
-    case 'reading':
-      activePage = 'reading';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderReadingPage();
-      break;
+      case 'speaking': {
+        activePage = 'speaking';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('speaking');
+        mod.renderSpeakingPage();
+        break;
+      }
 
-    case 'writing':
-      activePage = 'writing';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderWritingPage();
-      break;
+      case 'reading': {
+        activePage = 'reading';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('reading');
+        mod.renderReadingPage();
+        break;
+      }
 
-    case 'youtube':
-      activePage = 'youtube';
-      renderNavbar(activePage);
-      hideSidebar();
-      const ytVideoId = params.get('v');
-      renderYouTubePage(ytVideoId);
-      break;
+      case 'writing': {
+        activePage = 'writing';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('writing');
+        mod.renderWritingPage();
+        break;
+      }
 
-    case 'exercises':
-      activePage = 'exercises';
-      renderNavbar(activePage);
-      hideSidebar();
-      const exerciseTopic = params.get('topic');
-      renderExercisesPage(exerciseTopic);
-      break;
+      case 'youtube': {
+        activePage = 'youtube';
+        renderNavbar(activePage);
+        hideSidebar();
+        const ytVideoId = params.get('v');
+        const mod = await loadPageModule('youtube');
+        mod.renderYouTubePage(ytVideoId);
+        break;
+      }
 
-    case 'flashcards':
-      activePage = 'flashcards';
-      renderNavbar(activePage);
-      hideSidebar();
-      const fcTopic = params.get('topic');
-      renderFlashcardsPage(fcTopic);
-      break;
+      case 'exercises': {
+        activePage = 'exercises';
+        renderNavbar(activePage);
+        hideSidebar();
+        const exerciseTopic = params.get('topic');
+        const mod = await loadPageModule('exercises');
+        mod.renderExercisesPage(exerciseTopic);
+        break;
+      }
 
-    case 'statistics':
-      activePage = 'statistics';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderStatistics();
-      break;
+      case 'flashcards': {
+        activePage = 'flashcards';
+        renderNavbar(activePage);
+        hideSidebar();
+        const fcTopic = params.get('topic');
+        const mod = await loadPageModule('flashcards');
+        mod.renderFlashcardsPage(fcTopic);
+        break;
+      }
 
-    case 'exam-center':
-      activePage = 'exam-center';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderExamCenterPage();
-      break;
+      case 'statistics': {
+        activePage = 'statistics';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('statistics');
+        mod.renderStatistics();
+        break;
+      }
 
-    case 'settings':
-      activePage = 'settings';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderSettings();
-      break;
+      case 'exam-center': {
+        activePage = 'exam-center';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('exam-center');
+        mod.renderExamCenterPage();
+        break;
+      }
 
-    default:
-      activePage = 'dashboard';
-      renderNavbar(activePage);
-      hideSidebar();
-      renderDashboard();
-      break;
+      case 'settings': {
+        activePage = 'settings';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('settings');
+        mod.renderSettings();
+        break;
+      }
+
+      default: {
+        activePage = 'dashboard';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('dashboard');
+        mod.renderDashboard();
+        break;
+      }
+    }
+  } catch (err) {
+    console.error('Failed to load page module:', err);
+    const pageContainer = document.getElementById('page-container');
+    if (pageContainer) {
+      pageContainer.innerHTML = `
+        <div class="card p-xl flex-center" style="flex-direction: column; gap: 12px; text-align: center; margin-top: 40px;">
+          <h2 style="color: var(--color-error, #ef4444);">Lỗi Tải Trang</h2>
+          <p style="color: var(--text-secondary);">Không thể tải mô-đun giao diện. Vui lòng làm mới trang.</p>
+          <button onclick="window.location.reload()" class="btn btn-primary btn-sm">🔄 Tải Lại Trang</button>
+        </div>
+      `;
+    }
   }
 
   // Scroll to top on route change

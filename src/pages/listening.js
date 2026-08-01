@@ -4,6 +4,7 @@
 
 import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
+import { SoundService } from '../services/sound-service.js';
 import { renderLifeTopicsSelectOptions } from '../data/life-topics-data.js';
 import { LISTENING_EXERCISES } from '../data/skills-exercises-data.js';
 
@@ -115,7 +116,7 @@ async function loadNewPassage() {
 }
 
 function stopAudio() {
-  window.speechSynthesis?.cancel();
+  SoundService.stopSpeech();
   isPlaying = false;
 }
 
@@ -210,31 +211,46 @@ function renderDictationMode(workspace) {
 }
 
 function toggleAudio() {
-  const btn = document.getElementById('btn-play-audio');
+  const btn = document.getElementById('btn-play-audio') || document.getElementById('btn-play-shadow');
   const viz = document.getElementById('visualizer-bars');
 
   if (isPlaying) {
     stopAudio();
-    if (btn) btn.textContent = '▶';
+    if (btn) {
+      if (btn.id === 'btn-play-shadow') btn.textContent = '▶ Play Audio & Shadow';
+      else btn.textContent = '▶';
+    }
     viz?.classList.remove('playing');
   } else {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(currentPassage.transcript);
-      utterance.rate = currentRate;
-      utterance.lang = 'en-US';
+    if (!currentPassage || !currentPassage.transcript) return;
 
-      utterance.onend = () => {
+    SoundService.speakText(currentPassage.transcript, {
+      rate: currentRate,
+      onStart: () => {
+        isPlaying = true;
+        if (btn) {
+          if (btn.id === 'btn-play-shadow') btn.textContent = '⏸ Pause Audio';
+          else btn.textContent = '⏸';
+        }
+        viz?.classList.add('playing');
+      },
+      onEnd: () => {
         isPlaying = false;
-        if (btn) btn.textContent = '▶';
+        if (btn) {
+          if (btn.id === 'btn-play-shadow') btn.textContent = '▶ Play Audio & Shadow';
+          else btn.textContent = '▶';
+        }
         viz?.classList.remove('playing');
-      };
-
-      window.speechSynthesis.speak(utterance);
-      isPlaying = true;
-      if (btn) btn.textContent = '⏸';
-      viz?.classList.add('playing');
-    }
+      },
+      onError: () => {
+        isPlaying = false;
+        if (btn) {
+          if (btn.id === 'btn-play-shadow') btn.textContent = '▶ Play Audio & Shadow';
+          else btn.textContent = '▶';
+        }
+        viz?.classList.remove('playing');
+      },
+    });
   }
 }
 

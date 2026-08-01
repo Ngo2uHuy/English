@@ -1,9 +1,11 @@
 // ==========================================================================
-// Sound Service — Synthesized Arcade Sound Effects via Web Audio API
+// Sound Service — Synthesized Arcade Sound Effects & Robust TTS Audio Engine
 // ==========================================================================
 
 let audioCtx = null;
 let soundMuted = false;
+let keepAliveInterval = null;
+let currentAudioFallback = null;
 
 function getAudioContext() {
   if (!audioCtx) {
@@ -18,6 +20,13 @@ function getAudioContext() {
   return audioCtx;
 }
 
+// Pre-load voices on browser load
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  window.speechSynthesis.onvoiceschanged = () => {
+    window.speechSynthesis.getVoices();
+  };
+}
+
 export const SoundService = {
   isMuted() {
     return soundMuted;
@@ -28,6 +37,9 @@ export const SoundService = {
     return soundMuted;
   },
 
+  // ------------------------------------------------------------------------
+  // Sound Effects (Web Audio API)
+  // ------------------------------------------------------------------------
   playCorrect() {
     if (soundMuted) return;
     try {
@@ -168,6 +180,110 @@ export const SoundService = {
       });
     } catch {
       // Ignore
+    }
+  },
+
+  // ------------------------------------------------------------------------
+  // Text-To-Speech (TTS) Engine with Voice Selection & Online Audio Fallback
+  // ------------------------------------------------------------------------
+  speakText(text, options = {}) {
+    if (!text) return;
+
+    const {
+      rate = 1.0,
+      pitch = 1.0,
+      onStart = () => {},
+      onEnd = () => {},
+      onError = () => {},
+    } = options;
+
+    this.stopSpeech();
+
+    if ('speechSynthesis' in window) {
+      try {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = rate;
+        utterance.pitch = pitch;
+        utterance.lang = 'en-US';
+
+        const voices = window.speechSynthesis.getVoices() || [];
+        const englishVoice = voices.find(
+          v => v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Samantha') || v.name.includes('Zira') || v.name.includes('US'))
+        ) || voices.find(v => v.lang.startsWith('en'));
+
+        if (englishVoice) {
+          utterance.voice = englishVoice;
+        }
+
+        utterance.onstart = () => {
+          onStart();
+          // Chrome SpeechSynthesis keep-alive timer for long passages
+          if (keepAliveInterval) clearInterval(keepAliveInterval);
+          keepAliveInterval = setInterval(() => {
+            if (window.speechSynthesis.speaking) {
+              window.speechSynthesis.pause();
+              window.speechSynthesis.resume();
+            } else {
+              clearInterval(keepAliveInterval);
+            }
+          }, 8000);
+        };
+
+        utterance.onend = () => {
+          if (keepAliveInterval) clearInterval(keepAliveInterval);
+          onEnd();
+        };
+
+        utterance.onerror = (err) => {
+          console.warn('[SoundService] WebSpeech error, launching fallback:', err);
+          if (keepAliveInterval) clearInterval(keepAliveInterval);
+          this.playAudioFallback(text, { rate, onStart, onEnd, onError });
+        };
+
+        window.speechSynthesis.speak(utterance);
+      } catch (e) {
+        console.warn('[SoundService] WebSpeech exception:', e);
+        this.playAudioFallback(text, { rate, onStart, onEnd, onError });
+      }
+    } else {
+      this.playAudioFallback(text, { rate, onStart, onEnd, onError });
+    }
+  },
+
+  playAudioFallback(text, { rate = 1.0, onStart = () => {}, onEnd = () => {}, onError = () => {} }) {
+    try {
+      const cleanText = text.slice(0, 200);
+      const url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(cleanText)}&tl=en&client=tw-ob`;
+      currentAudioFallback = new Audio(url);
+      currentAudioFallback.playbackRate = rate;
+
+      currentAudioFallback.onplay = () => onStart();
+      currentAudioFallback.onended = () => onEnd();
+      currentAudioFallback.onerror = (e) => {
+        console.warn('[SoundService] Audio fallback error:', e);
+        onError(e);
+      };
+
+      currentAudioFallback.play().catch(err => {
+        console.warn('[SoundService] Audio play blocked:', err);
+        onError(err);
+      });
+    } catch (err) {
+      onError(err);
+    }
+  },
+
+  stopSpeech() {
+    if (keepAliveInterval) {
+      clearInterval(keepAliveInterval);
+      keepAliveInterval = null;
+    }
+    if (currentAudioFallback) {
+      currentAudioFallback.pause();
+      currentAudioFallback = null;
+    }
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
     }
   },
 };

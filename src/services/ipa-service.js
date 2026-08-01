@@ -1,106 +1,107 @@
 // ==========================================================================
-// IPA Phonetic Service — English International Phonetic Alphabet Engine
-// Provides accurate IPA transcriptions & dynamic G2P synthesis for words & phrases
+// IPA Phonetic Service — Oxford Learner's Dictionaries Standard Engine
+// Provides accurate Oxford IPA transcriptions & dynamic G2P synthesis
+// Standardized based on Oxford Learner's Dictionaries (BrE / NAmE)
 // ==========================================================================
 
-// Extensive Core IPA Dictionary for Common Words, Grammar Terms & Irregular Verbs
+// Core Oxford Learner's Dictionaries IPA Database
 const IPA_DICT = {
   // Common & Game Words
-  'a': 'ə', 'an': 'æn', 'the': 'ðə', 'and': 'ænd', 'or': 'ɔːr', 'but': 'bʌt', 'in': 'ɪn', 'on': 'ɒn', 'at': 'æt',
-  'to': 'tuː', 'for': 'fɔːr', 'with': 'wɪð', 'by': 'baɪ', 'about': 'əˈbaʊt', 'against': 'əˈɡenst', 'between': 'bɪˈtwiːn',
-  'into': 'ˈɪn.tuː', 'through': 'θruː', 'during': 'ˈdjʊə.rɪŋ', 'before': 'bɪˈfɔːr', 'after': 'ˈɑːf.tər', 'above': 'əˈbʌv',
-  'below': 'bɪˈloʊ', 'from': 'frɒm', 'up': 'ʌp', 'down': 'daʊn', 'out': 'aʊt', 'off': 'ɒf', 'over': 'ˈoʊ.vər', 'under': 'ˈʌn.dər',
+  'a': 'ə', 'an': 'ən', 'the': 'ðə', 'and': 'ənd', 'or': 'ɔː(r)', 'but': 'bət', 'in': 'ɪn', 'on': 'ɒn', 'at': 'ət',
+  'to': 'tə', 'for': 'fə(r)', 'with': 'wɪð', 'by': 'baɪ', 'about': 'əˈbaʊt', 'against': 'əˈɡenst', 'between': 'bɪˈtwiːn',
+  'into': 'ˈɪntə', 'through': 'θruː', 'during': 'ˈdjʊərɪŋ', 'before': 'bɪˈfɔː(r)', 'after': 'ˈɑːftə(r)', 'above': 'əˈbʌv',
+  'below': 'bɪˈləʊ', 'from': 'frəm', 'up': 'ʌp', 'down': 'daʊn', 'out': 'aʊt', 'off': 'ɒf', 'over': 'ˈəʊvə(r)', 'under': 'ˈʌndə(r)',
   
   'i': 'aɪ', 'you': 'juː', 'he': 'hiː', 'she': 'ʃiː', 'it': 'ɪt', 'we': 'wiː', 'they': 'ðeɪ',
-  'me': 'miː', 'him': 'hɪm', 'her': 'hɜːr', 'us': 'ʌs', 'them': 'ðem',
-  'my': 'maɪ', 'your': 'jɔːr', 'his': 'hɪz', 'its': 'ɪts', 'our': 'aʊər', 'their': 'ðeər',
+  'me': 'miː', 'him': 'hɪm', 'her': 'hɜː(r)', 'us': 'əs', 'them': 'ðəm',
+  'my': 'maɪ', 'your': 'jɔː(r)', 'his': 'hɪz', 'its': 'ɪts', 'our': 'ˈaʊə(r)', 'their': 'ðeə(r)',
   
   // Verbs (Base, Past, Participle)
-  'be': 'biː', 'is': 'ɪz', 'am': 'æm', 'are': 'ɑːr', 'was': 'wɒz', 'were': 'wɜːr', 'been': 'biːn', 'being': 'ˈbiː.ɪŋ',
-  'have': 'hæv', 'has': 'hæz', 'had': 'hæd', 'having': 'ˈhæv.ɪŋ',
-  'do': 'duː', 'does': 'dʌz', 'did': 'dɪd', 'done': 'dʌn', 'doing': 'ˈduː.ɪŋ',
-  'go': 'ɡoʊ', 'goes': 'ɡoʊz', 'went': 'went', 'gone': 'ɡɒn', 'going': 'ˈɡoʊ.ɪŋ',
-  'make': 'meɪk', 'made': 'meɪd', 'making': 'ˈmeɪ.kɪŋ',
-  'get': 'ɡet', 'got': 'ɡɒt', 'gotten': 'ˈɡɒt.n̩',
-  'take': 'teɪk', 'took': 'tʊk', 'taken': 'ˈteɪ.kən',
+  'be': 'biː', 'is': 'ɪz', 'am': 'əm', 'are': 'ɑː(r)', 'was': 'wɒz', 'were': 'wɜː(r)', 'been': 'biːn', 'being': 'ˈbiːɪŋ',
+  'have': 'hæv', 'has': 'hæz', 'had': 'hæd', 'having': 'ˈhævɪŋ',
+  'do': 'duː', 'does': 'dʌz', 'did': 'dɪd', 'done': 'dʌn', 'doing': 'ˈduːɪŋ',
+  'go': 'ɡəʊ', 'goes': 'ɡəʊz', 'went': 'went', 'gone': 'ɡɒn', 'going': 'ˈɡəʊɪŋ',
+  'make': 'meɪk', 'made': 'meɪd', 'making': 'ˈmeɪkɪŋ',
+  'get': 'ɡet', 'got': 'ɡɒt', 'gotten': 'ˈɡɒtn',
+  'take': 'teɪk', 'took': 'tʊk', 'taken': 'ˈteɪkən',
   'see': 'siː', 'saw': 'sɔː', 'seen': 'siːn',
   'come': 'kʌm', 'came': 'keɪm',
   'think': 'θɪŋk', 'thought': 'θɔːt',
-  'know': 'noʊ', 'knew': 'njuː', 'known': 'noʊn',
+  'know': 'nəʊ', 'knew': 'njuː', 'known': 'nəʊn',
   'say': 'seɪ', 'said': 'sed',
-  'tell': 'tel', 'told': 'toʊld',
-  'speak': 'spiːk', 'spoke': 'spoʊk', 'spoken': 'ˈspoʊ.kən',
-  'write': 'raɪt', 'wrote': 'roʊt', 'written': 'ˈrɪt.n̩',
-  'read': 'riːd', 'reading': 'ˈriː.dɪŋ',
+  'tell': 'tel', 'told': 'təʊld',
+  'speak': 'spiːk', 'spoke': 'spəʊk', 'spoken': 'ˈspəʊkən',
+  'write': 'raɪt', 'wrote': 'rəʊt', 'written': 'ˈrɪtn',
+  'read': 'riːd', 'reading': 'ˈriːdɪŋ',
   'run': 'rʌn', 'ran': 'ræn',
-  'eat': 'iːt', 'ate': 'et', 'eaten': 'ˈiː.tən',
+  'eat': 'iːt', 'ate': 'et', 'eaten': 'ˈiːtn',
   'drink': 'drɪŋk', 'drank': 'dræŋk', 'drunk': 'drʌŋk',
-  'drive': 'draɪv', 'drove': 'droʊv', 'driven': 'ˈdrɪv.n̩',
-  'fly': 'flaɪ', 'flew': 'fluː', 'flown': 'floʊn',
-  'break': 'breɪk', 'broke': 'broʊk', 'broken': 'ˈbroʊ.kən',
+  'drive': 'draɪv', 'drove': 'drəʊv', 'driven': 'ˈdrɪvn',
+  'fly': 'flaɪ', 'flew': 'fluː', 'flown': 'fləʊn',
+  'break': 'breɪk', 'broke': 'brəʊk', 'broken': 'ˈbrəʊkən',
   'buy': 'baɪ', 'bought': 'bɔːt',
   'catch': 'kætʃ', 'caught': 'kɔːt',
-  'choose': 'tʃuːz', 'chose': 'tʃoʊz', 'chosen': 'ˈtʃoʊ.zən',
-  'fall': 'fɔːl', 'fell': 'fel', 'fallen': 'ˈfɔː.lən',
+  'choose': 'tʃuːz', 'chose': 'tʃəʊz', 'chosen': 'ˈtʃəʊzn',
+  'fall': 'fɔːl', 'fell': 'fel', 'fallen': 'ˈfɔːlən',
   'find': 'faɪnd', 'found': 'faʊnd',
-  'forget': 'fərˈɡet', 'forgot': 'fərˈɡɒt', 'forgotten': 'fərˈɡɒt.n̩',
-  'give': 'ɡɪv', 'gave': 'ɡeɪv', 'given': 'ˈɡɪv.n̩',
-  'hear': 'hɪər', 'heard': 'hɜːd',
+  'forget': 'fəˈɡet', 'forgot': 'fəˈɡɒt', 'forgotten': 'fəˈɡɒtn',
+  'give': 'ɡɪv', 'gave': 'ɡeɪv', 'given': 'ˈɡɪvn',
+  'hear': 'hɪə(r)', 'heard': 'hɜːd',
   'keep': 'kiːp', 'kept': 'kept',
   'leave': 'liːv', 'left': 'left',
   'lose': 'luːz', 'lost': 'lɒst',
   'pay': 'peɪ', 'paid': 'peɪd',
   'put': 'pʊt',
   'ring': 'rɪŋ', 'rang': 'ræŋ', 'rung': 'rʌŋ',
-  'sell': 'sel', 'sold': 'soʊld',
+  'sell': 'sel', 'sold': 'səʊld',
   'sing': 'sɪŋ', 'sang': 'sæŋ', 'sung': 'sʌŋ',
   'sit': 'sɪt', 'sat': 'sæt',
   'sleep': 'sliːp', 'slept': 'slept',
   'stand': 'stænd', 'stood': 'stʊd',
   'swim': 'swɪm', 'swam': 'swæm', 'swum': 'swʌm',
   'teach': 'tiːtʃ', 'taught': 'tɔːt',
-  'understand': 'ˌʌn.dəˈstænd', 'understood': 'ˌʌn.dəˈstʊd',
+  'understand': 'ˌʌndəˈstænd', 'understood': 'ˌʌndəˈstʊd',
   'win': 'wɪn', 'won': 'wʌn',
-  'wear': 'weər', 'wore': 'wɔːr', 'worn': 'wɔːn',
+  'wear': 'weə(r)', 'wore': 'wɔː(r)', 'worn': 'wɔːn',
 
-  // Core Vocabulary & Flashcards
-  'apple': 'ˈæp.əl', 'banana': 'bəˈnɑː.nə', 'cat': 'kæt', 'dog': 'dɒɡ', 'house': 'haʊs', 'car': 'kɑːr',
-  'book': 'bʊk', 'water': 'ˈwɔː.tər', 'time': 'taɪm', 'year': 'jɪər', 'people': 'ˈpiː.pəl', 'way': 'weɪ',
-  'day': 'deɪ', 'man': 'mæn', 'thing': 'θɪŋ', 'woman': 'ˈwʊm.ən', 'life': 'laɪf', 'child': 'tʃaɪld',
-  'world': 'wɜːld', 'school': 'skuːl', 'state': 'steɪt', 'family': 'ˈfæm.əl.i', 'student': 'ˈstjuː.dənt',
-  'group': 'ɡruːp', 'country': 'ˈkʌn.tri', 'problem': 'ˈprɒb.ləm', 'hand': 'hænd', 'part': 'pɑːt',
-  'place': 'pleɪs', 'case': 'keɪs', 'week': 'wiːk', 'company': 'ˈkʌm.pə.ni', 'system': 'ˈsɪs.təm',
-  'program': 'ˈproʊ.ɡræm', 'question': 'ˈkwes.tʃən', 'work': 'wɜːk', 'number': 'ˈnʌm.bər', 'night': 'naɪt',
-  'mr': 'ˈmɪs.tər', 'point': 'pɔɪnt', 'home': 'hoʊm', 'water': 'ˈwɔː.tər', 'room': 'ruːm',
-  'mother': 'ˈmʌð.ər', 'area': 'ˈeə.ri.ə', 'money': 'ˈmʌn.i', 'story': 'ˈstɔː.ri', 'fact': 'fækt',
-  'month': 'mʌnθ', 'lot': 'lɒt', 'right': 'raɪt', 'study': 'ˈstʌd.i', 'book': 'bʊk', 'eye': 'aɪ',
-  'job': 'dʒɒb', 'word': 'wɜːd', 'business': 'ˈbɪz.nɪs', 'issue': 'ˈɪʃ.uː', 'side': 'saɪd',
-  'kind': 'kaɪnd', 'head': 'hed', 'house': 'haʊs', 'service': 'ˈsɜː.vɪs', 'friend': 'frend',
-  'father': 'ˈfɑː.ðər', 'power': 'ˈpaʊ.ər', 'hour': 'ˈaʊ.ər', 'game': 'ɡeɪm', 'line': 'laɪn',
-  'end': 'end', 'member': 'ˈmem.bər', 'law': 'lɔː', 'car': 'kɑːr', 'city': 'ˈsɪt.i',
-  'community': 'kəˈmjuː.nə.ti', 'name': 'neɪm', 'president': 'ˈprez.ɪ.dənt', 'team': 'tiːm',
-  'minute': 'ˈmɪn.ɪt', 'idea': 'aɪˈdɪə', 'kid': 'kɪd', 'body': 'ˈbɒd.i', 'information': 'ˌɪn.fəˈmeɪ.ʃən',
-  'back': 'bæk', 'parent': 'ˈpeə.rənt', 'face': 'feɪs', 'others': 'ˈʌð.əz', 'level': 'ˈlev.əl',
-  'office': 'ˈɒf.ɪs', 'door': 'dɔːr', 'health': 'helθ', 'person': 'ˈpɜː.sən', 'art': 'ɑːt',
-  'war': 'wɔːr', 'history': 'ˈhɪs.tər.i', 'party': 'ˈpɑː.ti', 'result': 'rɪˈzʌlt', 'change': 'tʃeɪndʒ',
-  'morning': 'ˈmɔː.nɪŋ', 'reason': 'ˈriː.zən', 'research': 'rɪˈsɜːtʃ', 'girl': 'ɡɜːl', 'guy': 'ɡaɪ',
-  'moment': 'ˈmoʊ.mənt', 'air': 'eər', 'teacher': 'ˈtiː.tʃər', 'force': 'fɔːs', 'education': 'ˌedʒ.uˈkeɪ.ʃən',
+  // Core Vocabulary & Oxford Top Words
+  'apple': 'ˈæpl', 'banana': 'bəˈnɑːnə', 'cat': 'kæt', 'dog': 'dɒɡ', 'house': 'haʊs', 'car': 'kɑː(r)',
+  'book': 'bʊk', 'water': 'ˈwɔːtə(r)', 'time': 'taɪm', 'year': 'jɪə(r)', 'people': 'ˈpiːpl', 'way': 'weɪ',
+  'day': 'deɪ', 'man': 'mæn', 'thing': 'θɪŋ', 'woman': 'ˈwʊmən', 'life': 'laɪf', 'child': 'tʃaɪld',
+  'world': 'wɜːld', 'school': 'skuːl', 'state': 'steɪt', 'family': 'ˈfæməli', 'student': 'ˈstjuːdnt',
+  'group': 'ɡruːp', 'country': 'ˈkʌntri', 'problem': 'ˈprɒbləm', 'hand': 'hænd', 'part': 'pɑːt',
+  'place': 'pleɪs', 'case': 'keɪs', 'week': 'wiːk', 'company': 'ˈkʌmpəni', 'system': 'ˈsɪstəm',
+  'program': 'ˈprəʊɡræm', 'question': 'ˈkwestʃən', 'work': 'wɜːk', 'number': 'ˈnʌmbə(r)', 'night': 'naɪt',
+  'mr': 'ˈmɪstə(r)', 'point': 'pɔɪnt', 'home': 'həʊm', 'room': 'ruːm',
+  'mother': 'ˈmʌðə(r)', 'area': 'ˈeəriə', 'money': 'ˈmʌni', 'story': 'ˈstɔːri', 'fact': 'fækt',
+  'month': 'mʌnθ', 'lot': 'lɒt', 'right': 'raɪt', 'study': 'ˈstʌdi', 'eye': 'aɪ',
+  'job': 'dʒɒb', 'word': 'wɜːd', 'business': 'ˈbɪznəs', 'issue': 'ˈɪʃuː', 'side': 'saɪd',
+  'kind': 'kaɪnd', 'head': 'hed', 'service': 'ˈsɜːvɪs', 'friend': 'frend',
+  'father': 'ˈfɑːðə(r)', 'power': 'ˈpaʊə(r)', 'hour': 'ˈaʊə(r)', 'game': 'ɡeɪm', 'line': 'laɪn',
+  'end': 'end', 'member': 'ˈmembə(r)', 'law': 'lɔː', 'city': 'ˈsɪti',
+  'community': 'kəˈmjuːnəti', 'name': 'neɪm', 'president': 'ˈprezɪdənt', 'team': 'tiːm',
+  'minute': 'ˈmɪnɪt', 'idea': 'aɪˈdɪə', 'kid': 'kɪd', 'body': 'ˈbɒdi', 'information': 'ˌɪnfəˈmeɪʃn',
+  'back': 'bæk', 'parent': 'ˈpeərənt', 'face': 'feɪs', 'others': 'ˈʌðəz', 'level': 'ˈlevl',
+  'office': 'ˈɒfɪs', 'door': 'dɔː(r)', 'health': 'helθ', 'person': 'ˈpɜːsn', 'art': 'ɑːt',
+  'war': 'wɔː(r)', 'history': 'ˈhɪstri', 'party': 'ˈpɑːti', 'result': 'rɪˈzʌlt', 'change': 'tʃeɪndʒ',
+  'morning': 'ˈmɔːnɪŋ', 'reason': 'ˈriːzn', 'research': 'rɪˈsɜːtʃ', 'girl': 'ɡɜːl', 'guy': 'ɡaɪ',
+  'moment': 'ˈməʊmənt', 'air': 'eə(r)', 'teacher': 'ˈtiːtʃə(r)', 'force': 'fɔːs', 'education': 'ˌedʒuˈkeɪʃn',
   
   // Adjectives & Synonyms/Antonyms
-  'big': 'bɪɡ', 'small': 'smɔːl', 'large': 'lɑːdʒ', 'tiny': 'ˈtaɪ.ni', 'huge': 'hjuːdʒ', 'enormous': 'ɪˈnɔː.məs',
-  'good': 'ɡʊd', 'bad': 'bæd', 'great': 'ɡreɪt', 'excellent': 'ˈek.səl.ənt', 'terrible': 'ˈter.ə.bəl',
-  'happy': 'ˈhæp.i', 'sad': 'sæd', 'joyful': 'ˈdʒɔɪ.fəl', 'gloomy': 'ˈɡluː.mi', 'cheerful': 'ˈtʃɪə.fəl',
-  'fast': 'fɑːst', 'slow': 'sloʊ', 'quick': 'kwɪk', 'rapid': 'ˈræp.ɪd', 'swift': 'swɪft',
-  'hot': 'hɒt', 'cold': 'koʊld', 'warm': 'wɔːm', 'cool': 'kuːl', 'freezing': 'ˈfriː.zɪŋ',
-  'strong': 'strɒŋ', 'weak': 'wiːk', 'powerful': 'ˈpaʊ.ə.fəl', 'fragile': 'ˈfrædʒ.aɪl',
-  'rich': 'rɪtʃ', 'poor': 'pʊər', 'wealthy': 'ˈwel.θi', 'affluent': 'ˈæf.lu.ənt',
-  'smart': 'smɑːt', 'clever': 'ˈklev.ər', 'intelligent': 'ɪnˈtel.ɪ.dʒənt', 'foolish': 'ˈfuː.lɪʃ',
-  'easy': 'ˈiː.zi', 'difficult': 'ˈdɪf.ɪ.kəlt', 'simple': 'ˈsɪm.pəl', 'complex': 'kəmˈpleks',
-  'beautiful': 'ˈbjuː.tɪ.fəl', 'ugly': 'ˈʌɡ.li', 'gorgeous': 'ˈɡɔː.dʒəs', 'attractive': 'əˈtræk.tɪv',
-  'abundant': 'əˈbʌn.dənt', 'scarce': 'skeəs', 'plentiful': 'ˈplen.tɪ.fəl',
-  'ancient': 'ˈeɪn.ʃənt', 'modern': 'ˈmɒd.ən', 'new': 'njuː', 'old': 'oʊld',
-  'brave': 'breɪv', 'cowardly': 'ˈkaʊ.əd.li', 'courageous': 'kəˈreɪ.dʒəs',
-  'calm': 'kɑːm', 'anxious': 'ˈæŋk.ʃəs', 'peaceful': 'ˈpiːs.fəl',
+  'big': 'bɪɡ', 'small': 'smɔːl', 'large': 'lɑːdʒ', 'tiny': 'ˈtaɪni', 'huge': 'hjuːdʒ', 'enormous': 'ɪˈnɔːməs',
+  'good': 'ɡʊd', 'bad': 'bæd', 'great': 'ɡreɪt', 'excellent': 'ˈeksələnt', 'terrible': 'ˈterəbl',
+  'happy': 'ˈhæpi', 'sad': 'sæd', 'joyful': 'ˈdʒɔɪfl', 'gloomy': 'ˈɡluːmi', 'cheerful': 'ˈtʃɪəfl',
+  'fast': 'fɑːst', 'slow': 'sləʊ', 'quick': 'kwɪk', 'rapid': 'ˈræpɪd', 'swift': 'swɪft',
+  'hot': 'hɒt', 'cold': 'kəʊld', 'warm': 'wɔːm', 'cool': 'kuːl', 'freezing': 'ˈfriːzɪŋ',
+  'strong': 'strɒŋ', 'weak': 'wiːk', 'powerful': 'ˈpaʊəfl', 'fragile': 'ˈfrædʒaɪl',
+  'rich': 'rɪtʃ', 'poor': 'pɔː(r)', 'wealthy': 'ˈwelθi', 'affluent': 'ˈæfluənt',
+  'smart': 'smɑːt', 'clever': 'ˈklevə(r)', 'intelligent': 'ɪnˈtelɪdʒənt', 'foolish': 'ˈfuːlɪʃ',
+  'easy': 'ˈiːzi', 'difficult': 'ˈdɪfɪkəlt', 'simple': 'ˈsɪmpl', 'complex': 'ˈkɒmpleks',
+  'beautiful': 'ˈbjuːtɪfl', 'ugly': 'ˈʌɡli', 'gorgeous': 'ˈɡɔːdʒəs', 'attractive': 'əˈtræktɪv',
+  'abundant': 'əˈbʌndənt', 'scarce': 'skeəs', 'plentiful': 'ˈplentɪfl',
+  'ancient': 'ˈeɪnʃənt', 'modern': 'ˈmɒdn', 'new': 'njuː', 'old': 'əʊld',
+  'brave': 'breɪv', 'cowardly': 'ˈkaʊədli', 'courageous': 'kəˈreɪdʒəs',
+  'calm': 'kɑːm', 'anxious': 'ˈæŋkʃəs', 'peaceful': 'ˈpiːsfl',
   
   // Minimal Pairs & Phoneme Blitz Words
   'ship': 'ʃɪp', 'sheep': 'ʃiːp',
@@ -120,35 +121,66 @@ const IPA_DICT = {
   'three': 'θriː', 'tree': 'triː',
   
   // Grammar Terms
-  'grammar': 'ˈɡræm.ər', 'verb': 'vɜːb', 'noun': 'naʊn', 'adjective': 'ˈædʒ.ek.tɪv', 'adverb': 'ˈæd.vɜːb',
-  'preposition': 'ˌprep.əˈzɪʃ.ən', 'pronoun': 'ˈproʊ.naʊn', 'conjunction': 'kənˈdʒʌŋk.ʃən',
-  'tense': 'tens', 'present': 'ˈprez.ənt', 'past': 'pɑːst', 'future': 'ˈfjuː.tʃər',
-  'simple': 'ˈsɪm.pəl', 'continuous': 'kənˈtɪn.ju.əs', 'perfect': 'ˈpɜː.fɪkt', 'passive': 'ˈpæs.ɪv',
-  'active': 'ˈæk.tɪv', 'singular': 'ˈsɪŋ.ɡjə.lər', 'plural': 'ˈplʊə.rəl', 'subject': 'ˈsʌb.dʒekt'
+  'grammar': 'ˈɡræmə(r)', 'verb': 'vɜːb', 'noun': 'naʊn', 'adjective': 'ˈædʒɪktɪv', 'adverb': 'ˈædvɜːb',
+  'preposition': 'ˌprepəˈzɪʃn', 'pronoun': 'ˈprəʊnaʊn', 'conjunction': 'kənˈdʒʌŋkʃn',
+  'tense': 'tens', 'present': 'ˈpreznt', 'past': 'pɑːst', 'future': 'ˈfjuːtʃə(r)',
+  'simple': 'ˈsɪmpl', 'continuous': 'kənˈtɪnjuəs', 'perfect': 'ˈpɜːfɪkt', 'passive': 'ˈpæsɪv',
+  'active': 'ˈæktɪv', 'singular': 'ˈsɪŋɡjələ(r)', 'plural': 'ˈplʊərəl', 'subject': 'ˈsʌbdʒɪkt'
 };
 
-// Grapheme to Phoneme (G2P) Rule Engine for Dynamic IPA Synthesis
+/**
+ * Normalizes any IPA input string to Oxford Learner's Dictionaries standard
+ */
+export function formatToOxfordIPA(ipaStr) {
+  if (!ipaStr) return '';
+  let str = String(ipaStr).trim();
+  if (!str) return '';
+
+  const isEnclosed = str.startsWith('/') && str.endsWith('/');
+  let clean = isEnclosed ? str.slice(1, -1) : str;
+
+  clean = clean
+    // Oxford BrE Diphthong: oʊ -> əʊ
+    .replace(/oʊ/g, 'əʊ')
+    // Oxford Latin g -> IPA script ɡ
+    .replace(/g/g, 'ɡ')
+    // Oxford short e sound: ɛ -> e
+    .replace(/ɛ/g, 'e')
+    // Clean up internal syllable dots while preserving stress marks (ˈ, ˌ)
+    .replace(/\./g, '')
+    // Oxford r notation (non-rhotic Linking R: ər -> ə(r), etc.)
+    .replace(/ər$/g, 'ə(r)')
+    .replace(/ər\s/g, 'ə(r) ')
+    .replace(/ɔːr$/g, 'ɔː(r)')
+    .replace(/ɔːr\s/g, 'ɔː(r) ')
+    .replace(/ɑːr$/g, 'ɑː(r)')
+    .replace(/ɑːr\s/g, 'ɑː(r) ')
+    .replace(/eər$/g, 'eə(r)')
+    .replace(/eər\s/g, 'eə(r) ')
+    .replace(/ɪər$/g, 'ɪə(r)')
+    .replace(/ɪər\s/g, 'ɪə(r) ');
+
+  return isEnclosed ? `/${clean}/` : clean;
+}
+
+// Grapheme to Phoneme (G2P) Rule Engine for Dynamic Oxford IPA Synthesis
 function ruleBasedIPA(word) {
   let w = word.toLowerCase().replace(/[^a-z]/g, '');
   if (!w) return word;
 
-  // Check Dictionary
   if (IPA_DICT[w]) return IPA_DICT[w];
 
-  // Common Prefix Handling
   let prefixIPA = '';
-  if (w.startsWith('un')) { prefixIPA = 'ʌn-'; w = w.slice(2); }
-  else if (w.startsWith('re')) { prefixIPA = 'riː-'; w = w.slice(2); }
-  else if (w.startsWith('dis')) { prefixIPA = 'dɪs-'; w = w.slice(3); }
-  else if (w.startsWith('pre')) { prefixIPA = 'priː-'; w = w.slice(3); }
+  if (w.startsWith('un')) { prefixIPA = 'ʌn'; w = w.slice(2); }
+  else if (w.startsWith('re')) { prefixIPA = 'riː'; w = w.slice(2); }
+  else if (w.startsWith('dis')) { prefixIPA = 'dɪs'; w = w.slice(3); }
+  else if (w.startsWith('pre')) { prefixIPA = 'priː'; w = w.slice(3); }
 
-  // Check dictionary again for stem
   if (IPA_DICT[w]) return prefixIPA + IPA_DICT[w];
 
-  // Phonetic Pattern Transformations
   let res = w
-    .replace(/tion/g, 'ʃən')
-    .replace(/sion/g, 'ʒən')
+    .replace(/tion/g, 'ʃn')
+    .replace(/sion/g, 'ʒn')
     .replace(/ph/g, 'f')
     .replace(/sh/g, 'ʃ')
     .replace(/ch/g, 'tʃ')
@@ -163,22 +195,22 @@ function ruleBasedIPA(word) {
     .replace(/oi/g, 'ɔɪ')
     .replace(/ai/g, 'eɪ')
     .replace(/ay/g, 'eɪ')
-    .replace(/oa/g, 'oʊ')
-    .replace(/ow/g, 'oʊ')
-    .replace(/ar/g, 'ɑːr')
-    .replace(/or/g, 'ɔːr')
-    .replace(/er$/g, 'ər')
+    .replace(/oa/g, 'əʊ')
+    .replace(/ow/g, 'əʊ')
+    .replace(/ar/g, 'ɑː(r)')
+    .replace(/or/g, 'ɔː(r)')
+    .replace(/er$/g, 'ə(r)')
     .replace(/ing$/g, 'ɪŋ')
     .replace(/ed$/g, 't')
     .replace(/ly$/g, 'li')
-    .replace(/ful$/g, 'fəl')
+    .replace(/ful$/g, 'fl')
     .replace(/less$/g, 'ləs')
     .replace(/ness$/g, 'nəs')
     .replace(/ment$/g, 'mənt')
-    .replace(/able$/g, 'əbəl')
-    .replace(/ible$/g, 'əbəl')
+    .replace(/able$/g, 'əbl')
+    .replace(/ible$/g, 'əbl')
     .replace(/ous$/g, 'əs')
-    .replace(/ity$/g, 'əti')
+    .replace(/ity$/g, me => 'əti')
     .replace(/c([eiy])/g, 's$1')
     .replace(/c/g, 'k')
     .replace(/g([eiy])/g, 'dʒ$1')
@@ -187,10 +219,9 @@ function ruleBasedIPA(word) {
     .replace(/y$/g, 'i')
     .replace(/a([bcdfghjklmnpqrstvwxyz])e$/g, 'eɪ$1')
     .replace(/i([bcdfghjklmnpqrstvwxyz])e$/g, 'aɪ$1')
-    .replace(/o([bcdfghjklmnpqrstvwxyz])e$/g, 'oʊ$1')
+    .replace(/o([bcdfghjklmnpqrstvwxyz])e$/g, 'əʊ$1')
     .replace(/u([bcdfghjklmnpqrstvwxyz])e$/g, 'juː$1');
 
-  // Insert primary stress mark for multi-syllables
   if (res.length > 4 && !res.includes('ˈ')) {
     res = 'ˈ' + res;
   }
@@ -200,25 +231,31 @@ function ruleBasedIPA(word) {
 
 export const IpaService = {
   /**
-   * Get single word IPA transcription
+   * Normalize input to Oxford Learner's Dictionaries standard
+   */
+  formatToOxfordIPA(ipa) {
+    return formatToOxfordIPA(ipa);
+  },
+
+  /**
+   * Get single word Oxford IPA transcription
    */
   getWordIPA(word) {
     if (!word) return '';
     const clean = word.trim().replace(/^[^a-zA-Z]+|[^a-zA-Z]+$/g, '');
     if (!clean) return word;
     const lower = clean.toLowerCase();
-    if (IPA_DICT[lower]) return IPA_DICT[lower];
-    return ruleBasedIPA(clean);
+    const rawIpa = IPA_DICT[lower] || ruleBasedIPA(clean);
+    return formatToOxfordIPA(rawIpa);
   },
 
   /**
-   * Get IPA transcription for words, phrases or sentences
+   * Get Oxford IPA transcription for words, phrases or sentences
    */
   getIPA(text) {
     if (!text) return '';
     const words = text.trim().split(/\s+/);
     const ipaParts = words.map(w => {
-      // Keep punctuation outside IPA lookup
       const match = w.match(/^([^a-zA-Z]*)([a-zA-Z'-]+)([^a-zA-Z]*)$/);
       if (match) {
         const [, prefix, core, suffix] = match;
@@ -228,20 +265,21 @@ export const IpaService = {
       return this.getWordIPA(w);
     });
 
-    return `/${ipaParts.join(' ')}/`;
+    const joined = ipaParts.join(' ');
+    return `/${formatToOxfordIPA(joined)}/`;
   },
 
   /**
-   * Returns HTML string with text + IPA badge
+   * Returns HTML string with text + Oxford IPA badge
    */
   getIPABadgeHtml(text, customStyle = '') {
     if (!text) return '';
     const ipa = this.getIPA(text);
-    return `<span class="ipa-badge" style="${customStyle}" title="Phiên âm quốc tế IPA">${ipa}</span>`;
+    return `<span class="ipa-badge" style="${customStyle}" title="Phiên âm Oxford Learner's Dictionaries">${ipa}</span>`;
   },
 
   /**
-   * Formats a term with term text and subtext IPA
+   * Formats a term with term text and subtext Oxford IPA
    */
   formatTermWithIPA(termText) {
     if (!termText) return '';

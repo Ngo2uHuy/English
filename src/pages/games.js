@@ -1,21 +1,45 @@
 // ==========================================================================
 // Games Page — English Learning Arcade Hub & Interactive Mini-Games
+// Integrated with Centralized Vocabulary Databank (5,200+ TOEIC, IELTS, 6k Vocab)
 // ==========================================================================
 
 import { StorageService } from '../services/storage-service.js';
 import { SoundService } from '../services/sound-service.js';
 import { IpaService } from '../services/ipa-service.js';
-import {
-  getSpeedMatchPairs,
-  getSentenceDashData,
-  getErrorHunterData,
-  getPhonemeBlitzData,
-  getSynonymAntonymData,
-  getIrregularVerbsGameData,
-} from '../data/games-data.js';
+import { VOCAB_BANK, getVocabPool, getVocabStats, getAvailableCategories } from '../data/vocab-bank.js';
+
+let gamesDataModule = null;
+async function getGamesDataModule() {
+  if (!gamesDataModule) {
+    gamesDataModule = await import('../data/games-data.js');
+  }
+  return gamesDataModule;
+}
 
 let currentGame = null; // 'speed-match' | 'sentence-dash' | 'error-hunter' | 'phoneme-blitz' | 'synonym-antonym' | 'irregular-verbs' | null
 let selectedQuestionCount = 10; // Default 10 questions/challenges
+
+// Speed Word Match Configuration State
+let selectedVocabPool = 'all'; // 'all' | 'toeic' | 'ielts' | 'common'
+let selectedVocabLevel = 'all'; // 'all' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+let selectedMatchGameMode = 'count'; // 'count' | 'time' | 'marathon'
+
+/**
+ * Text-to-Speech Pronunciation Helper
+ */
+function speakEnglishWord(text) {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    try {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.9;
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.warn("Speech Synthesis error:", e);
+    }
+  }
+}
 
 export function renderGamesPage(selectedMode = null) {
   const container = document.getElementById('page-container');
@@ -42,15 +66,16 @@ function renderArcadeHub(container) {
   const gameStats = StorageService.getGameStats();
   const highScores = gameStats.highScores || {};
   const isMuted = SoundService.isMuted();
+  const vocabStats = getVocabStats();
 
   container.innerHTML = `
     <div class="arcade-container animate-fade-in">
       <!-- Arcade Header -->
       <div class="arcade-header">
         <div class="arcade-title-group">
-          <span class="arcade-badge">ARCADE MODE (18.000+ ITEMS)</span>
+          <span class="arcade-badge">KHO TỪ VỰNG DATABANK (${vocabStats.total.toLocaleString()} TỪ)</span>
           <h1 class="arcade-title">English Learning Arcade 🎮</h1>
-          <p class="arcade-subtitle">Rèn luyện phản xạ ngôn ngữ siêu tốc với kho <strong>3.000+ câu/từ vựng thông dụng cho mỗi trò chơi</strong>!</p>
+          <p class="arcade-subtitle">Rèn luyện phản xạ ngôn ngữ siêu tốc với kho <strong>5.200+ từ vựng TOEIC, IELTS & 6.000 từ thông dụng</strong>!</p>
         </div>
 
         <div class="arcade-top-stats">
@@ -100,15 +125,15 @@ function renderArcadeHub(container) {
 
       <!-- Mini-Game Cards Grid -->
       <div class="arcade-grid">
-        <!-- Game 1: Speed Word Match -->
+        <!-- Game 1: Speed Word Match (UPDATED DATABANK) -->
         <div class="arcade-card neon-purple" data-mode="speed-match">
           <div class="card-icon-wrapper">
             <span class="game-emoji">⚡</span>
           </div>
           <div class="card-content">
-            <div class="game-tag">3.000+ Từ Vựng Match</div>
+            <div class="game-tag">${vocabStats.total.toLocaleString()}+ Từ Vựng Match</div>
             <h2 class="game-name">Speed Word Match</h2>
-            <p class="game-desc">Ghép các cặp từ Anh-Việt nhanh nhất có thể. Tích luỹ Combo để nhân điểm XP với kho 3000+ từ vựng!</p>
+            <p class="game-desc">Ghép các cặp từ Anh-Việt siêu tốc. Lựa chọn kho từ <strong>TOEIC (${vocabStats.toeic}), IELTS (${vocabStats.ielts}), 6.000 Từ Thông Dụng (${vocabStats.common})</strong> với phát âm chuẩn bản xứ!</p>
             <div class="game-card-footer">
               <span class="high-score">🏆 Kỷ lục: <strong>${highScores['speed-match'] || 0} điểm</strong></span>
               <button class="play-btn">Chơi ngay ➔</button>
@@ -199,9 +224,14 @@ function renderArcadeHub(container) {
     </div>
   `;
 
+  // Attach Event Listeners
+  document.getElementById('toggle-sound-btn')?.addEventListener('click', () => {
+    const muted = SoundService.toggleMute();
+    renderArcadeHub(container);
+  });
+
   container.querySelectorAll('.arcade-card').forEach(card => {
     card.addEventListener('click', (e) => {
-      e.preventDefault();
       const mode = card.dataset.mode;
       if (mode) {
         window.location.hash = `#/games?mode=${mode}`;
@@ -209,41 +239,38 @@ function renderArcadeHub(container) {
       }
     });
   });
-
-  document.getElementById('toggle-sound-btn')?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const muted = SoundService.toggleMute();
-    renderArcadeHub(container);
-  });
 }
 
 // --------------------------------------------------------------------------
 // Active Game Dispatcher
 // --------------------------------------------------------------------------
-function renderActiveGame(container, mode, skipSetup = false) {
-  if (!skipSetup) {
+async function renderActiveGame(container, mode, directStart = false) {
+  if (!directStart) {
     renderGameSetup(container, mode);
     return;
   }
 
+  container.innerHTML = `<div class="card" style="text-align:center;padding:48px;color:var(--text-secondary);">Đang khởi tạo trò chơi...</div>`;
+  const gamesData = await getGamesDataModule();
+
   switch (mode) {
     case 'speed-match':
-      initSpeedMatch(container, selectedQuestionCount);
+      initSpeedMatch(container, selectedQuestionCount, gamesData);
       break;
     case 'sentence-dash':
-      initSentenceDash(container, selectedQuestionCount);
+      initSentenceDash(container, selectedQuestionCount, gamesData);
       break;
     case 'error-hunter':
-      initErrorHunter(container, selectedQuestionCount);
+      initErrorHunter(container, selectedQuestionCount, gamesData);
       break;
     case 'phoneme-blitz':
-      initPhonemeBlitz(container, selectedQuestionCount);
+      initPhonemeBlitz(container, selectedQuestionCount, gamesData);
       break;
     case 'synonym-antonym':
-      initSynonymAntonym(container, selectedQuestionCount);
+      initSynonymAntonym(container, selectedQuestionCount, gamesData);
       break;
     case 'irregular-verbs':
-      initIrregularVerbs(container, selectedQuestionCount);
+      initIrregularVerbs(container, selectedQuestionCount, gamesData);
       break;
     default:
       renderArcadeHub(container);
@@ -271,7 +298,7 @@ function getGameMemoryTip(mode) {
     case 'phoneme-blitz':
       return {
         title: '🧠 Phân Biệt Âm Thanh Đối Lập (Minimal Pairs Discrimination)',
-        desc: 'Luyện tập phân biệt các cặp âm dễ nhầm lẫn (như /i/ ngắn vs /i:/ dài). Lắng nghe nhịp điệu và ngữ điệu câu để rèn luyện đôi tai tiếp nhận ngữ âm chính xác.'
+        desc: 'Lắng nghe phát âm và chọn đúng từ giữa các cặp từ phát âm gần giống nhau để rèn luyện đôi tai cảm nhận ngữ âm chuẩn.'
       };
     case 'synonym-antonym':
       return {
@@ -292,13 +319,22 @@ function getGameMemoryTip(mode) {
 }
 
 // --------------------------------------------------------------------------
-// Game Question Count Setup Modal
+// Game Question Count / Setup Modal
 // --------------------------------------------------------------------------
 function renderGameSetup(container, mode) {
-  const options = [5, 10, 15, 20, 30];
   const modeName = getModeName(mode);
   const emoji = getGameEmoji(mode);
   const memoryTip = getGameMemoryTip(mode);
+  const vocabStats = getVocabStats();
+
+  if (mode === 'speed-match') {
+    // Specialized Vocabulary Databank Setup for Speed Word Match
+    renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats);
+    return;
+  }
+
+  // Standard Setup for Other Games
+  const options = [5, 10, 15, 20, 30];
 
   container.innerHTML = `
     <div class="game-setup-modal animate-scale-in">
@@ -359,42 +395,237 @@ function renderGameSetup(container, mode) {
   });
 }
 
+/**
+ * Specialized Setup Modal for Speed Word Match
+ */
+function renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats) {
+  // Compute match count for current selections
+  const currentPoolItems = getVocabPool({ pool: selectedVocabPool, level: selectedVocabLevel });
+  const poolCountText = currentPoolItems.length.toLocaleString();
+
+  container.innerHTML = `
+    <div class="game-setup-modal animate-scale-in" style="max-width: 680px;">
+      <div class="setup-header" style="margin-bottom: 20px;">
+        <span class="setup-emoji">${emoji}</span>
+        <h2 class="setup-title">${modeName}</h2>
+        <p class="setup-subtitle">Chọn <strong>Kho từ vựng luyện tập (TOEIC, IELTS, 6.000 từ thông dụng)</strong> & chế độ chơi:</p>
+      </div>
+
+      <!-- Vocab Pool Picker -->
+      <div class="setup-section" style="margin-bottom: 20px; text-align: left;">
+        <label style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span>📚 Kho Từ Vựng Luyện Tập (Vocabulary Pool):</span>
+          <span style="font-size: 0.85rem; font-weight: 600; color: #a855f7; background: rgba(168,85,247,0.1); padding: 4px 12px; border-radius: 20px;">
+            ⚡ Đã sẵn sàng: <strong>${poolCountText} từ</strong>
+          </span>
+        </label>
+        <div class="vocab-pool-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+          <button class="vocab-pool-btn ${selectedVocabPool === 'all' ? 'active' : ''}" data-pool="all" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+            <div style="font-weight: 800; font-size: 1rem; color: #a855f7; margin-bottom: 2px;">🌟 Tất Cả Kho Từ Vựng</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">Tổng hợp ${vocabStats.total.toLocaleString()} từ vựng đa dạng</div>
+          </button>
+
+          <button class="vocab-pool-btn ${selectedVocabPool === 'toeic' ? 'active' : ''}" data-pool="toeic" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+            <div style="font-weight: 800; font-size: 1rem; color: #3b82f6; margin-bottom: 2px;">💼 TOEIC Essential</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">${vocabStats.toeic.toLocaleString()} từ thương mại, công sở</div>
+          </button>
+
+          <button class="vocab-pool-btn ${selectedVocabPool === 'ielts' ? 'active' : ''}" data-pool="ielts" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+            <div style="font-weight: 800; font-size: 1rem; color: #10b981; margin-bottom: 2px;">🎓 IELTS Academic</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">${vocabStats.ielts.toLocaleString()} từ học thuật, essay topic</div>
+          </button>
+
+          <button class="vocab-pool-btn ${selectedVocabPool === 'common' ? 'active' : ''}" data-pool="common" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+            <div style="font-weight: 800; font-size: 1rem; color: #f59e0b; margin-bottom: 2px;">🔤 6.000 Từ Thông Dụng</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">${vocabStats.common.toLocaleString()} từ Oxford A1 ➔ C2</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Level Filter & Play Mode Row -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 20px; text-align: left;">
+        <div>
+          <label style="font-weight: 700; font-size: 0.9rem; color: var(--text-primary); display: block; margin-bottom: 8px;">🎯 Trình Độ (CEFR Level):</label>
+          <select class="input-field" id="vocab-level-select" style="width: 100%; font-weight: 600;">
+            <option value="all" ${selectedVocabLevel === 'all' ? 'selected' : ''}>🌐 Tất cả cấp độ (A1 - C2)</option>
+            <option value="A1" ${selectedVocabLevel === 'A1' ? 'selected' : ''}>🐣 A1 - Sơ Cấp (Elementary)</option>
+            <option value="A2" ${selectedVocabLevel === 'A2' ? 'selected' : ''}>🐥 A2 - Tiền Trung Cấp (Pre-Inter)</option>
+            <option value="B1" ${selectedVocabLevel === 'B1' ? 'selected' : ''}>🦅 B1 - Trung Cấp (Intermediate)</option>
+            <option value="B2" ${selectedVocabLevel === 'B2' ? 'selected' : ''}>🚀 B2 - Trên Trung Cấp (Upper-Inter)</option>
+            <option value="C1" ${selectedVocabLevel === 'C1' ? 'selected' : ''}>💎 C1 - Cao Cấp (Advanced)</option>
+            <option value="C2" ${selectedVocabLevel === 'C2' ? 'selected' : ''}>👑 C2 - Thành Thạo (Mastery)</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-weight: 700; font-size: 0.9rem; color: var(--text-primary); display: block; margin-bottom: 8px;">🎮 Chế Độ Thử Thách:</label>
+          <select class="input-field" id="match-mode-select" style="width: 100%; font-weight: 600;">
+            <option value="count" ${selectedMatchGameMode === 'count' ? 'selected' : ''}>🎯 Theo Lượt (${selectedQuestionCount} cặp từ)</option>
+            <option value="time" ${selectedMatchGameMode === 'time' ? 'selected' : ''}>⏱️ Time Attack (60 Giây Tính Giờ)</option>
+            <option value="marathon" ${selectedMatchGameMode === 'marathon' ? 'selected' : ''}>⚡ Marathon (Chơi Vô Tận - 3 Mạng)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Question Count Picker (if count mode) -->
+      <div id="count-picker-box" style="margin-bottom: 24px; text-align: left; display: ${selectedMatchGameMode === 'count' ? 'block' : 'none'};">
+        <label style="font-weight: 700; font-size: 0.9rem; color: var(--text-primary); display: block; margin-bottom: 8px;">🔢 Số Cặp Từ / Trận:</label>
+        <div class="question-count-options">
+          ${[5, 10, 15, 20, 30].map(opt => `
+            <button class="count-opt-btn ${selectedQuestionCount === opt ? 'active' : ''}" data-count="${opt}">
+              ${opt} cặp
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Memory Tip Box -->
+      <div class="game-memory-tip-box" style="margin-bottom: 24px;">
+        <div class="game-memory-tip-header">${memoryTip.title}</div>
+        <div class="game-memory-tip-content">${memoryTip.desc}</div>
+      </div>
+
+      <!-- Actions -->
+      <div class="game-over-actions">
+        <button class="restart-game-btn" id="start-speed-game-btn" style="font-size: 1.05rem; padding: 14px 28px;">
+          🚀 Bắt Đầu Luyện Tập Từ Vựng
+        </button>
+        <button class="exit-arcade-btn" id="back-arcade-btn">
+          🏠 Về Arcade Hub
+        </button>
+      </div>
+    </div>
+  `;
+
+  // Attach Pool Selector Listener
+  container.querySelectorAll('.vocab-pool-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      container.querySelectorAll('.vocab-pool-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.borderColor = 'var(--border-subtle)';
+        b.style.background = 'var(--bg-secondary)';
+      });
+      btn.classList.add('active');
+      btn.style.borderColor = '#a855f7';
+      btn.style.background = 'rgba(168,85,247,0.12)';
+      selectedVocabPool = btn.dataset.pool;
+      renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats);
+    });
+  });
+
+  // Attach Level Change
+  document.getElementById('vocab-level-select')?.addEventListener('change', (e) => {
+    selectedVocabLevel = e.target.value;
+    renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats);
+  });
+
+  // Attach Mode Change
+  document.getElementById('match-mode-select')?.addEventListener('change', (e) => {
+    selectedMatchGameMode = e.target.value;
+    const box = document.getElementById('count-picker-box');
+    if (box) box.style.display = selectedMatchGameMode === 'count' ? 'block' : 'none';
+  });
+
+  // Attach Count Buttons
+  container.querySelectorAll('.count-opt-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      container.querySelectorAll('.count-opt-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedQuestionCount = parseInt(btn.dataset.count, 10);
+    });
+  });
+
+  // Start Game
+  document.getElementById('start-speed-game-btn')?.addEventListener('click', () => {
+    renderActiveGame(container, 'speed-match', true);
+  });
+
+  document.getElementById('back-arcade-btn')?.addEventListener('click', () => {
+    window.location.hash = '#/games';
+    renderGamesPage(null);
+  });
+}
+
 // ==========================================================================
-// GAME 1: SPEED WORD MATCH
+// GAME 1: SPEED WORD MATCH (CENTRALIZED VOCABULARY BANK IMPLEMENTATION)
 // ==========================================================================
-function initSpeedMatch(container, targetPairsCount = selectedQuestionCount) {
+function initSpeedMatch(container, targetPairsCount = selectedQuestionCount, gamesData) {
   let score = 0;
   let combo = 0;
   let maxCombo = 0;
   let matchedPairs = 0;
+  let wrongAttempts = 0;
   let selectedCards = [];
+  const playedWordsHistory = [];
 
-  const allPairs = getSpeedMatchPairs().sort(() => 0.5 - Math.random());
-  const gamePool = allPairs.slice(0, Math.min(targetPairsCount, allPairs.length));
+  const startTime = Date.now();
+
+  // Load words from Centralized Vocabulary Databank!
+  let allPoolItems = getVocabPool({ pool: selectedVocabPool, level: selectedVocabLevel });
+  if (!allPoolItems || allPoolItems.length === 0) {
+    allPoolItems = getVocabPool({ pool: 'all', level: 'all' });
+  }
+
+  // Shuffle dataset
+  const shuffledItems = [...allPoolItems].sort(() => 0.5 - Math.random());
+
+  let targetCount = targetPairsCount;
+  if (selectedMatchGameMode === 'time' || selectedMatchGameMode === 'marathon') {
+    targetCount = Math.min(200, shuffledItems.length);
+  }
+
+  const gamePool = shuffledItems.slice(0, Math.min(targetCount, shuffledItems.length));
 
   let poolIndex = 0;
+  let currentGridMatched = 0;
+  let timerInterval = null;
+  let timeLeft = 60; // 60s for Time Attack mode
 
   function loadActiveGrid() {
     const activePairs = gamePool.slice(poolIndex, poolIndex + 6);
     let cards = [];
     activePairs.forEach((pair, idx) => {
-      cards.push({ id: `en-${idx}`, pairId: idx, text: pair.en, type: 'en' });
-      cards.push({ id: `vn-${idx}`, pairId: idx, text: pair.vn, type: 'vn' });
+      cards.push({ id: `en-${idx}`, pairId: idx, text: pair.en, type: 'en', item: pair });
+      cards.push({ id: `vn-${idx}`, pairId: idx, text: pair.vn, type: 'vn', item: pair });
     });
     cards.sort(() => 0.5 - Math.random());
     return { activePairs, cards };
   }
 
   let { activePairs, cards } = loadActiveGrid();
-  let currentGridMatched = 0;
+
+  // Setup Timer if Time Attack mode
+  if (selectedMatchGameMode === 'time') {
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      const timerEl = document.getElementById('speed-timer-display');
+      if (timerEl) timerEl.textContent = `⏱️ ${timeLeft}s`;
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        finishSpeedMatch();
+      }
+    }, 1000);
+  }
 
   function renderStage() {
+    const poolLabel = selectedVocabPool === 'toeic' ? 'TOEIC' : selectedVocabPool === 'ielts' ? 'IELTS' : selectedVocabPool === 'common' ? '6k Vocab' : 'Tất cả';
+    const levelLabel = selectedVocabLevel === 'all' ? '' : `• ${selectedVocabLevel}`;
+
     container.innerHTML = `
       <div class="game-stage animate-fade-in">
         <div class="stage-top-bar">
           <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
-          <div class="stage-title">⚡ Speed Word Match</div>
-          <div class="stage-timer" id="game-progress">🎯 Cặp ${matchedPairs}/${gamePool.length}</div>
+
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div class="stage-title">⚡ Speed Word Match</div>
+            <span class="badge badge-purple" style="font-size:0.8rem; padding:4px 10px;">${poolLabel} ${levelLabel}</span>
+          </div>
+
+          <div class="stage-timer" id="game-progress">
+            ${selectedMatchGameMode === 'time' ? `<span id="speed-timer-display" style="color:#f59e0b;font-weight:800;">⏱️ ${timeLeft}s</span>` : ''}
+            ${selectedMatchGameMode === 'marathon' ? `<span style="color:#ef4444;font-weight:800;">❤️ ${Math.max(0, 3 - wrongAttempts)} Mạng</span>` : ''}
+            ${selectedMatchGameMode === 'count' ? `🎯 Cặp ${matchedPairs}/${gamePool.length}` : ''}
+          </div>
         </div>
 
         <div class="game-score-row">
@@ -402,14 +633,14 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount) {
           <div class="combo-badge" id="combo-badge">COMBO: x${Math.max(1, combo)}</div>
         </div>
 
-        <p class="game-instruction">Chạm 2 thẻ tương ứng (Tiếng Anh ⚡ Tiếng Việt) để nối từ!</p>
+        <p class="game-instruction">Chạm 2 thẻ tương ứng (Tiếng Anh ⚡ Tiếng Việt) để nối từ & nghe phát âm chuẩn!</p>
 
         <div class="speed-match-grid" id="match-grid">
           ${cards.map(c => `
             <div class="match-card" data-id="${c.id}" data-pair="${c.pairId}">
-              <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
-                <span>${c.text}</span>
-                ${c.type === 'en' ? `<span class="ipa-subtext" style="font-size:0.8rem;color:#c084fc;">${IpaService.getIPA(c.text)}</span>` : ''}
+              <div style="display:flex;flex-direction:column;align-items:center;gap:3px;">
+                <span style="font-size:1.05rem;font-weight:700;">${c.text}</span>
+                ${c.type === 'en' ? `<span class="ipa-subtext" style="font-size:0.8rem;color:#c084fc;font-weight:600;">${IpaService.getIPA(c.text)}</span>` : ''}
               </div>
             </div>
           `).join('')}
@@ -418,6 +649,7 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount) {
     `;
 
     document.getElementById('exit-game-btn')?.addEventListener('click', () => {
+      if (timerInterval) clearInterval(timerInterval);
       window.location.hash = '#/games';
       renderArcadeHub(container);
     });
@@ -450,6 +682,15 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount) {
           matchedPairs++;
           currentGridMatched++;
 
+          // Audio Pronunciation & Sound FX
+          const matchedItem = activePairs[parseInt(pair1, 10)];
+          if (matchedItem) {
+            speakEnglishWord(matchedItem.en);
+            if (!playedWordsHistory.some(w => w.en === matchedItem.en)) {
+              playedWordsHistory.push(matchedItem);
+            }
+          }
+
           if (combo >= 2) SoundService.playCombo();
           else SoundService.playCorrect();
 
@@ -461,40 +702,48 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount) {
           const scoreEl = document.getElementById('game-score');
           const comboEl = document.getElementById('combo-badge');
           const progressEl = document.getElementById('game-progress');
+
           if (scoreEl) scoreEl.textContent = score;
-          if (progressEl) progressEl.textContent = `🎯 Cặp ${matchedPairs}/${gamePool.length}`;
           if (comboEl) {
             comboEl.textContent = `COMBO: x${combo}`;
             comboEl.classList.add('pulse');
             setTimeout(() => comboEl.classList.remove('pulse'), 300);
           }
 
-          if (matchedPairs >= gamePool.length) {
-            setTimeout(() => {
-              finishGame('speed-match', score, maxCombo, gamePool.length);
-            }, 50);
+          if (selectedMatchGameMode === 'count' && matchedPairs >= gamePool.length) {
+            setTimeout(() => finishSpeedMatch(), 100);
             return;
           }
 
           if (currentGridMatched >= activePairs.length) {
             poolIndex += 6;
             currentGridMatched = 0;
+
+            if (poolIndex >= gamePool.length) {
+              setTimeout(() => finishSpeedMatch(), 100);
+              return;
+            }
+
             const nextGrid = loadActiveGrid();
             activePairs = nextGrid.activePairs;
             cards = nextGrid.cards;
-            setTimeout(() => {
-              renderStage();
-            }, 50);
+            setTimeout(() => renderStage(), 100);
           }
         } else {
           // MISMATCHED
           combo = 0;
+          wrongAttempts++;
           SoundService.playError();
           c1.classList.add('wrong');
           c2.classList.add('wrong');
 
           const comboEl = document.getElementById('combo-badge');
           if (comboEl) comboEl.textContent = `COMBO: x1`;
+
+          if (selectedMatchGameMode === 'marathon' && wrongAttempts >= 3) {
+            setTimeout(() => finishSpeedMatch(), 300);
+            return;
+          }
 
           setTimeout(() => {
             c1.classList.remove('selected', 'wrong');
@@ -507,155 +756,273 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount) {
     });
   }
 
+  function finishSpeedMatch() {
+    if (timerInterval) clearInterval(timerInterval);
+
+    const totalTimeSec = Math.max(1, Math.round((Date.now() - startTime) / 1000));
+    const accuracy = Math.round((matchedPairs / Math.max(1, matchedPairs + wrongAttempts)) * 100);
+    const secPerWord = (totalTimeSec / Math.max(1, matchedPairs)).toFixed(1);
+
+    finishSpeedMatchGame({
+      score,
+      maxCombo,
+      matchedPairs,
+      wrongAttempts,
+      totalTimeSec,
+      accuracy,
+      secPerWord,
+      playedWordsHistory
+    });
+  }
+
   renderStage();
 }
 
-// ==========================================================================
+/**
+ * Detailed Results & Vocabulary Training Review Screen for Speed Word Match
+ */
+function finishSpeedMatchGame(results) {
+  SoundService.playVictory();
+  const { score, maxCombo, matchedPairs, wrongAttempts, totalTimeSec, accuracy, secPerWord, playedWordsHistory } = results;
+
+  const xpGained = Math.round(score / 5) + maxCombo * 10;
+  StorageService.addGameResult('speed-match', score, xpGained, maxCombo);
+
+  const container = document.getElementById('page-container');
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="game-over-modal animate-scale-in" style="max-width: 800px;">
+      <div class="game-over-header">
+        <span class="trophy-icon">🏆</span>
+        <h2>TRẬN ĐẤU TỪ VỰNG HOÀN THÀNH!</h2>
+        <p class="mode-name">Speed Word Match ⚡ Kho ${selectedVocabPool.toUpperCase()} (${matchedPairs} cặp từ ghép thành công)</p>
+      </div>
+
+      <div class="game-over-stats" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="result-stat-box">
+          <span class="stat-label">Tổng Điểm</span>
+          <span class="stat-value gold">${score}</span>
+        </div>
+        <div class="result-stat-box">
+          <span class="stat-label">XP Nhận Được</span>
+          <span class="stat-value green">+${xpGained} XP</span>
+        </div>
+        <div class="result-stat-box">
+          <span class="stat-label">Chính Xác</span>
+          <span class="stat-value purple">${accuracy}%</span>
+        </div>
+        <div class="result-stat-box">
+          <span class="stat-label">Tốc Độ TB</span>
+          <span class="stat-value blue">${secPerWord}s/từ</span>
+        </div>
+      </div>
+
+      <!-- Training Vocabulary Summary Table -->
+      <div style="margin: 24px 0; text-align: left;">
+        <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>📖 Danh Sách Từ Vựng Đã Luyện Tập (${playedWordsHistory.length} từ):</span>
+        </h3>
+        <div style="max-height: 280px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-secondary);">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+            <thead>
+              <tr style="background: var(--bg-tertiary); border-bottom: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase;">
+                <th style="padding: 10px 14px;">Từ Tiếng Anh</th>
+                <th style="padding: 10px 14px;">Nghĩa Tiếng Việt</th>
+                <th style="padding: 10px 14px;">Phân Loại</th>
+                <th style="padding: 10px 14px; text-align: center;">Phát Âm</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${playedWordsHistory.map(w => `
+                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 10px 14px; font-weight: 700; color: var(--text-primary);">
+                    ${w.en} <span style="font-size:0.75rem; color:#a855f7; font-weight:600;">${IpaService.getIPA(w.en)}</span>
+                  </td>
+                  <td style="padding: 10px 14px; color: var(--text-secondary);">${w.vn}</td>
+                  <td style="padding: 10px 14px;">
+                    <span class="badge ${w.pool === 'toeic' ? 'badge-blue' : w.pool === 'ielts' ? 'badge-green' : 'badge-amber'}" style="font-size:0.75rem; padding: 2px 8px;">
+                      ${w.pool ? w.pool.toUpperCase() : 'COMMON'} • ${w.level || 'B1'}
+                    </span>
+                  </td>
+                  <td style="padding: 10px 14px; text-align: center;">
+                    <button class="tts-speak-btn" data-word="${w.en}" style="background: none; border: none; font-size: 1.1rem; cursor: pointer;" title="Nghe phát âm">
+                      🔊
+                    </button>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="game-over-actions">
+        <button class="restart-game-btn" id="restart-speed-game-btn">
+          🔄 Luyện Tiếp Kho Này
+        </button>
+        <button class="btn btn-secondary" id="custom-vocab-btn">
+          ⚙️ Đổi Kho Từ Vựng
+        </button>
+        <button class="exit-arcade-btn" id="exit-arcade-btn">
+          🏠 Về Arcade Hub
+        </button>
+      </div>
+    </div>
+  `;
+
+  // Attach TTS Listeners for Review Table
+  container.querySelectorAll('.tts-speak-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      speakEnglishWord(btn.dataset.word);
+    });
+  });
+
+  document.getElementById('restart-speed-game-btn')?.addEventListener('click', () => {
+    renderActiveGame(container, 'speed-match', true);
+  });
+
+  document.getElementById('custom-vocab-btn')?.addEventListener('click', () => {
+    renderGameSetup(container, 'speed-match');
+  });
+
+  document.getElementById('exit-arcade-btn')?.addEventListener('click', () => {
+    window.location.hash = '#/games';
+    renderGamesPage(null);
+  });
+}
+
+// --------------------------------------------------------------------------
 // GAME 2: SENTENCE BUILDER DASH
-// ==========================================================================
-function initSentenceDash(container, totalQuestions = selectedQuestionCount) {
+// --------------------------------------------------------------------------
+function initSentenceDash(container, targetCount = selectedQuestionCount, gamesData) {
   let score = 0;
   let combo = 0;
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = getSentenceDashData()
-    .sort(() => 0.5 - Math.random())
-    .slice(0, totalQuestions);
+  const dataset = gamesData.getSentenceDashData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  if (!dataset || dataset.length === 0) return;
 
-  function loadSentence() {
+  function loadQuestion() {
     if (currentIndex >= dataset.length) {
       finishGame('sentence-dash', score, maxCombo, dataset.length);
       return;
     }
 
-    const item = dataset[currentIndex];
+    const q = dataset[currentIndex];
     let selectedWords = [];
 
-    container.innerHTML = `
-      <div class="game-stage animate-fade-in">
-        <div class="stage-top-bar">
-          <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
-          <div class="stage-title">🚀 Sentence Builder Dash</div>
-          <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
+    function renderStage() {
+      container.innerHTML = `
+        <div class="game-stage animate-fade-in">
+          <div class="stage-top-bar">
+            <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
+            <div class="stage-title">🚀 Sentence Builder Dash</div>
+            <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
+          </div>
+
+          <div class="game-score-row">
+            <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
+            <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
+          </div>
+
+          <div class="dash-hint-box">
+            <div class="hint-text">💡 Nghĩa: <strong>${q.translation}</strong></div>
+            <span class="badge badge-blue">${q.category || 'Grammar'}</span>
+          </div>
+
+          <div class="target-sentence-zone" id="target-zone">
+            ${selectedWords.map((w, idx) => `
+              <button class="word-chip in-target" data-idx="${idx}">${w}</button>
+            `).join('')}
+          </div>
+
+          <div class="scrambled-words-pool" id="source-zone">
+            ${q.scrambledWords.map((w, idx) => `
+              <button class="word-chip ${selectedWords.includes(w) ? 'used' : ''}" data-word="${w}" data-idx="${idx}">${w}</button>
+            `).join('')}
+          </div>
+
+          <div style="display:flex;justify-content:center;gap:12px;margin-top:24px;">
+            <button class="btn btn-secondary" id="clear-btn">🔄 Làm lại</button>
+            <button class="btn btn-primary" id="submit-btn" ${selectedWords.length === 0 ? 'disabled' : ''}>✅ Kiểm tra câu</button>
+          </div>
         </div>
+      `;
 
-        <div class="game-score-row">
-          <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
-          <div class="combo-badge" id="combo-badge">COMBO: x${Math.max(1, combo)}</div>
-        </div>
+      document.getElementById('exit-game-btn')?.addEventListener('click', () => {
+        window.location.hash = '#/games';
+        renderArcadeHub(container);
+      });
 
-        <div class="dash-hint-box">
-          <span class="hint-label">Gợi ý câu:</span> "${item.translation}"
-          <div class="hint-tag">${item.hint}</div>
-        </div>
+      document.getElementById('clear-btn')?.addEventListener('click', () => {
+        selectedWords = [];
+        renderStage();
+      });
 
-        <!-- Target sentence assembly zone -->
-        <div class="target-sentence-zone" id="target-zone">
-          <span class="placeholder-text">Chạm các từ bên dưới để ghép câu...</span>
-        </div>
+      document.getElementById('submit-btn')?.addEventListener('click', checkAnswer);
 
-        <!-- Word chips pool -->
-        <div class="word-pool-zone" id="word-pool">
-          ${item.scrambled.map((w, idx) => `
-            <button class="word-chip" data-index="${idx}">${w}</button>
-          `).join('')}
-        </div>
+      const sourceZone = document.getElementById('source-zone');
+      sourceZone?.addEventListener('click', (e) => {
+        const chip = e.target.closest('.word-chip:not(.used)');
+        if (!chip) return;
+        selectedWords.push(chip.dataset.word);
+        renderStage();
+      });
 
-        <div class="dash-actions">
-          <button class="dash-btn reset-btn" id="reset-sentence-btn">🔄 Làm lại</button>
-          <button class="dash-btn submit-btn" id="submit-sentence-btn">✔ Kiểm Tra</button>
-        </div>
-      </div>
-    `;
+      const targetZone = document.getElementById('target-zone');
+      targetZone?.addEventListener('click', (e) => {
+        const chip = e.target.closest('.word-chip.in-target');
+        if (!chip) return;
+        const removeIdx = parseInt(chip.dataset.idx, 10);
+        selectedWords.splice(removeIdx, 1);
+        renderStage();
+      });
+    }
 
-    document.getElementById('exit-game-btn')?.addEventListener('click', () => {
-      window.location.hash = '#/games';
-      renderArcadeHub(container);
-    });
+    function checkAnswer() {
+      const userSentence = selectedWords.join(' ').trim();
+      const targetZone = document.getElementById('target-zone');
 
-    const targetZone = document.getElementById('target-zone');
-    const wordPool = document.getElementById('word-pool');
+      if (userSentence === q.originalSentence) {
+        combo++;
+        if (combo > maxCombo) maxCombo = combo;
+        score += 150 * Math.min(combo, 5);
+        SoundService.playCorrect();
+        if (targetZone) targetZone.classList.add('correct-glow');
 
-    wordPool?.addEventListener('click', (e) => {
-      const chip = e.target.closest('.word-chip');
-      if (!chip || chip.classList.contains('used')) return;
-
-      chip.classList.add('used');
-      selectedWords.push({ word: chip.textContent.trim(), chipEl: chip });
-
-      renderTargetSentence();
-    });
-
-    function renderTargetSentence() {
-      if (selectedWords.length === 0) {
-        targetZone.innerHTML = `<span class="placeholder-text">Chạm các từ bên dưới để ghép câu...</span>`;
+        setTimeout(() => {
+          currentIndex++;
+          loadQuestion();
+        }, 50);
       } else {
-        targetZone.innerHTML = selectedWords.map((item, idx) => `
-          <button class="placed-chip" data-idx="${idx}">${item.word}</button>
-        `).join('');
+        combo = 0;
+        SoundService.playError();
+        if (targetZone) targetZone.classList.add('wrong-glow');
+        setTimeout(() => {
+          if (targetZone) targetZone.classList.remove('wrong-glow');
+        }, 400);
       }
     }
 
-    targetZone?.addEventListener('click', (e) => {
-      const placed = e.target.closest('.placed-chip');
-      if (!placed) return;
-      const idx = parseInt(placed.dataset.idx, 10);
-      const removed = selectedWords.splice(idx, 1)[0];
-      if (removed) {
-        removed.chipEl.classList.remove('used');
-      }
-      renderTargetSentence();
-    });
-
-    document.getElementById('reset-sentence-btn')?.addEventListener('click', () => {
-      selectedWords.forEach(sw => sw.chipEl.classList.remove('used'));
-      selectedWords = [];
-      renderTargetSentence();
-    });
-
-    document.getElementById('submit-sentence-btn')?.addEventListener('click', () => {
-      const userSentence = selectedWords.map(sw => sw.word).join(' ');
-      if (userSentence.toLowerCase().trim() === item.target.toLowerCase().trim()) {
-        // CORRECT
-        combo++;
-        if (combo > maxCombo) maxCombo = combo;
-        const addedScore = 150 * Math.min(combo, 4);
-        score += addedScore;
-
-        SoundService.playCombo();
-        targetZone.classList.add('correct-glow');
-
-        // Immediate transition to next sentence
-        setTimeout(() => {
-          currentIndex++;
-          loadSentence();
-        }, 50);
-      } else {
-        // WRONG
-        combo = 0;
-        SoundService.playError();
-        targetZone.classList.add('wrong-glow');
-        setTimeout(() => targetZone.classList.remove('wrong-glow'), 250);
-      }
-    });
+    renderStage();
   }
 
-  loadSentence();
+  loadQuestion();
 }
 
-// ==========================================================================
-// GAME 3: ERROR HUNTER (GRAMMAR TRAP)
-// ==========================================================================
-function initErrorHunter(container, totalQuestions = selectedQuestionCount) {
+// --------------------------------------------------------------------------
+// GAME 3: ERROR HUNTER
+// --------------------------------------------------------------------------
+function initErrorHunter(container, targetCount = selectedQuestionCount, gamesData) {
   let score = 0;
   let combo = 0;
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = getErrorHunterData()
-    .sort(() => 0.5 - Math.random())
-    .slice(0, totalQuestions);
+  const dataset = gamesData.getErrorHunterData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
     if (currentIndex >= dataset.length) {
@@ -664,121 +1031,80 @@ function initErrorHunter(container, totalQuestions = selectedQuestionCount) {
     }
 
     const item = dataset[currentIndex];
-    let selectedSegment = null;
 
-    container.innerHTML = `
-      <div class="game-stage animate-fade-in">
-        <div class="stage-top-bar">
-          <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
-          <div class="stage-title">🔍 Error Hunter</div>
-          <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
-        </div>
+    function renderStage() {
+      container.innerHTML = `
+        <div class="game-stage animate-fade-in">
+          <div class="stage-top-bar">
+            <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
+            <div class="stage-title">🔍 Error Hunter (Bẫy Ngữ Pháp)</div>
+            <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
+          </div>
 
-        <div class="game-score-row">
-          <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
-          <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
-        </div>
+          <div class="game-score-row">
+            <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
+            <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
+          </div>
 
-        <p class="game-instruction">Chạm phần câu bị lỗi ngữ pháp và chọn đáp án sửa đổi đúng:</p>
+          <p class="game-instruction">Chạm vào từ/cụm từ sai ngữ pháp duy nhất trong câu dưới đây:</p>
 
-        <!-- Sentence Segments -->
-        <div class="sentence-hunter-card">
-          <div class="hunter-segments" id="segments-container">
-            ${item.sentenceParts.map((part, idx) => `
-              <span class="hunter-segment" data-idx="${idx}">${part}</span>
+          <div class="error-hunter-sentence-box" id="sentence-box">
+            ${item.tokens.map(token => `
+              <span class="error-token ${token.isErrorTarget ? 'error-target' : ''}" data-id="${token.id}">${token.text}</span>
             `).join(' ')}
           </div>
-          <div class="translation-hint">💡 Ý nghĩa: "${item.translation}"</div>
         </div>
+      `;
 
-        <!-- Fix options -->
-        <div class="fix-options-box hidden" id="options-box">
-          <div class="options-title">Chọn phương án sửa đúng cho cụm từ vừa chọn:</div>
-          <div class="options-grid" id="options-grid">
-            ${item.correctOptions.map((opt, idx) => `
-              <button class="option-btn" data-opt="${idx}">${opt}</button>
-            `).join('')}
-          </div>
-        </div>
-      </div>
-    `;
+      document.getElementById('exit-game-btn')?.addEventListener('click', () => {
+        window.location.hash = '#/games';
+        renderArcadeHub(container);
+      });
 
-    document.getElementById('exit-game-btn')?.addEventListener('click', () => {
-      window.location.hash = '#/games';
-      renderArcadeHub(container);
-    });
+      const box = document.getElementById('sentence-box');
+      box?.addEventListener('click', (e) => {
+        const tokenEl = e.target.closest('.error-token');
+        if (!tokenEl || tokenEl.classList.contains('clicked')) return;
 
-    const segmentsEl = document.getElementById('segments-container');
-    const optionsBox = document.getElementById('options-box');
+        const isWrong = tokenEl.classList.contains('error-target');
+        tokenEl.classList.add('clicked');
 
-    segmentsEl?.addEventListener('click', (e) => {
-      const seg = e.target.closest('.hunter-segment');
-      if (!seg) return;
+        if (isWrong) {
+          combo++;
+          if (combo > maxCombo) maxCombo = combo;
+          score += 150 * Math.min(combo, 5);
+          SoundService.playCorrect();
+          tokenEl.classList.add('correct');
 
-      document.querySelectorAll('.hunter-segment').forEach(s => s.classList.remove('selected'));
-      seg.classList.add('selected');
-      selectedSegment = parseInt(seg.dataset.idx, 10);
+          setTimeout(() => {
+            currentIndex++;
+            loadQuestion();
+          }, 50);
+        } else {
+          combo = 0;
+          SoundService.playError();
+          tokenEl.classList.add('wrong');
+        }
+      });
+    }
 
-      optionsBox.classList.remove('hidden');
-    });
-
-    const optionsGrid = document.getElementById('options-grid');
-    optionsGrid?.addEventListener('click', (e) => {
-      const optBtn = e.target.closest('.option-btn');
-      if (!optBtn) return;
-
-      const optIdx = parseInt(optBtn.dataset.opt, 10);
-
-      if (selectedSegment === item.errorIndex && optIdx === item.correctChoice) {
-        // CORRECT
-        combo++;
-        if (combo > maxCombo) maxCombo = combo;
-        score += 200 * Math.min(combo, 4);
-        SoundService.playCorrect();
-
-        optBtn.classList.add('correct');
-        // Immediate transition to next question
-        setTimeout(() => {
-          currentIndex++;
-          loadQuestion();
-        }, 50);
-      } else {
-        // WRONG
-        combo = 0;
-        SoundService.playError();
-        optBtn.classList.add('wrong');
-        setTimeout(() => {
-          optBtn.classList.remove('wrong');
-        }, 300);
-      }
-    });
+    renderStage();
   }
 
   loadQuestion();
 }
 
-// ==========================================================================
+// --------------------------------------------------------------------------
 // GAME 4: PHONEME BLITZ
-// ==========================================================================
-function initPhonemeBlitz(container, totalQuestions = selectedQuestionCount) {
+// --------------------------------------------------------------------------
+function initPhonemeBlitz(container, targetCount = selectedQuestionCount, gamesData) {
   let score = 0;
   let combo = 0;
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = getPhonemeBlitzData()
-    .sort(() => 0.5 - Math.random())
-    .slice(0, totalQuestions);
-
-  function speakWord(text) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'en-US';
-      utterance.rate = 0.95;
-      window.speechSynthesis.speak(utterance);
-    }
-  }
+  const dataset = gamesData.getPhonemeBlitzData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
     if (currentIndex >= dataset.length) {
@@ -787,98 +1113,92 @@ function initPhonemeBlitz(container, totalQuestions = selectedQuestionCount) {
     }
 
     const item = dataset[currentIndex];
-    let choices = [item.wordTarget, item.distractor].filter(Boolean).sort(() => 0.5 - Math.random());
 
-    container.innerHTML = `
-      <div class="game-stage animate-fade-in">
-        <div class="stage-top-bar">
-          <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
-          <div class="stage-title">🎧 Phoneme Blitz</div>
-          <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
-        </div>
+    function renderStage() {
+      container.innerHTML = `
+        <div class="game-stage animate-fade-in">
+          <div class="stage-top-bar">
+            <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
+            <div class="stage-title">🎧 Phoneme Blitz (Phản Xạ Âm Thanh)</div>
+            <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
+          </div>
 
-        <div class="game-score-row">
-          <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
-          <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
-        </div>
+          <div class="game-score-row">
+            <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
+            <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
+          </div>
 
-        <div class="phoneme-audio-card" style="text-align:center;padding:28px 20px;margin-bottom:24px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:16px;">
-          <button class="audio-play-big-btn" id="play-sound-btn" style="padding:14px 28px;font-size:1.1rem;font-weight:700;border-radius:30px;background:var(--accent-color);color:#fff;border:none;cursor:pointer;margin-bottom:12px;">
-            🔊 Bấm để nghe phát âm
-          </button>
-          <p class="phoneme-hint" style="color:var(--text-secondary);font-size:0.95rem;">
-            ${item.soundHint || item.translation || ''}
-            <span class="ipa-badge" style="font-size:1rem;padding:3px 10px;margin-left:8px;">${IpaService.getIPA(item.wordTarget)}</span>
-          </p>
-        </div>
-
-        <div class="phoneme-options-grid" id="phoneme-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
-          ${choices.map(c => `
-            <button class="phoneme-choice-btn option-btn" data-word="${c}" style="padding:18px;font-size:1.1rem;font-weight:700;border-radius:12px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;">
-              <span>${c}</span>
-              <span class="ipa-subtext" style="font-size:0.85rem;color:#c084fc;">${IpaService.getIPA(c)}</span>
+          <div class="audio-challenge-card card" style="text-align:center;padding:32px;margin-bottom:24px;">
+            <button class="audio-play-big-btn" id="play-audio-btn" style="font-size:2rem;padding:20px 32px;border-radius:50px;cursor:pointer;background:var(--color-primary);color:white;border:none;">
+              🔊 Phản Xạ Âm Thanh
             </button>
-          `).join('')}
+            <p style="margin-top:16px;color:var(--text-secondary);font-weight:600;">${item.meaning}</p>
+          </div>
+
+          <div class="options-grid" id="options-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;">
+            ${item.options.map(opt => `
+              <button class="option-btn" data-word="${opt}" style="padding:20px;font-size:1.1rem;font-weight:700;border-radius:12px;cursor:pointer;">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
         </div>
-      </div>
-    `;
+      `;
 
-    document.getElementById('exit-game-btn')?.addEventListener('click', () => {
-      window.location.hash = '#/games';
-      renderArcadeHub(container);
-    });
+      document.getElementById('exit-game-btn')?.addEventListener('click', () => {
+        window.location.hash = '#/games';
+        renderArcadeHub(container);
+      });
 
-    const playBtn = document.getElementById('play-sound-btn');
-    playBtn?.addEventListener('click', () => {
-      speakWord(item.wordTarget || item.audioText || '');
-    });
+      document.getElementById('play-audio-btn')?.addEventListener('click', () => {
+        speakEnglishWord(item.targetWord);
+      });
 
-    setTimeout(() => speakWord(item.wordTarget || item.audioText || ''), 300);
+      // Auto speak target word on load
+      speakEnglishWord(item.targetWord);
 
-    const grid = document.getElementById('phoneme-grid');
-    grid?.addEventListener('click', (e) => {
-      const btn = e.target.closest('.phoneme-choice-btn');
-      if (!btn) return;
+      const grid = document.getElementById('options-grid');
+      grid?.addEventListener('click', (e) => {
+        const btn = e.target.closest('.option-btn');
+        if (!btn || btn.disabled) return;
 
-      const chosenWord = btn.dataset.word;
-      if (chosenWord === item.wordTarget) {
-        // CORRECT
-        combo++;
-        if (combo > maxCombo) maxCombo = combo;
-        score += 150 * Math.min(combo, 4);
-        SoundService.playCorrect();
-        btn.classList.add('correct');
+        const chosen = btn.dataset.word;
+        if (chosen === item.targetWord) {
+          combo++;
+          if (combo > maxCombo) maxCombo = combo;
+          score += 100 * Math.min(combo, 5);
+          SoundService.playCorrect();
+          btn.classList.add('correct');
 
-        // Immediate transition to next question
-        setTimeout(() => {
-          currentIndex++;
-          loadQuestion();
-        }, 50);
-      } else {
-        // WRONG
-        combo = 0;
-        SoundService.playError();
-        btn.classList.add('wrong');
-        setTimeout(() => btn.classList.remove('wrong'), 300);
-      }
-    });
+          setTimeout(() => {
+            currentIndex++;
+            loadQuestion();
+          }, 50);
+        } else {
+          combo = 0;
+          SoundService.playError();
+          btn.classList.add('wrong');
+        }
+      });
+    }
+
+    renderStage();
   }
 
   loadQuestion();
 }
 
-// ==========================================================================
+// --------------------------------------------------------------------------
 // GAME 5: SYNONYM & ANTONYM CHALLENGE
-// ==========================================================================
-function initSynonymAntonym(container, totalQuestions = selectedQuestionCount) {
+// --------------------------------------------------------------------------
+function initSynonymAntonym(container, targetCount = selectedQuestionCount, gamesData) {
   let score = 0;
   let combo = 0;
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = getSynonymAntonymData()
-    .sort(() => 0.5 - Math.random())
-    .slice(0, totalQuestions);
+  const dataset = gamesData.getSynonymAntonymData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
     if (currentIndex >= dataset.length) {
@@ -887,94 +1207,89 @@ function initSynonymAntonym(container, totalQuestions = selectedQuestionCount) {
     }
 
     const item = dataset[currentIndex];
-    const isSynonym = item.type === 'SYNONYM';
 
-    container.innerHTML = `
-      <div class="game-stage animate-fade-in">
-        <div class="stage-top-bar">
-          <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
-          <div class="stage-title">🔄 Synonym & Antonym Challenge</div>
-          <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
-        </div>
-
-        <div class="game-score-row">
-          <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
-          <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
-        </div>
-
-        <div class="card" style="text-align:center;padding:32px 24px;margin-bottom:24px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:16px;">
-          <div style="margin-bottom:12px;">
-            <span class="badge ${isSynonym ? 'badge-indigo' : 'badge-amber'}" style="font-size:0.9rem;padding:6px 16px;text-transform:uppercase;letter-spacing:1px;">
-              ${isSynonym ? '✨ Tìm Từ ĐỒNG NGHĨA (Synonym)' : '🔥 Tìm Từ TRÁI NGHĨA (Antonym)'}
-            </span>
+    function renderStage() {
+      container.innerHTML = `
+        <div class="game-stage animate-fade-in">
+          <div class="stage-top-bar">
+            <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
+            <div class="stage-title">🔄 Synonym & Antonym Challenge</div>
+            <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
           </div>
-          <h2 style="font-size:2.2rem;font-weight:800;color:var(--text-primary);margin:12px 0 2px 0;">${item.word}</h2>
-          <div class="ipa-text" style="font-size:1.05rem;color:#a855f7;margin-bottom:8px;font-weight:700;">${IpaService.getIPA(item.word)}</div>
-          <p style="font-size:0.95rem;color:var(--text-secondary);">${item.targetMeaning}</p>
+
+          <div class="game-score-row">
+            <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
+            <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
+          </div>
+
+          <div class="card" style="text-align:center;padding:32px 24px;margin-bottom:24px;">
+            <div style="margin-bottom:8px;">
+              <span class="badge ${item.type === 'synonym' ? 'badge-blue' : 'badge-rose'}" style="font-size:0.9rem;padding:6px 16px;text-transform:uppercase;">
+                ${item.type === 'synonym' ? '🔍 Tìm từ ĐỒNG NGHĨA (Synonym)' : '⚡ Tìm từ TRÁI NGHĨA (Antonym)'}
+              </span>
+            </div>
+            <h2 style="font-size:2.2rem;font-weight:800;color:var(--text-primary);margin:12px 0 4px 0;">${item.word}</h2>
+            <div class="ipa-text" style="font-size:1.05rem;color:#a855f7;font-weight:700;margin-bottom:8px;">${IpaService.getIPA(item.word)}</div>
+            <p style="font-size:1rem;color:var(--text-secondary);font-weight:600;">Nghĩa: ${item.translation}</p>
+          </div>
+
+          <div class="options-grid" id="synonym-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;">
+            ${item.options.map(opt => `
+              <button class="option-btn" data-opt="${opt}" style="padding:18px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
         </div>
+      `;
 
-        <div class="options-grid" id="synonym-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
-          ${item.options.map(opt => `
-            <button class="option-btn" data-opt="${opt}" style="padding:16px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
-              <span>${opt}</span>
-              <span class="ipa-badge">${IpaService.getIPA(opt)}</span>
-            </button>
-          `).join('')}
-        </div>
-      </div>
-    `;
+      document.getElementById('exit-game-btn')?.addEventListener('click', () => {
+        window.location.hash = '#/games';
+        renderArcadeHub(container);
+      });
 
-    document.getElementById('exit-game-btn')?.addEventListener('click', () => {
-      window.location.hash = '#/games';
-      renderArcadeHub(container);
-    });
+      const grid = document.getElementById('synonym-grid');
+      grid?.addEventListener('click', (e) => {
+        const btn = e.target.closest('.option-btn');
+        if (!btn || btn.disabled) return;
 
-    const grid = document.getElementById('synonym-grid');
+        const chosen = btn.dataset.opt;
+        if (chosen === item.correctAnswer) {
+          combo++;
+          if (combo > maxCombo) maxCombo = combo;
+          score += 120 * Math.min(combo, 5);
+          SoundService.playCorrect();
+          btn.classList.add('correct');
 
-    grid?.addEventListener('click', (e) => {
-      const btn = e.target.closest('.option-btn');
-      if (!btn || btn.disabled) return;
+          setTimeout(() => {
+            currentIndex++;
+            loadQuestion();
+          }, 50);
+        } else {
+          combo = 0;
+          SoundService.playError();
+          btn.classList.add('wrong');
+        }
+      });
+    }
 
-      grid.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-      const chosen = btn.dataset.opt;
-
-      if (chosen === item.correctAnswer) {
-        // CORRECT
-        combo++;
-        if (combo > maxCombo) maxCombo = combo;
-        score += 150 * Math.min(combo, 4);
-        SoundService.playCorrect();
-        btn.classList.add('correct');
-      } else {
-        // WRONG
-        combo = 0;
-        SoundService.playError();
-        btn.classList.add('wrong');
-      }
-
-      // Immediate transition to next question (no 1.1s - 1.6s result display delay)
-      setTimeout(() => {
-        currentIndex++;
-        loadQuestion();
-      }, 50);
-    });
+    renderStage();
   }
 
   loadQuestion();
 }
 
-// ==========================================================================
+// --------------------------------------------------------------------------
 // GAME 6: IRREGULAR VERBS MASTER
-// ==========================================================================
-function initIrregularVerbs(container, totalQuestions = selectedQuestionCount) {
+// --------------------------------------------------------------------------
+function initIrregularVerbs(container, targetCount = selectedQuestionCount, gamesData) {
   let score = 0;
   let combo = 0;
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = getIrregularVerbsGameData()
-    .sort(() => 0.5 - Math.random())
-    .slice(0, totalQuestions);
+  const dataset = gamesData.getIrregularVerbsGameData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
     if (currentIndex >= dataset.length) {
@@ -984,82 +1299,82 @@ function initIrregularVerbs(container, totalQuestions = selectedQuestionCount) {
 
     const item = dataset[currentIndex];
 
-    container.innerHTML = `
-      <div class="game-stage animate-fade-in">
-        <div class="stage-top-bar">
-          <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
-          <div class="stage-title">📚 Irregular Verbs Master</div>
-          <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
-        </div>
-
-        <div class="game-score-row">
-          <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
-          <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
-        </div>
-
-        <div class="card" style="text-align:center;padding:32px 24px;margin-bottom:24px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:16px;">
-          <div style="margin-bottom:12px;">
-            <span class="badge badge-amber" style="font-size:0.9rem;padding:6px 16px;text-transform:uppercase;letter-spacing:1px;">
-              🎯 Động Từ Bất Quy Tắc (V1 ➔ V2 ➔ V3)
-            </span>
+    function renderStage() {
+      container.innerHTML = `
+        <div class="game-stage animate-fade-in">
+          <div class="stage-top-bar">
+            <button class="back-arcade-btn" id="exit-game-btn">⬅ Thoát Game</button>
+            <div class="stage-title">📚 Irregular Verbs Master</div>
+            <div class="stage-timer">🎯 Câu ${currentIndex + 1}/${dataset.length}</div>
           </div>
-          <h2 style="font-size:2.2rem;font-weight:800;color:var(--text-primary);margin:12px 0 2px 0;">${item.v1}</h2>
-          <div class="ipa-text" style="font-size:1.05rem;color:#a855f7;margin-bottom:8px;font-weight:700;">${IpaService.getIPA(item.v1)}</div>
-          <p style="font-size:1rem;color:var(--text-secondary);font-weight:600;">${item.promptText}</p>
+
+          <div class="game-score-row">
+            <div class="score-badge">ĐIỂM: <span id="game-score">${score}</span></div>
+            <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
+          </div>
+
+          <div class="card" style="text-align:center;padding:32px 24px;margin-bottom:24px;">
+            <div style="margin-bottom:12px;">
+              <span class="badge badge-amber" style="font-size:0.9rem;padding:6px 16px;text-transform:uppercase;">
+                🎯 Động Từ Bất Quy Tắc (V1 ➔ V2 ➔ V3)
+              </span>
+            </div>
+            <h2 style="font-size:2.2rem;font-weight:800;color:var(--text-primary);margin:12px 0 2px 0;">${item.v1}</h2>
+            <div class="ipa-text" style="font-size:1.05rem;color:#a855f7;margin-bottom:8px;font-weight:700;">${IpaService.getIPA(item.v1)}</div>
+            <p style="font-size:1rem;color:var(--text-secondary);font-weight:600;">${item.promptText}</p>
+          </div>
+
+          <div class="options-grid" id="verbs-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
+            ${item.options.map(opt => `
+              <button class="option-btn" data-opt="${opt}" style="padding:16px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>${opt}</span>
+                <span class="ipa-badge" style="font-size:0.8rem;color:#a855f7;">${IpaService.getIPA(opt)}</span>
+              </button>
+            `).join('')}
+          </div>
         </div>
+      `;
 
-        <div class="options-grid" id="verbs-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
-          ${item.options.map(opt => `
-            <button class="option-btn" data-opt="${opt}" style="padding:16px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
-              <span>${opt}</span>
-              <span class="ipa-badge">${IpaService.getIPA(opt)}</span>
-            </button>
-          `).join('')}
-        </div>
-      </div>
-    `;
+      document.getElementById('exit-game-btn')?.addEventListener('click', () => {
+        window.location.hash = '#/games';
+        renderArcadeHub(container);
+      });
 
-    document.getElementById('exit-game-btn')?.addEventListener('click', () => {
-      window.location.hash = '#/games';
-      renderArcadeHub(container);
-    });
+      const grid = document.getElementById('verbs-grid');
+      grid?.addEventListener('click', (e) => {
+        const btn = e.target.closest('.option-btn');
+        if (!btn || btn.disabled) return;
 
-    const grid = document.getElementById('verbs-grid');
+        grid.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+        const chosen = btn.dataset.opt;
 
-    grid?.addEventListener('click', (e) => {
-      const btn = e.target.closest('.option-btn');
-      if (!btn || btn.disabled) return;
+        if (chosen === item.correctAnswer) {
+          combo++;
+          if (combo > maxCombo) maxCombo = combo;
+          score += 150 * Math.min(combo, 4);
+          SoundService.playCorrect();
+          btn.classList.add('correct');
+        } else {
+          combo = 0;
+          SoundService.playError();
+          btn.classList.add('wrong');
+        }
 
-      grid.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-      const chosen = btn.dataset.opt;
+        setTimeout(() => {
+          currentIndex++;
+          loadQuestion();
+        }, 50);
+      });
+    }
 
-      if (chosen === item.correctAnswer) {
-        // CORRECT
-        combo++;
-        if (combo > maxCombo) maxCombo = combo;
-        score += 150 * Math.min(combo, 4);
-        SoundService.playCorrect();
-        btn.classList.add('correct');
-      } else {
-        // WRONG
-        combo = 0;
-        SoundService.playError();
-        btn.classList.add('wrong');
-      }
-
-      // Immediate transition to next question (no 1.1s - 1.6s result display delay)
-      setTimeout(() => {
-        currentIndex++;
-        loadQuestion();
-      }, 50);
-    });
+    renderStage();
   }
 
   loadQuestion();
 }
 
 // --------------------------------------------------------------------------
-// Finish Game & Record XP
+// Standard Finish Game Modal
 // --------------------------------------------------------------------------
 function finishGame(mode, score, maxCombo, totalQuestions = selectedQuestionCount) {
   SoundService.playVictory();

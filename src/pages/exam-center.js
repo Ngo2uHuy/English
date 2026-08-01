@@ -4,6 +4,7 @@
 
 import { ExamEngineService } from '../services/exam-engine-service.js';
 import { StorageService } from '../services/storage-service.js';
+import { SoundService } from '../services/sound-service.js';
 
 let activeExamSession = null;
 let timerInterval = null;
@@ -264,9 +265,16 @@ function renderToeicWorkspaceHTML(paper) {
 function renderToeicListeningPartsHTML(parts) {
   return parts.map(p => `
     <div style="margin-bottom:32px;">
-      <div style="padding:10px 14px;background:var(--bg-secondary);border-radius:var(--radius-md);margin-bottom:16px;border-left:4px solid var(--color-primary);">
-        <h4 style="font-size:1.05rem;margin:0 0 4px 0;color:var(--color-primary);">${p.name}</h4>
-        <p style="font-size:0.85rem;color:var(--text-secondary);margin:0;">${p.instruction}</p>
+      <div style="padding:10px 14px;background:var(--bg-secondary);border-radius:var(--radius-md);margin-bottom:16px;border-left:4px solid var(--color-primary);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h4 style="font-size:1.05rem;margin:0 0 4px 0;color:var(--color-primary);">${p.name}</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin:0;">${p.instruction}</p>
+        </div>
+        ${p.transcript ? `
+          <button class="btn btn-primary btn-sm btn-play-exam-audio" data-text="${encodeURIComponent(p.transcript)}" style="padding:8px 16px;font-weight:700;">
+            ▶ Phát Âm Bài Nghe (${p.name})
+          </button>
+        ` : ''}
       </div>
 
       ${p.transcript ? `
@@ -278,7 +286,14 @@ function renderToeicListeningPartsHTML(parts) {
       ${p.questions.map(q => `
         <div style="margin-bottom:20px;padding-bottom:16px;border-bottom:1px dashed var(--border-subtle);" id="q-card-${q.id}">
           ${q.imageDescription ? `<div style="padding:8px 12px;background:var(--bg-tertiary);border-radius:6px;font-size:0.85rem;margin-bottom:10px;font-style:italic;">📷 ${q.imageDescription}</div>` : ''}
-          ${q.audioText ? `<div style="font-weight:600;margin-bottom:8px;">🔊 "${q.audioText}"</div>` : ''}
+          ${q.audioText ? `
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
+              <span style="font-weight:600;">🔊 Audio Question: "${q.audioText}"</span>
+              <button class="btn btn-secondary btn-sm btn-play-exam-audio" data-text="${encodeURIComponent(q.audioText)}" style="padding:4px 12px;font-size:0.8rem;border-radius:20px;">
+                🔊 Nghe Câu Hỏi
+              </button>
+            </div>
+          ` : ''}
           ${q.question ? `<div style="font-weight:600;margin-bottom:8px;">${q.question}</div>` : ''}
 
           <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
@@ -355,8 +370,17 @@ function renderIeltsWorkspaceHTML(paper) {
 function renderIeltsListeningHTML(sec) {
   return sec.sections.map(s => `
     <div style="margin-bottom:28px;">
-      <h4 style="font-size:1.1rem;color:var(--color-rose);margin-bottom:6px;">${s.name}</h4>
-      <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;">Context: ${s.context}</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+        <div>
+          <h4 style="font-size:1.1rem;color:var(--color-rose);margin:0 0 4px 0;">${s.name}</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin:0;">Context: ${s.context}</p>
+        </div>
+        ${s.transcript ? `
+          <button class="btn btn-primary btn-sm btn-play-exam-audio" data-text="${encodeURIComponent(s.transcript)}" style="background:var(--color-rose);padding:8px 16px;font-weight:700;">
+            ▶ Phát Âm Bài Nghe (${s.name})
+          </button>
+        ` : ''}
+      </div>
       
       <div style="padding:14px;background:var(--bg-secondary);border-radius:var(--radius-md);margin-bottom:16px;font-size:0.88rem;line-height:1.6;border:1px solid var(--border-subtle);">
         <strong>🎧 Audio Transcript:</strong><br>${s.transcript.replace(/\n/g, '<br>')}
@@ -469,6 +493,48 @@ function renderPaletteGridHTML(paper, isToeic) {
 }
 
 function bindExamRoomEvents(container) {
+  // Exam Audio Play Buttons
+  container.querySelectorAll('.btn-play-exam-audio').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const rawText = decodeURIComponent(e.currentTarget.dataset.text || '');
+      if (!rawText) return;
+
+      if (btn.classList.contains('playing')) {
+        SoundService.stopSpeech();
+        btn.classList.remove('playing');
+        btn.innerHTML = btn.dataset.origHtml || '▶ Phát Âm Bài Nghe';
+      } else {
+        // Stop any other currently playing exam audio
+        container.querySelectorAll('.btn-play-exam-audio').forEach(b => {
+          if (b.classList.contains('playing')) {
+            b.classList.remove('playing');
+            b.innerHTML = b.dataset.origHtml || '▶ Phát Âm Bài Nghe';
+          }
+        });
+
+        btn.dataset.origHtml = btn.innerHTML;
+        btn.classList.add('playing');
+        btn.innerHTML = '⏸ Tạm Dừng';
+
+        SoundService.speakText(rawText, {
+          rate: 0.95,
+          onStart: () => {
+            btn.classList.add('playing');
+            btn.innerHTML = '⏸ Tạm Dừng';
+          },
+          onEnd: () => {
+            btn.classList.remove('playing');
+            btn.innerHTML = btn.dataset.origHtml || '▶ Phát Âm Bài Nghe';
+          },
+          onError: () => {
+            btn.classList.remove('playing');
+            btn.innerHTML = btn.dataset.origHtml || '▶ Phát Âm Bài Nghe';
+          }
+        });
+      }
+    });
+  });
+
   // Section filter pill click
   container.querySelectorAll('.filter-pill').forEach(btn => {
     btn.addEventListener('click', (e) => {

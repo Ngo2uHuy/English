@@ -4,6 +4,7 @@
 
 import { StorageService } from '../services/storage-service.js';
 import { GeminiService } from '../services/gemini-service.js';
+import { SoundService } from '../services/sound-service.js';
 import { IpaService } from '../services/ipa-service.js';
 import { renderLifeTopicsSelectOptions } from '../data/life-topics-data.js';
 import { SPEAKING_EXERCISES } from '../data/skills-exercises-data.js';
@@ -153,13 +154,8 @@ function renderPronunciationMode(workspace) {
 
   document.getElementById('btn-record-mic')?.addEventListener('click', toggleRecording);
   document.getElementById('btn-listen-native')?.addEventListener('click', () => {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const text = currentPrompt.title || currentPrompt.topic;
-      const utt = new SpeechSynthesisUtterance(text);
-      utt.lang = 'en-US';
-      window.speechSynthesis.speak(utt);
-    }
+    const text = currentPrompt ? (currentPrompt.title || currentPrompt.topic) : '';
+    if (text) SoundService.speakText(text, { rate: 0.95 });
   });
 }
 
@@ -387,13 +383,7 @@ function bindRoleplayEvents(workspace) {
   workspace.querySelectorAll('.btn-speak-ai').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const text = decodeURIComponent(e.currentTarget.dataset.text);
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const utt = new SpeechSynthesisUtterance(text);
-        utt.lang = 'en-US';
-        utt.rate = 0.95;
-        window.speechSynthesis.speak(utt);
-      }
+      SoundService.speakText(text, { rate: 0.95 });
     });
   });
 
@@ -481,12 +471,8 @@ async function sendUserRoleplayMessage() {
     });
 
     // Auto speak AI response
-    if ('speechSynthesis' in window && aiResponse.replyText) {
-      window.speechSynthesis.cancel();
-      const utt = new SpeechSynthesisUtterance(aiResponse.replyText);
-      utt.lang = 'en-US';
-      utt.rate = 0.95;
-      window.speechSynthesis.speak(utt);
+    if (aiResponse.replyText) {
+      SoundService.speakText(aiResponse.replyText, { rate: 0.95 });
     }
   } catch (err) {
     conversationHistory.push({
