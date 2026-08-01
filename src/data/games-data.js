@@ -3951,11 +3951,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Dis",
-    "vn": "Bất / Không",
-    "category": "Intermediate"
-  },
-  {
     "en": "Disable",
     "vn": "Vô hiệu hóa, làm tàn tật",
     "category": "Family & Life"
@@ -4616,16 +4611,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Hyper",
-    "vn": "Cực kỳ",
-    "category": "Psychology"
-  },
-  {
-    "en": "Hyperable",
-    "vn": "Hyper có khả năng",
-    "category": "Science & Space"
-  },
-  {
     "en": "Hyperactive",
     "vn": "Hyper chủ động",
     "category": "Psychology"
@@ -4836,109 +4821,14 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Inter",
-    "vn": "Liên",
-    "category": "TOEIC Mastery"
-  },
-  {
     "en": "Interested",
     "vn": "Thích thú",
     "category": "Common B1"
   },
   {
-    "en": "Interevaluated",
-    "vn": "Liên được đánh giá",
-    "category": "History & World"
-  },
-  {
-    "en": "Interexpected",
-    "vn": "Liên được kỳ vọng",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Interformed",
-    "vn": "Liên được hình thành",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Interguided",
-    "vn": "Liên được hướng dẫn",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Interillustrated",
-    "vn": "Liên được minh họa",
-    "category": "Environment"
-  },
-  {
-    "en": "Interincluded",
-    "vn": "Liên được bao gồm",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Interlicensed",
-    "vn": "Liên được cấp phép",
-    "category": "Psychology"
-  },
-  {
-    "en": "Intermonitored",
-    "vn": "Liên được theo dõi",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Interpowered",
-    "vn": "Liên được cấp năng lượng",
-    "category": "Home & Living"
-  },
-  {
     "en": "Interpreted",
     "vn": "Đã diễn giải",
     "category": "Common B1"
-  },
-  {
-    "en": "Interprotected",
-    "vn": "Liên được bảo vệ",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Interrated",
-    "vn": "Liên được xếp hạng",
-    "category": "Finance"
-  },
-  {
-    "en": "Interregulated",
-    "vn": "Liên được quy định",
-    "category": "History & World"
-  },
-  {
-    "en": "Intersecured",
-    "vn": "Liên được bảo mật",
-    "category": "Environment"
-  },
-  {
-    "en": "Interselected",
-    "vn": "Liên được lựa chọn",
-    "category": "Finance"
-  },
-  {
-    "en": "Intersuggested",
-    "vn": "Liên được đề xuất",
-    "category": "Education"
-  },
-  {
-    "en": "Intersupported",
-    "vn": "Liên được hỗ trợ",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Intertrained",
-    "vn": "Liên được đào tạo",
-    "category": "Environment"
-  },
-  {
-    "en": "Interverified",
-    "vn": "Liên được chứng thực",
-    "category": "Psychology"
   },
   {
     "en": "Introduced",
@@ -5211,16 +5101,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Finance"
   },
   {
-    "en": "Macroable",
-    "vn": "Macro có khả năng",
-    "category": "Psychology"
-  },
-  {
-    "en": "Macroactive",
-    "vn": "Macro chủ động",
-    "category": "TOEIC Mastery"
-  },
-  {
     "en": "MAKE",
     "vn": "Make + Subject (người) + V-bare (bắt buộc ai làm gì)",
     "category": "Be made + To-V"
@@ -5286,16 +5166,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Tech & AI"
   },
   {
-    "en": "Microable",
-    "vn": "Micro có khả năng",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Microactive",
-    "vn": "Micro chủ động",
-    "category": "Education"
-  },
-  {
     "en": "Modal",
     "vn": "Use",
     "category": "Example"
@@ -5354,86 +5224,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Nevertheless",
     "vn": "Dẫu vậy, tuy nhiên",
     "category": "Common B1"
-  },
-  {
-    "en": "Nonable",
-    "vn": "Non có khả năng",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Nonacceptable",
-    "vn": "Non có thể chấp nhận",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Nonactive",
-    "vn": "Non chủ động",
-    "category": "Beginner"
-  },
-  {
-    "en": "Nonaffected",
-    "vn": "Non bị ảnh hưởng",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Nonbalanced",
-    "vn": "Non cân bằng",
-    "category": "Psychology"
-  },
-  {
-    "en": "Noncombined",
-    "vn": "Non kết hợp",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Noneducated",
-    "vn": "Non có học thức",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Nonemployed",
-    "vn": "Non có việc làm",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Nonfocused",
-    "vn": "Non tập trung",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Noninformed",
-    "vn": "Non có thông tin",
-    "category": "Environment"
-  },
-  {
-    "en": "Noninterested",
-    "vn": "Non thích thú",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Noninvolved",
-    "vn": "Non có liên quan",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Nonisolated",
-    "vn": "Non bị cô lập",
-    "category": "Education"
-  },
-  {
-    "en": "Nonlearned",
-    "vn": "Non có học vấn",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Nonlimited",
-    "vn": "Non bị hạn chế",
-    "category": "Environment"
-  },
-  {
-    "en": "Nonlocated",
-    "vn": "Non nằm ở vị trí",
-    "category": "Law & Ethics"
   },
   {
     "en": "Normalized",
@@ -5596,21 +5386,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Pre",
-    "vn": "Trước",
-    "category": "Academic"
-  },
-  {
-    "en": "Preable",
-    "vn": "Trước có khả năng",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Preactive",
-    "vn": "Trước chủ động",
-    "category": "Family & Life"
-  },
-  {
     "en": "Process",
     "vn": "Quy trình",
     "category": "Common B1"
@@ -5701,21 +5476,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Re",
-    "vn": "Lại",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Reable",
-    "vn": "Lại có khả năng",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Reacceptable",
-    "vn": "Lại có thể chấp nhận",
-    "category": "Environment"
-  },
-  {
     "en": "Reacted",
     "vn": "Đã phản ứng",
     "category": "Common B1"
@@ -5731,79 +5491,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Finance"
   },
   {
-    "en": "Readapted",
-    "vn": "Lại đã thích nghi",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Readjusted",
-    "vn": "Lại đã điều chỉnh",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Reaffected",
-    "vn": "Lại bị ảnh hưởng",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Realigned",
-    "vn": "Lại đã căn chỉnh",
-    "category": "Psychology"
-  },
-  {
-    "en": "Reallocated",
-    "vn": "Lại đã phân bổ",
-    "category": "History & World"
-  },
-  {
-    "en": "Realtered",
-    "vn": "Lại đã sửa đổi",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Reanalyzed",
-    "vn": "Lại đã phân tích",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Reapproved",
-    "vn": "Lại đã phê duyệt",
-    "category": "Beginner"
-  },
-  {
-    "en": "Rearranged",
-    "vn": "Lại đã sắp xếp",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Reassembled",
-    "vn": "Lại đã lắp ráp",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Reassigned",
-    "vn": "Lại đã phân công",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Reattached",
-    "vn": "Lại đã đính kèm",
-    "category": "Education"
-  },
-  {
     "en": "Rebalanced",
     "vn": "Lại cân bằng",
     "category": "Food & Dining"
-  },
-  {
-    "en": "Recalculated",
-    "vn": "Lại đã tính toán",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Reclassified",
-    "vn": "Lại đã phân loại",
-    "category": "Tech & AI"
   },
   {
     "en": "Recombined",
@@ -5811,104 +5501,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Environment"
   },
   {
-    "en": "Recompleted",
-    "vn": "Lại đã hoàn thành",
-    "category": "Finance"
-  },
-  {
-    "en": "Recomposed",
-    "vn": "Lại đã soạn thảo",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Reconfigured",
-    "vn": "Lại đã cấu hình",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Reconnected",
-    "vn": "Lại đã kết nối",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Recontrolled",
-    "vn": "Lại đã kiểm soát",
-    "category": "Psychology"
-  },
-  {
-    "en": "Reconverted",
-    "vn": "Lại đã chuyển đổi",
-    "category": "History & World"
-  },
-  {
-    "en": "Recooked",
-    "vn": "Lại đã nấu",
-    "category": "TOEIC Mastery"
-  },
-  {
     "en": "Recorded",
     "vn": "Đã ghi lại",
     "category": "Common B1"
-  },
-  {
-    "en": "Recorrected",
-    "vn": "Lại đã sửa đúng",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Recreated",
-    "vn": "Lại đã tạo ra",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Redefined",
-    "vn": "Lại đã định nghĩa",
-    "category": "Beginner"
-  },
-  {
-    "en": "Redelivered",
-    "vn": "Lại đã giao hàng",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Redesigned",
-    "vn": "Lại đã thiết kế",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Redeveloped",
-    "vn": "Lại đã phát triển",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Redirected",
-    "vn": "Lại đã chỉ đạo",
-    "category": "Education"
-  },
-  {
-    "en": "Rediscovered",
-    "vn": "Lại đã phát hiện",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Redisplayed",
-    "vn": "Lại đã hiển thị",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Redistributed",
-    "vn": "Lại đã phân phối",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Redivided",
-    "vn": "Lại đã chia nhỏ",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Redocumented",
-    "vn": "Lại đã ghi hồ sơ",
-    "category": "Environment"
   },
   {
     "en": "Reduced",
@@ -5916,79 +5511,14 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Reedited",
-    "vn": "Lại đã chỉnh sửa",
-    "category": "Finance"
-  },
-  {
-    "en": "Reeducated",
-    "vn": "Lại có học thức",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Reemployed",
-    "vn": "Lại có việc làm",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Reencoded",
-    "vn": "Lại đã mã hóa",
-    "category": "Psychology"
-  },
-  {
-    "en": "Reengaged",
-    "vn": "Lại đã đính hôn/tham gia",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Reestablished",
-    "vn": "Lại đã thành lập",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Reexpanded",
-    "vn": "Lại đã mở rộng",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Reexported",
-    "vn": "Lại đã xuất khẩu",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Reexpressed",
-    "vn": "Lại đã bộc lộ",
-    "category": "Education"
-  },
-  {
-    "en": "Refiltered",
-    "vn": "Lại đã lọc",
-    "category": "Food & Dining"
-  },
-  {
     "en": "Refined",
     "vn": "Đã tinh chế",
     "category": "Common B1"
   },
   {
-    "en": "Refinished",
-    "vn": "Lại đã hoàn tất",
-    "category": "Health & Mind"
-  },
-  {
     "en": "Refocused",
     "vn": "Lại tập trung",
     "category": "Travel & Tourism"
-  },
-  {
-    "en": "Reformatted",
-    "vn": "Lại đã định dạng",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Regenerated",
-    "vn": "Lại đã tạo ra",
-    "category": "Finance"
   },
   {
     "en": "Regulated",
@@ -6001,111 +5531,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Legal & Compliance"
   },
   {
-    "en": "Reidentified",
-    "vn": "Lại đã xác định",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Reimported",
-    "vn": "Lại đã nhập khẩu",
-    "category": "Psychology"
-  },
-  {
-    "en": "Reimproved",
-    "vn": "Lại đã cải thiện",
-    "category": "History & World"
-  },
-  {
-    "en": "Reincreased",
-    "vn": "Lại đã gia tăng",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Reindexed",
-    "vn": "Lại đã đánh mục lục",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Reinformed",
-    "vn": "Lại có thông tin",
-    "category": "Beginner"
-  },
-  {
-    "en": "Reinitiated",
-    "vn": "Lại đã khởi xướng",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Reinnovated",
-    "vn": "Lại đã đổi mới",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Reinspected",
-    "vn": "Lại đã kiểm tra",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Reinstalled",
-    "vn": "Lại đã cài đặt",
-    "category": "Education"
-  },
-  {
-    "en": "Reinstructed",
-    "vn": "Lại đã hướng dẫn",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Reintegrated",
-    "vn": "Lại đã tích hợp",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Reintended",
-    "vn": "Lại đã dự định",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Reinterested",
-    "vn": "Lại thích thú",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Reinterpreted",
-    "vn": "Lại đã diễn giải",
-    "category": "Environment"
-  },
-  {
-    "en": "Reintroduced",
-    "vn": "Lại đã giới thiệu",
-    "category": "Finance"
-  },
-  {
-    "en": "Reinvented",
-    "vn": "Lại đã phát minh",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Reinvested",
-    "vn": "Lại đã đầu tư",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Reinvolved",
-    "vn": "Lại có liên quan",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Reisolated",
-    "vn": "Lại bị cô lập",
-    "category": "Psychology"
-  },
-  {
-    "en": "Relabeled",
-    "vn": "Lại đã dán nhãn",
-    "category": "History & World"
-  },
-  {
     "en": "Related",
     "vn": "Có liên quan",
     "category": "Common B1"
@@ -6116,29 +5541,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Relaunched",
-    "vn": "Lại đã ra mắt",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Relearned",
-    "vn": "Lại có học vấn",
-    "category": "Advanced Vocab"
-  },
-  {
     "en": "Released",
     "vn": "Đã phát hành",
     "category": "Common B1"
-  },
-  {
-    "en": "Relimited",
-    "vn": "Lại bị hạn chế",
-    "category": "Beginner"
-  },
-  {
-    "en": "Relinked",
-    "vn": "Lại đã liên kết",
-    "category": "Family & Life"
   },
   {
     "en": "Relocated",
@@ -6146,59 +5551,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Home & Living"
   },
   {
-    "en": "Remanaged",
-    "vn": "Lại đã quản lý",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Remanufactured",
-    "vn": "Lại đã sản xuất",
-    "category": "Education"
-  },
-  {
-    "en": "Remapped",
-    "vn": "Lại đã lập bản đồ",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Rematched",
-    "vn": "Lại đã ghép nối",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Remeasured",
-    "vn": "Lại đã đo lường",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Remodified",
-    "vn": "Lại đã chỉnh sửa",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Remotivated",
-    "vn": "Lại có động lực",
-    "category": "Finance"
-  },
-  {
-    "en": "Renavigated",
-    "vn": "Lại đã điều hướng",
-    "category": "Law & Ethics"
-  },
-  {
     "en": "Rendered",
     "vn": "Đã kết xuất",
     "category": "Common B1"
-  },
-  {
-    "en": "Renegotiated",
-    "vn": "Lại đã thương lượng",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Renormalized",
-    "vn": "Lại đã chuẩn hóa",
-    "category": "Arts & Culture"
   },
   {
     "en": "Renovation",
@@ -6206,64 +5561,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Real Estate & Corporate"
   },
   {
-    "en": "Reobserved",
-    "vn": "Lại đã quan sát",
-    "category": "Psychology"
-  },
-  {
-    "en": "Reobtained",
-    "vn": "Lại đã thu được",
-    "category": "History & World"
-  },
-  {
-    "en": "Reoccupied",
-    "vn": "Lại đã chiếm giữ",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Reoperated",
-    "vn": "Lại đã vận hành",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Reoptimized",
-    "vn": "Lại đã tối ưu hóa",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Reorganized",
-    "vn": "Lại đã tổ chức",
-    "category": "Beginner"
-  },
-  {
-    "en": "Reoriented",
-    "vn": "Lại đã định hướng",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Repackaged",
-    "vn": "Lại đã đóng gói",
-    "category": "Home & Living"
-  },
-  {
     "en": "Repaired",
     "vn": "Đã sửa chữa",
     "category": "Common B1"
-  },
-  {
-    "en": "Reparsed",
-    "vn": "Lại đã phân tích cú pháp",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Reperformed",
-    "vn": "Lại đã thực hiện",
-    "category": "Education"
-  },
-  {
-    "en": "Replanned",
-    "vn": "Lại đã lên kế hoạch",
-    "category": "Food & Dining"
   },
   {
     "en": "Report",
@@ -6276,129 +5576,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Reprepared",
-    "vn": "Lại đã chuẩn bị",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Reprocessed",
-    "vn": "Lại đã xử lý",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Reproduced",
-    "vn": "Lại đã sản xuất",
-    "category": "Environment"
-  },
-  {
-    "en": "Reprogrammed",
-    "vn": "Lại đã lập trình",
-    "category": "Finance"
-  },
-  {
-    "en": "Republished",
-    "vn": "Lại đã xuất bản",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Requalified",
-    "vn": "Lại đủ điều kiện",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Rereacted",
-    "vn": "Lại đã phản ứng",
-    "category": "History & World"
-  },
-  {
-    "en": "Rerecorded",
-    "vn": "Lại đã ghi lại",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Rereduced",
-    "vn": "Lại đã giảm bớt",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Rerefined",
-    "vn": "Lại đã tinh chế",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Rerelated",
-    "vn": "Lại có liên quan",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Rereleased",
-    "vn": "Lại đã phát hành",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Rerendered",
-    "vn": "Lại đã kết xuất",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Rerepaired",
-    "vn": "Lại đã sửa chữa",
-    "category": "Education"
-  },
-  {
-    "en": "Rereported",
-    "vn": "Lại đã báo cáo",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Reresolved",
-    "vn": "Lại đã giải quyết",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Rerestored",
-    "vn": "Lại đã phục hồi",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Rerestricted",
-    "vn": "Lại bị hạn chế",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Rereviewed",
-    "vn": "Lại đã đánh giá",
-    "category": "Environment"
-  },
-  {
-    "en": "Rerouted",
-    "vn": "Lại đã định tuyến",
-    "category": "Finance"
-  },
-  {
-    "en": "Rescheduled",
-    "vn": "Lại đã lên lịch",
-    "category": "Law & Ethics"
-  },
-  {
     "en": "Research",
     "vn": "Nghiên cứu",
     "category": "Common B1"
-  },
-  {
-    "en": "Researched",
-    "vn": "Lại đã tìm kiếm",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Reseparated",
-    "vn": "Lại bị tách rời",
-    "category": "History & World"
-  },
-  {
-    "en": "Reserved",
-    "vn": "Lại đã phục vụ",
-    "category": "TOEIC Mastery"
   },
   {
     "en": "Reshaped",
@@ -6406,24 +5586,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Advanced Vocab"
   },
   {
-    "en": "Reshared",
-    "vn": "Lại đã chia sẻ",
-    "category": "Intermediate"
-  },
-  {
     "en": "Resilience",
     "vn": "Khả năng phục hồi",
     "category": "Common B1"
-  },
-  {
-    "en": "Resimplified",
-    "vn": "Lại đã giản hóa",
-    "category": "Beginner"
-  },
-  {
-    "en": "Resimulated",
-    "vn": "Lại đã mô phỏng",
-    "category": "Family & Life"
   },
   {
     "en": "Resolved",
@@ -6436,19 +5601,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Respecified",
-    "vn": "Lại đã chỉ định",
-    "category": "Work & Career"
-  },
-  {
     "en": "Response",
     "vn": "Phản hồi",
     "category": "Common B1"
-  },
-  {
-    "en": "Restandardized",
-    "vn": "Lại đã chuẩn hóa",
-    "category": "Education"
   },
   {
     "en": "Restored",
@@ -6461,64 +5616,14 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Common B1"
   },
   {
-    "en": "Restructured",
-    "vn": "Lại có cấu trúc",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Resubmitted",
-    "vn": "Lại đã nộp",
-    "category": "Travel & Tourism"
-  },
-  {
     "en": "Result",
     "vn": "Kết quả",
     "category": "Common B1"
   },
   {
-    "en": "Resynchronized",
-    "vn": "Lại đã đồng bộ",
-    "category": "Finance"
-  },
-  {
-    "en": "Resynthesized",
-    "vn": "Lại đã tổng hợp",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Retested",
-    "vn": "Lại đã kiểm thử",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Retransformed",
-    "vn": "Lại đã biến đổi",
-    "category": "Psychology"
-  },
-  {
-    "en": "Retranslated",
-    "vn": "Lại đã dịch",
-    "category": "History & World"
-  },
-  {
-    "en": "Reupdated",
-    "vn": "Lại đã cập nhật",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Revalidated",
-    "vn": "Lại đã xác minh",
-    "category": "Advanced Vocab"
-  },
-  {
     "en": "Reviewed",
     "vn": "Đã đánh giá",
     "category": "Common B1"
-  },
-  {
-    "en": "Revisualized",
-    "vn": "Lại đã trực quan hóa",
-    "category": "Beginner"
   },
   {
     "en": "Risk",
@@ -6806,21 +5911,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Science & Space"
   },
   {
-    "en": "Ultraable",
-    "vn": "Ultra có khả năng",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Ultraactive",
-    "vn": "Ultra chủ động",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Un",
-    "vn": "Không",
-    "category": "Psychology"
-  },
-  {
     "en": "Unable",
     "vn": "Không thể, không có khả năng",
     "category": "History & World"
@@ -6836,26 +5926,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Family & Life"
   },
   {
-    "en": "Unapproved",
-    "vn": "Không đã phê duyệt",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Unarranged",
-    "vn": "Không đã sắp xếp",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Unassembled",
-    "vn": "Không đã lắp ráp",
-    "category": "Environment"
-  },
-  {
-    "en": "Unassigned",
-    "vn": "Không đã phân công",
-    "category": "Finance"
-  },
-  {
     "en": "Unattached",
     "vn": "Độc thân, không gắn kết",
     "category": "Law & Ethics"
@@ -6866,64 +5936,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Science & Space"
   },
   {
-    "en": "Uncalculated",
-    "vn": "Không đã tính toán",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Unclassified",
-    "vn": "Không đã phân loại",
-    "category": "History & World"
-  },
-  {
-    "en": "Uncombined",
-    "vn": "Không kết hợp",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Uncompleted",
-    "vn": "Không đã hoàn thành",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Uncomposed",
-    "vn": "Không đã soạn thảo",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Unconfigured",
-    "vn": "Không đã cấu hình",
-    "category": "Beginner"
-  },
-  {
-    "en": "Unconnected",
-    "vn": "Không đã kết nối",
-    "category": "Family & Life"
-  },
-  {
     "en": "Uncontrolled",
     "vn": "Không kiểm soát được",
     "category": "Home & Living"
-  },
-  {
-    "en": "Unconverted",
-    "vn": "Không đã chuyển đổi",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Uncooked",
-    "vn": "Không đã nấu",
-    "category": "Education"
-  },
-  {
-    "en": "Uncorrected",
-    "vn": "Không đã sửa đúng",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Uncreated",
-    "vn": "Không đã tạo ra",
-    "category": "Health & Mind"
   },
   {
     "en": "Undefined",
@@ -6931,59 +5946,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Travel & Tourism"
   },
   {
-    "en": "Undelivered",
-    "vn": "Không đã giao hàng",
-    "category": "Tech & AI"
-  },
-  {
     "en": "Under",
     "vn": "Dưới / Chưa đủ",
     "category": "Advanced"
-  },
-  {
-    "en": "Undesigned",
-    "vn": "Không đã thiết kế",
-    "category": "Environment"
-  },
-  {
-    "en": "Undeveloped",
-    "vn": "Không đã phát triển",
-    "category": "Finance"
-  },
-  {
-    "en": "Undirected",
-    "vn": "Không đã chỉ đạo",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Undiscovered",
-    "vn": "Không đã phát hiện",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Undisplayed",
-    "vn": "Không đã hiển thị",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Undistributed",
-    "vn": "Không đã phân phối",
-    "category": "Psychology"
-  },
-  {
-    "en": "Undivided",
-    "vn": "Không đã chia nhỏ",
-    "category": "History & World"
-  },
-  {
-    "en": "Undocumented",
-    "vn": "Không đã ghi hồ sơ",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Unedited",
-    "vn": "Không đã chỉnh sửa",
-    "category": "Advanced Vocab"
   },
   {
     "en": "Uneducated",
@@ -6996,59 +5961,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Beginner"
   },
   {
-    "en": "Unencoded",
-    "vn": "Không đã mã hóa",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Unengaged",
-    "vn": "Không đã đính hôn/tham gia",
-    "category": "Education"
-  },
-  {
-    "en": "Unestablished",
-    "vn": "Không đã thành lập",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Unexpanded",
-    "vn": "Không đã mở rộng",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Unexported",
-    "vn": "Không đã xuất khẩu",
-    "category": "Finance"
-  },
-  {
-    "en": "Unexpressed",
-    "vn": "Không đã bộc lộ",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Unfiltered",
-    "vn": "Không đã lọc",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Unfinished",
-    "vn": "Không đã hoàn tất",
-    "category": "Arts & Culture"
-  },
-  {
     "en": "Unfocused",
     "vn": "Không tập trung",
     "category": "Psychology"
-  },
-  {
-    "en": "Unformatted",
-    "vn": "Không đã định dạng",
-    "category": "History & World"
-  },
-  {
-    "en": "Ungenerated",
-    "vn": "Không đã tạo ra",
-    "category": "Advanced Vocab"
   },
   {
     "en": "Unidentified",
@@ -7056,64 +5971,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Beginner"
   },
   {
-    "en": "Unimported",
-    "vn": "Không đã nhập khẩu",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Unimproved",
-    "vn": "Không đã cải thiện",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Unincreased",
-    "vn": "Không đã gia tăng",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Unindexed",
-    "vn": "Không đã đánh mục lục",
-    "category": "Health & Mind"
-  },
-  {
     "en": "Uninformed",
     "vn": "Không có thông tin",
     "category": "Travel & Tourism"
-  },
-  {
-    "en": "Uninitiated",
-    "vn": "Không đã khởi xướng",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Uninnovated",
-    "vn": "Không đã đổi mới",
-    "category": "Environment"
-  },
-  {
-    "en": "Uninspected",
-    "vn": "Không đã kiểm tra",
-    "category": "Finance"
-  },
-  {
-    "en": "Uninstalled",
-    "vn": "Không đã cài đặt",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Uninstructed",
-    "vn": "Không đã hướng dẫn",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Unintegrated",
-    "vn": "Không đã tích hợp",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Unintended",
-    "vn": "Không đã dự định",
-    "category": "Psychology"
   },
   {
     "en": "Uninterested",
@@ -7121,44 +5981,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "History & World"
   },
   {
-    "en": "Uninterpreted",
-    "vn": "Không đã diễn giải",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Unintroduced",
-    "vn": "Không đã giới thiệu",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Uninvented",
-    "vn": "Không đã phát minh",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Uninvested",
-    "vn": "Không đã đầu tư",
-    "category": "Beginner"
-  },
-  {
     "en": "Uninvolved",
     "vn": "Không có liên quan",
     "category": "Family & Life"
-  },
-  {
-    "en": "Unisolated",
-    "vn": "Không bị cô lập",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Unlabeled",
-    "vn": "Không đã dán nhãn",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Unlaunched",
-    "vn": "Không đã ra mắt",
-    "category": "Education"
   },
   {
     "en": "Unlearned",
@@ -7171,114 +5996,14 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Travel & Tourism"
   },
   {
-    "en": "Unlinked",
-    "vn": "Không đã liên kết",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Unlocated",
-    "vn": "Không nằm ở vị trí",
-    "category": "Environment"
-  },
-  {
-    "en": "Unmanaged",
-    "vn": "Không đã quản lý",
-    "category": "Finance"
-  },
-  {
-    "en": "Unmanufactured",
-    "vn": "Không đã sản xuất",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Unmapped",
-    "vn": "Không đã lập bản đồ",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Unmatched",
-    "vn": "Không đã ghép nối",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Unmeasured",
-    "vn": "Không đã đo lường",
-    "category": "Psychology"
-  },
-  {
-    "en": "Unmodified",
-    "vn": "Không đã chỉnh sửa",
-    "category": "History & World"
-  },
-  {
     "en": "Unmotivated",
     "vn": "Không có động lực",
     "category": "Advanced Vocab"
   },
   {
-    "en": "Unnavigated",
-    "vn": "Không đã điều hướng",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Unnegotiated",
-    "vn": "Không đã thương lượng",
-    "category": "Beginner"
-  },
-  {
-    "en": "Unnormalized",
-    "vn": "Không đã chuẩn hóa",
-    "category": "Family & Life"
-  },
-  {
-    "en": "Unobserved",
-    "vn": "Không đã quan sát",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Unobtained",
-    "vn": "Không đã thu được",
-    "category": "Work & Career"
-  },
-  {
     "en": "Unoccupied",
     "vn": "Trống, không có người ở, nhàn rỗi",
     "category": "Education"
-  },
-  {
-    "en": "Unoperated",
-    "vn": "Chưa vận hành",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Unoptimized",
-    "vn": "Không đã tối ưu hóa",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Unorganized",
-    "vn": "Không đã tổ chức",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Unoriented",
-    "vn": "Không đã định hướng",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Unpackaged",
-    "vn": "Không đã đóng gói",
-    "category": "Environment"
-  },
-  {
-    "en": "Unparsed",
-    "vn": "Không đã phân tích cú pháp",
-    "category": "Finance"
-  },
-  {
-    "en": "Unperformed",
-    "vn": "Không đã thực hiện",
-    "category": "Law & Ethics"
   },
   {
     "en": "Unplanned",
@@ -7291,49 +6016,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Psychology"
   },
   {
-    "en": "Unprocessed",
-    "vn": "Không đã xử lý",
-    "category": "History & World"
-  },
-  {
-    "en": "Unproduced",
-    "vn": "Không đã sản xuất",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Unprogrammed",
-    "vn": "Không đã lập trình",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Unpublished",
-    "vn": "Không đã xuất bản",
-    "category": "Beginner"
-  },
-  {
     "en": "Unqualified",
     "vn": "Không đủ điều kiện",
     "category": "Family & Life"
-  },
-  {
-    "en": "Unreacted",
-    "vn": "Không đã phản ứng",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Unrecorded",
-    "vn": "Không đã ghi lại",
-    "category": "Education"
-  },
-  {
-    "en": "Unreduced",
-    "vn": "Không đã giảm bớt",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Unrefined",
-    "vn": "Không đã tinh chế",
-    "category": "Health & Mind"
   },
   {
     "en": "Unrelated",
@@ -7341,69 +6026,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Tech & AI"
   },
   {
-    "en": "Unreleased",
-    "vn": "Không đã phát hành",
-    "category": "Environment"
-  },
-  {
-    "en": "Unrendered",
-    "vn": "Không đã kết xuất",
-    "category": "Finance"
-  },
-  {
-    "en": "Unrepaired",
-    "vn": "Không đã sửa chữa",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Unreported",
-    "vn": "Không đã báo cáo",
-    "category": "Science & Space"
-  },
-  {
-    "en": "Unresolved",
-    "vn": "Không đã giải quyết",
-    "category": "Arts & Culture"
-  },
-  {
-    "en": "Unrestored",
-    "vn": "Không đã phục hồi",
-    "category": "Psychology"
-  },
-  {
     "en": "Unrestricted",
     "vn": "Không bị hạn chế",
     "category": "History & World"
-  },
-  {
-    "en": "Unreviewed",
-    "vn": "Không đã đánh giá",
-    "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Unrouted",
-    "vn": "Không đã định tuyến",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Unscheduled",
-    "vn": "Không đã lên lịch",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Unsearched",
-    "vn": "Không đã tìm kiếm",
-    "category": "Beginner"
-  },
-  {
-    "en": "Unseparated",
-    "vn": "Không bị tách rời",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Unserved",
-    "vn": "Không đã phục vụ",
-    "category": "Education"
   },
   {
     "en": "Unshaped",
@@ -7411,89 +6036,9 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Food & Dining"
   },
   {
-    "en": "Unshared",
-    "vn": "Không đã chia sẻ",
-    "category": "Health & Mind"
-  },
-  {
-    "en": "Unsimplified",
-    "vn": "Không đã giản hóa",
-    "category": "Travel & Tourism"
-  },
-  {
-    "en": "Unsimulated",
-    "vn": "Không đã mô phỏng",
-    "category": "Tech & AI"
-  },
-  {
-    "en": "Unsolved",
-    "vn": "Không đã giải quyết",
-    "category": "Environment"
-  },
-  {
-    "en": "Unspecified",
-    "vn": "Không đã chỉ định",
-    "category": "Finance"
-  },
-  {
-    "en": "Unstandardized",
-    "vn": "Không đã chuẩn hóa",
-    "category": "Law & Ethics"
-  },
-  {
-    "en": "Unstored",
-    "vn": "Không đã lưu trữ",
-    "category": "Science & Space"
-  },
-  {
     "en": "Unstructured",
     "vn": "Không có cấu trúc",
     "category": "Arts & Culture"
-  },
-  {
-    "en": "Unsubmitted",
-    "vn": "Không đã nộp",
-    "category": "Psychology"
-  },
-  {
-    "en": "Unsynchronized",
-    "vn": "Không đã đồng bộ",
-    "category": "Advanced Vocab"
-  },
-  {
-    "en": "Unsynthesized",
-    "vn": "Không đã tổng hợp",
-    "category": "Intermediate"
-  },
-  {
-    "en": "Untested",
-    "vn": "Không đã kiểm thử",
-    "category": "Beginner"
-  },
-  {
-    "en": "Untransformed",
-    "vn": "Không đã biến đổi",
-    "category": "Home & Living"
-  },
-  {
-    "en": "Untranslated",
-    "vn": "Không đã dịch",
-    "category": "Work & Career"
-  },
-  {
-    "en": "Unupdated",
-    "vn": "Không đã cập nhật",
-    "category": "Education"
-  },
-  {
-    "en": "Unvalidated",
-    "vn": "Không đã xác minh",
-    "category": "Food & Dining"
-  },
-  {
-    "en": "Unvisualized",
-    "vn": "Không đã trực quan hóa",
-    "category": "Travel & Tourism"
   },
   {
     "en": "Updated",
@@ -8931,11 +7476,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Safety & Operations"
   },
   {
-    "en": "Emind",
-    "vn": "Nhắc nhở",
-    "category": "TOEIC Mastery"
-  },
-  {
     "en": "Eminent",
     "vn": "Kiệt xuất, lỗi lạc",
     "category": "Advanced Vocab"
@@ -8994,11 +7534,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Endeavor",
     "vn": "Nỗ lực, cố gắng",
     "category": "TOEIC Mastery"
-  },
-  {
-    "en": "Endendorse",
-    "vn": "Ủng hộ, xác nhận",
-    "category": "Finance"
   },
   {
     "en": "Endurance",
@@ -10006,11 +8541,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Tech & AI"
   },
   {
-    "en": "Prosecation",
-    "vn": "Sự truy tố",
-    "category": "Law & Ethics"
-  },
-  {
     "en": "Prospectus",
     "vn": "Bản cáo bạch",
     "category": "Finance"
@@ -10476,11 +9006,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Home & Living"
   },
   {
-    "en": "Tenative",
-    "vn": "Dự kiến, chưa dứt khoát",
-    "category": "TOEIC Mastery"
-  },
-  {
     "en": "Termination",
     "vn": "Sự chấm dứt",
     "category": "Work & Career"
@@ -10716,11 +9241,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Arts & Culture"
   },
   {
-    "en": "Vinity",
-    "vn": "Sự lân cận, vùng phụ cận",
-    "category": "TOEIC Mastery"
-  },
-  {
     "en": "Vindicate",
     "vn": "Minh oan, chứng minh đúng",
     "category": "Law & Ethics"
@@ -10749,11 +9269,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Visibility",
     "vn": "Tầm nhìn, độ hiển thị",
     "category": "Travel & Tourism"
-  },
-  {
-    "en": "Vitalive",
-    "vn": "Sinh động, sức sống",
-    "category": "Health & Mind"
   },
   {
     "en": "Vitality",
@@ -13361,7 +11876,7 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Science & Math"
   },
   {
-    "en": "Bigraphy",
+    "en": "Biography",
     "vn": "Tiểu sử cá nhân",
     "category": "Literature & History"
   },
@@ -13746,11 +12261,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Tech & General"
   },
   {
-    "en": "Contribuion",
-    "vn": "Sự đóng góp",
-    "category": "HR & Finance"
-  },
-  {
     "en": "Contrition",
     "vn": "Sự ăn hối hận",
     "category": "Psychology & Ethics"
@@ -14001,11 +12511,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Science & Music"
   },
   {
-    "en": "Aquire",
-    "vn": "Thu được, có được",
-    "category": "Education & Business"
-  },
-  {
     "en": "Actionable",
     "vn": "Có thể thực thi ngay",
     "category": "Management & Strategy"
@@ -14214,11 +12719,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Amorphous",
     "vn": "Không có hình dạng nhất định",
     "category": "Science & Physics"
-  },
-  {
-    "en": "Amplication",
-    "vn": "Sự khuếch đại",
-    "category": "Science & Sound"
   },
   {
     "en": "Amplifier",
@@ -16036,11 +14536,6 @@ export const SPEED_MATCH_PAIRS = [
     "category": "Sports & Navy"
   },
   {
-    "en": "Captence",
-    "vn": "Tiêu đề phụ",
-    "category": "Media"
-  },
-  {
     "en": "Captivating",
     "vn": "Hấp dẫn quyến rũ",
     "category": "Arts & Mind"
@@ -16409,11 +14904,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Ceiling",
     "vn": "Trần nhà, mức trần giá tối đa",
     "category": "Home & Economics"
-  },
-  {
-    "en": "Celebrancy",
-    "vn": "Sự chủ trì lễ hội",
-    "category": "Culture"
   },
   {
     "en": "Celebrant",
@@ -16829,11 +15319,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Cherubic",
     "vn": "Có khuôn mặt thơ ngây như thiên thần",
     "category": "Personal"
-  },
-  {
-    "en": "Cheveron",
-    "vn": "Họa tiết hình chữ V",
-    "category": "Design & Military"
   },
   {
     "en": "Chickpea",
@@ -17304,11 +15789,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Cloister",
     "vn": "Hành lang tu viện cổ",
     "category": "Architecture & History"
-  },
-  {
-    "en": "Clonning",
-    "vn": "Sự nhân bản vô tính",
-    "category": "Science & Biology"
   },
   {
     "en": "Close-up",
@@ -18134,10 +16614,6 @@ export const SPEED_MATCH_PAIRS = [
     "en": "Constructive",
     "vn": "Mang tính xây dựng góp ý",
     "category": "Communication"
-  },
-  {
-    "en": "Constructor",
-    "category": "Construction & IT"
   },
   {
     "en": "Consul",
