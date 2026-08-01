@@ -1,12 +1,12 @@
 // ==========================================================================
 // Games Page — English Learning Arcade Hub & Interactive Mini-Games
-// Integrated with Centralized Vocabulary Databank (5,200+ TOEIC, IELTS, 6k Vocab)
+// Integrated with Centralized Vocabulary Databank (6,000+ TOEIC, IELTS, 6k Vocab)
 // ==========================================================================
 
 import { StorageService } from '../services/storage-service.js';
 import { SoundService } from '../services/sound-service.js';
 import { IpaService } from '../services/ipa-service.js';
-import { VOCAB_BANK, getVocabPool, getVocabStats, getAvailableCategories } from '../data/vocab-bank.js';
+import { VOCAB_BANK, getVocabPool, getVocabStats, getAvailableCategories, shuffleArray } from '../data/vocab-bank.js';
 
 let gamesDataModule = null;
 async function getGamesDataModule() {
@@ -21,7 +21,7 @@ let selectedQuestionCount = 10; // Default 10 questions/challenges
 
 // Speed Word Match Configuration State
 let selectedVocabPool = 'all'; // 'all' | 'toeic' | 'ielts' | 'common'
-let selectedVocabLevel = 'all'; // 'all' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+let selectedVocabLevel = 'all'; // 'all' | 'A1-A2' | 'B1-B2' | 'C1-C2' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 let selectedMatchGameMode = 'count'; // 'count' | 'time' | 'marathon'
 
 /**
@@ -75,7 +75,7 @@ function renderArcadeHub(container) {
         <div class="arcade-title-group">
           <span class="arcade-badge">KHO TỪ VỰNG DATABANK (${vocabStats.total.toLocaleString()} TỪ)</span>
           <h1 class="arcade-title">English Learning Arcade 🎮</h1>
-          <p class="arcade-subtitle">Rèn luyện phản xạ ngôn ngữ siêu tốc với kho <strong>5.200+ từ vựng TOEIC, IELTS & 6.000 từ thông dụng</strong>!</p>
+          <p class="arcade-subtitle">Rèn luyện phản xạ ngôn ngữ siêu tốc với kho <strong>6.000+ từ vựng TOEIC, IELTS & 6.000 từ thông dụng</strong>!</p>
         </div>
 
         <div class="arcade-top-stats">
@@ -399,7 +399,7 @@ function renderGameSetup(container, mode) {
  * Specialized Setup Modal for Speed Word Match
  */
 function renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats) {
-  // Compute match count for current selections
+  // Compute match count for current selections with range level support
   const currentPoolItems = getVocabPool({ pool: selectedVocabPool, level: selectedVocabLevel });
   const poolCountText = currentPoolItems.length.toLocaleString();
 
@@ -420,22 +420,22 @@ function renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats
           </span>
         </label>
         <div class="vocab-pool-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-          <button class="vocab-pool-btn ${selectedVocabPool === 'all' ? 'active' : ''}" data-pool="all" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+          <button class="vocab-pool-btn ${selectedVocabPool === 'all' ? 'active' : ''}" data-pool="all" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid ${selectedVocabPool === 'all' ? '#a855f7' : 'var(--border-subtle)'}; background: ${selectedVocabPool === 'all' ? 'rgba(168,85,247,0.12)' : 'var(--bg-secondary)'};">
             <div style="font-weight: 800; font-size: 1rem; color: #a855f7; margin-bottom: 2px;">🌟 Tất Cả Kho Từ Vựng</div>
             <div style="font-size: 0.8rem; color: var(--text-secondary);">Tổng hợp ${vocabStats.total.toLocaleString()} từ vựng đa dạng</div>
           </button>
 
-          <button class="vocab-pool-btn ${selectedVocabPool === 'toeic' ? 'active' : ''}" data-pool="toeic" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+          <button class="vocab-pool-btn ${selectedVocabPool === 'toeic' ? 'active' : ''}" data-pool="toeic" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid ${selectedVocabPool === 'toeic' ? '#3b82f6' : 'var(--border-subtle)'}; background: ${selectedVocabPool === 'toeic' ? 'rgba(59,130,246,0.12)' : 'var(--bg-secondary)'};">
             <div style="font-weight: 800; font-size: 1rem; color: #3b82f6; margin-bottom: 2px;">💼 TOEIC Essential</div>
             <div style="font-size: 0.8rem; color: var(--text-secondary);">${vocabStats.toeic.toLocaleString()} từ thương mại, công sở</div>
           </button>
 
-          <button class="vocab-pool-btn ${selectedVocabPool === 'ielts' ? 'active' : ''}" data-pool="ielts" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+          <button class="vocab-pool-btn ${selectedVocabPool === 'ielts' ? 'active' : ''}" data-pool="ielts" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid ${selectedVocabPool === 'ielts' ? '#10b981' : 'var(--border-subtle)'}; background: ${selectedVocabPool === 'ielts' ? 'rgba(16,185,129,0.12)' : 'var(--bg-secondary)'};">
             <div style="font-weight: 800; font-size: 1rem; color: #10b981; margin-bottom: 2px;">🎓 IELTS Academic</div>
             <div style="font-size: 0.8rem; color: var(--text-secondary);">${vocabStats.ielts.toLocaleString()} từ học thuật, essay topic</div>
           </button>
 
-          <button class="vocab-pool-btn ${selectedVocabPool === 'common' ? 'active' : ''}" data-pool="common" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid var(--border-subtle); background: var(--bg-secondary);">
+          <button class="vocab-pool-btn ${selectedVocabPool === 'common' ? 'active' : ''}" data-pool="common" style="padding: 14px; text-align: left; border-radius: 12px; cursor: pointer; border: 2px solid ${selectedVocabPool === 'common' ? '#f59e0b' : 'var(--border-subtle)'}; background: ${selectedVocabPool === 'common' ? 'rgba(245,158,11,0.12)' : 'var(--bg-secondary)'};">
             <div style="font-weight: 800; font-size: 1rem; color: #f59e0b; margin-bottom: 2px;">🔤 6.000 Từ Thông Dụng</div>
             <div style="font-size: 0.8rem; color: var(--text-secondary);">${vocabStats.common.toLocaleString()} từ Oxford A1 ➔ C2</div>
           </button>
@@ -448,12 +448,15 @@ function renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats
           <label style="font-weight: 700; font-size: 0.9rem; color: var(--text-primary); display: block; margin-bottom: 8px;">🎯 Trình Độ (CEFR Level):</label>
           <select class="input-field" id="vocab-level-select" style="width: 100%; font-weight: 600;">
             <option value="all" ${selectedVocabLevel === 'all' ? 'selected' : ''}>🌐 Tất cả cấp độ (A1 - C2)</option>
-            <option value="A1" ${selectedVocabLevel === 'A1' ? 'selected' : ''}>🐣 A1 - Sơ Cấp (Elementary)</option>
-            <option value="A2" ${selectedVocabLevel === 'A2' ? 'selected' : ''}>🐥 A2 - Tiền Trung Cấp (Pre-Inter)</option>
-            <option value="B1" ${selectedVocabLevel === 'B1' ? 'selected' : ''}>🦅 B1 - Trung Cấp (Intermediate)</option>
-            <option value="B2" ${selectedVocabLevel === 'B2' ? 'selected' : ''}>🚀 B2 - Trên Trung Cấp (Upper-Inter)</option>
-            <option value="C1" ${selectedVocabLevel === 'C1' ? 'selected' : ''}>💎 C1 - Cao Cấp (Advanced)</option>
-            <option value="C2" ${selectedVocabLevel === 'C2' ? 'selected' : ''}>👑 C2 - Thành Thạo (Mastery)</option>
+            <option value="A1-A2" ${selectedVocabLevel === 'A1-A2' ? 'selected' : ''}>🐣 Sơ Cấp (A1 - A2)</option>
+            <option value="B1-B2" ${selectedVocabLevel === 'B1-B2' ? 'selected' : ''}>🦅 Trung Cấp (B1 - B2)</option>
+            <option value="C1-C2" ${selectedVocabLevel === 'C1-C2' ? 'selected' : ''}>💎 Cao Cấp (C1 - C2)</option>
+            <option value="A1" ${selectedVocabLevel === 'A1' ? 'selected' : ''}>🌱 A1 - Elementary</option>
+            <option value="A2" ${selectedVocabLevel === 'A2' ? 'selected' : ''}>🌿 A2 - Pre-Intermediate</option>
+            <option value="B1" ${selectedVocabLevel === 'B1' ? 'selected' : ''}>☘️ B1 - Intermediate</option>
+            <option value="B2" ${selectedVocabLevel === 'B2' ? 'selected' : ''}>🍀 B2 - Upper-Intermediate</option>
+            <option value="C1" ${selectedVocabLevel === 'C1' ? 'selected' : ''}>⚡ C1 - Advanced</option>
+            <option value="C2" ${selectedVocabLevel === 'C2' ? 'selected' : ''}>👑 C2 - Mastery</option>
           </select>
         </div>
 
@@ -488,7 +491,7 @@ function renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats
       <!-- Actions -->
       <div class="game-over-actions">
         <button class="restart-game-btn" id="start-speed-game-btn" style="font-size: 1.05rem; padding: 14px 28px;">
-          🚀 Bắt Đầu Luyện Tập Từ Vựng
+          🚀 Bắt Đầu Luyện Tập Từ Vựng (${poolCountText} từ)
         </button>
         <button class="exit-arcade-btn" id="back-arcade-btn">
           🏠 Về Arcade Hub
@@ -500,14 +503,6 @@ function renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats
   // Attach Pool Selector Listener
   container.querySelectorAll('.vocab-pool-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      container.querySelectorAll('.vocab-pool-btn').forEach(b => {
-        b.classList.remove('active');
-        b.style.borderColor = 'var(--border-subtle)';
-        b.style.background = 'var(--bg-secondary)';
-      });
-      btn.classList.add('active');
-      btn.style.borderColor = '#a855f7';
-      btn.style.background = 'rgba(168,85,247,0.12)';
       selectedVocabPool = btn.dataset.pool;
       renderSpeedMatchSetup(container, modeName, emoji, memoryTip, vocabStats);
     });
@@ -562,16 +557,19 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount, gam
 
   // Load words from Centralized Vocabulary Databank!
   let allPoolItems = getVocabPool({ pool: selectedVocabPool, level: selectedVocabLevel });
-  if (!allPoolItems || allPoolItems.length === 0) {
+  if (!allPoolItems || allPoolItems.length < 6) {
+    allPoolItems = getVocabPool({ pool: selectedVocabPool, level: 'all' });
+  }
+  if (!allPoolItems || allPoolItems.length < 6) {
     allPoolItems = getVocabPool({ pool: 'all', level: 'all' });
   }
 
-  // Shuffle dataset
-  const shuffledItems = [...allPoolItems].sort(() => 0.5 - Math.random());
+  // Uniform Fisher-Yates Shuffle dataset
+  const shuffledItems = shuffleArray(allPoolItems);
 
   let targetCount = targetPairsCount;
   if (selectedMatchGameMode === 'time' || selectedMatchGameMode === 'marathon') {
-    targetCount = Math.min(200, shuffledItems.length);
+    targetCount = Math.min(300, shuffledItems.length);
   }
 
   const gamePool = shuffledItems.slice(0, Math.min(targetCount, shuffledItems.length));
@@ -588,7 +586,7 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount, gam
       cards.push({ id: `en-${idx}`, pairId: idx, text: pair.en, type: 'en', item: pair });
       cards.push({ id: `vn-${idx}`, pairId: idx, text: pair.vn, type: 'vn', item: pair });
     });
-    cards.sort(() => 0.5 - Math.random());
+    cards = shuffleArray(cards);
     return { activePairs, cards };
   }
 

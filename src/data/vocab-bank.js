@@ -11784,9 +11784,9 @@ export const VOCAB_BANK = [
     "id": "v-1473",
     "en": "Factory",
     "vn": "Nhà máy",
-    "pool": "common",
-    "category": "Common B1",
-    "level": "B1"
+    "pool": "toeic",
+    "category": "Manufacturing",
+    "level": "A2"
   },
   {
     "id": "v-1474",
@@ -12232,8 +12232,8 @@ export const VOCAB_BANK = [
     "id": "v-1529",
     "en": "Harbor",
     "vn": "Bến cảng",
-    "pool": "common",
-    "category": "Common B1",
+    "pool": "toeic",
+    "category": "Shipping & Travel",
     "level": "B1"
   },
   {
@@ -13864,9 +13864,9 @@ export const VOCAB_BANK = [
     "id": "v-1733",
     "en": "Location",
     "vn": "Vị trí",
-    "pool": "common",
-    "category": "Common B1",
-    "level": "B1"
+    "pool": "toeic",
+    "category": "Geography & Business",
+    "level": "A2"
   },
   {
     "id": "v-1734",
@@ -18456,9 +18456,9 @@ export const VOCAB_BANK = [
     "id": "v-2307",
     "en": "Project",
     "vn": "Dự án",
-    "pool": "common",
-    "category": "Common B1",
-    "level": "B1"
+    "pool": "toeic",
+    "category": "Business & Strategy",
+    "level": "A2"
   },
   {
     "id": "v-2308",
@@ -19608,9 +19608,9 @@ export const VOCAB_BANK = [
     "id": "v-2451",
     "en": "Report",
     "vn": "Báo cáo",
-    "pool": "common",
-    "category": "Common B1",
-    "level": "B1"
+    "pool": "toeic",
+    "category": "Office & Media",
+    "level": "A2"
   },
   {
     "id": "v-2452",
@@ -22160,9 +22160,9 @@ export const VOCAB_BANK = [
     "id": "v-2770",
     "en": "System",
     "vn": "Hệ thống",
-    "pool": "common",
-    "category": "Common B1",
-    "level": "B1"
+    "pool": "toeic",
+    "category": "IT & Tech",
+    "level": "A2"
   },
   {
     "id": "v-2771",
@@ -30352,9 +30352,9 @@ export const VOCAB_BANK = [
     "id": "v-3794",
     "en": "Engine",
     "vn": "Động cơ",
-    "pool": "common",
-    "category": "Tech",
-    "level": "B1"
+    "pool": "toeic",
+    "category": "Engineering & Auto",
+    "level": "A2"
   },
   {
     "id": "v-3795",
@@ -33952,7 +33952,7 @@ export const VOCAB_BANK = [
     "id": "v-4244",
     "en": "Bystander",
     "vn": "Người đứng xem, người ngoài cuộc",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Life",
     "level": "B2"
   },
@@ -34088,7 +34088,7 @@ export const VOCAB_BANK = [
     "id": "v-4261",
     "en": "Coexistence",
     "vn": "Sự cùng tồn tại hòa bình",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & History",
     "level": "B2"
   },
@@ -34288,7 +34288,7 @@ export const VOCAB_BANK = [
     "id": "v-4286",
     "en": "Congregation",
     "vn": "Giáo xứ, nhóm tín đồ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Religion & Society",
     "level": "C1"
   },
@@ -34576,7 +34576,7 @@ export const VOCAB_BANK = [
     "id": "v-4322",
     "en": "Convulsion",
     "vn": "Sự co giật, biến động lớn",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Health & Society",
     "level": "C2"
   },
@@ -34816,7 +34816,7 @@ export const VOCAB_BANK = [
     "id": "v-4352",
     "en": "Cultural",
     "vn": "Thuộc về văn hóa",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Culture & Society",
     "level": "B1"
   },
@@ -34848,7 +34848,7 @@ export const VOCAB_BANK = [
     "id": "v-4356",
     "en": "Cyberbullying",
     "vn": "Hành vi bắt nạt trên mạng",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & IT",
     "level": "B2"
   },
@@ -35088,7 +35088,7 @@ export const VOCAB_BANK = [
     "id": "v-4386",
     "en": "Agricultural",
     "vn": "Thuộc về nông nghiệp",
-    "pool": "ielts",
+    "pool": "toeic",
     "category": "Environment & Trade",
     "level": "C1"
   },
@@ -35168,7 +35168,7 @@ export const VOCAB_BANK = [
     "id": "v-4396",
     "en": "Alcoholism",
     "vn": "Bệnh nghiện rượu",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Health & Society",
     "level": "B2"
   },
@@ -35344,7 +35344,7 @@ export const VOCAB_BANK = [
     "id": "v-4418",
     "en": "Anonymity",
     "vn": "Sự ẩn danh",
-    "pool": "common",
+    "pool": "ielts",
     "category": "IT & Society",
     "level": "B2"
   },
@@ -35536,7 +35536,7 @@ export const VOCAB_BANK = [
     "id": "v-4442",
     "en": "Aristocrat",
     "vn": "Người quý tộc",
-    "pool": "common",
+    "pool": "ielts",
     "category": "History & Society",
     "level": "C1"
   },
@@ -36344,7 +36344,7 @@ export const VOCAB_BANK = [
     "id": "v-4543",
     "en": "Beggar",
     "vn": "Người ăn xin",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society",
     "level": "B1"
   },
@@ -36440,7 +36440,7 @@ export const VOCAB_BANK = [
     "id": "v-4555",
     "en": "Benefactor",
     "vn": "Nhà hảo tâm, người bảo trợ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Ethics",
     "level": "C1"
   },
@@ -36824,7 +36824,7 @@ export const VOCAB_BANK = [
     "id": "v-4603",
     "en": "Blight",
     "vn": "Tai họa, bệnh thối cây",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Agriculture & Society",
     "level": "C2"
   },
@@ -37464,7 +37464,7 @@ export const VOCAB_BANK = [
     "id": "v-4683",
     "en": "Brotherhood",
     "vn": "Tình anh em, hội huynh đệ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Life",
     "level": "B2"
   },
@@ -37592,7 +37592,7 @@ export const VOCAB_BANK = [
     "id": "v-4699",
     "en": "Bully",
     "vn": "Kẻ hay bắt nạt",
-    "pool": "common",
+    "pool": "ielts",
     "category": "School & Society",
     "level": "B1"
   },
@@ -37776,7 +37776,7 @@ export const VOCAB_BANK = [
     "id": "v-4722",
     "en": "Cabinetmaker",
     "vn": "Thợ đóng tủ gỗ tinh xảo",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Crafts & Work",
     "level": "C1"
   },
@@ -37808,7 +37808,7 @@ export const VOCAB_BANK = [
     "id": "v-4726",
     "en": "Cafeteria",
     "vn": "Nhà ăn tự phục vụ",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Food & Office",
     "level": "A2"
   },
@@ -37856,7 +37856,7 @@ export const VOCAB_BANK = [
     "id": "v-4732",
     "en": "Calculator",
     "vn": "Máy tính cầm tay",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Education & Office",
     "level": "A1"
   },
@@ -37888,7 +37888,7 @@ export const VOCAB_BANK = [
     "id": "v-4736",
     "en": "Callousness",
     "vn": "Sự nhẫn tâm vô cảm",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "C2"
   },
@@ -37904,7 +37904,7 @@ export const VOCAB_BANK = [
     "id": "v-4738",
     "en": "Calmness",
     "vn": "Sự bình tĩnh điềm tĩnh",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "B1"
   },
@@ -37912,7 +37912,7 @@ export const VOCAB_BANK = [
     "id": "v-4739",
     "en": "Camaraderie",
     "vn": "Tình bạn đồng chí gắn bó",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Relationships & Work",
     "level": "C1"
   },
@@ -38048,7 +38048,7 @@ export const VOCAB_BANK = [
     "id": "v-4756",
     "en": "Cannabis",
     "vn": "Cây cần sa",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Health & Law",
     "level": "B2"
   },
@@ -38096,7 +38096,7 @@ export const VOCAB_BANK = [
     "id": "v-4762",
     "en": "Cantankerous",
     "vn": "Hay gắt gỏng khó tính",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "C2"
   },
@@ -38104,7 +38104,7 @@ export const VOCAB_BANK = [
     "id": "v-4763",
     "en": "Canteen",
     "vn": "Nhà ăn trường/công sở",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Food & Office",
     "level": "A2"
   },
@@ -38128,7 +38128,7 @@ export const VOCAB_BANK = [
     "id": "v-4766",
     "en": "Capability",
     "vn": "Khả năng, năng lực tác chiến",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Tech & HR",
     "level": "B2"
   },
@@ -38208,7 +38208,7 @@ export const VOCAB_BANK = [
     "id": "v-4776",
     "en": "Captivity",
     "vn": "Tình trạng bị giam giữ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Animals & Law",
     "level": "B2"
   },
@@ -38216,7 +38216,7 @@ export const VOCAB_BANK = [
     "id": "v-4777",
     "en": "Captor",
     "vn": "Kẻ bắt giữ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Safety",
     "level": "B2"
   },
@@ -38232,7 +38232,7 @@ export const VOCAB_BANK = [
     "id": "v-4779",
     "en": "Carat",
     "vn": "Đơn vị cara vàng/kim cương",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Jewelry & Trade",
     "level": "B2"
   },
@@ -38272,7 +38272,7 @@ export const VOCAB_BANK = [
     "id": "v-4784",
     "en": "Cardboard",
     "vn": "Bìa các-tông",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Materials & Office",
     "level": "A2"
   },
@@ -38392,7 +38392,7 @@ export const VOCAB_BANK = [
     "id": "v-4799",
     "en": "Carpentry",
     "vn": "Nghề mộc",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Crafts & Work",
     "level": "B1"
   },
@@ -38480,7 +38480,7 @@ export const VOCAB_BANK = [
     "id": "v-4810",
     "en": "Caseworker",
     "vn": "Nhân viên công tác xã hội",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Health",
     "level": "B2"
   },
@@ -38608,7 +38608,7 @@ export const VOCAB_BANK = [
     "id": "v-4826",
     "en": "Catastrophic",
     "vn": "Mang tính thảm họa",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Environment & Safety",
     "level": "B2"
   },
@@ -38664,7 +38664,7 @@ export const VOCAB_BANK = [
     "id": "v-4833",
     "en": "Cathode",
     "vn": "Cực âm điện tử",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Physics",
     "level": "B2"
   },
@@ -38768,7 +38768,7 @@ export const VOCAB_BANK = [
     "id": "v-4846",
     "en": "Cavity",
     "vn": "Lỗ sâu răng, hốc rỗng",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Health & Science",
     "level": "B2"
   },
@@ -38832,7 +38832,7 @@ export const VOCAB_BANK = [
     "id": "v-4854",
     "en": "Celibacy",
     "vn": "Sự sống độc thân kiêng khem",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Religion & Society",
     "level": "C2"
   },
@@ -38848,7 +38848,7 @@ export const VOCAB_BANK = [
     "id": "v-4856",
     "en": "Cellular",
     "vn": "Thuộc tế bào, mạng di động",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & IT",
     "level": "B2"
   },
@@ -38864,7 +38864,7 @@ export const VOCAB_BANK = [
     "id": "v-4858",
     "en": "Cellulose",
     "vn": "Chất xen-lu-lô thực vật",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Biology",
     "level": "B2"
   },
@@ -38872,7 +38872,7 @@ export const VOCAB_BANK = [
     "id": "v-4859",
     "en": "Celsius",
     "vn": "Độ C đo nhiệt độ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Weather",
     "level": "A1"
   },
@@ -38880,7 +38880,7 @@ export const VOCAB_BANK = [
     "id": "v-4860",
     "en": "Cemetery",
     "vn": "Nghĩa trang",
-    "pool": "common",
+    "pool": "ielts",
     "category": "History & Society",
     "level": "B1"
   },
@@ -38896,7 +38896,7 @@ export const VOCAB_BANK = [
     "id": "v-4862",
     "en": "Censurable",
     "vn": "Đáng bị phê bình",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Ethics & Law",
     "level": "C2"
   },
@@ -38928,7 +38928,7 @@ export const VOCAB_BANK = [
     "id": "v-4866",
     "en": "Centigrade",
     "vn": "Độ bách phân (Độ C)",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Weather",
     "level": "A2"
   },
@@ -39072,7 +39072,7 @@ export const VOCAB_BANK = [
     "id": "v-4884",
     "en": "Chagrined",
     "vn": "Thất vọng chán nản",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "C2"
   },
@@ -39168,7 +39168,7 @@ export const VOCAB_BANK = [
     "id": "v-4896",
     "en": "Changeable",
     "vn": "Dễ thay đổi thất thường",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Weather & Psychology",
     "level": "B1"
   },
@@ -39248,7 +39248,7 @@ export const VOCAB_BANK = [
     "id": "v-4906",
     "en": "Characteristic",
     "vn": "Đặc điểm đặc trưng",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Analytics",
     "level": "B1"
   },
@@ -39256,7 +39256,7 @@ export const VOCAB_BANK = [
     "id": "v-4907",
     "en": "Charitable",
     "vn": "Có lòng từ thiện",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Ethics",
     "level": "B1"
   },
@@ -39264,7 +39264,7 @@ export const VOCAB_BANK = [
     "id": "v-4908",
     "en": "Charlatan",
     "vn": "Kẻ lừa đảo khoác phác",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Mind",
     "level": "C2"
   },
@@ -39336,7 +39336,7 @@ export const VOCAB_BANK = [
     "id": "v-4917",
     "en": "Cheated",
     "vn": "Bị lừa dối",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "A2"
   },
@@ -39416,7 +39416,7 @@ export const VOCAB_BANK = [
     "id": "v-4927",
     "en": "Chemical",
     "vn": "Hóa chất, thuộc hóa học",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Chemistry",
     "level": "A2"
   },
@@ -39424,7 +39424,7 @@ export const VOCAB_BANK = [
     "id": "v-4928",
     "en": "Chemist",
     "vn": "Nhà hóa học, dược sĩ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Career",
     "level": "A2"
   },
@@ -39432,7 +39432,7 @@ export const VOCAB_BANK = [
     "id": "v-4929",
     "en": "Chemistry",
     "vn": "Môn hóa học",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Education",
     "level": "A2"
   },
@@ -39496,7 +39496,7 @@ export const VOCAB_BANK = [
     "id": "v-4937",
     "en": "Childish",
     "vn": "Trẻ con ngây ngô",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "B1"
   },
@@ -39504,7 +39504,7 @@ export const VOCAB_BANK = [
     "id": "v-4938",
     "en": "Childless",
     "vn": "Không có con",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Family & Society",
     "level": "B2"
   },
@@ -39512,7 +39512,7 @@ export const VOCAB_BANK = [
     "id": "v-4939",
     "en": "Childlike",
     "vn": "Hồn nhiên như trẻ thơ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "B2"
   },
@@ -39544,7 +39544,7 @@ export const VOCAB_BANK = [
     "id": "v-4943",
     "en": "Chloride",
     "vn": "Hợp chất clo-rua",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Chemistry",
     "level": "B2"
   },
@@ -39552,7 +39552,7 @@ export const VOCAB_BANK = [
     "id": "v-4944",
     "en": "Chlorine",
     "vn": "Khí clo chất tẩy",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Chemistry & Environment",
     "level": "B2"
   },
@@ -39632,7 +39632,7 @@ export const VOCAB_BANK = [
     "id": "v-4954",
     "en": "Chromium",
     "vn": "Kim loại crôm",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Chemistry",
     "level": "B2"
   },
@@ -39800,7 +39800,7 @@ export const VOCAB_BANK = [
     "id": "v-4975",
     "en": "Circumference",
     "vn": "Chu vi hình tròn",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Math & Science",
     "level": "B2"
   },
@@ -39840,7 +39840,7 @@ export const VOCAB_BANK = [
     "id": "v-4980",
     "en": "Cirrus",
     "vn": "Mây ti (mây tầng cao)",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Weather & Science",
     "level": "C1"
   },
@@ -39864,7 +39864,7 @@ export const VOCAB_BANK = [
     "id": "v-4983",
     "en": "Citizenship",
     "vn": "Quyền công dân",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Politics",
     "level": "B1"
   },
@@ -39880,7 +39880,7 @@ export const VOCAB_BANK = [
     "id": "v-4985",
     "en": "Civilian",
     "vn": "Thường dân không thuộc quân đội",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Military",
     "level": "B1"
   },
@@ -39888,7 +39888,7 @@ export const VOCAB_BANK = [
     "id": "v-4986",
     "en": "Civility",
     "vn": "Sự lịch sự phép lịch sự",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology & Society",
     "level": "B2"
   },
@@ -39896,7 +39896,7 @@ export const VOCAB_BANK = [
     "id": "v-4987",
     "en": "Civilized",
     "vn": "Văn minh khai sáng",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society",
     "level": "B1"
   },
@@ -39936,7 +39936,7 @@ export const VOCAB_BANK = [
     "id": "v-4992",
     "en": "Clamor",
     "vn": "Tiếng la hò phản đối dồn dập",
-    "pool": "common",
+    "pool": "ielts",
     "category": "News & Society",
     "level": "C1"
   },
@@ -39944,7 +39944,7 @@ export const VOCAB_BANK = [
     "id": "v-4993",
     "en": "Clamp",
     "vn": "Cái kẹp cố định",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Tools & Work",
     "level": "B2"
   },
@@ -39952,7 +39952,7 @@ export const VOCAB_BANK = [
     "id": "v-4994",
     "en": "Clan",
     "vn": "Dòng tộc, thị tộc",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Family & Society",
     "level": "B2"
   },
@@ -40008,7 +40008,7 @@ export const VOCAB_BANK = [
     "id": "v-5001",
     "en": "Claustrophobia",
     "vn": "Hội chứng sợ không gian hẹp",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology & Health",
     "level": "B2"
   },
@@ -40072,7 +40072,7 @@ export const VOCAB_BANK = [
     "id": "v-5009",
     "en": "Cleavage",
     "vn": "Sự chia rẽ phân tách, khe ngực",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society & Body",
     "level": "C1"
   },
@@ -40328,7 +40328,7 @@ export const VOCAB_BANK = [
     "id": "v-5041",
     "en": "Co-author",
     "vn": "Đồng tác giả",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Academic & Books",
     "level": "B1"
   },
@@ -40352,7 +40352,7 @@ export const VOCAB_BANK = [
     "id": "v-5044",
     "en": "Coastal",
     "vn": "Thuộc vùng ven biển",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Geography & Environment",
     "level": "B1"
   },
@@ -40560,7 +40560,7 @@ export const VOCAB_BANK = [
     "id": "v-5070",
     "en": "Collectable",
     "vn": "Vật phẩm có giá trị sưu tầm",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Hobbies & Trade",
     "level": "B2"
   },
@@ -40608,7 +40608,7 @@ export const VOCAB_BANK = [
     "id": "v-5076",
     "en": "Colonial",
     "vn": "Thuộc về thuộc địa",
-    "pool": "common",
+    "pool": "ielts",
     "category": "History & Society",
     "level": "B2"
   },
@@ -40656,7 +40656,7 @@ export const VOCAB_BANK = [
     "id": "v-5082",
     "en": "Combatant",
     "vn": "Chiến sĩ tham chiến",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Military & Law",
     "level": "B2"
   },
@@ -40696,7 +40696,7 @@ export const VOCAB_BANK = [
     "id": "v-5087",
     "en": "Comet",
     "vn": "Sao chổi",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Space",
     "level": "B1"
   },
@@ -40824,7 +40824,7 @@ export const VOCAB_BANK = [
     "id": "v-5103",
     "en": "Community",
     "vn": "Cộng đồng dân cư",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Society",
     "level": "A2"
   },
@@ -40832,7 +40832,7 @@ export const VOCAB_BANK = [
     "id": "v-5104",
     "en": "Commutation",
     "vn": "Sự giảm án, sự đi lại hàng ngày",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Travel",
     "level": "C2"
   },
@@ -40976,7 +40976,7 @@ export const VOCAB_BANK = [
     "id": "v-5122",
     "en": "Complacency",
     "vn": "Sự tự mãn thỏa mãn dừng lại",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
   },
@@ -41008,7 +41008,7 @@ export const VOCAB_BANK = [
     "id": "v-5126",
     "en": "Completion",
     "vn": "Sự hoàn thành kết thúc",
-    "pool": "common",
+    "pool": "toeic",
     "category": "Project & Work",
     "level": "B1"
   },
@@ -41056,7 +41056,7 @@ export const VOCAB_BANK = [
     "id": "v-5132",
     "en": "Composite",
     "vn": "Hợp chất composite, hỗn hợp",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Materials",
     "level": "B2"
   },
@@ -41064,7 +41064,7 @@ export const VOCAB_BANK = [
     "id": "v-5133",
     "en": "Compost",
     "vn": "Phân bón hữu cơ ủ từ rác",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Agriculture & Environment",
     "level": "B2"
   },
@@ -41072,7 +41072,7 @@ export const VOCAB_BANK = [
     "id": "v-5134",
     "en": "Compound",
     "vn": "Hợp chất hóa học, khu phức hợp",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Real Estate",
     "level": "B1"
   },
@@ -41112,7 +41112,7 @@ export const VOCAB_BANK = [
     "id": "v-5139",
     "en": "Compulsive",
     "vn": "Có tính ép buộc/nghiện không cưỡng được",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "B2"
   },
@@ -41152,7 +41152,7 @@ export const VOCAB_BANK = [
     "id": "v-5144",
     "en": "Concealment",
     "vn": "Sự che giấu giấu giếm",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Safety",
     "level": "B2"
   },
@@ -41256,7 +41256,7 @@ export const VOCAB_BANK = [
     "id": "v-5157",
     "en": "Condemnatory",
     "vn": "Có tính lên án kết tội",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Communication",
     "level": "C2"
   },
@@ -41288,7 +41288,7 @@ export const VOCAB_BANK = [
     "id": "v-5161",
     "en": "Confession",
     "vn": "Lời thú tội, sự xưng tội",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Religion",
     "level": "B1"
   },
@@ -41344,7 +41344,7 @@ export const VOCAB_BANK = [
     "id": "v-5168",
     "en": "Confucianism",
     "vn": "Nho giáo",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Philosophy & History",
     "level": "B2"
   },
@@ -41352,7 +41352,7 @@ export const VOCAB_BANK = [
     "id": "v-5169",
     "en": "Confused",
     "vn": "Bối rối nhầm lẫn",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "A1"
   },
@@ -41384,7 +41384,7 @@ export const VOCAB_BANK = [
     "id": "v-5173",
     "en": "Congregational",
     "vn": "Thuộc về giáo xứ nhóm họp",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Religion & Society",
     "level": "C2"
   },
@@ -41416,7 +41416,7 @@ export const VOCAB_BANK = [
     "id": "v-5177",
     "en": "Connective",
     "vn": "Có tính kết nối",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Science & Grammar",
     "level": "B2"
   },
@@ -41456,7 +41456,7 @@ export const VOCAB_BANK = [
     "id": "v-5182",
     "en": "Consciousness",
     "vn": "Ý thức sự tỉnh táo",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Health & Psychology",
     "level": "B2"
   },
@@ -41504,7 +41504,7 @@ export const VOCAB_BANK = [
     "id": "v-5188",
     "en": "Console",
     "vn": "Bàn điều khiển, an ủi",
-    "pool": "common",
+    "pool": "ielts",
     "category": "IT & Psychology",
     "level": "B1"
   },
@@ -41520,7 +41520,7 @@ export const VOCAB_BANK = [
     "id": "v-5190",
     "en": "Conspirator",
     "vn": "Kẻ tham gia âm mưu",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & History",
     "level": "C1"
   },
@@ -41528,7 +41528,7 @@ export const VOCAB_BANK = [
     "id": "v-5191",
     "en": "Constancy",
     "vn": "Tính kiên định trước sau như một",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
   },
@@ -41536,7 +41536,7 @@ export const VOCAB_BANK = [
     "id": "v-5192",
     "en": "Constitutional",
     "vn": "Thuộc hiến pháp",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Government",
     "level": "B2"
   },
@@ -41616,7 +41616,7 @@ export const VOCAB_BANK = [
     "id": "v-5202",
     "en": "Contemplative",
     "vn": "Trầm tư suy ngẫm sâu",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
   },
@@ -41640,7 +41640,7 @@ export const VOCAB_BANK = [
     "id": "v-5205",
     "en": "Contemptuous",
     "vn": "Tỏ thái độ khinh bỉ",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Psychology",
     "level": "C2"
   },
@@ -41656,7 +41656,7 @@ export const VOCAB_BANK = [
     "id": "v-5207",
     "en": "Contestation",
     "vn": "Sự tranh chấp cuộc thi đấu",
-    "pool": "common",
+    "pool": "ielts",
     "category": "Law & Sports",
     "level": "C1"
   },
@@ -41739,8 +41739,6668 @@ export const VOCAB_BANK = [
     "pool": "common",
     "category": "Media & IT",
     "level": "A2"
+  },
+  {
+    "id": "v-5218",
+    "en": "Understand - understood - understood",
+    "vn": "Thấu hiểu",
+    "pool": "common",
+    "category": "Irregular Verbs",
+    "level": "B1"
+  },
+  {
+    "id": "v-5219",
+    "en": "Banana",
+    "vn": "Quả chuối",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5220",
+    "en": "Bread",
+    "vn": "Bánh mì",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5221",
+    "en": "Butter",
+    "vn": "Bơ ăn",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5222",
+    "en": "Cheese",
+    "vn": "Phô mai",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5223",
+    "en": "Chicken",
+    "vn": "Thịt gà, con gà",
+    "pool": "common",
+    "category": "Food & Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5224",
+    "en": "Coffee",
+    "vn": "Cà phê",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5225",
+    "en": "Egg",
+    "vn": "Quả trứng",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5226",
+    "en": "Fish",
+    "vn": "Con cá, món cá",
+    "pool": "common",
+    "category": "Food & Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5227",
+    "en": "Fruit",
+    "vn": "Trái cây",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5228",
+    "en": "Juice",
+    "vn": "Nước ép trái cây",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5229",
+    "en": "Lemon",
+    "vn": "Quả chanh vàng",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5230",
+    "en": "Meat",
+    "vn": "Thịt ăn",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5231",
+    "en": "Milk",
+    "vn": "Sữa tươi",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5232",
+    "en": "Orange",
+    "vn": "Quả cam, màu cam",
+    "pool": "common",
+    "category": "Food & Colors",
+    "level": "A1"
+  },
+  {
+    "id": "v-5233",
+    "en": "Rice",
+    "vn": "Cơm, gạo",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5234",
+    "en": "Salad",
+    "vn": "Món rau trộn",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5235",
+    "en": "Salt",
+    "vn": "Muối ăn",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5236",
+    "en": "Soup",
+    "vn": "Món súp, canh",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5237",
+    "en": "Sugar",
+    "vn": "Đường ăn",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5238",
+    "en": "Tea",
+    "vn": "Trà, chè",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5239",
+    "en": "Water",
+    "vn": "Nước uống",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5240",
+    "en": "Window",
+    "vn": "Cửa sổ",
+    "pool": "common",
+    "category": "Home & Housing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5241",
+    "en": "Door",
+    "vn": "Cửa ra vào",
+    "pool": "common",
+    "category": "Home & Housing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5242",
+    "en": "Wall",
+    "vn": "Bức tường",
+    "pool": "common",
+    "category": "Home & Housing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5243",
+    "en": "Floor",
+    "vn": "Sàn nhà, tầng nhà",
+    "pool": "common",
+    "category": "Home & Housing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5244",
+    "en": "Roof",
+    "vn": "Mái nhà",
+    "pool": "common",
+    "category": "Home & Housing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5245",
+    "en": "Room",
+    "vn": "Căn phòng",
+    "pool": "common",
+    "category": "Home & Housing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5246",
+    "en": "Table",
+    "vn": "Cái bàn",
+    "pool": "common",
+    "category": "Home & Furniture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5247",
+    "en": "Chair",
+    "vn": "Cái ghế",
+    "pool": "common",
+    "category": "Home & Furniture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5248",
+    "en": "Bed",
+    "vn": "Cái giường",
+    "pool": "common",
+    "category": "Home & Furniture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5249",
+    "en": "Clock",
+    "vn": "Đồng hồ treo tường",
+    "pool": "common",
+    "category": "Home & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5250",
+    "en": "Pen",
+    "vn": "Bút mực",
+    "pool": "toeic",
+    "category": "Education & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5251",
+    "en": "Pencil",
+    "vn": "Bút chì",
+    "pool": "toeic",
+    "category": "Education & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5252",
+    "en": "Book",
+    "vn": "Cuốn sách",
+    "pool": "common",
+    "category": "Education & Books",
+    "level": "A1"
+  },
+  {
+    "id": "v-5253",
+    "en": "Bag",
+    "vn": "Túi xách, cặp",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5254",
+    "en": "Coat",
+    "vn": "Áo khoác dài",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5255",
+    "en": "Hat",
+    "vn": "Cái mũ, nón",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5256",
+    "en": "Shoes",
+    "vn": "Đôi giày",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5257",
+    "en": "Socks",
+    "vn": "Đôi tất, vớ",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5258",
+    "en": "Shirt",
+    "vn": "Áo sơ mi",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5259",
+    "en": "Pants",
+    "vn": "Quần dài",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5260",
+    "en": "Dress",
+    "vn": "Váy liền thân",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5261",
+    "en": "Skirt",
+    "vn": "Chân váy",
+    "pool": "common",
+    "category": "Fashion & Style",
+    "level": "A1"
+  },
+  {
+    "id": "v-5262",
+    "en": "Boy",
+    "vn": "Cậu bé, con trai",
+    "pool": "common",
+    "category": "Family & Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5263",
+    "en": "Girl",
+    "vn": "Cô bé, con gái",
+    "pool": "common",
+    "category": "Family & Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5264",
+    "en": "Man",
+    "vn": "Người đàn ông",
+    "pool": "common",
+    "category": "Family & Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5265",
+    "en": "Woman",
+    "vn": "Người phụ nữ",
+    "pool": "common",
+    "category": "Family & Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5266",
+    "en": "Friend",
+    "vn": "Người bạn",
+    "pool": "common",
+    "category": "Relationships",
+    "level": "A1"
+  },
+  {
+    "id": "v-5267",
+    "en": "House",
+    "vn": "Ngôi nhà",
+    "pool": "common",
+    "category": "Home & Housing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5268",
+    "en": "School",
+    "vn": "Trường học",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5269",
+    "en": "Teacher",
+    "vn": "Giáo viên",
+    "pool": "common",
+    "category": "Education & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5270",
+    "en": "Student",
+    "vn": "Học sinh, sinh viên",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5271",
+    "en": "Doctor",
+    "vn": "Bác sĩ",
+    "pool": "common",
+    "category": "Health & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5272",
+    "en": "Nurse",
+    "vn": "Y sĩ, y tá",
+    "pool": "common",
+    "category": "Health & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5273",
+    "en": "Driver",
+    "vn": "Tài xế lái xe",
+    "pool": "common",
+    "category": "Travel & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5274",
+    "en": "Car",
+    "vn": "Xe ô tô",
+    "pool": "common",
+    "category": "Travel & Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5275",
+    "en": "Bus",
+    "vn": "Xe buýt",
+    "pool": "common",
+    "category": "Travel & Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5276",
+    "en": "Train",
+    "vn": "Tàu hỏa",
+    "pool": "common",
+    "category": "Travel & Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5277",
+    "en": "Plane",
+    "vn": "Máy bay",
+    "pool": "common",
+    "category": "Travel & Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5278",
+    "en": "Bike",
+    "vn": "Xe đạp",
+    "pool": "common",
+    "category": "Travel & Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5279",
+    "en": "Street",
+    "vn": "Con đường, phố",
+    "pool": "common",
+    "category": "City & Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5280",
+    "en": "City",
+    "vn": "Thành phố",
+    "pool": "common",
+    "category": "City & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5281",
+    "en": "Town",
+    "vn": "Thị trấn",
+    "pool": "common",
+    "category": "City & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5282",
+    "en": "Country",
+    "vn": "Đất nước, miền quê",
+    "pool": "common",
+    "category": "Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5283",
+    "en": "Sun",
+    "vn": "Mặt trời",
+    "pool": "common",
+    "category": "Nature & Space",
+    "level": "A1"
+  },
+  {
+    "id": "v-5284",
+    "en": "Moon",
+    "vn": "Mặt trăng",
+    "pool": "common",
+    "category": "Nature & Space",
+    "level": "A1"
+  },
+  {
+    "id": "v-5285",
+    "en": "Star",
+    "vn": "Ngôi sao",
+    "pool": "common",
+    "category": "Nature & Space",
+    "level": "A1"
+  },
+  {
+    "id": "v-5286",
+    "en": "Sky",
+    "vn": "Bầu trời",
+    "pool": "common",
+    "category": "Nature & Space",
+    "level": "A1"
+  },
+  {
+    "id": "v-5287",
+    "en": "Rain",
+    "vn": "Cơn mưa",
+    "pool": "common",
+    "category": "Weather & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5288",
+    "en": "Snow",
+    "vn": "Tuyết rơi",
+    "pool": "common",
+    "category": "Weather & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5289",
+    "en": "Wind",
+    "vn": "Cơn gió",
+    "pool": "common",
+    "category": "Weather & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5290",
+    "en": "Tree",
+    "vn": "Cây cối",
+    "pool": "ielts",
+    "category": "Nature & Environment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5291",
+    "en": "Flower",
+    "vn": "Bông hoa",
+    "pool": "ielts",
+    "category": "Nature & Environment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5292",
+    "en": "Grass",
+    "vn": "Bãi cỏ",
+    "pool": "ielts",
+    "category": "Nature & Environment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5293",
+    "en": "Bird",
+    "vn": "Con chim",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5294",
+    "en": "Cat",
+    "vn": "Con mèo",
+    "pool": "common",
+    "category": "Animals & Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5295",
+    "en": "Dog",
+    "vn": "Con chó",
+    "pool": "common",
+    "category": "Animals & Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5296",
+    "en": "Horse",
+    "vn": "Con ngựa",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5297",
+    "en": "Cow",
+    "vn": "Con bò",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5298",
+    "en": "Pig",
+    "vn": "Con heo, lợn",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5299",
+    "en": "Sheep",
+    "vn": "Con cừu",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5300",
+    "en": "Duck",
+    "vn": "Con vịt",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5301",
+    "en": "Mouse",
+    "vn": "Con chuột",
+    "pool": "common",
+    "category": "Animals & Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5302",
+    "en": "Day",
+    "vn": "Ngày",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5303",
+    "en": "Night",
+    "vn": "Ban đêm",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5304",
+    "en": "Morning",
+    "vn": "Buổi sáng",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5305",
+    "en": "Evening",
+    "vn": "Buổi tối",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5306",
+    "en": "Week",
+    "vn": "Tuần lễ",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5307",
+    "en": "Month",
+    "vn": "Tháng",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5308",
+    "en": "Year",
+    "vn": "Năm",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5309",
+    "en": "Time",
+    "vn": "Thời gian",
+    "pool": "common",
+    "category": "Time & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5310",
+    "en": "Money",
+    "vn": "Tiền bạc",
+    "pool": "toeic",
+    "category": "Finance & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5311",
+    "en": "Price",
+    "vn": "Giá cả",
+    "pool": "toeic",
+    "category": "Shopping & Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5312",
+    "en": "Store",
+    "vn": "Cửa hàng",
+    "pool": "common",
+    "category": "Shopping & Retail",
+    "level": "A1"
+  },
+  {
+    "id": "v-5313",
+    "en": "Shop",
+    "vn": "Tiệm bán hàng",
+    "pool": "common",
+    "category": "Shopping & Retail",
+    "level": "A1"
+  },
+  {
+    "id": "v-5314",
+    "en": "Market",
+    "vn": "Khu chợ",
+    "pool": "toeic",
+    "category": "Shopping & Business",
+    "level": "A1"
+  },
+  {
+    "id": "v-5315",
+    "en": "Music",
+    "vn": "Âm nhạc",
+    "pool": "common",
+    "category": "Arts & Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5316",
+    "en": "Song",
+    "vn": "Bài hát",
+    "pool": "common",
+    "category": "Arts & Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5317",
+    "en": "Game",
+    "vn": "Trò chơi",
+    "pool": "common",
+    "category": "Entertainment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5318",
+    "en": "Movie",
+    "vn": "Bộ phim",
+    "pool": "common",
+    "category": "Entertainment & Movies",
+    "level": "A1"
+  },
+  {
+    "id": "v-5319",
+    "en": "Color",
+    "vn": "Màu sắc",
+    "pool": "common",
+    "category": "Daily Life & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5320",
+    "en": "Red",
+    "vn": "Màu đỏ",
+    "pool": "common",
+    "category": "Colors & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5321",
+    "en": "Blue",
+    "vn": "Màu xanh dương",
+    "pool": "common",
+    "category": "Colors & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5322",
+    "en": "Green",
+    "vn": "Màu xanh lá",
+    "pool": "common",
+    "category": "Colors & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5323",
+    "en": "Yellow",
+    "vn": "Màu vàng",
+    "pool": "common",
+    "category": "Colors & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5324",
+    "en": "White",
+    "vn": "Màu trắng",
+    "pool": "common",
+    "category": "Colors & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5325",
+    "en": "Black",
+    "vn": "Màu đen",
+    "pool": "common",
+    "category": "Colors & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5326",
+    "en": "Big",
+    "vn": "To lớn",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5327",
+    "en": "Small",
+    "vn": "Nhỏ bé",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5328",
+    "en": "Hot",
+    "vn": "Nóng",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5329",
+    "en": "Cold",
+    "vn": "Lạnh",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5330",
+    "en": "New",
+    "vn": "Mới",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5331",
+    "en": "Old",
+    "vn": "Cũ, già",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5332",
+    "en": "Happy",
+    "vn": "Vui vẻ, hạnh phúc",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5333",
+    "en": "Sad",
+    "vn": "Buồn rầu",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5334",
+    "en": "Slow",
+    "vn": "Chậm",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5335",
+    "en": "Hard",
+    "vn": "Khó khăn, cứng",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5336",
+    "en": "Air",
+    "vn": "Không khí",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5337",
+    "en": "Arm",
+    "vn": "Cánh tay",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5338",
+    "en": "Ask",
+    "vn": "Hỏi, yêu cầu",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5339",
+    "en": "Baby",
+    "vn": "Em bé",
+    "pool": "common",
+    "category": "Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5340",
+    "en": "Ball",
+    "vn": "Quả bóng",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5341",
+    "en": "Bank",
+    "vn": "Ngân hàng",
+    "pool": "toeic",
+    "category": "Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5342",
+    "en": "Beach",
+    "vn": "Bãi biển",
+    "pool": "common",
+    "category": "Travel & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5343",
+    "en": "Bear",
+    "vn": "Con gấu",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5344",
+    "en": "Beautiful",
+    "vn": "Đẹp đẽ",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5345",
+    "en": "Bedroom",
+    "vn": "Phòng ngủ",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5346",
+    "en": "Beer",
+    "vn": "Rượu bia",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5347",
+    "en": "Before",
+    "vn": "Trước khi",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5348",
+    "en": "Behind",
+    "vn": "Phía sau",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5349",
+    "en": "Birthday",
+    "vn": "Ngày sinh nhật",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5350",
+    "en": "Boat",
+    "vn": "Con thuyền",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5351",
+    "en": "Body",
+    "vn": "Cơ thể",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5352",
+    "en": "Bone",
+    "vn": "Xương",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5353",
+    "en": "Bottle",
+    "vn": "Chai, lọ",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5354",
+    "en": "Box",
+    "vn": "Cái hộp",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5355",
+    "en": "Bridge",
+    "vn": "Cây cầu",
+    "pool": "common",
+    "category": "Architecture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5356",
+    "en": "Brown",
+    "vn": "Màu nâu",
+    "pool": "common",
+    "category": "Colors",
+    "level": "A1"
+  },
+  {
+    "id": "v-5357",
+    "en": "Build",
+    "vn": "Xây dựng",
+    "pool": "common",
+    "category": "Construction",
+    "level": "A1"
+  },
+  {
+    "id": "v-5358",
+    "en": "Busy",
+    "vn": "Bận rộn",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5359",
+    "en": "Buy",
+    "vn": "Mua",
+    "pool": "common",
+    "category": "Shopping",
+    "level": "A1"
+  },
+  {
+    "id": "v-5360",
+    "en": "Cake",
+    "vn": "Bánh ngọt",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5361",
+    "en": "Call",
+    "vn": "Gọi điện, tiếng gọi",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5362",
+    "en": "Camera",
+    "vn": "Máy ảnh",
+    "pool": "common",
+    "category": "Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5363",
+    "en": "Camp",
+    "vn": "Trại, cắm trại",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5364",
+    "en": "Candle",
+    "vn": "Ngọn nến",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5365",
+    "en": "Candy",
+    "vn": "Kẹo ngọt",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5366",
+    "en": "Captain",
+    "vn": "Đội trưởng, thuyền trưởng",
+    "pool": "common",
+    "category": "Leadership",
+    "level": "A2"
+  },
+  {
+    "id": "v-5367",
+    "en": "Card",
+    "vn": "Thẻ, thiệp",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5368",
+    "en": "Carry",
+    "vn": "Mang, vác",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5369",
+    "en": "Center",
+    "vn": "Trung tâm",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5370",
+    "en": "Century",
+    "vn": "Thế kỷ (100 năm)",
+    "pool": "common",
+    "category": "Time & History",
+    "level": "A2"
+  },
+  {
+    "id": "v-5371",
+    "en": "Chance",
+    "vn": "Cơ hội, sự may mắn",
+    "pool": "common",
+    "category": "General",
+    "level": "A2"
+  },
+  {
+    "id": "v-5372",
+    "en": "Cheap",
+    "vn": "Rẻ tiền",
+    "pool": "common",
+    "category": "Shopping",
+    "level": "A1"
+  },
+  {
+    "id": "v-5373",
+    "en": "Church",
+    "vn": "Nhà thờ",
+    "pool": "common",
+    "category": "Architecture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5374",
+    "en": "Clean",
+    "vn": "Sạch sẻ, dọn dẹp",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5375",
+    "en": "Clever",
+    "vn": "Thông minh, khéo léo",
+    "pool": "common",
+    "category": "Qualities",
+    "level": "A1"
+  },
+  {
+    "id": "v-5376",
+    "en": "Close",
+    "vn": "Đóng lại, gần gũi",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5377",
+    "en": "Clothes",
+    "vn": "Quần áo",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5378",
+    "en": "Cloud",
+    "vn": "Đám mây",
+    "pool": "common",
+    "category": "Weather",
+    "level": "A1"
+  },
+  {
+    "id": "v-5379",
+    "en": "Coin",
+    "vn": "Đồng tiền xu",
+    "pool": "toeic",
+    "category": "Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5380",
+    "en": "Computer",
+    "vn": "Máy tính",
+    "pool": "common",
+    "category": "IT & Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5381",
+    "en": "Cook",
+    "vn": "Nấu ăn, người nấu",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5382",
+    "en": "Cool",
+    "vn": "Mát mẻ, ngầu",
+    "pool": "common",
+    "category": "Weather & Lifestyle",
+    "level": "A1"
+  },
+  {
+    "id": "v-5383",
+    "en": "Corn",
+    "vn": "Ngô, bắp",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5384",
+    "en": "Corner",
+    "vn": "Góc đường, góc phòng",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5385",
+    "en": "Cost",
+    "vn": "Chi phí, giá cả",
+    "pool": "toeic",
+    "category": "Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5386",
+    "en": "Crowd",
+    "vn": "Đám đông",
+    "pool": "common",
+    "category": "Society",
+    "level": "A2"
+  },
+  {
+    "id": "v-5387",
+    "en": "Cry",
+    "vn": "Khóc, tiếng la",
+    "pool": "common",
+    "category": "Emotions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5388",
+    "en": "Cup",
+    "vn": "Cái tách, cúp thưởng",
+    "pool": "common",
+    "category": "Home & Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5389",
+    "en": "Dance",
+    "vn": "Nhảy múa, điệu nhảy",
+    "pool": "common",
+    "category": "Arts",
+    "level": "A1"
+  },
+  {
+    "id": "v-5390",
+    "en": "Danger",
+    "vn": "Sự nguy hiểm",
+    "pool": "common",
+    "category": "Safety",
+    "level": "A1"
+  },
+  {
+    "id": "v-5391",
+    "en": "Dangerous",
+    "vn": "Nguy hiểm",
+    "pool": "common",
+    "category": "Safety",
+    "level": "A1"
+  },
+  {
+    "id": "v-5392",
+    "en": "Dark",
+    "vn": "Bóng tối, tối màu",
+    "pool": "common",
+    "category": "Weather & Colors",
+    "level": "A1"
+  },
+  {
+    "id": "v-5393",
+    "en": "Daughter",
+    "vn": "Con gái",
+    "pool": "common",
+    "category": "Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5394",
+    "en": "Deep",
+    "vn": "Sâu thẳm",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5395",
+    "en": "Delicious",
+    "vn": "Thơm ngon",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5396",
+    "en": "Dentist",
+    "vn": "Bác sĩ nha khoa",
+    "pool": "common",
+    "category": "Health & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5397",
+    "en": "Desert",
+    "vn": "Sa mạc",
+    "pool": "common",
+    "category": "Geography",
+    "level": "A2"
+  },
+  {
+    "id": "v-5398",
+    "en": "Desk",
+    "vn": "Bàn học, bàn làm việc",
+    "pool": "common",
+    "category": "Furniture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5399",
+    "en": "Dictionary",
+    "vn": "Từ điển",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5400",
+    "en": "Dinner",
+    "vn": "Bữa ăn tối",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5401",
+    "en": "Dirty",
+    "vn": "Bẩn thỉu",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5402",
+    "en": "Doll",
+    "vn": "Búp bê",
+    "pool": "common",
+    "category": "Toys",
+    "level": "A1"
+  },
+  {
+    "id": "v-5403",
+    "en": "Dollar",
+    "vn": "Đô la",
+    "pool": "toeic",
+    "category": "Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5404",
+    "en": "Dragon",
+    "vn": "Con rồng",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5405",
+    "en": "Dream",
+    "vn": "Giấc mơ, mơ ước",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5406",
+    "en": "Drink",
+    "vn": "Đồ uống, uống",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5407",
+    "en": "Drive",
+    "vn": "Lái xe",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5408",
+    "en": "Eagle",
+    "vn": "Chim đại bàng",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-5409",
+    "en": "Ear",
+    "vn": "Lỗ tai",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5410",
+    "en": "Early",
+    "vn": "Sớm",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5411",
+    "en": "Earth",
+    "vn": "Trái đất, mặt đất",
+    "pool": "common",
+    "category": "Nature & Space",
+    "level": "A1"
+  },
+  {
+    "id": "v-5412",
+    "en": "East",
+    "vn": "Phía Đông",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5413",
+    "en": "Eat",
+    "vn": "Ăn uống",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5414",
+    "en": "Eight",
+    "vn": "Số 8",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5415",
+    "en": "Elephant",
+    "vn": "Con voi",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5416",
+    "en": "Email",
+    "vn": "Thư điện tử",
+    "pool": "toeic",
+    "category": "IT & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5417",
+    "en": "Empty",
+    "vn": "Trống rỗng",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5418",
+    "en": "English",
+    "vn": "Tiếng Anh",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5419",
+    "en": "Everyday",
+    "vn": "Hàng ngày",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5420",
+    "en": "Exact",
+    "vn": "Chính xác",
+    "pool": "common",
+    "category": "Math & Analytics",
+    "level": "A2"
+  },
+  {
+    "id": "v-5421",
+    "en": "Exam",
+    "vn": "Kỳ thi",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5422",
+    "en": "Exciting",
+    "vn": "Hào hứng, thú vị",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5423",
+    "en": "Expensive",
+    "vn": "Đắt tiền",
+    "pool": "common",
+    "category": "Shopping",
+    "level": "A1"
+  },
+  {
+    "id": "v-5424",
+    "en": "Eye",
+    "vn": "Mắt",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5425",
+    "en": "Face",
+    "vn": "Khuôn mặt",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5426",
+    "en": "Fall",
+    "vn": "Mùa thu, sự rơi ngã",
+    "pool": "common",
+    "category": "Nature & Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5427",
+    "en": "Famous",
+    "vn": "Nổi tiếng",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5428",
+    "en": "Fan",
+    "vn": "Cái quạt, người hâm mộ",
+    "pool": "common",
+    "category": "Home & Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5429",
+    "en": "Farm",
+    "vn": "Trang trại",
+    "pool": "common",
+    "category": "Agriculture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5430",
+    "en": "Farmer",
+    "vn": "Nông dân",
+    "pool": "common",
+    "category": "Agriculture & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5431",
+    "en": "Favorite",
+    "vn": "Được yêu thích nhất",
+    "pool": "common",
+    "category": "Preferences",
+    "level": "A1"
+  },
+  {
+    "id": "v-5432",
+    "en": "Feather",
+    "vn": "Lông vũ",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-5433",
+    "en": "Feeling",
+    "vn": "Cảm xúc, cảm giác",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5434",
+    "en": "Field",
+    "vn": "Cánh đồng, lĩnh vực",
+    "pool": "toeic",
+    "category": "Nature & Work",
+    "level": "A2"
+  },
+  {
+    "id": "v-5435",
+    "en": "Fifteen",
+    "vn": "Số 15",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5436",
+    "en": "Fifty",
+    "vn": "Số 50",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5437",
+    "en": "Fight",
+    "vn": "Cuộc chiến, chiến đấu",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5438",
+    "en": "Finger",
+    "vn": "Ngón tay",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5439",
+    "en": "Fire",
+    "vn": "Ngọn lửa, sa thải",
+    "pool": "common",
+    "category": "Nature & HR",
+    "level": "A1"
+  },
+  {
+    "id": "v-5440",
+    "en": "First",
+    "vn": "Đầu tiên, thứ nhất",
+    "pool": "common",
+    "category": "Order",
+    "level": "A1"
+  },
+  {
+    "id": "v-5441",
+    "en": "Fisherman",
+    "vn": "Ngư dân",
+    "pool": "common",
+    "category": "Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5442",
+    "en": "Flag",
+    "vn": "Lá cờ",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5443",
+    "en": "Fly",
+    "vn": "Bay, con ruồi",
+    "pool": "common",
+    "category": "Action & Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5444",
+    "en": "Food",
+    "vn": "Thức ăn",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5445",
+    "en": "Foot",
+    "vn": "Bàn chân",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5446",
+    "en": "Football",
+    "vn": "Môn bóng đá",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5447",
+    "en": "Forest",
+    "vn": "Khu rừng",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5448",
+    "en": "Fork",
+    "vn": "Cái nĩa ăn",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5449",
+    "en": "Four",
+    "vn": "Số 4",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5450",
+    "en": "Free",
+    "vn": "Miễn phí, tự do",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5451",
+    "en": "Fresh",
+    "vn": "Tươi mới",
+    "pool": "common",
+    "category": "Food & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5452",
+    "en": "Friday",
+    "vn": "Thứ Sáu",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5453",
+    "en": "Frog",
+    "vn": "Con ếch",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5454",
+    "en": "Full",
+    "vn": "Đầy đủ, no bụng",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5455",
+    "en": "Fun",
+    "vn": "Trò vui, niềm vui",
+    "pool": "common",
+    "category": "Entertainment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5456",
+    "en": "Funny",
+    "vn": "Hài hước",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5457",
+    "en": "Future",
+    "vn": "Tương lai",
+    "pool": "common",
+    "category": "Time",
+    "level": "A2"
+  },
+  {
+    "id": "v-5458",
+    "en": "Garden",
+    "vn": "Khu vườn",
+    "pool": "common",
+    "category": "Home & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5459",
+    "en": "Garlic",
+    "vn": "Củ tỏi",
+    "pool": "common",
+    "category": "Food",
+    "level": "A2"
+  },
+  {
+    "id": "v-5460",
+    "en": "Gas",
+    "vn": "Khí gas, xăng",
+    "pool": "common",
+    "category": "Energy & Auto",
+    "level": "A1"
+  },
+  {
+    "id": "v-5461",
+    "en": "Gate",
+    "vn": "Cổng ra vào",
+    "pool": "common",
+    "category": "Home & Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5462",
+    "en": "Gift",
+    "vn": "Món quà",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5463",
+    "en": "Giraffe",
+    "vn": "Con hươu cao cổ",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5464",
+    "en": "Give",
+    "vn": "Cho, tặng",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5465",
+    "en": "Glass",
+    "vn": "Cái ly thủy tinh, kính",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5466",
+    "en": "Glasses",
+    "vn": "Kính đeo mắt",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5467",
+    "en": "Glove",
+    "vn": "Găng tay",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5468",
+    "en": "Go",
+    "vn": "Đi",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5469",
+    "en": "Goal",
+    "vn": "Mục tiêu, bàn thắng",
+    "pool": "common",
+    "category": "Sports & Strategy",
+    "level": "A2"
+  },
+  {
+    "id": "v-5470",
+    "en": "Goat",
+    "vn": "Con dê",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5471",
+    "en": "Gold",
+    "vn": "Vàng",
+    "pool": "toeic",
+    "category": "Materials & Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5472",
+    "en": "Goldfish",
+    "vn": "Con cá vàng",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5473",
+    "en": "Golf",
+    "vn": "Môn đánh gôn",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A2"
+  },
+  {
+    "id": "v-5474",
+    "en": "Goodbye",
+    "vn": "Tạm biệt",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5475",
+    "en": "Goose",
+    "vn": "Con ngỗng",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-5476",
+    "en": "Grape",
+    "vn": "Quả nho",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5477",
+    "en": "Great",
+    "vn": "Tuyệt vời, to lớn",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5478",
+    "en": "Group",
+    "vn": "Nhóm, tập thể",
+    "pool": "common",
+    "category": "Society",
+    "level": "A1"
+  },
+  {
+    "id": "v-5479",
+    "en": "Grow",
+    "vn": "Phát triển, trồng cây",
+    "pool": "toeic",
+    "category": "Nature & Business",
+    "level": "A1"
+  },
+  {
+    "id": "v-5480",
+    "en": "Guitar",
+    "vn": "Đàn ghi-ta",
+    "pool": "common",
+    "category": "Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-5481",
+    "en": "Hair",
+    "vn": "Mái tóc",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5482",
+    "en": "Half",
+    "vn": "Một nửa",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5483",
+    "en": "Hall",
+    "vn": "Hành lang, hội trường",
+    "pool": "common",
+    "category": "Architecture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5484",
+    "en": "Ham",
+    "vn": "Thịt dăm bông",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5485",
+    "en": "Hamburger",
+    "vn": "Bánh kẹp thịt",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5486",
+    "en": "Hammer",
+    "vn": "Cái búa",
+    "pool": "common",
+    "category": "Tools",
+    "level": "A2"
+  },
+  {
+    "id": "v-5487",
+    "en": "Hand",
+    "vn": "Bàn tay",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5488",
+    "en": "Handbag",
+    "vn": "Túi xách tay",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5489",
+    "en": "Hate",
+    "vn": "Ghét bỏ",
+    "pool": "common",
+    "category": "Emotions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5490",
+    "en": "Head",
+    "vn": "Cái đầu, người đứng đầu",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5491",
+    "en": "Headache",
+    "vn": "Cơn đau đầu",
+    "pool": "common",
+    "category": "Health",
+    "level": "A1"
+  },
+  {
+    "id": "v-5492",
+    "en": "Headphones",
+    "vn": "Tai nghe",
+    "pool": "common",
+    "category": "Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5493",
+    "en": "Health",
+    "vn": "Sức khỏe",
+    "pool": "common",
+    "category": "Health",
+    "level": "A2"
+  },
+  {
+    "id": "v-5494",
+    "en": "Healthy",
+    "vn": "Khỏe mạnh",
+    "pool": "common",
+    "category": "Health",
+    "level": "A1"
+  },
+  {
+    "id": "v-5495",
+    "en": "Heart",
+    "vn": "Trái tim",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5496",
+    "en": "Heavy",
+    "vn": "Nặng nề",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5497",
+    "en": "Height",
+    "vn": "Chiều cao",
+    "pool": "common",
+    "category": "Math & Body",
+    "level": "A2"
+  },
+  {
+    "id": "v-5498",
+    "en": "Helicopter",
+    "vn": "Máy bay trực thăng",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A2"
+  },
+  {
+    "id": "v-5499",
+    "en": "Hen",
+    "vn": "Con gà mái",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5500",
+    "en": "Hero",
+    "vn": "Anh hùng",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5501",
+    "en": "Hide",
+    "vn": "Che giấu, trốn",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5502",
+    "en": "High",
+    "vn": "Cao",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5503",
+    "en": "Hill",
+    "vn": "Ngọn đồi",
+    "pool": "common",
+    "category": "Nature & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5504",
+    "en": "Hippo",
+    "vn": "Con hà mã",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5505",
+    "en": "History",
+    "vn": "Môn lịch sử",
+    "pool": "common",
+    "category": "Education",
+    "level": "A2"
+  },
+  {
+    "id": "v-5506",
+    "en": "Hobby",
+    "vn": "Sở thích",
+    "pool": "common",
+    "category": "Hobbies",
+    "level": "A1"
+  },
+  {
+    "id": "v-5507",
+    "en": "Hold",
+    "vn": "Cầm, giữ",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5508",
+    "en": "Hole",
+    "vn": "Cái lỗ, hố",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5509",
+    "en": "Holiday",
+    "vn": "Kỳ nghỉ lễ",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5510",
+    "en": "Home",
+    "vn": "Ngôi nhà thân yêu",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5511",
+    "en": "Homework",
+    "vn": "Bài tập về nhà",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5512",
+    "en": "Honey",
+    "vn": "Mật ong, người yêu dấu",
+    "pool": "common",
+    "category": "Food & Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5513",
+    "en": "Hope",
+    "vn": "Hy vọng",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5514",
+    "en": "Hospital",
+    "vn": "Bệnh viện",
+    "pool": "common",
+    "category": "Health",
+    "level": "A1"
+  },
+  {
+    "id": "v-5515",
+    "en": "Hotel",
+    "vn": "Khách sạn",
+    "pool": "common",
+    "category": "Travel & Hospitality",
+    "level": "A1"
+  },
+  {
+    "id": "v-5516",
+    "en": "Hour",
+    "vn": "Giờ đồng hồ",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5517",
+    "en": "Hug",
+    "vn": "Cái ôm, ôm chặt",
+    "pool": "common",
+    "category": "Family & Emotion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5518",
+    "en": "Huge",
+    "vn": "Khổng lồ",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A2"
+  },
+  {
+    "id": "v-5519",
+    "en": "Human",
+    "vn": "Con người",
+    "pool": "common",
+    "category": "Society",
+    "level": "A2"
+  },
+  {
+    "id": "v-5520",
+    "en": "Hungry",
+    "vn": "Đói bụng",
+    "pool": "common",
+    "category": "Health",
+    "level": "A1"
+  },
+  {
+    "id": "v-5521",
+    "en": "Hunt",
+    "vn": "Săn bắt",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5522",
+    "en": "Hurry",
+    "vn": "Nhanh lên, vội vã",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5523",
+    "en": "Ice",
+    "vn": "Nước đá, băng",
+    "pool": "common",
+    "category": "Weather & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5524",
+    "en": "Icecream",
+    "vn": "Kem lạnh",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5525",
+    "en": "Idea",
+    "vn": "Ý tưởng",
+    "pool": "common",
+    "category": "Mind",
+    "level": "A1"
+  },
+  {
+    "id": "v-5526",
+    "en": "Identification",
+    "vn": "Giấy tờ căn cước, sự nhận diện",
+    "pool": "toeic",
+    "category": "Security & HR",
+    "level": "B1"
+  },
+  {
+    "id": "v-5527",
+    "en": "Illness",
+    "vn": "Căn bệnh",
+    "pool": "common",
+    "category": "Health",
+    "level": "A2"
+  },
+  {
+    "id": "v-5528",
+    "en": "Important",
+    "vn": "Quan trọng",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5529",
+    "en": "Increase",
+    "vn": "Sự gia tăng, tăng lên",
+    "pool": "toeic",
+    "category": "Business & Analytics",
+    "level": "A2"
+  },
+  {
+    "id": "v-5530",
+    "en": "Insect",
+    "vn": "Côn trùng",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5531",
+    "en": "Inside",
+    "vn": "Bên trong",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5532",
+    "en": "Interesting",
+    "vn": "Thú vị",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5533",
+    "en": "Internet",
+    "vn": "Mạng internet",
+    "pool": "common",
+    "category": "IT & Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5534",
+    "en": "Interview",
+    "vn": "Phỏng vấn",
+    "pool": "toeic",
+    "category": "HR & Work",
+    "level": "A2"
+  },
+  {
+    "id": "v-5535",
+    "en": "Invent",
+    "vn": "Phát minh",
+    "pool": "ielts",
+    "category": "Science",
+    "level": "A2"
+  },
+  {
+    "id": "v-5536",
+    "en": "Invention",
+    "vn": "Sự phát minh",
+    "pool": "ielts",
+    "category": "Science",
+    "level": "A2"
+  },
+  {
+    "id": "v-5537",
+    "en": "Invitation",
+    "vn": "Lời mời, thiệp mời",
+    "pool": "common",
+    "category": "Events",
+    "level": "A2"
+  },
+  {
+    "id": "v-5538",
+    "en": "Invite",
+    "vn": "Mời",
+    "pool": "common",
+    "category": "Events",
+    "level": "A1"
+  },
+  {
+    "id": "v-5539",
+    "en": "Island",
+    "vn": "Hòn đảo",
+    "pool": "common",
+    "category": "Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5540",
+    "en": "Jacket",
+    "vn": "Áo khoác ngắn",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5541",
+    "en": "Jam",
+    "vn": "Mứt trái cây, sự tắc nghẽn",
+    "pool": "common",
+    "category": "Food & Traffic",
+    "level": "A1"
+  },
+  {
+    "id": "v-5542",
+    "en": "January",
+    "vn": "Tháng Một",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5543",
+    "en": "Jeans",
+    "vn": "Quần bò, quần jean",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5544",
+    "en": "Job",
+    "vn": "Công việc",
+    "pool": "common",
+    "category": "Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5545",
+    "en": "Join",
+    "vn": "Tham gia, kết nối",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5546",
+    "en": "Joke",
+    "vn": "Lời nói đùa, trò đùa",
+    "pool": "common",
+    "category": "Entertainment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5547",
+    "en": "July",
+    "vn": "Tháng Bảy",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5548",
+    "en": "Jump",
+    "vn": "Nhảy lên",
+    "pool": "common",
+    "category": "Sports & Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5549",
+    "en": "June",
+    "vn": "Tháng Sáu",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5550",
+    "en": "Jungle",
+    "vn": "Khu rừng nhiệt đới",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5551",
+    "en": "Kangaroo",
+    "vn": "Con chuột túi",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5552",
+    "en": "Key",
+    "vn": "Chìa khóa, phím bấm",
+    "pool": "common",
+    "category": "Home & IT",
+    "level": "A1"
+  },
+  {
+    "id": "v-5553",
+    "en": "Keyboard",
+    "vn": "Bàn phím máy tính/đàn",
+    "pool": "common",
+    "category": "IT & Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-5554",
+    "en": "Kick",
+    "vn": "Cú đá, đá bóng",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5555",
+    "en": "Kid",
+    "vn": "Đứa trẻ, nói đùa",
+    "pool": "common",
+    "category": "Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5556",
+    "en": "Kilogram",
+    "vn": "Ký, cân",
+    "pool": "common",
+    "category": "Math & Shopping",
+    "level": "A1"
+  },
+  {
+    "id": "v-5557",
+    "en": "King",
+    "vn": "Đức vua",
+    "pool": "common",
+    "category": "History",
+    "level": "A1"
+  },
+  {
+    "id": "v-5558",
+    "en": "Kiss",
+    "vn": "Nụ hôn, hôn",
+    "pool": "common",
+    "category": "Relationships",
+    "level": "A1"
+  },
+  {
+    "id": "v-5559",
+    "en": "Kitchen",
+    "vn": "Căn bếp",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5560",
+    "en": "Kite",
+    "vn": "Con diều",
+    "pool": "common",
+    "category": "Toys & Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5561",
+    "en": "Kitten",
+    "vn": "Mèo con",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5562",
+    "en": "Knee",
+    "vn": "Đầu gối",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5563",
+    "en": "Knife",
+    "vn": "Con dao",
+    "pool": "common",
+    "category": "Food & Tools",
+    "level": "A1"
+  },
+  {
+    "id": "v-5564",
+    "en": "Know",
+    "vn": "Biết, hiểu rõ",
+    "pool": "common",
+    "category": "Mind",
+    "level": "A1"
+  },
+  {
+    "id": "v-5565",
+    "en": "Ladder",
+    "vn": "Cái thang leo",
+    "pool": "common",
+    "category": "Tools & Home",
+    "level": "A2"
+  },
+  {
+    "id": "v-5566",
+    "en": "Lady",
+    "vn": "Quý bà, người phụ nữ",
+    "pool": "common",
+    "category": "Society",
+    "level": "A1"
+  },
+  {
+    "id": "v-5567",
+    "en": "Lake",
+    "vn": "Hồ nước",
+    "pool": "common",
+    "category": "Nature & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5568",
+    "en": "Lamb",
+    "vn": "Con cừu non, thịt cừu",
+    "pool": "common",
+    "category": "Animals & Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5569",
+    "en": "Lamp",
+    "vn": "Cái đèn",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5570",
+    "en": "Laptop",
+    "vn": "Máy tính xách tay",
+    "pool": "common",
+    "category": "IT & Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5571",
+    "en": "Large",
+    "vn": "Rộng lớn",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5572",
+    "en": "Last",
+    "vn": "Cuối cùng, vừa qua",
+    "pool": "common",
+    "category": "Order & Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5573",
+    "en": "Late",
+    "vn": "Trễ, muộn",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5574",
+    "en": "Laugh",
+    "vn": "Tiếng cười, cười to",
+    "pool": "common",
+    "category": "Emotions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5575",
+    "en": "Law",
+    "vn": "Luật pháp",
+    "pool": "ielts",
+    "category": "Law & Society",
+    "level": "A2"
+  },
+  {
+    "id": "v-5576",
+    "en": "Lawyer",
+    "vn": "Luật sư",
+    "pool": "ielts",
+    "category": "Law & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5577",
+    "en": "Leaf",
+    "vn": "Chiếc lá cây",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5578",
+    "en": "Learn",
+    "vn": "Học tập",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5579",
+    "en": "Lemonade",
+    "vn": "Nước chanh ép",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5580",
+    "en": "Lesson",
+    "vn": "Bài học",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5581",
+    "en": "Letter",
+    "vn": "Bức thư, chữ cái",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5582",
+    "en": "Library",
+    "vn": "Thư viện",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5583",
+    "en": "Life",
+    "vn": "Cuộc sống, sự sống",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5584",
+    "en": "Light",
+    "vn": "Ánh sáng, nhẹ nhàng",
+    "pool": "common",
+    "category": "Physics & Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5585",
+    "en": "Lion",
+    "vn": "Con sư tử",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5586",
+    "en": "Lip",
+    "vn": "Bờ môi",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5587",
+    "en": "Listen",
+    "vn": "Lắng nghe",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5588",
+    "en": "Live",
+    "vn": "Sống, trực tiếp",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5589",
+    "en": "Lizard",
+    "vn": "Con thằn lằn",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5590",
+    "en": "Lock",
+    "vn": "Ổ khóa, khóa cửa",
+    "pool": "common",
+    "category": "Home & Security",
+    "level": "A1"
+  },
+  {
+    "id": "v-5591",
+    "en": "Long",
+    "vn": "Dài lâu",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5592",
+    "en": "Look",
+    "vn": "Nhìn, vẻ ngoài",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5593",
+    "en": "Love",
+    "vn": "Tình yêu, yêu mến",
+    "pool": "common",
+    "category": "Emotions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5594",
+    "en": "Lunch",
+    "vn": "Bữa ăn trưa",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5595",
+    "en": "Machine",
+    "vn": "Cỗ máy",
+    "pool": "toeic",
+    "category": "Engineering & Tech",
+    "level": "A2"
+  },
+  {
+    "id": "v-5596",
+    "en": "Magazine",
+    "vn": "Tạp chí",
+    "pool": "common",
+    "category": "Media & Books",
+    "level": "A1"
+  },
+  {
+    "id": "v-5597",
+    "en": "Mail",
+    "vn": "Thư từ, bưu kiện",
+    "pool": "toeic",
+    "category": "Office & Correspondence",
+    "level": "A1"
+  },
+  {
+    "id": "v-5598",
+    "en": "Mango",
+    "vn": "Quả xoài",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5599",
+    "en": "Map",
+    "vn": "Bản đồ",
+    "pool": "common",
+    "category": "Travel & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5600",
+    "en": "March",
+    "vn": "Tháng Ba, diễu hành",
+    "pool": "common",
+    "category": "Time & Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5601",
+    "en": "Married",
+    "vn": "Đã kết hôn",
+    "pool": "common",
+    "category": "Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5602",
+    "en": "Match",
+    "vn": "Trận đấu, que diêm, nối ghép",
+    "pool": "common",
+    "category": "Sports & Games",
+    "level": "A1"
+  },
+  {
+    "id": "v-5603",
+    "en": "Math",
+    "vn": "Môn toán học",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5604",
+    "en": "Meal",
+    "vn": "Bữa ăn",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5605",
+    "en": "Medicine",
+    "vn": "Thuốc chữa bệnh, ngành y",
+    "pool": "common",
+    "category": "Health & Medicine",
+    "level": "A2"
+  },
+  {
+    "id": "v-5606",
+    "en": "Melon",
+    "vn": "Quả dưa lưới",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5607",
+    "en": "Member",
+    "vn": "Thành viên",
+    "pool": "common",
+    "category": "Society",
+    "level": "A2"
+  },
+  {
+    "id": "v-5608",
+    "en": "Memory",
+    "vn": "Ký ức, bộ nhớ",
+    "pool": "ielts",
+    "category": "Psychology & IT",
+    "level": "A2"
+  },
+  {
+    "id": "v-5609",
+    "en": "Menu",
+    "vn": "Thực đơn món ăn",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A1"
+  },
+  {
+    "id": "v-5610",
+    "en": "Message",
+    "vn": "Tin nhắn",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5611",
+    "en": "Minute",
+    "vn": "Phút đồng hồ",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5612",
+    "en": "Mirror",
+    "vn": "Gương soi",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5613",
+    "en": "Miss",
+    "vn": "Bỏ lỡ, nhớ nhung, cô gái",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5614",
+    "en": "Mistake",
+    "vn": "Lỗi sai",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5615",
+    "en": "Mobile",
+    "vn": "Di động",
+    "pool": "common",
+    "category": "IT & Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5616",
+    "en": "Model",
+    "vn": "Mô hình, người mẫu",
+    "pool": "common",
+    "category": "Arts & Tech",
+    "level": "A2"
+  },
+  {
+    "id": "v-5617",
+    "en": "Modern",
+    "vn": "Hiện đại",
+    "pool": "common",
+    "category": "Architecture & Design",
+    "level": "A2"
+  },
+  {
+    "id": "v-5618",
+    "en": "Mom",
+    "vn": "Mẹ",
+    "pool": "common",
+    "category": "Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5619",
+    "en": "Monday",
+    "vn": "Thứ Hai",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5620",
+    "en": "Monkey",
+    "vn": "Con khỉ",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5621",
+    "en": "Mosquito",
+    "vn": "Con muỗi",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5622",
+    "en": "Motorbike",
+    "vn": "Xe máy",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5623",
+    "en": "Mountain",
+    "vn": "Ngọn núi",
+    "pool": "common",
+    "category": "Geography & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5624",
+    "en": "Mouth",
+    "vn": "Cái miệng",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5625",
+    "en": "Museum",
+    "vn": "Bảo tàng",
+    "pool": "common",
+    "category": "History & Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5626",
+    "en": "Musician",
+    "vn": "Nhạc sĩ",
+    "pool": "common",
+    "category": "Music & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5627",
+    "en": "Name",
+    "vn": "Tên gọi",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5628",
+    "en": "Napkin",
+    "vn": "Khăn ăn",
+    "pool": "common",
+    "category": "Food & Dining",
+    "level": "A2"
+  },
+  {
+    "id": "v-5629",
+    "en": "Nature",
+    "vn": "Thiên nhiên",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5630",
+    "en": "Neck",
+    "vn": "Cái cổ",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5631",
+    "en": "Necklace",
+    "vn": "Vòng cổ trang sức",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5632",
+    "en": "Neighbor",
+    "vn": "Hàng xóm",
+    "pool": "common",
+    "category": "Society",
+    "level": "A2"
+  },
+  {
+    "id": "v-5633",
+    "en": "Nervous",
+    "vn": "Lo lắng hồi hộp",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A2"
+  },
+  {
+    "id": "v-5634",
+    "en": "Nest",
+    "vn": "Tổ chim",
+    "pool": "common",
+    "category": "Animals & Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5635",
+    "en": "Net",
+    "vn": "Cái lưới, mạng lưới",
+    "pool": "common",
+    "category": "Sports & IT",
+    "level": "A1"
+  },
+  {
+    "id": "v-5636",
+    "en": "Newspaper",
+    "vn": "Tờ báo tin tức",
+    "pool": "common",
+    "category": "Media",
+    "level": "A1"
+  },
+  {
+    "id": "v-5637",
+    "en": "Nice",
+    "vn": "Đẹp đẽ, tốt bụng",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5638",
+    "en": "Nine",
+    "vn": "Số 9",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5639",
+    "en": "Noise",
+    "vn": "Tiếng ồn",
+    "pool": "common",
+    "category": "Sound",
+    "level": "A1"
+  },
+  {
+    "id": "v-5640",
+    "en": "Noisy",
+    "vn": "Ồn ào",
+    "pool": "common",
+    "category": "Sound",
+    "level": "A1"
+  },
+  {
+    "id": "v-5641",
+    "en": "Noodle",
+    "vn": "Mì, hủ tiếu",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5642",
+    "en": "Noon",
+    "vn": "Buổi trưa",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5643",
+    "en": "North",
+    "vn": "Phía Bắc",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5644",
+    "en": "Nose",
+    "vn": "Cái mũi",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5645",
+    "en": "Notebook",
+    "vn": "Cuốn sổ tay",
+    "pool": "toeic",
+    "category": "Education & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5646",
+    "en": "November",
+    "vn": "Tháng Mười Một",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5647",
+    "en": "Number",
+    "vn": "Con số",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5648",
+    "en": "Nut",
+    "vn": "Hạt sấy khô, đai ốc",
+    "pool": "common",
+    "category": "Food & Engineering",
+    "level": "A1"
+  },
+  {
+    "id": "v-5649",
+    "en": "Ocean",
+    "vn": "Đại dương",
+    "pool": "common",
+    "category": "Nature & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5650",
+    "en": "October",
+    "vn": "Tháng Mười",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5651",
+    "en": "Octopus",
+    "vn": "Con bạch tuộc",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5652",
+    "en": "Oil",
+    "vn": "Dầu ăn, dầu mỏ",
+    "pool": "common",
+    "category": "Food & Energy",
+    "level": "A1"
+  },
+  {
+    "id": "v-5653",
+    "en": "Omelet",
+    "vn": "Món trứng chiên",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5654",
+    "en": "Onion",
+    "vn": "Củ hành tây",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5655",
+    "en": "Open",
+    "vn": "Mở ra, cởi mở",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5656",
+    "en": "Ostrich",
+    "vn": "Chim đà điểu",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-5657",
+    "en": "Out",
+    "vn": "Phía ngoài",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5658",
+    "en": "Oven",
+    "vn": "Lò nướng",
+    "pool": "common",
+    "category": "Home & Kitchen",
+    "level": "A2"
+  },
+  {
+    "id": "v-5659",
+    "en": "Owl",
+    "vn": "Con chim cú mèo",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5660",
+    "en": "Owner",
+    "vn": "Chủ sở hữu",
+    "pool": "toeic",
+    "category": "Business & Law",
+    "level": "A2"
+  },
+  {
+    "id": "v-5661",
+    "en": "Ox",
+    "vn": "Con bò đực",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-5662",
+    "en": "Page",
+    "vn": "Trang sách/web",
+    "pool": "common",
+    "category": "Books & IT",
+    "level": "A1"
+  },
+  {
+    "id": "v-5663",
+    "en": "Pain",
+    "vn": "Cơn đau",
+    "pool": "common",
+    "category": "Health",
+    "level": "A2"
+  },
+  {
+    "id": "v-5664",
+    "en": "Painter",
+    "vn": "Họa sĩ, thợ sơn",
+    "pool": "common",
+    "category": "Arts & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5665",
+    "en": "Painting",
+    "vn": "Bức tranh vẽ",
+    "pool": "common",
+    "category": "Arts",
+    "level": "A1"
+  },
+  {
+    "id": "v-5666",
+    "en": "Pajamas",
+    "vn": "Bộ đồ ngủ",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5667",
+    "en": "Palace",
+    "vn": "Cung điện",
+    "pool": "common",
+    "category": "Architecture & History",
+    "level": "A2"
+  },
+  {
+    "id": "v-5668",
+    "en": "Panda",
+    "vn": "Con gấu trúc",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5669",
+    "en": "Paper",
+    "vn": "Tờ giấy",
+    "pool": "toeic",
+    "category": "Materials & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5670",
+    "en": "Parrot",
+    "vn": "Con chim vẹt",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5671",
+    "en": "Party",
+    "vn": "Bữa tiệc, đảng phái",
+    "pool": "common",
+    "category": "Culture & Politics",
+    "level": "A1"
+  },
+  {
+    "id": "v-5672",
+    "en": "Passport",
+    "vn": "Hộ chiếu du lịch",
+    "pool": "common",
+    "category": "Travel & Security",
+    "level": "A1"
+  },
+  {
+    "id": "v-5673",
+    "en": "Past",
+    "vn": "Quá khứ",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5674",
+    "en": "Path",
+    "vn": "Con đường nhỏ",
+    "pool": "common",
+    "category": "Nature & Travel",
+    "level": "A2"
+  },
+  {
+    "id": "v-5675",
+    "en": "Patient",
+    "vn": "Bệnh nhân, kiên nhẫn",
+    "pool": "common",
+    "category": "Health & Personal",
+    "level": "A2"
+  },
+  {
+    "id": "v-5676",
+    "en": "Pay",
+    "vn": "Thanh toán, tiền lương",
+    "pool": "toeic",
+    "category": "Finance & HR",
+    "level": "A1"
+  },
+  {
+    "id": "v-5677",
+    "en": "Peach",
+    "vn": "Quả đào",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5678",
+    "en": "Peacock",
+    "vn": "Con chim công",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-5679",
+    "en": "Peanut",
+    "vn": "Hạt đậu phụng",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5680",
+    "en": "Pear",
+    "vn": "Quả lê",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5681",
+    "en": "Penguin",
+    "vn": "Chim cánh cụt",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5682",
+    "en": "People",
+    "vn": "Con người, nhân dân",
+    "pool": "common",
+    "category": "Society",
+    "level": "A1"
+  },
+  {
+    "id": "v-5683",
+    "en": "Pepper",
+    "vn": "Hạt tiêu, quả ớt chuông",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5684",
+    "en": "Perfect",
+    "vn": "Hoàn hảo",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5685",
+    "en": "Person",
+    "vn": "Một cá nhân",
+    "pool": "common",
+    "category": "Society",
+    "level": "A1"
+  },
+  {
+    "id": "v-5686",
+    "en": "Pet",
+    "vn": "Thú cưng",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5687",
+    "en": "Phone",
+    "vn": "Điện thoại",
+    "pool": "common",
+    "category": "Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5688",
+    "en": "Photo",
+    "vn": "Bức ảnh",
+    "pool": "common",
+    "category": "Arts & Photography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5689",
+    "en": "Piano",
+    "vn": "Đàn dương cầm",
+    "pool": "common",
+    "category": "Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-5690",
+    "en": "Picnic",
+    "vn": "Buổi dã ngoại",
+    "pool": "common",
+    "category": "Travel & Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5691",
+    "en": "Picture",
+    "vn": "Bức tranh, hình ảnh",
+    "pool": "common",
+    "category": "Arts",
+    "level": "A1"
+  },
+  {
+    "id": "v-5692",
+    "en": "Pie",
+    "vn": "Bánh nướng nhân ngọt/mặn",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5693",
+    "en": "Pillow",
+    "vn": "Cái gối nằm",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5694",
+    "en": "Pilot",
+    "vn": "Phi công",
+    "pool": "common",
+    "category": "Aviation & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5695",
+    "en": "Pineapple",
+    "vn": "Quả dứa, thơm",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5696",
+    "en": "Pink",
+    "vn": "Màu hồng",
+    "pool": "common",
+    "category": "Colors",
+    "level": "A1"
+  },
+  {
+    "id": "v-5697",
+    "en": "Pipe",
+    "vn": "Ống dẫn nước/khí, tẩu thuốc",
+    "pool": "common",
+    "category": "Engineering & Home",
+    "level": "A2"
+  },
+  {
+    "id": "v-5698",
+    "en": "Pirate",
+    "vn": "Cướp biển",
+    "pool": "common",
+    "category": "History & Movies",
+    "level": "A2"
+  },
+  {
+    "id": "v-5699",
+    "en": "Pizza",
+    "vn": "Bánh pi-za",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5700",
+    "en": "Place",
+    "vn": "Địa điểm, nơi chốn",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5701",
+    "en": "Planet",
+    "vn": "Hành tinh",
+    "pool": "ielts",
+    "category": "Science & Space",
+    "level": "A2"
+  },
+  {
+    "id": "v-5702",
+    "en": "Plant",
+    "vn": "Cây trồng, nhà máy sản xuất",
+    "pool": "toeic",
+    "category": "Nature & Manufacturing",
+    "level": "A1"
+  },
+  {
+    "id": "v-5703",
+    "en": "Plastic",
+    "vn": "Chất nhựa chất dẻo",
+    "pool": "common",
+    "category": "Materials",
+    "level": "A1"
+  },
+  {
+    "id": "v-5704",
+    "en": "Plate",
+    "vn": "Đĩa ăn",
+    "pool": "common",
+    "category": "Food & Kitchen",
+    "level": "A1"
+  },
+  {
+    "id": "v-5705",
+    "en": "Play",
+    "vn": "Chơi đùa, vở kịch",
+    "pool": "common",
+    "category": "Sports & Arts",
+    "level": "A1"
+  },
+  {
+    "id": "v-5706",
+    "en": "Player",
+    "vn": "Người chơi, cầu thủ",
+    "pool": "common",
+    "category": "Sports & Games",
+    "level": "A1"
+  },
+  {
+    "id": "v-5707",
+    "en": "Playground",
+    "vn": "Sân chơi trẻ em",
+    "pool": "common",
+    "category": "School & City",
+    "level": "A1"
+  },
+  {
+    "id": "v-5708",
+    "en": "Plum",
+    "vn": "Quả mận",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5709",
+    "en": "Pocket",
+    "vn": "Túi quần áo",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5710",
+    "en": "Poem",
+    "vn": "Bài thơ",
+    "pool": "common",
+    "category": "Literature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5711",
+    "en": "Poet",
+    "vn": "Nhà thơ",
+    "pool": "common",
+    "category": "Literature & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5712",
+    "en": "Poison",
+    "vn": "Chất độc",
+    "pool": "common",
+    "category": "Health & Safety",
+    "level": "A2"
+  },
+  {
+    "id": "v-5713",
+    "en": "Police",
+    "vn": "Cảnh sát",
+    "pool": "ielts",
+    "category": "Law & Safety",
+    "level": "A1"
+  },
+  {
+    "id": "v-5714",
+    "en": "Pollution",
+    "vn": "Sự ô nhiễm",
+    "pool": "ielts",
+    "category": "Environment",
+    "level": "A2"
+  },
+  {
+    "id": "v-5715",
+    "en": "Pond",
+    "vn": "Aao nước nhỏ",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5716",
+    "en": "Pool",
+    "vn": "Hồ bơi, bể tích hợp",
+    "pool": "common",
+    "category": "Sports & General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5717",
+    "en": "Poor",
+    "vn": "Nghèo khó, yếu kém",
+    "pool": "common",
+    "category": "Society & Quality",
+    "level": "A1"
+  },
+  {
+    "id": "v-5718",
+    "en": "Popcorn",
+    "vn": "Bắp răng bơ",
+    "pool": "common",
+    "category": "Food & Movies",
+    "level": "A1"
+  },
+  {
+    "id": "v-5719",
+    "en": "Popular",
+    "vn": "Phổ biến, được ưa thích",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5720",
+    "en": "Pork",
+    "vn": "Thịt lợn",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5721",
+    "en": "Postcard",
+    "vn": "Bưu thiếp",
+    "pool": "common",
+    "category": "Travel & PR",
+    "level": "A1"
+  },
+  {
+    "id": "v-5722",
+    "en": "Poster",
+    "vn": "Tấm áp phích quảng cáo",
+    "pool": "common",
+    "category": "PR & Design",
+    "level": "A1"
+  },
+  {
+    "id": "v-5723",
+    "en": "Pot",
+    "vn": "Nồi nấu ăn, chậu cây",
+    "pool": "common",
+    "category": "Kitchen & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5724",
+    "en": "Potato",
+    "vn": "Củ khoai tây",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5725",
+    "en": "Power",
+    "vn": "Năng lượng, quyền lực",
+    "pool": "common",
+    "category": "Energy & Politics",
+    "level": "A2"
+  },
+  {
+    "id": "v-5726",
+    "en": "Practice",
+    "vn": "Luyện tập, sự thực hành",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5727",
+    "en": "Presenter",
+    "vn": "Người dẫn chương trình",
+    "pool": "common",
+    "category": "Media & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5728",
+    "en": "Prince",
+    "vn": "Hoàng tử",
+    "pool": "common",
+    "category": "History",
+    "level": "A1"
+  },
+  {
+    "id": "v-5729",
+    "en": "Princess",
+    "vn": "Công chúa",
+    "pool": "common",
+    "category": "History",
+    "level": "A1"
+  },
+  {
+    "id": "v-5730",
+    "en": "Printer",
+    "vn": "Máy in",
+    "pool": "toeic",
+    "category": "IT & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5731",
+    "en": "Problem",
+    "vn": "Vấn đề, bài toán",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5732",
+    "en": "Program",
+    "vn": "Chương trình",
+    "pool": "common",
+    "category": "IT & Media",
+    "level": "A1"
+  },
+  {
+    "id": "v-5733",
+    "en": "Promise",
+    "vn": "Lời hứa, hứa hẹn",
+    "pool": "common",
+    "category": "Relationships",
+    "level": "A2"
+  },
+  {
+    "id": "v-5734",
+    "en": "Protect",
+    "vn": "Bảo vệ",
+    "pool": "common",
+    "category": "Safety & Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5735",
+    "en": "Public",
+    "vn": "Công cộng, công chúng",
+    "pool": "common",
+    "category": "Society",
+    "level": "A2"
+  },
+  {
+    "id": "v-5736",
+    "en": "Pudding",
+    "vn": "Món bánh tráng miệng pudding",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5737",
+    "en": "Pumpkin",
+    "vn": "Quả bí đỏ",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5738",
+    "en": "Puppy",
+    "vn": "Chó con",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5739",
+    "en": "Purple",
+    "vn": "Màu tím",
+    "pool": "common",
+    "category": "Colors",
+    "level": "A1"
+  },
+  {
+    "id": "v-5740",
+    "en": "Purse",
+    "vn": "Ví tiền nữ",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5741",
+    "en": "Puzzle",
+    "vn": "Trò chơi câu đố ghép hình",
+    "pool": "common",
+    "category": "Games",
+    "level": "A1"
+  },
+  {
+    "id": "v-5742",
+    "en": "Queen",
+    "vn": "Nữ hoàng",
+    "pool": "common",
+    "category": "History",
+    "level": "A1"
+  },
+  {
+    "id": "v-5743",
+    "en": "Quiet",
+    "vn": "Yên tĩnh",
+    "pool": "common",
+    "category": "Sound",
+    "level": "A1"
+  },
+  {
+    "id": "v-5744",
+    "en": "Rabbit",
+    "vn": "Con thỏ",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5745",
+    "en": "Race",
+    "vn": "Cuộc đua, chủng tộc",
+    "pool": "common",
+    "category": "Sports & Society",
+    "level": "A2"
+  },
+  {
+    "id": "v-5746",
+    "en": "Radio",
+    "vn": "Đài phát thanh",
+    "pool": "common",
+    "category": "Media",
+    "level": "A1"
+  },
+  {
+    "id": "v-5747",
+    "en": "Radish",
+    "vn": "Củ cải đỏ",
+    "pool": "common",
+    "category": "Food",
+    "level": "A2"
+  },
+  {
+    "id": "v-5748",
+    "en": "Railway",
+    "vn": "Đường sắt",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A2"
+  },
+  {
+    "id": "v-5749",
+    "en": "Rainbow",
+    "vn": "Cầu vồng",
+    "pool": "common",
+    "category": "Weather & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5750",
+    "en": "Raincoat",
+    "vn": "Áo mưa",
+    "pool": "common",
+    "category": "Fashion & Weather",
+    "level": "A1"
+  },
+  {
+    "id": "v-5751",
+    "en": "Rat",
+    "vn": "Con chuột lớn",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5752",
+    "en": "Read",
+    "vn": "Đọc sách",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5753",
+    "en": "Reader",
+    "vn": "Độc giả, người đọc",
+    "pool": "common",
+    "category": "Books",
+    "level": "A1"
+  },
+  {
+    "id": "v-5754",
+    "en": "Ready",
+    "vn": "Sẵn sàng",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5755",
+    "en": "Real",
+    "vn": "Thực tế, chân thật",
+    "pool": "common",
+    "category": "General",
+    "level": "A2"
+  },
+  {
+    "id": "v-5756",
+    "en": "Receive",
+    "vn": "Nhận được",
+    "pool": "toeic",
+    "category": "Communication",
+    "level": "A2"
+  },
+  {
+    "id": "v-5757",
+    "en": "Recent",
+    "vn": "Gần đây",
+    "pool": "common",
+    "category": "Time",
+    "level": "A2"
+  },
+  {
+    "id": "v-5758",
+    "en": "Refrigerator",
+    "vn": "Tủ lạnh",
+    "pool": "common",
+    "category": "Home",
+    "level": "A2"
+  },
+  {
+    "id": "v-5759",
+    "en": "Rent",
+    "vn": "Tiền thuê, thuê nhà",
+    "pool": "toeic",
+    "category": "Real Estate & Finance",
+    "level": "A2"
+  },
+  {
+    "id": "v-5760",
+    "en": "Repair",
+    "vn": "Sửa chữa",
+    "pool": "toeic",
+    "category": "Engineering & Maintenance",
+    "level": "A2"
+  },
+  {
+    "id": "v-5761",
+    "en": "Reporter",
+    "vn": "Phóng viên",
+    "pool": "common",
+    "category": "Media & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5762",
+    "en": "Rest",
+    "vn": "Nghỉ ngơi, phần còn lại",
+    "pool": "common",
+    "category": "Health & General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5763",
+    "en": "Restaurant",
+    "vn": "Nhà hàng",
+    "pool": "common",
+    "category": "Food & Hospitality",
+    "level": "A1"
+  },
+  {
+    "id": "v-5764",
+    "en": "Rich",
+    "vn": "Giàu có, phong phú",
+    "pool": "toeic",
+    "category": "Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5765",
+    "en": "Ride",
+    "vn": "Cưỡi xe, đi nhờ",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5766",
+    "en": "Right",
+    "vn": "Bên phải, đúng đắn",
+    "pool": "common",
+    "category": "Directions & Ethics",
+    "level": "A1"
+  },
+  {
+    "id": "v-5767",
+    "en": "Ring",
+    "vn": "Chiếc nhẫn, tiếng chuông",
+    "pool": "common",
+    "category": "Jewelry & Sound",
+    "level": "A1"
+  },
+  {
+    "id": "v-5768",
+    "en": "River",
+    "vn": "Dòng sông",
+    "pool": "common",
+    "category": "Nature & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5769",
+    "en": "Road",
+    "vn": "Con đường",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5770",
+    "en": "Robot",
+    "vn": "Người máy",
+    "pool": "common",
+    "category": "Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5771",
+    "en": "Rock",
+    "vn": "Hòn đá, nhạc rock",
+    "pool": "common",
+    "category": "Nature & Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-5772",
+    "en": "Rocket",
+    "vn": "Tên lửa",
+    "pool": "ielts",
+    "category": "Science & Space",
+    "level": "A2"
+  },
+  {
+    "id": "v-5773",
+    "en": "Rooster",
+    "vn": "Con gà trống",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5774",
+    "en": "Rose",
+    "vn": "Hoa hồng",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5775",
+    "en": "Rope",
+    "vn": "Dây thừng",
+    "pool": "common",
+    "category": "Tools",
+    "level": "A2"
+  },
+  {
+    "id": "v-5776",
+    "en": "Round",
+    "vn": "Hình tròn, vòng đấu",
+    "pool": "common",
+    "category": "Shape & Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5777",
+    "en": "Ruler",
+    "vn": "Thước kẻ, thước đo",
+    "pool": "common",
+    "category": "Education & Tools",
+    "level": "A1"
+  },
+  {
+    "id": "v-5778",
+    "en": "Run",
+    "vn": "Chạy bộ",
+    "pool": "common",
+    "category": "Sports & Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5779",
+    "en": "Runner",
+    "vn": "Vận động viên chạy bộ",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5780",
+    "en": "Safe",
+    "vn": "An toàn, két sắt",
+    "pool": "common",
+    "category": "Safety & Security",
+    "level": "A2"
+  },
+  {
+    "id": "v-5781",
+    "en": "Safety",
+    "vn": "Sự an toàn",
+    "pool": "common",
+    "category": "Safety",
+    "level": "A2"
+  },
+  {
+    "id": "v-5782",
+    "en": "Sales",
+    "vn": "Doanh số bán hàng",
+    "pool": "toeic",
+    "category": "Sales & Marketing",
+    "level": "A2"
+  },
+  {
+    "id": "v-5783",
+    "en": "Salty",
+    "vn": "Có vị mặn",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5784",
+    "en": "Same",
+    "vn": "Giống nhau",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5785",
+    "en": "Sand",
+    "vn": "Bãi cát",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5786",
+    "en": "Sandwich",
+    "vn": "Bánh mì kẹp",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5787",
+    "en": "Sauce",
+    "vn": "Nước sốt",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5788",
+    "en": "Sausage",
+    "vn": "Xúc xích",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5789",
+    "en": "Save",
+    "vn": "Lưu trữ, tiết kiệm",
+    "pool": "toeic",
+    "category": "IT & Finance",
+    "level": "A1"
+  },
+  {
+    "id": "v-5790",
+    "en": "Say",
+    "vn": "Nói",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5791",
+    "en": "Scarf",
+    "vn": "Khăn quàng cổ",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5792",
+    "en": "Science",
+    "vn": "Môn khoa học",
+    "pool": "ielts",
+    "category": "Science",
+    "level": "A1"
+  },
+  {
+    "id": "v-5793",
+    "en": "Scientist",
+    "vn": "Nhà khoa học",
+    "pool": "ielts",
+    "category": "Science & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5794",
+    "en": "Scissors",
+    "vn": "Cái kéo",
+    "pool": "common",
+    "category": "Tools",
+    "level": "A1"
+  },
+  {
+    "id": "v-5795",
+    "en": "Scooter",
+    "vn": "Xe tay ga, xe xe đẩy chân",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5796",
+    "en": "Screen",
+    "vn": "Màn hình",
+    "pool": "common",
+    "category": "Tech & IT",
+    "level": "A1"
+  },
+  {
+    "id": "v-5797",
+    "en": "Sea",
+    "vn": "Biển cả",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5798",
+    "en": "Seafood",
+    "vn": "Hải sản",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5799",
+    "en": "Seagull",
+    "vn": "Chim hải âu",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-5800",
+    "en": "Seal",
+    "vn": "Con hải cẩu, con dấu niêm phong",
+    "pool": "ielts",
+    "category": "Animals & Law",
+    "level": "A2"
+  },
+  {
+    "id": "v-5801",
+    "en": "Season",
+    "vn": "Mùa trong năm",
+    "pool": "common",
+    "category": "Nature & Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5802",
+    "en": "Seat",
+    "vn": "Chỗ ngồi",
+    "pool": "common",
+    "category": "Travel & Furniture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5803",
+    "en": "Second",
+    "vn": "Giây đồng hồ, thứ hai",
+    "pool": "common",
+    "category": "Time & Order",
+    "level": "A1"
+  },
+  {
+    "id": "v-5804",
+    "en": "Secret",
+    "vn": "Bí mật",
+    "pool": "common",
+    "category": "General",
+    "level": "A2"
+  },
+  {
+    "id": "v-5805",
+    "en": "Secretary",
+    "vn": "Thư ký văn phòng",
+    "pool": "toeic",
+    "category": "Office & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5806",
+    "en": "Seed",
+    "vn": "Hạt giống",
+    "pool": "common",
+    "category": "Nature & Agriculture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5807",
+    "en": "Sell",
+    "vn": "Bán hàng",
+    "pool": "common",
+    "category": "Shopping & Commerce",
+    "level": "A1"
+  },
+  {
+    "id": "v-5808",
+    "en": "Send",
+    "vn": "Gửi đi",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5809",
+    "en": "Sentence",
+    "vn": "Câu văn, bản án",
+    "pool": "ielts",
+    "category": "Grammar & Law",
+    "level": "A1"
+  },
+  {
+    "id": "v-5810",
+    "en": "September",
+    "vn": "Tháng Chín",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5811",
+    "en": "Seven",
+    "vn": "Số 7",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5812",
+    "en": "Shampoo",
+    "vn": "Dầu gội đầu",
+    "pool": "common",
+    "category": "Beauty & Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5813",
+    "en": "Shark",
+    "vn": "Con cá mập",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5814",
+    "en": "Shelf",
+    "vn": "Kệ sách, giá để đồ",
+    "pool": "toeic",
+    "category": "Home & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5815",
+    "en": "Shell",
+    "vn": "Vỏ sò, vỏ ốc",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5816",
+    "en": "Ship",
+    "vn": "Tàu thủy lớn",
+    "pool": "toeic",
+    "category": "Shipping & Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5817",
+    "en": "Shopping",
+    "vn": "Hoạt động mua sắm",
+    "pool": "common",
+    "category": "Shopping",
+    "level": "A1"
+  },
+  {
+    "id": "v-5818",
+    "en": "Short",
+    "vn": "Ngắn, thấp",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5819",
+    "en": "Shorts",
+    "vn": "Quần đùi",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5820",
+    "en": "Shoulder",
+    "vn": "Bờ vai",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5821",
+    "en": "Shout",
+    "vn": "Hét to, la lên",
+    "pool": "common",
+    "category": "Sound",
+    "level": "A1"
+  },
+  {
+    "id": "v-5822",
+    "en": "Show",
+    "vn": "Show diễn, cho xem",
+    "pool": "common",
+    "category": "Entertainment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5823",
+    "en": "Shower",
+    "vn": "Vòi hoa sen, trận mưa rào",
+    "pool": "common",
+    "category": "Home & Weather",
+    "level": "A1"
+  },
+  {
+    "id": "v-5824",
+    "en": "Shrimp",
+    "vn": "Con tôm",
+    "pool": "common",
+    "category": "Food & Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5825",
+    "en": "Shut",
+    "vn": "Đóng lại",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5826",
+    "en": "Shy",
+    "vn": "E ngại, rút rè",
+    "pool": "ielts",
+    "category": "Psychology",
+    "level": "A1"
+  },
+  {
+    "id": "v-5827",
+    "en": "Sick",
+    "vn": "Bị ốm, bệnh",
+    "pool": "common",
+    "category": "Health",
+    "level": "A1"
+  },
+  {
+    "id": "v-5828",
+    "en": "Side",
+    "vn": "Mặt bên, phía",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5829",
+    "en": "Sign",
+    "vn": "Biển báo, ký tên",
+    "pool": "toeic",
+    "category": "Office & Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5830",
+    "en": "Silver",
+    "vn": "Bạc",
+    "pool": "common",
+    "category": "Materials",
+    "level": "A1"
+  },
+  {
+    "id": "v-5831",
+    "en": "Simple",
+    "vn": "Đơn giản",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5832",
+    "en": "Sing",
+    "vn": "Hát",
+    "pool": "common",
+    "category": "Arts & Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-5833",
+    "en": "Singer",
+    "vn": "Ca sĩ",
+    "pool": "common",
+    "category": "Music & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5834",
+    "en": "Single",
+    "vn": "Độc thân, đơn lẻ",
+    "pool": "common",
+    "category": "Relationships & General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5835",
+    "en": "Sink",
+    "vn": "Bồn rửa mặt/bát, chìm xuống",
+    "pool": "common",
+    "category": "Home & Action",
+    "level": "A2"
+  },
+  {
+    "id": "v-5836",
+    "en": "Sit",
+    "vn": "Ngồi xuống",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5837",
+    "en": "Six",
+    "vn": "Số 6",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-5838",
+    "en": "Size",
+    "vn": "Kích cỡ",
+    "pool": "common",
+    "category": "Shopping",
+    "level": "A1"
+  },
+  {
+    "id": "v-5839",
+    "en": "Skate",
+    "vn": "Trượt băng, giày trượt",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5840",
+    "en": "Skateboard",
+    "vn": "Ván trượt",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5841",
+    "en": "Ski",
+    "vn": "Trượt tuyết",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5842",
+    "en": "Skin",
+    "vn": "Làn da",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5843",
+    "en": "Sleep",
+    "vn": "Giấc ngủ, ngủ",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5844",
+    "en": "Sleepy",
+    "vn": "Buồn ngủ",
+    "pool": "common",
+    "category": "Health",
+    "level": "A1"
+  },
+  {
+    "id": "v-5845",
+    "en": "Slice",
+    "vn": "Lát cắt (bánh/thịt)",
+    "pool": "common",
+    "category": "Food",
+    "level": "A2"
+  },
+  {
+    "id": "v-5846",
+    "en": "Slide",
+    "vn": "Cầu trượt, trang trình chiếu",
+    "pool": "toeic",
+    "category": "Play & Office",
+    "level": "A1"
+  },
+  {
+    "id": "v-5847",
+    "en": "Smart",
+    "vn": "Thông minh",
+    "pool": "common",
+    "category": "Qualities",
+    "level": "A1"
+  },
+  {
+    "id": "v-5848",
+    "en": "Smell",
+    "vn": "Mùi hương, ngửi",
+    "pool": "common",
+    "category": "Senses",
+    "level": "A1"
+  },
+  {
+    "id": "v-5849",
+    "en": "Smile",
+    "vn": "Nụ cười, mỉm cười",
+    "pool": "common",
+    "category": "Emotions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5850",
+    "en": "Smoke",
+    "vn": "Khói, hút thuốc",
+    "pool": "ielts",
+    "category": "Health & Environment",
+    "level": "A1"
+  },
+  {
+    "id": "v-5851",
+    "en": "Snake",
+    "vn": "Con rắn",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5852",
+    "en": "Sneakers",
+    "vn": "Giày thể thao",
+    "pool": "common",
+    "category": "Fashion & Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5853",
+    "en": "Snowman",
+    "vn": "Người tuyết",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5854",
+    "en": "Soap",
+    "vn": "Xà phòng",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5855",
+    "en": "Soccer",
+    "vn": "Môn bóng đá",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5856",
+    "en": "Sock",
+    "vn": "Tất, vớ",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5857",
+    "en": "Sofa",
+    "vn": "Ghế sofa",
+    "pool": "common",
+    "category": "Furniture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5858",
+    "en": "Soft",
+    "vn": "Mềm mại",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5859",
+    "en": "Soil",
+    "vn": "Đất trồng",
+    "pool": "common",
+    "category": "Nature & Agriculture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5860",
+    "en": "Soldier",
+    "vn": "Người quân nhân, người lính",
+    "pool": "common",
+    "category": "Military & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5861",
+    "en": "Solve",
+    "vn": "Giải quyết (vấn đề)",
+    "pool": "common",
+    "category": "Math & Strategy",
+    "level": "A2"
+  },
+  {
+    "id": "v-5862",
+    "en": "Son",
+    "vn": "Con trai",
+    "pool": "common",
+    "category": "Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5863",
+    "en": "Soon",
+    "vn": "Sớm thôi",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5864",
+    "en": "Sour",
+    "vn": "Vị chua",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5865",
+    "en": "South",
+    "vn": "Phía Nam",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5866",
+    "en": "Space",
+    "vn": "Không gian, vũ trụ",
+    "pool": "ielts",
+    "category": "Science & Space",
+    "level": "A2"
+  },
+  {
+    "id": "v-5867",
+    "en": "Spaceship",
+    "vn": "Tàu vũ trụ",
+    "pool": "common",
+    "category": "Space & Tech",
+    "level": "A2"
+  },
+  {
+    "id": "v-5868",
+    "en": "Spaghetti",
+    "vn": "Mì Ý spaghetti",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5869",
+    "en": "Speak",
+    "vn": "Nói chuyện",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5870",
+    "en": "Speaker",
+    "vn": "Loa phát thanh, người nói",
+    "pool": "toeic",
+    "category": "Tech & Office",
+    "level": "A2"
+  },
+  {
+    "id": "v-5871",
+    "en": "Special",
+    "vn": "Đặc biệt",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-5872",
+    "en": "Speed",
+    "vn": "Tốc độ",
+    "pool": "common",
+    "category": "Physics & Auto",
+    "level": "A2"
+  },
+  {
+    "id": "v-5873",
+    "en": "Spell",
+    "vn": "Đánh vần, phép thuật",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5874",
+    "en": "Spend",
+    "vn": "Dành thời gian/tiền bạc",
+    "pool": "toeic",
+    "category": "Finance & Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5875",
+    "en": "Spider",
+    "vn": "Con nhện",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5876",
+    "en": "Spinach",
+    "vn": "Rau chân vịt, cải bó xôi",
+    "pool": "common",
+    "category": "Food",
+    "level": "A2"
+  },
+  {
+    "id": "v-5877",
+    "en": "Spoon",
+    "vn": "Cái muỗng",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5878",
+    "en": "Sport",
+    "vn": "Thể thao",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5879",
+    "en": "Spring",
+    "vn": "Mùa xuân, lò xo",
+    "pool": "common",
+    "category": "Nature & Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5880",
+    "en": "Square",
+    "vn": "Hình vuông, quảng trường",
+    "pool": "common",
+    "category": "Shape & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5881",
+    "en": "Squid",
+    "vn": "Con mực biển",
+    "pool": "common",
+    "category": "Animals & Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5882",
+    "en": "Squirrel",
+    "vn": "Con sóc",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5883",
+    "en": "Stadium",
+    "vn": "Sân vận động",
+    "pool": "common",
+    "category": "Sports & Architecture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5884",
+    "en": "Staff",
+    "vn": "Đội ngũ nhân viên",
+    "pool": "toeic",
+    "category": "HR & Workplace",
+    "level": "A2"
+  },
+  {
+    "id": "v-5885",
+    "en": "Stage",
+    "vn": "Sân khấu, giai đoạn",
+    "pool": "common",
+    "category": "Arts & Project",
+    "level": "A2"
+  },
+  {
+    "id": "v-5886",
+    "en": "Stairs",
+    "vn": "Cầu thang bộ",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5887",
+    "en": "Stamp",
+    "vn": "Tem thư, đóng dấu",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5888",
+    "en": "Stand",
+    "vn": "Đứng dậy, quầy hàng",
+    "pool": "common",
+    "category": "Action & Retail",
+    "level": "A1"
+  },
+  {
+    "id": "v-5889",
+    "en": "Start",
+    "vn": "Bắt đầu",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5890",
+    "en": "Station",
+    "vn": "Nhà ga, trạm phát",
+    "pool": "common",
+    "category": "Travel & Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5891",
+    "en": "Steak",
+    "vn": "Bít tết bò",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5892",
+    "en": "Steal",
+    "vn": "Trộm cắp",
+    "pool": "ielts",
+    "category": "Law & Crime",
+    "level": "A2"
+  },
+  {
+    "id": "v-5893",
+    "en": "Steam",
+    "vn": "Hơi nước",
+    "pool": "ielts",
+    "category": "Science",
+    "level": "A2"
+  },
+  {
+    "id": "v-5894",
+    "en": "Steel",
+    "vn": "Thép",
+    "pool": "common",
+    "category": "Materials & Engineering",
+    "level": "A2"
+  },
+  {
+    "id": "v-5895",
+    "en": "Step",
+    "vn": "Bước chân, công đoạn",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5896",
+    "en": "Sticker",
+    "vn": "Hình dán",
+    "pool": "common",
+    "category": "Toys",
+    "level": "A1"
+  },
+  {
+    "id": "v-5897",
+    "en": "Sticky",
+    "vn": "Dính, nhớt",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5898",
+    "en": "Still",
+    "vn": "Vẫn còn, yên tĩnh",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5899",
+    "en": "Stomach",
+    "vn": "Dạ dày, bụng",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5900",
+    "en": "Stone",
+    "vn": "Hòn đá",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5901",
+    "en": "Storm",
+    "vn": "Cơn bão",
+    "pool": "common",
+    "category": "Weather",
+    "level": "A1"
+  },
+  {
+    "id": "v-5902",
+    "en": "Story",
+    "vn": "Câu chuyện",
+    "pool": "common",
+    "category": "Books & Media",
+    "level": "A1"
+  },
+  {
+    "id": "v-5903",
+    "en": "Stove",
+    "vn": "Bếp nấu",
+    "pool": "common",
+    "category": "Home & Kitchen",
+    "level": "A1"
+  },
+  {
+    "id": "v-5904",
+    "en": "Straight",
+    "vn": "Thẳng tắp",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5905",
+    "en": "Strawberry",
+    "vn": "Quả dâu tây",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5906",
+    "en": "Stress",
+    "vn": "Căng thẳng",
+    "pool": "common",
+    "category": "Health & Mind",
+    "level": "A2"
+  },
+  {
+    "id": "v-5907",
+    "en": "Strong",
+    "vn": "Mạnh mẽ",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5908",
+    "en": "Study",
+    "vn": "Học tập, nghiên cứu",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5909",
+    "en": "Subway",
+    "vn": "Tàu điện ngầm",
+    "pool": "common",
+    "category": "Travel & Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5910",
+    "en": "Suit",
+    "vn": "Bộ comple, phù hợp",
+    "pool": "toeic",
+    "category": "Fashion & Work",
+    "level": "A2"
+  },
+  {
+    "id": "v-5911",
+    "en": "Suitcase",
+    "vn": "Vali du lịch",
+    "pool": "toeic",
+    "category": "Travel",
+    "level": "A2"
+  },
+  {
+    "id": "v-5912",
+    "en": "Summer",
+    "vn": "Mùa hè",
+    "pool": "common",
+    "category": "Nature & Seasons",
+    "level": "A1"
+  },
+  {
+    "id": "v-5913",
+    "en": "Sunday",
+    "vn": "Chủ Nhật",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-5914",
+    "en": "Sunflower",
+    "vn": "Hoa hướng dương",
+    "pool": "common",
+    "category": "Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-5915",
+    "en": "Sunglasses",
+    "vn": "Kính râm",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5916",
+    "en": "Supermarket",
+    "vn": "Siêu thị",
+    "pool": "common",
+    "category": "Shopping",
+    "level": "A1"
+  },
+  {
+    "id": "v-5917",
+    "en": "Supper",
+    "vn": "Bữa ăn tối nhẹ",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5918",
+    "en": "Support",
+    "vn": "Sự hỗ trợ, ủng hộ",
+    "pool": "toeic",
+    "category": "HR & Strategy",
+    "level": "A2"
+  },
+  {
+    "id": "v-5919",
+    "en": "Surf",
+    "vn": "Lướt sóng, lướt web",
+    "pool": "common",
+    "category": "Sports & IT",
+    "level": "A1"
+  },
+  {
+    "id": "v-5920",
+    "en": "Surface",
+    "vn": "Bề mặt",
+    "pool": "ielts",
+    "category": "Science & Geography",
+    "level": "A2"
+  },
+  {
+    "id": "v-5921",
+    "en": "Surprise",
+    "vn": "Sự ngạc nhiên",
+    "pool": "common",
+    "category": "Emotions",
+    "level": "A1"
+  },
+  {
+    "id": "v-5922",
+    "en": "Sweater",
+    "vn": "Áo len",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5923",
+    "en": "Sweet",
+    "vn": "Ngọt ngào, kẹo ngọt",
+    "pool": "common",
+    "category": "Food & Taste",
+    "level": "A1"
+  },
+  {
+    "id": "v-5924",
+    "en": "Swim",
+    "vn": "Bơi lội",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5925",
+    "en": "Swimming",
+    "vn": "Bộ môn bơi lội",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5926",
+    "en": "Swing",
+    "vn": "Xích đu, đung đưa",
+    "pool": "common",
+    "category": "Play & Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5927",
+    "en": "Sword",
+    "vn": "Thanh kiếm cổ",
+    "pool": "common",
+    "category": "History",
+    "level": "A2"
+  },
+  {
+    "id": "v-5928",
+    "en": "Tag",
+    "vn": "Nhãn mác, thẻ đính",
+    "pool": "common",
+    "category": "Shopping & IT",
+    "level": "A1"
+  },
+  {
+    "id": "v-5929",
+    "en": "Tail",
+    "vn": "Cái đuôi",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5930",
+    "en": "Talk",
+    "vn": "Trò chuyện",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5931",
+    "en": "Tall",
+    "vn": "Cao lớn",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5932",
+    "en": "Tape",
+    "vn": "Băng dính, băng đĩa",
+    "pool": "common",
+    "category": "Tools & Media",
+    "level": "A1"
+  },
+  {
+    "id": "v-5933",
+    "en": "Taste",
+    "vn": "Mùi vị, nếm thử",
+    "pool": "common",
+    "category": "Food & Taste",
+    "level": "A1"
+  },
+  {
+    "id": "v-5934",
+    "en": "Tax",
+    "vn": "Thuế",
+    "pool": "toeic",
+    "category": "Finance & Law",
+    "level": "B1"
+  },
+  {
+    "id": "v-5935",
+    "en": "Taxi",
+    "vn": "Xe tắc xi",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5936",
+    "en": "Team",
+    "vn": "Đội ngũ, nhóm",
+    "pool": "toeic",
+    "category": "Sports & Workplace",
+    "level": "A1"
+  },
+  {
+    "id": "v-5937",
+    "en": "Teapot",
+    "vn": "Ấm pha trà",
+    "pool": "common",
+    "category": "Home & Kitchen",
+    "level": "A1"
+  },
+  {
+    "id": "v-5938",
+    "en": "Tear",
+    "vn": "Nước mắt, xé rách",
+    "pool": "common",
+    "category": "Emotions & Action",
+    "level": "A2"
+  },
+  {
+    "id": "v-5939",
+    "en": "Teddy",
+    "vn": "Gấu bông",
+    "pool": "common",
+    "category": "Toys",
+    "level": "A1"
+  },
+  {
+    "id": "v-5940",
+    "en": "Tooth",
+    "vn": "Răng",
+    "pool": "common",
+    "category": "Health & Body",
+    "level": "A1"
+  },
+  {
+    "id": "v-5941",
+    "en": "Toothbrush",
+    "vn": "Bàn chải đánh răng",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5942",
+    "en": "Toothpaste",
+    "vn": "Kem đánh răng",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5943",
+    "en": "Top",
+    "vn": "Đỉnh cao, áo thun nữ",
+    "pool": "common",
+    "category": "General & Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5944",
+    "en": "Topic",
+    "vn": "Chủ đề bài học",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5945",
+    "en": "Towel",
+    "vn": "Khăn tắm",
+    "pool": "common",
+    "category": "Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5946",
+    "en": "Tower",
+    "vn": "Tòa tháp",
+    "pool": "common",
+    "category": "Architecture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5947",
+    "en": "Toy",
+    "vn": "Đồ chơi",
+    "pool": "common",
+    "category": "Toys",
+    "level": "A1"
+  },
+  {
+    "id": "v-5948",
+    "en": "Track",
+    "vn": "Đường đua, vết chân",
+    "pool": "common",
+    "category": "Sports & Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5949",
+    "en": "Tractor",
+    "vn": "Xe máy kéo nông nghiệp",
+    "pool": "common",
+    "category": "Agriculture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5950",
+    "en": "Trade",
+    "vn": "Thương mại, buôn bán",
+    "pool": "toeic",
+    "category": "Trade & Commerce",
+    "level": "B1"
+  },
+  {
+    "id": "v-5951",
+    "en": "Tradition",
+    "vn": "Truyền thống",
+    "pool": "common",
+    "category": "Culture",
+    "level": "A2"
+  },
+  {
+    "id": "v-5952",
+    "en": "Traffic",
+    "vn": "Giao thông",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5953",
+    "en": "Trainer",
+    "vn": "Huấn luyện viên, giày thể thao",
+    "pool": "common",
+    "category": "Sports & Fashion",
+    "level": "A2"
+  },
+  {
+    "id": "v-5954",
+    "en": "Training",
+    "vn": "Khóa đào tạo",
+    "pool": "toeic",
+    "category": "HR & Education",
+    "level": "A2"
+  },
+  {
+    "id": "v-5955",
+    "en": "Travel",
+    "vn": "Du lịch, đi lại",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5956",
+    "en": "Trip",
+    "vn": "Chuyến đi",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5957",
+    "en": "Trophy",
+    "vn": "Cúp vô địch",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5958",
+    "en": "Truck",
+    "vn": "Xe tải",
+    "pool": "common",
+    "category": "Transport",
+    "level": "A1"
+  },
+  {
+    "id": "v-5959",
+    "en": "Trumpet",
+    "vn": "Kèn trôm-pét",
+    "pool": "common",
+    "category": "Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-5960",
+    "en": "Truth",
+    "vn": "Sự thật",
+    "pool": "common",
+    "category": "Ethics & Mind",
+    "level": "A2"
+  },
+  {
+    "id": "v-5961",
+    "en": "T-shirt",
+    "vn": "Áo thun",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5962",
+    "en": "Tube",
+    "vn": "Ống tròn, tàu điện ngầm London",
+    "pool": "common",
+    "category": "Engineering & Travel",
+    "level": "A2"
+  },
+  {
+    "id": "v-5963",
+    "en": "Tuna",
+    "vn": "Cá ngừ",
+    "pool": "common",
+    "category": "Food & Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5964",
+    "en": "Tunnel",
+    "vn": "Đường hầm",
+    "pool": "common",
+    "category": "Engineering & Transport",
+    "level": "A2"
+  },
+  {
+    "id": "v-5965",
+    "en": "Turkey",
+    "vn": "Thịt gà tây, nước Thổ Nhĩ Kỳ",
+    "pool": "common",
+    "category": "Food & Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5966",
+    "en": "Turtle",
+    "vn": "Con rùa biển",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-5967",
+    "en": "TV",
+    "vn": "Tivi",
+    "pool": "common",
+    "category": "Tech & Media",
+    "level": "A1"
+  },
+  {
+    "id": "v-5968",
+    "en": "Twice",
+    "vn": "Hai lần",
+    "pool": "common",
+    "category": "Math & Frequency",
+    "level": "A1"
+  },
+  {
+    "id": "v-5969",
+    "en": "Twin",
+    "vn": "Anh chị em sinh đôi",
+    "pool": "common",
+    "category": "Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-5970",
+    "en": "UGLY",
+    "vn": "Xấu xí",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-5971",
+    "en": "Umbrella",
+    "vn": "Cây dù, ô che mưa",
+    "pool": "common",
+    "category": "Weather & Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5972",
+    "en": "Underground",
+    "vn": "Dưới mặt đất, hệ thống tàu ngầm",
+    "pool": "common",
+    "category": "Transport & Geography",
+    "level": "A2"
+  },
+  {
+    "id": "v-5973",
+    "en": "Uniform",
+    "vn": "Bộ đồng phục",
+    "pool": "common",
+    "category": "School & Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5974",
+    "en": "University",
+    "vn": "Trường đại học",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-5975",
+    "en": "Unlock",
+    "vn": "Mở khóa",
+    "pool": "common",
+    "category": "IT & Home",
+    "level": "A1"
+  },
+  {
+    "id": "v-5976",
+    "en": "User",
+    "vn": "Người sử dụng",
+    "pool": "toeic",
+    "category": "IT & Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-5977",
+    "en": "Vacation",
+    "vn": "Kỳ nghỉ hè/lễ",
+    "pool": "common",
+    "category": "Travel",
+    "level": "A1"
+  },
+  {
+    "id": "v-5978",
+    "en": "Vaccine",
+    "vn": "Vắc-xin phòng bệnh",
+    "pool": "common",
+    "category": "Health & Medicine",
+    "level": "A2"
+  },
+  {
+    "id": "v-5979",
+    "en": "Valley",
+    "vn": "Thung lũng",
+    "pool": "common",
+    "category": "Geography & Nature",
+    "level": "A2"
+  },
+  {
+    "id": "v-5980",
+    "en": "Vanilla",
+    "vn": "Hương vani thơm",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5981",
+    "en": "Vase",
+    "vn": "Bình hoa",
+    "pool": "common",
+    "category": "Home & Furniture",
+    "level": "A1"
+  },
+  {
+    "id": "v-5982",
+    "en": "Vegetable",
+    "vn": "Rau củ quả",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5983",
+    "en": "Vehicle",
+    "vn": "Phương tiện giao thông",
+    "pool": "toeic",
+    "category": "Auto & Transport",
+    "level": "A2"
+  },
+  {
+    "id": "v-5984",
+    "en": "Vest",
+    "vn": "Áo gile",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5985",
+    "en": "Veterinarian",
+    "vn": "Bác sĩ thú y",
+    "pool": "common",
+    "category": "Health & Career",
+    "level": "A2"
+  },
+  {
+    "id": "v-5986",
+    "en": "Video",
+    "vn": "Đoạn phim",
+    "pool": "common",
+    "category": "Tech & Media",
+    "level": "A1"
+  },
+  {
+    "id": "v-5987",
+    "en": "Village",
+    "vn": "Ngôi làng",
+    "pool": "common",
+    "category": "Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-5988",
+    "en": "Violin",
+    "vn": "Đàn vi-ô-lông",
+    "pool": "common",
+    "category": "Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-5989",
+    "en": "Visit",
+    "vn": "Thăm viếng",
+    "pool": "common",
+    "category": "Travel & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-5990",
+    "en": "Visitor",
+    "vn": "Khách viếng thăm",
+    "pool": "toeic",
+    "category": "Travel & PR",
+    "level": "A1"
+  },
+  {
+    "id": "v-5991",
+    "en": "Voice",
+    "vn": "Giọng nói",
+    "pool": "common",
+    "category": "Sound & Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-5992",
+    "en": "Volleyball",
+    "vn": "Môn bóng chuyền",
+    "pool": "common",
+    "category": "Sports",
+    "level": "A1"
+  },
+  {
+    "id": "v-5993",
+    "en": "Waffle",
+    "vn": "Bánh tổ ong waffle",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-5994",
+    "en": "Wait",
+    "vn": "Chờ đợi",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5995",
+    "en": "Waiter",
+    "vn": "Bồi bàn nam",
+    "pool": "common",
+    "category": "Food & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5996",
+    "en": "Waitress",
+    "vn": "Nữ phục vụ bàn",
+    "pool": "common",
+    "category": "Food & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-5997",
+    "en": "Walk",
+    "vn": "Đi bộ",
+    "pool": "common",
+    "category": "Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-5998",
+    "en": "Wallet",
+    "vn": "Ví tiền",
+    "pool": "common",
+    "category": "Fashion",
+    "level": "A1"
+  },
+  {
+    "id": "v-5999",
+    "en": "Walnut",
+    "vn": "Hạt óc chó",
+    "pool": "common",
+    "category": "Food",
+    "level": "A2"
+  },
+  {
+    "id": "v-6000",
+    "en": "Want",
+    "vn": "Muốn có",
+    "pool": "common",
+    "category": "Mind",
+    "level": "A1"
+  },
+  {
+    "id": "v-6001",
+    "en": "War",
+    "vn": "Chiến tranh",
+    "pool": "common",
+    "category": "History & Military",
+    "level": "A2"
+  },
+  {
+    "id": "v-6002",
+    "en": "Warm",
+    "vn": "Ấm áp",
+    "pool": "common",
+    "category": "Weather",
+    "level": "A1"
+  },
+  {
+    "id": "v-6003",
+    "en": "Wash",
+    "vn": "Rửa, giặt đồ",
+    "pool": "common",
+    "category": "Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-6004",
+    "en": "Wasp",
+    "vn": "Con tò vò, ong vò vẽ",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-6005",
+    "en": "Waste",
+    "vn": "Lãng phí, rác thải",
+    "pool": "ielts",
+    "category": "Environment",
+    "level": "A2"
+  },
+  {
+    "id": "v-6006",
+    "en": "Watch",
+    "vn": "Đồng hồ đeo tay, theo dõi",
+    "pool": "common",
+    "category": "Tech & Daily Life",
+    "level": "A1"
+  },
+  {
+    "id": "v-6007",
+    "en": "Watermelon",
+    "vn": "Quả dưa hấu",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-6008",
+    "en": "Wave",
+    "vn": "Sóng biển, vẫy tay",
+    "pool": "common",
+    "category": "Nature & Action",
+    "level": "A1"
+  },
+  {
+    "id": "v-6009",
+    "en": "Way",
+    "vn": "Con đường, cách thức",
+    "pool": "common",
+    "category": "General",
+    "level": "A1"
+  },
+  {
+    "id": "v-6010",
+    "en": "Weather",
+    "vn": "Thời tiết",
+    "pool": "common",
+    "category": "Weather",
+    "level": "A1"
+  },
+  {
+    "id": "v-6011",
+    "en": "Web",
+    "vn": "Mạng nhện, mạng internet",
+    "pool": "common",
+    "category": "IT & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-6012",
+    "en": "Website",
+    "vn": "Trang tin điện tử",
+    "pool": "common",
+    "category": "IT & Tech",
+    "level": "A1"
+  },
+  {
+    "id": "v-6013",
+    "en": "Wedding",
+    "vn": "Lễ kết hôn",
+    "pool": "common",
+    "category": "Culture & Family",
+    "level": "A1"
+  },
+  {
+    "id": "v-6014",
+    "en": "Wednesday",
+    "vn": "Thứ Tư",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-6015",
+    "en": "Weekend",
+    "vn": "Cuối tuần",
+    "pool": "common",
+    "category": "Time",
+    "level": "A1"
+  },
+  {
+    "id": "v-6016",
+    "en": "Welcome",
+    "vn": "Chào đón",
+    "pool": "common",
+    "category": "Communication",
+    "level": "A1"
+  },
+  {
+    "id": "v-6017",
+    "en": "West",
+    "vn": "Phía Tây",
+    "pool": "common",
+    "category": "Directions",
+    "level": "A1"
+  },
+  {
+    "id": "v-6018",
+    "en": "Wet",
+    "vn": "Ẩm ướt",
+    "pool": "common",
+    "category": "Weather & Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-6019",
+    "en": "Whale",
+    "vn": "Con cá voi",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-6020",
+    "en": "Wheel",
+    "vn": "Bánh xe",
+    "pool": "common",
+    "category": "Auto & Tools",
+    "level": "A1"
+  },
+  {
+    "id": "v-6021",
+    "en": "Windy",
+    "vn": "Trời nhiều gió",
+    "pool": "common",
+    "category": "Weather",
+    "level": "A1"
+  },
+  {
+    "id": "v-6022",
+    "en": "Wine",
+    "vn": "Rượu vang",
+    "pool": "common",
+    "category": "Food & Beverage",
+    "level": "A1"
+  },
+  {
+    "id": "v-6023",
+    "en": "Wing",
+    "vn": "Cánh chim/máy bay",
+    "pool": "common",
+    "category": "Animals & Aviation",
+    "level": "A1"
+  },
+  {
+    "id": "v-6024",
+    "en": "Winner",
+    "vn": "Người chiến thắng",
+    "pool": "common",
+    "category": "Sports & Games",
+    "level": "A1"
+  },
+  {
+    "id": "v-6025",
+    "en": "Winter",
+    "vn": "Mùa đông",
+    "pool": "common",
+    "category": "Nature & Seasons",
+    "level": "A1"
+  },
+  {
+    "id": "v-6026",
+    "en": "Wipe",
+    "vn": "Lau chùi",
+    "pool": "toeic",
+    "category": "Home & Work",
+    "level": "A1"
+  },
+  {
+    "id": "v-6027",
+    "en": "Wire",
+    "vn": "Dây điện",
+    "pool": "common",
+    "category": "Engineering & Tech",
+    "level": "A2"
+  },
+  {
+    "id": "v-6028",
+    "en": "Wisdom",
+    "vn": "Trí khôn, sự khôn ngoan",
+    "pool": "ielts",
+    "category": "Psychology & Mind",
+    "level": "A2"
+  },
+  {
+    "id": "v-6029",
+    "en": "Wish",
+    "vn": "Ước nguyện, lời chúc",
+    "pool": "common",
+    "category": "Emotions",
+    "level": "A1"
+  },
+  {
+    "id": "v-6030",
+    "en": "Wolf",
+    "vn": "Con chim sói",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-6031",
+    "en": "Wood",
+    "vn": "Gỗ cây",
+    "pool": "common",
+    "category": "Materials & Nature",
+    "level": "A1"
+  },
+  {
+    "id": "v-6032",
+    "en": "Work",
+    "vn": "Làm việc, tác phẩm",
+    "pool": "toeic",
+    "category": "Career & Work",
+    "level": "A1"
+  },
+  {
+    "id": "v-6033",
+    "en": "Worker",
+    "vn": "Người công nhân",
+    "pool": "toeic",
+    "category": "HR & Work",
+    "level": "A1"
+  },
+  {
+    "id": "v-6034",
+    "en": "World",
+    "vn": "Thế giới",
+    "pool": "common",
+    "category": "Geography",
+    "level": "A1"
+  },
+  {
+    "id": "v-6035",
+    "en": "Worm",
+    "vn": "Con sâu, con giun",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-6036",
+    "en": "Write",
+    "vn": "Viết lách",
+    "pool": "common",
+    "category": "Education",
+    "level": "A1"
+  },
+  {
+    "id": "v-6037",
+    "en": "Writer",
+    "vn": "Nhà văn",
+    "pool": "common",
+    "category": "Books & Career",
+    "level": "A1"
+  },
+  {
+    "id": "v-6038",
+    "en": "Xylophone",
+    "vn": "Mộc cầm (đàn gõ gỗ)",
+    "pool": "common",
+    "category": "Music",
+    "level": "A1"
+  },
+  {
+    "id": "v-6039",
+    "en": "Yacht",
+    "vn": "Du thuyền sang trọng",
+    "pool": "common",
+    "category": "Travel & Ocean",
+    "level": "A2"
+  },
+  {
+    "id": "v-6040",
+    "en": "Yak",
+    "vn": "Con bò Tây Tạng",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A2"
+  },
+  {
+    "id": "v-6041",
+    "en": "Yard",
+    "vn": "Sân nhà, đơn vị thước yard",
+    "pool": "common",
+    "category": "Home & Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-6042",
+    "en": "Yogurt",
+    "vn": "Sữa chua",
+    "pool": "common",
+    "category": "Food",
+    "level": "A1"
+  },
+  {
+    "id": "v-6043",
+    "en": "Yolk",
+    "vn": "Lòng đỏ trứng",
+    "pool": "common",
+    "category": "Food",
+    "level": "A2"
+  },
+  {
+    "id": "v-6044",
+    "en": "Young",
+    "vn": "Trẻ tuổi",
+    "pool": "common",
+    "category": "Adjectives",
+    "level": "A1"
+  },
+  {
+    "id": "v-6045",
+    "en": "Zebra",
+    "vn": "Con ngựa vằn",
+    "pool": "common",
+    "category": "Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-6046",
+    "en": "Zero",
+    "vn": "Số 0",
+    "pool": "common",
+    "category": "Math",
+    "level": "A1"
+  },
+  {
+    "id": "v-6047",
+    "en": "Zoo",
+    "vn": "Sở thú",
+    "pool": "common",
+    "category": "Travel & Animals",
+    "level": "A1"
+  },
+  {
+    "id": "v-6048",
+    "en": "Zucchini",
+    "vn": "Quả bí ngòi",
+    "pool": "common",
+    "category": "Food",
+    "level": "A2"
   }
 ];
+
+/**
+ * Fisher-Yates Uniform Shuffle Algorithm
+ */
+export function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
 /**
  * Filter vocabulary by Pool, Level, Category, and Count
@@ -41748,23 +48408,44 @@ export const VOCAB_BANK = [
 export function getVocabPool({ pool = 'all', level = 'all', category = 'all', count = null } = {}) {
   let filtered = VOCAB_BANK;
 
+  // Pool Filtering
   if (pool && pool !== 'all') {
     filtered = filtered.filter(item => item.pool === pool);
   }
 
+  // Level Filtering with Range Matching
   if (level && level !== 'all') {
-    filtered = filtered.filter(item => item.level.toLowerCase() === level.toLowerCase());
+    const lvl = level.toUpperCase();
+    if (lvl === 'A1-A2') {
+      filtered = filtered.filter(item => item.level === 'A1' || item.level === 'A2');
+    } else if (lvl === 'B1-B2') {
+      filtered = filtered.filter(item => item.level === 'B1' || item.level === 'B2');
+    } else if (lvl === 'C1-C2') {
+      filtered = filtered.filter(item => item.level === 'C1' || item.level === 'C2');
+    } else {
+      filtered = filtered.filter(item => item.level.toUpperCase() === lvl);
+    }
   }
 
+  // Category Filtering
   if (category && category !== 'all') {
     filtered = filtered.filter(item => item.category && item.category.toLowerCase().includes(category.toLowerCase()));
   }
 
-  if (count && typeof count === 'number' && count > 0) {
-    return [...filtered].sort(() => 0.5 - Math.random()).slice(0, count);
+  // Fallback Protection: If level+pool filter yields fewer than 12 items, fall back to pool filter so game never breaks!
+  if (filtered.length < 12) {
+    if (pool && pool !== 'all') {
+      filtered = VOCAB_BANK.filter(item => item.pool === pool);
+    } else {
+      filtered = VOCAB_BANK;
+    }
   }
 
-  return filtered;
+  if (count && typeof count === 'number' && count > 0) {
+    return shuffleArray(filtered).slice(0, count);
+  }
+
+  return shuffleArray(filtered);
 }
 
 /**
