@@ -10,7 +10,6 @@ import { WRITING_EXERCISES } from '../data/skills-exercises-data.js';
 let currentPrompt = null;
 let timerSeconds = 0;
 let timerInterval = null;
-
 export function renderWritingPage() {
   const container = document.getElementById('page-container');
   if (!container) return;
@@ -27,6 +26,7 @@ export function renderWritingPage() {
           ${WRITING_EXERCISES.map(ex => `<option value="${ex.id}">✍️ ${ex.title} (${ex.category})</option>`).join('')}
         </select>
         <select id="writing-cat-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
+          <option value="">🌍 Tất cả thể loại (All)</option>
           <optgroup label="✍️ Standard Formats">
             <option value="IELTS Task 2" selected>IELTS Task 2 Essay</option>
             <option value="IELTS Task 1 - Chart">IELTS Task 1 - Chart Analysis</option>
@@ -87,17 +87,25 @@ export function renderWritingPage() {
   `;
 
   document.getElementById('btn-generate-writing')?.addEventListener('click', loadNewPrompt);
+
   document.getElementById('writing-preset-select')?.addEventListener('change', (e) => {
     const selectedId = e.target.value;
     if (selectedId) {
       const preset = WRITING_EXERCISES.find(ex => ex.id === selectedId);
       if (preset) {
         currentPrompt = preset;
-        StorageService.saveWritingSession(currentPrompt, preset.category, '');
+        syncWritingFilterDropdowns(preset.category || preset.topic, preset.id);
+        StorageService.saveWritingSession(currentPrompt, preset.category || preset.topic, '');
         renderPromptContent();
       }
     }
   });
+
+  document.getElementById('writing-cat-select')?.addEventListener('change', () => {
+    updateWritingPresetDropdown();
+    loadNewPrompt();
+  });
+
   document.getElementById('essay-textarea')?.addEventListener('input', updateWordCount);
   document.getElementById('btn-save-draft')?.addEventListener('click', saveDraft);
   document.getElementById('btn-evaluate-writing')?.addEventListener('click', evaluateEssay);
@@ -107,8 +115,8 @@ export function renderWritingPage() {
   const savedSession = StorageService.getWritingSession();
   if (savedSession && savedSession.prompt) {
     currentPrompt = savedSession.prompt;
-    const catSel = document.getElementById('writing-cat-select');
-    if (catSel && savedSession.category) catSel.value = savedSession.category;
+    const cat = currentPrompt.category || currentPrompt.topic || savedSession.category || '';
+    syncWritingFilterDropdowns(cat, currentPrompt.id);
 
     if (savedSession.draft) {
       const textarea = document.getElementById('essay-textarea');
@@ -117,8 +125,50 @@ export function renderWritingPage() {
     }
     renderPromptContent();
   } else {
+    updateWritingPresetDropdown();
     loadNewPrompt();
   }
+}
+
+function updateWritingPresetDropdown(selectedPresetId = null) {
+  const catSel = document.getElementById('writing-cat-select');
+  const presetSel = document.getElementById('writing-preset-select');
+  if (!presetSel) return;
+
+  const currentCat = catSel ? catSel.value : '';
+
+  const filtered = WRITING_EXERCISES.filter(ex => {
+    if (!currentCat) return true;
+    const catMatch = ex.category === currentCat || ex.category?.toLowerCase().includes(currentCat.toLowerCase());
+    const topicMatch = ex.topic === currentCat || ex.topic?.toLowerCase().includes(currentCat.toLowerCase());
+    return catMatch || topicMatch;
+  });
+
+  presetSel.innerHTML = `
+    <option value="">📚 Kho Bài tập Viết (${filtered.length}/${WRITING_EXERCISES.length} bài)</option>
+    ${filtered.map(ex => `<option value="${ex.id}">✍️ ${ex.title} (${ex.category})</option>`).join('')}
+  `;
+
+  const targetId = selectedPresetId || (currentPrompt ? currentPrompt.id : null);
+  if (targetId && filtered.some(ex => ex.id === targetId)) {
+    presetSel.value = targetId;
+  } else {
+    presetSel.value = '';
+  }
+}
+
+function syncWritingFilterDropdowns(categoryOrTopic, presetId = null) {
+  const catSel = document.getElementById('writing-cat-select');
+
+  if (catSel && categoryOrTopic) {
+    const options = Array.from(catSel.options);
+    const matchedOpt = options.find(opt => opt.value === categoryOrTopic || opt.value.toLowerCase().includes(categoryOrTopic.toLowerCase()) || categoryOrTopic.toLowerCase().includes(opt.value.toLowerCase()));
+    if (matchedOpt) {
+      catSel.value = matchedOpt.value;
+    }
+  }
+
+  updateWritingPresetDropdown(presetId);
 }
 
 function startTimer() {
@@ -140,6 +190,9 @@ async function loadNewPrompt() {
   if (card) {
     card.innerHTML = `<div style="text-align:center;padding:24px;color:var(--text-secondary);">Generating prompt for <strong>${category}</strong>...</div>`;
   }
+
+  const presetSel = document.getElementById('writing-preset-select');
+  if (presetSel) presetSel.value = '';
 
   currentPrompt = await GeminiService.generateWritingPrompt(category);
   StorageService.saveWritingSession(currentPrompt, category);

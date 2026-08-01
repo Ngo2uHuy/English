@@ -29,9 +29,10 @@ export function renderListeningPage() {
           ${LISTENING_EXERCISES.map(ex => `<option value="${ex.id}">🎧 ${ex.title} (${ex.level})</option>`).join('')}
         </select>
         <select id="listening-topic-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
-          ${renderLifeTopicsSelectOptions('Daily Routine & Home Life')}
+          ${renderLifeTopicsSelectOptions('Daily Routine & Home Life', true)}
         </select>
         <select id="listening-level-select" class="input-field" style="max-width:130px;padding:8px 12px;font-size:0.85rem;">
+          <option value="">📊 Tất cả level</option>
           <option value="A2">A2 Elementary</option>
           <option value="B1" selected>B1 Intermediate</option>
           <option value="B2">B2 Upper-Int</option>
@@ -61,6 +62,7 @@ export function renderListeningPage() {
 
   // Bind Events
   document.getElementById('btn-generate-listening')?.addEventListener('click', loadNewPassage);
+
   document.getElementById('listening-preset-select')?.addEventListener('change', (e) => {
     const selectedId = e.target.value;
     if (selectedId) {
@@ -68,10 +70,21 @@ export function renderListeningPage() {
       if (preset) {
         stopAudio();
         currentPassage = preset;
+        syncListeningFilterDropdowns(preset.topic, preset.level, preset.id);
         StorageService.saveListeningSession(currentPassage, preset.topic, preset.level);
         renderCurrentMode();
       }
     }
+  });
+
+  document.getElementById('listening-topic-select')?.addEventListener('change', () => {
+    updateListeningPresetDropdown();
+    loadNewPassage();
+  });
+
+  document.getElementById('listening-level-select')?.addEventListener('change', () => {
+    updateListeningPresetDropdown();
+    loadNewPassage();
   });
 
   container.querySelectorAll('.filter-pill').forEach(btn => {
@@ -86,18 +99,65 @@ export function renderListeningPage() {
   const savedSession = StorageService.getListeningSession();
   if (savedSession && savedSession.passage) {
     currentPassage = savedSession.passage;
-    const topicSel = document.getElementById('listening-topic-select');
-    const levelSel = document.getElementById('listening-level-select');
-    if (topicSel && savedSession.topic) topicSel.value = savedSession.topic;
-    if (levelSel && savedSession.level) levelSel.value = savedSession.level;
+    const passageTopic = currentPassage.topic || savedSession.topic || '';
+    const passageLevel = currentPassage.level || savedSession.level || '';
+    syncListeningFilterDropdowns(passageTopic, passageLevel, currentPassage.id);
     renderCurrentMode();
   } else {
+    updateListeningPresetDropdown();
     loadNewPassage();
   }
 }
 
+function updateListeningPresetDropdown(selectedPresetId = null) {
+  const topicSel = document.getElementById('listening-topic-select');
+  const levelSel = document.getElementById('listening-level-select');
+  const presetSel = document.getElementById('listening-preset-select');
+  if (!presetSel) return;
+
+  const currentTopic = topicSel ? topicSel.value : '';
+  const currentLevel = levelSel ? levelSel.value : '';
+
+  const filtered = LISTENING_EXERCISES.filter(ex => {
+    const matchTopic = !currentTopic || ex.topic === currentTopic || ex.topic?.toLowerCase().includes(currentTopic.toLowerCase());
+    const matchLevel = !currentLevel || ex.level === currentLevel;
+    return matchTopic && matchLevel;
+  });
+
+  presetSel.innerHTML = `
+    <option value="">📚 Kho Bài tập Nghe (${filtered.length}/${LISTENING_EXERCISES.length} bài)</option>
+    ${filtered.map(ex => `<option value="${ex.id}">🎧 ${ex.title} (${ex.level})</option>`).join('')}
+  `;
+
+  const targetId = selectedPresetId || (currentPassage ? currentPassage.id : null);
+  if (targetId && filtered.some(ex => ex.id === targetId)) {
+    presetSel.value = targetId;
+  } else {
+    presetSel.value = '';
+  }
+}
+
+function syncListeningFilterDropdowns(topic, level, presetId = null) {
+  const topicSel = document.getElementById('listening-topic-select');
+  const levelSel = document.getElementById('listening-level-select');
+
+  if (topicSel && topic) {
+    const options = Array.from(topicSel.options);
+    const matchedOpt = options.find(opt => opt.value === topic || opt.value.toLowerCase().includes(topic.toLowerCase()) || topic.toLowerCase().includes(opt.value.toLowerCase()));
+    if (matchedOpt) {
+      topicSel.value = matchedOpt.value;
+    }
+  }
+
+  if (levelSel && level) {
+    levelSel.value = level;
+  }
+
+  updateListeningPresetDropdown(presetId);
+}
+
 async function loadNewPassage() {
-  const topic = document.getElementById('listening-topic-select')?.value || 'Daily Life';
+  const topic = document.getElementById('listening-topic-select')?.value || 'Daily Routine & Home Life';
   const level = document.getElementById('listening-level-select')?.value || 'B1';
   const workspace = document.getElementById('listening-workspace');
 
@@ -108,6 +168,9 @@ async function loadNewPassage() {
       </div>
     `;
   }
+
+  const presetSel = document.getElementById('listening-preset-select');
+  if (presetSel) presetSel.value = '';
 
   stopAudio();
   currentPassage = await GeminiService.generateListeningPassage(topic, level);

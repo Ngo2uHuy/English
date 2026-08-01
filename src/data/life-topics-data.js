@@ -68,8 +68,9 @@ export const LIFE_TOPICS_CATEGORIES = [
 export const ALL_LIFE_TOPICS = LIFE_TOPICS_CATEGORIES.flatMap(cat => cat.topics);
 
 // Helper function to build html select options with grouped optgroups
-export function renderLifeTopicsSelectOptions(selectedTopicName = '') {
-  return LIFE_TOPICS_CATEGORIES.map(category => `
+export function renderLifeTopicsSelectOptions(selectedTopicName = '', includeAllOption = false) {
+  const allOpt = includeAllOption ? `<option value="">🌍 Tất cả chủ đề (All Life Topics)</option>` : '';
+  const groups = LIFE_TOPICS_CATEGORIES.map(category => `
     <optgroup label="${category.icon} ${category.name}">
       ${category.topics.map(t => {
         const isSelected = selectedTopicName === t.name || selectedTopicName === t.id;
@@ -77,4 +78,5 @@ export function renderLifeTopicsSelectOptions(selectedTopicName = '') {
       }).join('')}
     </optgroup>
   `).join('');
+  return allOpt + groups;
 }

@@ -30,7 +30,7 @@ export function renderSpeakingPage() {
           ${SPEAKING_EXERCISES.map(ex => `<option value="${ex.id}">🗣️ ${ex.title} (${ex.level})</option>`).join('')}
         </select>
         <select id="speaking-topic-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
-          ${renderLifeTopicsSelectOptions('Family & Relationships')}
+          ${renderLifeTopicsSelectOptions('Family & Relationships', true)}
         </select>
         <button id="btn-generate-speaking" class="btn btn-primary btn-sm">New Prompt</button>
       </div>
@@ -51,16 +51,23 @@ export function renderSpeakingPage() {
   `;
 
   document.getElementById('btn-generate-speaking')?.addEventListener('click', loadNewTopic);
+
   document.getElementById('speaking-preset-select')?.addEventListener('change', (e) => {
     const selectedId = e.target.value;
     if (selectedId) {
       const preset = SPEAKING_EXERCISES.find(ex => ex.id === selectedId);
       if (preset) {
         currentPrompt = preset;
+        syncSpeakingFilterDropdowns(preset.topic, preset.id);
         StorageService.saveSpeakingSession(currentPrompt, preset.topic);
         renderCurrentMode();
       }
     }
+  });
+
+  document.getElementById('speaking-topic-select')?.addEventListener('change', () => {
+    updateSpeakingPresetDropdown();
+    loadNewTopic();
   });
 
   container.querySelectorAll('.filter-pill').forEach(btn => {
@@ -77,12 +84,51 @@ export function renderSpeakingPage() {
   const savedSession = StorageService.getSpeakingSession();
   if (savedSession && savedSession.prompt) {
     currentPrompt = savedSession.prompt;
-    const topicSel = document.getElementById('speaking-topic-select');
-    if (topicSel && savedSession.topic) topicSel.value = savedSession.topic;
+    const promptTopic = currentPrompt.topic || savedSession.topic || '';
+    syncSpeakingFilterDropdowns(promptTopic, currentPrompt.id);
     renderCurrentMode();
   } else {
+    updateSpeakingPresetDropdown();
     loadNewTopic();
   }
+}
+
+function updateSpeakingPresetDropdown(selectedPresetId = null) {
+  const topicSel = document.getElementById('speaking-topic-select');
+  const presetSel = document.getElementById('speaking-preset-select');
+  if (!presetSel) return;
+
+  const currentTopic = topicSel ? topicSel.value : '';
+
+  const filtered = SPEAKING_EXERCISES.filter(ex => {
+    return !currentTopic || ex.topic === currentTopic || ex.topic?.toLowerCase().includes(currentTopic.toLowerCase());
+  });
+
+  presetSel.innerHTML = `
+    <option value="">📚 Kho Bài tập Nói (${filtered.length}/${SPEAKING_EXERCISES.length} bài)</option>
+    ${filtered.map(ex => `<option value="${ex.id}">🗣️ ${ex.title} (${ex.level})</option>`).join('')}
+  `;
+
+  const targetId = selectedPresetId || (currentPrompt ? currentPrompt.id : null);
+  if (targetId && filtered.some(ex => ex.id === targetId)) {
+    presetSel.value = targetId;
+  } else {
+    presetSel.value = '';
+  }
+}
+
+function syncSpeakingFilterDropdowns(topic, presetId = null) {
+  const topicSel = document.getElementById('speaking-topic-select');
+
+  if (topicSel && topic) {
+    const options = Array.from(topicSel.options);
+    const matchedOpt = options.find(opt => opt.value === topic || opt.value.toLowerCase().includes(topic.toLowerCase()) || topic.toLowerCase().includes(opt.value.toLowerCase()));
+    if (matchedOpt) {
+      topicSel.value = matchedOpt.value;
+    }
+  }
+
+  updateSpeakingPresetDropdown(presetId);
 }
 
 function initSpeechRecognition() {
@@ -96,7 +142,7 @@ function initSpeechRecognition() {
 }
 
 async function loadNewTopic() {
-  const topic = document.getElementById('speaking-topic-select')?.value || 'Self Introduction';
+  const topic = document.getElementById('speaking-topic-select')?.value || 'Family & Relationships';
   const workspace = document.getElementById('speaking-workspace');
 
   if (workspace) {
@@ -106,6 +152,9 @@ async function loadNewTopic() {
       </div>
     `;
   }
+
+  const presetSel = document.getElementById('speaking-preset-select');
+  if (presetSel) presetSel.value = '';
 
   currentPrompt = await GeminiService.generateSpeakingPrompt(topic);
   StorageService.saveSpeakingSession(currentPrompt, topic);

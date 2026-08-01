@@ -28,9 +28,10 @@ export function renderReadingPage() {
           ${READING_EXERCISES.map(ex => `<option value="${ex.id}">📖 ${ex.title} (${ex.level})</option>`).join('')}
         </select>
         <select id="reading-topic-select" class="input-field" style="max-width:220px;padding:8px 12px;font-size:0.85rem;">
-          ${renderLifeTopicsSelectOptions('Emotions & Psychology')}
+          ${renderLifeTopicsSelectOptions('Emotions & Psychology', true)}
         </select>
         <select id="reading-level-select" class="input-field" style="max-width:130px;padding:8px 12px;font-size:0.85rem;">
+          <option value="">📊 Tất cả level</option>
           <option value="B1">B1 Intermediate</option>
           <option value="B2" selected>B2 Upper-Int</option>
           <option value="C1">C1 Advanced</option>
@@ -82,18 +83,32 @@ export function renderReadingPage() {
     </div>
   `;
 
+  // Bind Events
   document.getElementById('btn-generate-reading')?.addEventListener('click', loadNewArticle);
+
   document.getElementById('reading-preset-select')?.addEventListener('change', (e) => {
     const selectedId = e.target.value;
     if (selectedId) {
       const preset = READING_EXERCISES.find(ex => ex.id === selectedId);
       if (preset) {
         currentArticle = preset;
+        syncReadingFilterDropdowns(preset.topic, preset.level, preset.id);
         StorageService.saveReadingSession(currentArticle, preset.topic, preset.level);
         renderArticleContent();
       }
     }
   });
+
+  document.getElementById('reading-topic-select')?.addEventListener('change', () => {
+    updateReadingPresetDropdown();
+    loadNewArticle();
+  });
+
+  document.getElementById('reading-level-select')?.addEventListener('change', () => {
+    updateReadingPresetDropdown();
+    loadNewArticle();
+  });
+
   document.getElementById('btn-close-modal')?.addEventListener('click', () => {
     const modal = document.getElementById('word-modal');
     if (modal) modal.style.display = 'none';
@@ -102,26 +117,78 @@ export function renderReadingPage() {
   const savedSession = StorageService.getReadingSession();
   if (savedSession && savedSession.article) {
     currentArticle = savedSession.article;
-    const topicSel = document.getElementById('reading-topic-select');
-    const levelSel = document.getElementById('reading-level-select');
-    if (topicSel && savedSession.topic) topicSel.value = savedSession.topic;
-    if (levelSel && savedSession.level) levelSel.value = savedSession.level;
+    const articleTopic = currentArticle.topic || savedSession.topic || '';
+    const articleLevel = currentArticle.level || savedSession.level || '';
+    syncReadingFilterDropdowns(articleTopic, articleLevel, currentArticle.id);
     renderArticleContent();
   } else {
+    updateReadingPresetDropdown();
     loadNewArticle();
   }
 
   renderVocabNotebook();
 }
 
+function updateReadingPresetDropdown(selectedPresetId = null) {
+  const topicSel = document.getElementById('reading-topic-select');
+  const levelSel = document.getElementById('reading-level-select');
+  const presetSel = document.getElementById('reading-preset-select');
+  if (!presetSel) return;
+
+  const currentTopic = topicSel ? topicSel.value : '';
+  const currentLevel = levelSel ? levelSel.value : '';
+
+  const filtered = READING_EXERCISES.filter(ex => {
+    const matchTopic = !currentTopic || ex.topic === currentTopic || ex.topic?.toLowerCase().includes(currentTopic.toLowerCase());
+    const matchLevel = !currentLevel || ex.level === currentLevel;
+    return matchTopic && matchLevel;
+  });
+
+  presetSel.innerHTML = `
+    <option value="">📚 Kho Bài tập Đọc (${filtered.length}/${READING_EXERCISES.length} bài)</option>
+    ${filtered.map(ex => `<option value="${ex.id}">📖 ${ex.title} (${ex.level})</option>`).join('')}
+  `;
+
+  const targetId = selectedPresetId || (currentArticle ? currentArticle.id : null);
+  if (targetId && filtered.some(ex => ex.id === targetId)) {
+    presetSel.value = targetId;
+  } else {
+    presetSel.value = '';
+  }
+}
+
+function syncReadingFilterDropdowns(topic, level, presetId = null) {
+  const topicSel = document.getElementById('reading-topic-select');
+  const levelSel = document.getElementById('reading-level-select');
+
+  if (topicSel && topic) {
+    // Check if option exists or match string
+    const options = Array.from(topicSel.options);
+    const matchedOpt = options.find(opt => opt.value === topic || opt.value.toLowerCase().includes(topic.toLowerCase()) || topic.toLowerCase().includes(opt.value.toLowerCase()));
+    if (matchedOpt) {
+      topicSel.value = matchedOpt.value;
+    }
+  }
+
+  if (levelSel && level) {
+    levelSel.value = level;
+  }
+
+  updateReadingPresetDropdown(presetId);
+}
+
 async function loadNewArticle() {
-  const topic = document.getElementById('reading-topic-select')?.value || 'Psychology & Habits';
+  const topic = document.getElementById('reading-topic-select')?.value || 'Emotions & Psychology';
   const level = document.getElementById('reading-level-select')?.value || 'B2';
   const card = document.getElementById('reading-article-card');
 
   if (card) {
     card.innerHTML = `<div style="text-align:center;padding:48px;color:var(--text-secondary);">Generating article for <strong>${topic} (${level})</strong>...</div>`;
   }
+
+  // Clear preset selection when loading a fresh generated article
+  const presetSel = document.getElementById('reading-preset-select');
+  if (presetSel) presetSel.value = '';
 
   currentArticle = await GeminiService.generateReadingArticle(topic, level);
   StorageService.saveReadingSession(currentArticle, topic, level);
