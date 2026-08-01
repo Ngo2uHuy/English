@@ -5006,22 +5006,6 @@ export const VOCAB_BANK = [
     "level": "B1"
   },
   {
-    "id": "v-626",
-    "en": "Antiable",
-    "vn": "Anti có khả năng",
-    "pool": "common",
-    "category": "Travel & Tourism",
-    "level": "B1"
-  },
-  {
-    "id": "v-627",
-    "en": "Antiactive",
-    "vn": "Anti chủ động",
-    "pool": "ielts",
-    "category": "Environment",
-    "level": "C1"
-  },
-  {
     "id": "v-628",
     "en": "Approved",
     "vn": "Đã phê duyệt",
@@ -6030,22 +6014,6 @@ export const VOCAB_BANK = [
     "level": "C1"
   },
   {
-    "id": "v-754",
-    "en": "Counterable",
-    "vn": "Counter có khả năng",
-    "pool": "common",
-    "category": "Beginner",
-    "level": "A2"
-  },
-  {
-    "id": "v-755",
-    "en": "Counteractive",
-    "vn": "Counter chủ động",
-    "pool": "common",
-    "category": "Home & Living",
-    "level": "B1"
-  },
-  {
     "id": "v-756",
     "en": "Created",
     "vn": "Đã tạo ra",
@@ -6360,23 +6328,15 @@ export const VOCAB_BANK = [
   {
     "id": "v-795",
     "en": "Disable",
-    "vn": "Dis có khả năng",
+    "vn": "Vô hiệu hóa, làm tàn tật",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
   },
   {
-    "id": "v-796",
-    "en": "Disactive",
-    "vn": "Dis chủ động",
-    "pool": "toeic",
-    "category": "Work & Career",
-    "level": "B2"
-  },
-  {
     "id": "v-797",
     "en": "Discovery",
-    "vn": "Phát hiện",
+    "vn": "Sự khám phá",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -6384,7 +6344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-798",
     "en": "Discussion",
-    "vn": "Thảo luận",
+    "vn": "Cuộc thảo luận",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -6392,7 +6352,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-799",
     "en": "Disinterested",
-    "vn": "Dis thích thú",
+    "vn": "Không vụ lợi, công tâm",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -7632,7 +7592,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-954",
     "en": "Improved",
-    "vn": "Đã cải thiện",
+    "vn": "Đã cải thiện, được nâng cao",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -7782,110 +7742,6 @@ export const VOCAB_BANK = [
     "level": "B2"
   },
   {
-    "id": "v-973",
-    "en": "Interable",
-    "vn": "Inter có khả năng",
-    "pool": "common",
-    "category": "Education",
-    "level": "A2"
-  },
-  {
-    "id": "v-974",
-    "en": "Interacceptable",
-    "vn": "Inter có thể chấp nhận",
-    "pool": "common",
-    "category": "Food & Dining",
-    "level": "B1"
-  },
-  {
-    "id": "v-975",
-    "en": "Interactive",
-    "vn": "Inter chủ động",
-    "pool": "common",
-    "category": "Health & Mind",
-    "level": "B1"
-  },
-  {
-    "id": "v-976",
-    "en": "Interaffected",
-    "vn": "Inter bị ảnh hưởng",
-    "pool": "ielts",
-    "category": "Environment",
-    "level": "C1"
-  },
-  {
-    "id": "v-977",
-    "en": "Interapplied",
-    "vn": "Inter được ứng dụng",
-    "pool": "ielts",
-    "category": "Psychology",
-    "level": "C1"
-  },
-  {
-    "id": "v-978",
-    "en": "Interbalanced",
-    "vn": "Inter cân bằng",
-    "pool": "common",
-    "category": "Family & Life",
-    "level": "A2"
-  },
-  {
-    "id": "v-979",
-    "en": "Intercertified",
-    "vn": "Inter được chứng nhận",
-    "pool": "toeic",
-    "category": "Work & Career",
-    "level": "B2"
-  },
-  {
-    "id": "v-980",
-    "en": "Intercombined",
-    "vn": "Inter kết hợp",
-    "pool": "common",
-    "category": "Food & Dining",
-    "level": "B1"
-  },
-  {
-    "id": "v-981",
-    "en": "Intereducated",
-    "vn": "Inter có học thức",
-    "pool": "common",
-    "category": "Travel & Tourism",
-    "level": "B1"
-  },
-  {
-    "id": "v-982",
-    "en": "Interemployed",
-    "vn": "Inter có việc làm",
-    "pool": "ielts",
-    "category": "Tech & AI",
-    "level": "C1"
-  },
-  {
-    "id": "v-983",
-    "en": "Interenabled",
-    "vn": "Inter được kích hoạt",
-    "pool": "ielts",
-    "category": "Environment",
-    "level": "C1"
-  },
-  {
-    "id": "v-984",
-    "en": "Interendorsed",
-    "vn": "Inter được ủng hộ",
-    "pool": "ielts",
-    "category": "Law & Ethics",
-    "level": "C1"
-  },
-  {
-    "id": "v-985",
-    "en": "Interenhanced",
-    "vn": "Inter được tăng cường",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
     "id": "v-986",
     "en": "Interested",
     "vn": "Thích thú",
@@ -7896,7 +7752,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-987",
     "en": "Interevaluated",
-    "vn": "Inter được đánh giá",
+    "vn": "Liên được đánh giá",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -7904,23 +7760,15 @@ export const VOCAB_BANK = [
   {
     "id": "v-988",
     "en": "Interexpected",
-    "vn": "Inter được kỳ vọng",
+    "vn": "Liên được kỳ vọng",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
   },
   {
-    "id": "v-989",
-    "en": "Interfocused",
-    "vn": "Inter tập trung",
-    "pool": "toeic",
-    "category": "Work & Career",
-    "level": "B2"
-  },
-  {
     "id": "v-990",
     "en": "Interformed",
-    "vn": "Inter được hình thành",
+    "vn": "Liên được hình thành",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -7928,7 +7776,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-991",
     "en": "Interguided",
-    "vn": "Inter được hướng dẫn",
+    "vn": "Liên được hướng dẫn",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -7936,7 +7784,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-992",
     "en": "Interillustrated",
-    "vn": "Inter được minh họa",
+    "vn": "Liên được minh họa",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -7944,95 +7792,31 @@ export const VOCAB_BANK = [
   {
     "id": "v-993",
     "en": "Interincluded",
-    "vn": "Inter được bao gồm",
+    "vn": "Liên được bao gồm",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
   },
   {
-    "id": "v-994",
-    "en": "Interinformed",
-    "vn": "Inter có thông tin",
-    "pool": "common",
-    "category": "History & World",
-    "level": "B1"
-  },
-  {
-    "id": "v-995",
-    "en": "Interinterested",
-    "vn": "Inter thích thú",
-    "pool": "common",
-    "category": "Education",
-    "level": "A2"
-  },
-  {
-    "id": "v-996",
-    "en": "Interinvolved",
-    "vn": "Inter có liên quan",
-    "pool": "ielts",
-    "category": "Environment",
-    "level": "C1"
-  },
-  {
-    "id": "v-997",
-    "en": "Interisolated",
-    "vn": "Inter bị cô lập",
-    "pool": "toeic",
-    "category": "Finance",
-    "level": "B2"
-  },
-  {
-    "id": "v-998",
-    "en": "Interlearned",
-    "vn": "Inter có học vấn",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
     "id": "v-999",
     "en": "Interlicensed",
-    "vn": "Inter được cấp phép",
+    "vn": "Liên được cấp phép",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
   },
   {
-    "id": "v-1000",
-    "en": "Interlimited",
-    "vn": "Inter bị hạn chế",
-    "pool": "common",
-    "category": "History & World",
-    "level": "B1"
-  },
-  {
-    "id": "v-1001",
-    "en": "Interlocated",
-    "vn": "Inter nằm ở vị trí",
-    "pool": "common",
-    "category": "Advanced Vocab",
-    "level": "C1"
-  },
-  {
     "id": "v-1002",
     "en": "Intermonitored",
-    "vn": "Inter được theo dõi",
+    "vn": "Liên được theo dõi",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
   },
   {
-    "id": "v-1003",
-    "en": "Intermotivated",
-    "vn": "Inter có động lực",
-    "pool": "common",
-    "category": "Health & Mind",
-    "level": "B1"
-  },
-  {
     "id": "v-1004",
     "en": "Interpowered",
-    "vn": "Inter được cấp năng lượng",
+    "vn": "Liên được cấp năng lượng",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -8048,23 +7832,15 @@ export const VOCAB_BANK = [
   {
     "id": "v-1006",
     "en": "Interprotected",
-    "vn": "Inter được bảo vệ",
+    "vn": "Liên được bảo vệ",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
   },
   {
-    "id": "v-1007",
-    "en": "Interqualified",
-    "vn": "Inter đủ điều kiện",
-    "pool": "ielts",
-    "category": "Environment",
-    "level": "C1"
-  },
-  {
     "id": "v-1008",
     "en": "Interrated",
-    "vn": "Inter được xếp hạng",
+    "vn": "Liên được xếp hạng",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -8072,31 +7848,15 @@ export const VOCAB_BANK = [
   {
     "id": "v-1009",
     "en": "Interregulated",
-    "vn": "Inter được quy định",
+    "vn": "Liên được quy định",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
   },
   {
-    "id": "v-1010",
-    "en": "Interrelated",
-    "vn": "Inter có liên quan",
-    "pool": "toeic",
-    "category": "TOEIC Mastery",
-    "level": "B2"
-  },
-  {
-    "id": "v-1011",
-    "en": "Interrestricted",
-    "vn": "Inter bị hạn chế",
-    "pool": "common",
-    "category": "Education",
-    "level": "A2"
-  },
-  {
     "id": "v-1012",
     "en": "Intersecured",
-    "vn": "Inter được bảo mật",
+    "vn": "Liên được bảo mật",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -8104,39 +7864,15 @@ export const VOCAB_BANK = [
   {
     "id": "v-1013",
     "en": "Interselected",
-    "vn": "Inter được lựa chọn",
+    "vn": "Liên được lựa chọn",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
   },
   {
-    "id": "v-1014",
-    "en": "Interseparated",
-    "vn": "Inter bị tách rời",
-    "pool": "ielts",
-    "category": "Law & Ethics",
-    "level": "C1"
-  },
-  {
-    "id": "v-1015",
-    "en": "Intershaped",
-    "vn": "Inter định hình",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
-    "id": "v-1016",
-    "en": "Interstructured",
-    "vn": "Inter có cấu trúc",
-    "pool": "common",
-    "category": "Home & Living",
-    "level": "B1"
-  },
-  {
     "id": "v-1017",
     "en": "Intersuggested",
-    "vn": "Inter được đề xuất",
+    "vn": "Liên được đề xuất",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -8144,7 +7880,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1018",
     "en": "Intersupported",
-    "vn": "Inter được hỗ trợ",
+    "vn": "Liên được hỗ trợ",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -8152,7 +7888,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1019",
     "en": "Intertrained",
-    "vn": "Inter được đào tạo",
+    "vn": "Liên được đào tạo",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -8160,7 +7896,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1020",
     "en": "Interverified",
-    "vn": "Inter được chứng thực",
+    "vn": "Liên được chứng thực",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -9102,190 +8838,6 @@ export const VOCAB_BANK = [
     "level": "C1"
   },
   {
-    "id": "v-1138",
-    "en": "Overable",
-    "vn": "Over có khả năng",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
-    "id": "v-1139",
-    "en": "Overacceptable",
-    "vn": "Over có thể chấp nhận",
-    "pool": "ielts",
-    "category": "Psychology",
-    "level": "C1"
-  },
-  {
-    "id": "v-1140",
-    "en": "Overactive",
-    "vn": "Over chủ động",
-    "pool": "common",
-    "category": "History & World",
-    "level": "B1"
-  },
-  {
-    "id": "v-1141",
-    "en": "Overaffected",
-    "vn": "Over bị ảnh hưởng",
-    "pool": "common",
-    "category": "Intermediate",
-    "level": "B1"
-  },
-  {
-    "id": "v-1142",
-    "en": "Overbalanced",
-    "vn": "Over cân bằng",
-    "pool": "toeic",
-    "category": "Finance",
-    "level": "B2"
-  },
-  {
-    "id": "v-1143",
-    "en": "Overcombined",
-    "vn": "Over kết hợp",
-    "pool": "ielts",
-    "category": "Psychology",
-    "level": "C1"
-  },
-  {
-    "id": "v-1144",
-    "en": "Overeducated",
-    "vn": "Over có học thức",
-    "pool": "toeic",
-    "category": "TOEIC Mastery",
-    "level": "B2"
-  },
-  {
-    "id": "v-1145",
-    "en": "Overemployed",
-    "vn": "Over có việc làm",
-    "pool": "common",
-    "category": "Advanced Vocab",
-    "level": "C1"
-  },
-  {
-    "id": "v-1146",
-    "en": "Overfocused",
-    "vn": "Over tập trung",
-    "pool": "ielts",
-    "category": "Science & Space",
-    "level": "C1"
-  },
-  {
-    "id": "v-1147",
-    "en": "Overinformed",
-    "vn": "Over có thông tin",
-    "pool": "common",
-    "category": "Food & Dining",
-    "level": "B1"
-  },
-  {
-    "id": "v-1148",
-    "en": "Overinterested",
-    "vn": "Over thích thú",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
-    "id": "v-1149",
-    "en": "Overinvolved",
-    "vn": "Over có liên quan",
-    "pool": "common",
-    "category": "Intermediate",
-    "level": "B1"
-  },
-  {
-    "id": "v-1150",
-    "en": "Overisolated",
-    "vn": "Over bị cô lập",
-    "pool": "common",
-    "category": "Beginner",
-    "level": "A2"
-  },
-  {
-    "id": "v-1151",
-    "en": "Overlearned",
-    "vn": "Over có học vấn",
-    "pool": "toeic",
-    "category": "Work & Career",
-    "level": "B2"
-  },
-  {
-    "id": "v-1152",
-    "en": "Overlimited",
-    "vn": "Over bị hạn chế",
-    "pool": "common",
-    "category": "Food & Dining",
-    "level": "B1"
-  },
-  {
-    "id": "v-1153",
-    "en": "Overlocated",
-    "vn": "Over nằm ở vị trí",
-    "pool": "common",
-    "category": "Travel & Tourism",
-    "level": "B1"
-  },
-  {
-    "id": "v-1154",
-    "en": "Overmotivated",
-    "vn": "Over có động lực",
-    "pool": "common",
-    "category": "History & World",
-    "level": "B1"
-  },
-  {
-    "id": "v-1155",
-    "en": "Overqualified",
-    "vn": "Over đủ điều kiện",
-    "pool": "common",
-    "category": "Intermediate",
-    "level": "B1"
-  },
-  {
-    "id": "v-1156",
-    "en": "Overrelated",
-    "vn": "Over có liên quan",
-    "pool": "common",
-    "category": "Health & Mind",
-    "level": "B1"
-  },
-  {
-    "id": "v-1157",
-    "en": "Overrestricted",
-    "vn": "Over bị hạn chế",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
-    "id": "v-1158",
-    "en": "Overseparated",
-    "vn": "Over bị tách rời",
-    "pool": "common",
-    "category": "Family & Life",
-    "level": "A2"
-  },
-  {
-    "id": "v-1159",
-    "en": "Overshaped",
-    "vn": "Over định hình",
-    "pool": "toeic",
-    "category": "Work & Career",
-    "level": "B2"
-  },
-  {
-    "id": "v-1160",
-    "en": "Overstructured",
-    "vn": "Over có cấu trúc",
-    "pool": "ielts",
-    "category": "Law & Ethics",
-    "level": "C1"
-  },
-  {
     "id": "v-1161",
     "en": "Packaged",
     "vn": "Đã đóng gói",
@@ -9382,22 +8934,6 @@ export const VOCAB_BANK = [
     "level": "C1"
   },
   {
-    "id": "v-1173",
-    "en": "Postable",
-    "vn": "Post có khả năng",
-    "pool": "ielts",
-    "category": "Law & Ethics",
-    "level": "C1"
-  },
-  {
-    "id": "v-1174",
-    "en": "Postactive",
-    "vn": "Post chủ động",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
     "id": "v-1175",
     "en": "Potential",
     "vn": "Tiềm năng",
@@ -9424,7 +8960,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1178",
     "en": "Preable",
-    "vn": "Pre có khả năng",
+    "vn": "Trước có khả năng",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -9432,7 +8968,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1179",
     "en": "Preactive",
-    "vn": "Pre chủ động",
+    "vn": "Trước chủ động",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -9592,7 +9128,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1199",
     "en": "Reable",
-    "vn": "Re có khả năng",
+    "vn": "Lại có khả năng",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -9600,7 +9136,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1200",
     "en": "Reacceptable",
-    "vn": "Re có thể chấp nhận",
+    "vn": "Lại có thể chấp nhận",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -9624,7 +9160,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1203",
     "en": "Reactive",
-    "vn": "Re chủ động",
+    "vn": "Lại chủ động",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -9632,7 +9168,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1204",
     "en": "Readapted",
-    "vn": "Re đã thích nghi",
+    "vn": "Lại đã thích nghi",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -9640,7 +9176,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1205",
     "en": "Readjusted",
-    "vn": "Re đã điều chỉnh",
+    "vn": "Lại đã điều chỉnh",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -9648,7 +9184,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1206",
     "en": "Reaffected",
-    "vn": "Re bị ảnh hưởng",
+    "vn": "Lại bị ảnh hưởng",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -9656,7 +9192,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1207",
     "en": "Realigned",
-    "vn": "Re đã căn chỉnh",
+    "vn": "Lại đã căn chỉnh",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -9664,7 +9200,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1208",
     "en": "Reallocated",
-    "vn": "Re đã phân bổ",
+    "vn": "Lại đã phân bổ",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -9672,7 +9208,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1209",
     "en": "Realtered",
-    "vn": "Re đã sửa đổi",
+    "vn": "Lại đã sửa đổi",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -9680,7 +9216,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1210",
     "en": "Reanalyzed",
-    "vn": "Re đã phân tích",
+    "vn": "Lại đã phân tích",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -9688,7 +9224,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1211",
     "en": "Reapproved",
-    "vn": "Re đã phê duyệt",
+    "vn": "Lại đã phê duyệt",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -9696,7 +9232,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1212",
     "en": "Rearranged",
-    "vn": "Re đã sắp xếp",
+    "vn": "Lại đã sắp xếp",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -9704,7 +9240,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1213",
     "en": "Reassembled",
-    "vn": "Re đã lắp ráp",
+    "vn": "Lại đã lắp ráp",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -9712,7 +9248,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1214",
     "en": "Reassigned",
-    "vn": "Re đã phân công",
+    "vn": "Lại đã phân công",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -9720,7 +9256,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1215",
     "en": "Reattached",
-    "vn": "Re đã đính kèm",
+    "vn": "Lại đã đính kèm",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -9728,7 +9264,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1216",
     "en": "Rebalanced",
-    "vn": "Re cân bằng",
+    "vn": "Lại cân bằng",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -9736,7 +9272,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1217",
     "en": "Recalculated",
-    "vn": "Re đã tính toán",
+    "vn": "Lại đã tính toán",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -9744,7 +9280,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1218",
     "en": "Reclassified",
-    "vn": "Re đã phân loại",
+    "vn": "Lại đã phân loại",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -9752,7 +9288,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1219",
     "en": "Recombined",
-    "vn": "Re kết hợp",
+    "vn": "Lại kết hợp",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -9760,7 +9296,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1220",
     "en": "Recompleted",
-    "vn": "Re đã hoàn thành",
+    "vn": "Lại đã hoàn thành",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -9768,7 +9304,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1221",
     "en": "Recomposed",
-    "vn": "Re đã soạn thảo",
+    "vn": "Lại đã soạn thảo",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -9776,7 +9312,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1222",
     "en": "Reconfigured",
-    "vn": "Re đã cấu hình",
+    "vn": "Lại đã cấu hình",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -9784,7 +9320,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1223",
     "en": "Reconnected",
-    "vn": "Re đã kết nối",
+    "vn": "Lại đã kết nối",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -9792,7 +9328,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1224",
     "en": "Recontrolled",
-    "vn": "Re đã kiểm soát",
+    "vn": "Lại đã kiểm soát",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -9800,7 +9336,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1225",
     "en": "Reconverted",
-    "vn": "Re đã chuyển đổi",
+    "vn": "Lại đã chuyển đổi",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -9808,7 +9344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1226",
     "en": "Recooked",
-    "vn": "Re đã nấu",
+    "vn": "Lại đã nấu",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -9824,7 +9360,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1228",
     "en": "Recorrected",
-    "vn": "Re đã sửa đúng",
+    "vn": "Lại đã sửa đúng",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -9832,7 +9368,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1229",
     "en": "Recreated",
-    "vn": "Re đã tạo ra",
+    "vn": "Lại đã tạo ra",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -9840,7 +9376,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1230",
     "en": "Redefined",
-    "vn": "Re đã định nghĩa",
+    "vn": "Lại đã định nghĩa",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -9848,7 +9384,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1231",
     "en": "Redelivered",
-    "vn": "Re đã giao hàng",
+    "vn": "Lại đã giao hàng",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -9856,7 +9392,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1232",
     "en": "Redesigned",
-    "vn": "Re đã thiết kế",
+    "vn": "Lại đã thiết kế",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -9864,7 +9400,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1233",
     "en": "Redeveloped",
-    "vn": "Re đã phát triển",
+    "vn": "Lại đã phát triển",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -9872,7 +9408,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1234",
     "en": "Redirected",
-    "vn": "Re đã chỉ đạo",
+    "vn": "Lại đã chỉ đạo",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -9880,7 +9416,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1235",
     "en": "Rediscovered",
-    "vn": "Re đã phát hiện",
+    "vn": "Lại đã phát hiện",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -9888,7 +9424,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1236",
     "en": "Redisplayed",
-    "vn": "Re đã hiển thị",
+    "vn": "Lại đã hiển thị",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -9896,7 +9432,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1237",
     "en": "Redistributed",
-    "vn": "Re đã phân phối",
+    "vn": "Lại đã phân phối",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -9904,7 +9440,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1238",
     "en": "Redivided",
-    "vn": "Re đã chia nhỏ",
+    "vn": "Lại đã chia nhỏ",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -9912,7 +9448,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1239",
     "en": "Redocumented",
-    "vn": "Re đã ghi hồ sơ",
+    "vn": "Lại đã ghi hồ sơ",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -9928,7 +9464,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1241",
     "en": "Reedited",
-    "vn": "Re đã chỉnh sửa",
+    "vn": "Lại đã chỉnh sửa",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -9936,7 +9472,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1242",
     "en": "Reeducated",
-    "vn": "Re có học thức",
+    "vn": "Lại có học thức",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -9944,7 +9480,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1243",
     "en": "Reemployed",
-    "vn": "Re có việc làm",
+    "vn": "Lại có việc làm",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -9952,7 +9488,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1244",
     "en": "Reencoded",
-    "vn": "Re đã mã hóa",
+    "vn": "Lại đã mã hóa",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -9960,7 +9496,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1245",
     "en": "Reengaged",
-    "vn": "Re đã đính hôn/tham gia",
+    "vn": "Lại đã đính hôn/tham gia",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -9968,7 +9504,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1246",
     "en": "Reestablished",
-    "vn": "Re đã thành lập",
+    "vn": "Lại đã thành lập",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -9976,7 +9512,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1247",
     "en": "Reexpanded",
-    "vn": "Re đã mở rộng",
+    "vn": "Lại đã mở rộng",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -9984,7 +9520,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1248",
     "en": "Reexported",
-    "vn": "Re đã xuất khẩu",
+    "vn": "Lại đã xuất khẩu",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -9992,7 +9528,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1249",
     "en": "Reexpressed",
-    "vn": "Re đã bộc lộ",
+    "vn": "Lại đã bộc lộ",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -10000,7 +9536,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1250",
     "en": "Refiltered",
-    "vn": "Re đã lọc",
+    "vn": "Lại đã lọc",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -10016,7 +9552,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1252",
     "en": "Refinished",
-    "vn": "Re đã hoàn tất",
+    "vn": "Lại đã hoàn tất",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -10024,7 +9560,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1253",
     "en": "Refocused",
-    "vn": "Re tập trung",
+    "vn": "Lại tập trung",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -10032,7 +9568,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1254",
     "en": "Reformatted",
-    "vn": "Re đã định dạng",
+    "vn": "Lại đã định dạng",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -10040,7 +9576,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1255",
     "en": "Regenerated",
-    "vn": "Re đã tạo ra",
+    "vn": "Lại đã tạo ra",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -10064,7 +9600,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1258",
     "en": "Reidentified",
-    "vn": "Re đã xác định",
+    "vn": "Lại đã xác định",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -10072,7 +9608,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1259",
     "en": "Reimported",
-    "vn": "Re đã nhập khẩu",
+    "vn": "Lại đã nhập khẩu",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -10080,7 +9616,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1260",
     "en": "Reimproved",
-    "vn": "Re đã cải thiện",
+    "vn": "Lại đã cải thiện",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -10088,7 +9624,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1261",
     "en": "Reincreased",
-    "vn": "Re đã gia tăng",
+    "vn": "Lại đã gia tăng",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -10096,7 +9632,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1262",
     "en": "Reindexed",
-    "vn": "Re đã đánh mục lục",
+    "vn": "Lại đã đánh mục lục",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -10104,7 +9640,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1263",
     "en": "Reinformed",
-    "vn": "Re có thông tin",
+    "vn": "Lại có thông tin",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -10112,7 +9648,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1264",
     "en": "Reinitiated",
-    "vn": "Re đã khởi xướng",
+    "vn": "Lại đã khởi xướng",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -10120,7 +9656,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1265",
     "en": "Reinnovated",
-    "vn": "Re đã đổi mới",
+    "vn": "Lại đã đổi mới",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -10128,7 +9664,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1266",
     "en": "Reinspected",
-    "vn": "Re đã kiểm tra",
+    "vn": "Lại đã kiểm tra",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -10136,7 +9672,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1267",
     "en": "Reinstalled",
-    "vn": "Re đã cài đặt",
+    "vn": "Lại đã cài đặt",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -10144,7 +9680,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1268",
     "en": "Reinstructed",
-    "vn": "Re đã hướng dẫn",
+    "vn": "Lại đã hướng dẫn",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -10152,7 +9688,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1269",
     "en": "Reintegrated",
-    "vn": "Re đã tích hợp",
+    "vn": "Lại đã tích hợp",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -10160,7 +9696,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1270",
     "en": "Reintended",
-    "vn": "Re đã dự định",
+    "vn": "Lại đã dự định",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -10168,7 +9704,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1271",
     "en": "Reinterested",
-    "vn": "Re thích thú",
+    "vn": "Lại thích thú",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -10176,7 +9712,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1272",
     "en": "Reinterpreted",
-    "vn": "Re đã diễn giải",
+    "vn": "Lại đã diễn giải",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -10184,7 +9720,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1273",
     "en": "Reintroduced",
-    "vn": "Re đã giới thiệu",
+    "vn": "Lại đã giới thiệu",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -10192,7 +9728,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1274",
     "en": "Reinvented",
-    "vn": "Re đã phát minh",
+    "vn": "Lại đã phát minh",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -10200,7 +9736,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1275",
     "en": "Reinvested",
-    "vn": "Re đã đầu tư",
+    "vn": "Lại đã đầu tư",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -10208,7 +9744,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1276",
     "en": "Reinvolved",
-    "vn": "Re có liên quan",
+    "vn": "Lại có liên quan",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -10216,7 +9752,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1277",
     "en": "Reisolated",
-    "vn": "Re bị cô lập",
+    "vn": "Lại bị cô lập",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -10224,7 +9760,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1278",
     "en": "Relabeled",
-    "vn": "Re đã dán nhãn",
+    "vn": "Lại đã dán nhãn",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -10248,7 +9784,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1281",
     "en": "Relaunched",
-    "vn": "Re đã ra mắt",
+    "vn": "Lại đã ra mắt",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -10256,7 +9792,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1282",
     "en": "Relearned",
-    "vn": "Re có học vấn",
+    "vn": "Lại có học vấn",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -10272,7 +9808,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1284",
     "en": "Relimited",
-    "vn": "Re bị hạn chế",
+    "vn": "Lại bị hạn chế",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -10280,7 +9816,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1285",
     "en": "Relinked",
-    "vn": "Re đã liên kết",
+    "vn": "Lại đã liên kết",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -10288,7 +9824,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1286",
     "en": "Relocated",
-    "vn": "Re nằm ở vị trí",
+    "vn": "Lại nằm ở vị trí",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -10296,7 +9832,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1287",
     "en": "Remanaged",
-    "vn": "Re đã quản lý",
+    "vn": "Lại đã quản lý",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -10304,7 +9840,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1288",
     "en": "Remanufactured",
-    "vn": "Re đã sản xuất",
+    "vn": "Lại đã sản xuất",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -10312,7 +9848,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1289",
     "en": "Remapped",
-    "vn": "Re đã lập bản đồ",
+    "vn": "Lại đã lập bản đồ",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -10320,7 +9856,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1290",
     "en": "Rematched",
-    "vn": "Re đã ghép nối",
+    "vn": "Lại đã ghép nối",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -10328,7 +9864,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1291",
     "en": "Remeasured",
-    "vn": "Re đã đo lường",
+    "vn": "Lại đã đo lường",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -10336,7 +9872,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1292",
     "en": "Remodified",
-    "vn": "Re đã chỉnh sửa",
+    "vn": "Lại đã chỉnh sửa",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -10344,7 +9880,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1293",
     "en": "Remotivated",
-    "vn": "Re có động lực",
+    "vn": "Lại có động lực",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -10352,7 +9888,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1294",
     "en": "Renavigated",
-    "vn": "Re đã điều hướng",
+    "vn": "Lại đã điều hướng",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -10368,7 +9904,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1296",
     "en": "Renegotiated",
-    "vn": "Re đã thương lượng",
+    "vn": "Lại đã thương lượng",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -10376,7 +9912,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1297",
     "en": "Renormalized",
-    "vn": "Re đã chuẩn hóa",
+    "vn": "Lại đã chuẩn hóa",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -10392,7 +9928,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1299",
     "en": "Reobserved",
-    "vn": "Re đã quan sát",
+    "vn": "Lại đã quan sát",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -10400,7 +9936,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1300",
     "en": "Reobtained",
-    "vn": "Re đã thu được",
+    "vn": "Lại đã thu được",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -10408,7 +9944,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1301",
     "en": "Reoccupied",
-    "vn": "Re đã chiếm giữ",
+    "vn": "Lại đã chiếm giữ",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -10416,7 +9952,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1302",
     "en": "Reoperated",
-    "vn": "Re đã vận hành",
+    "vn": "Lại đã vận hành",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -10424,7 +9960,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1303",
     "en": "Reoptimized",
-    "vn": "Re đã tối ưu hóa",
+    "vn": "Lại đã tối ưu hóa",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -10432,7 +9968,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1304",
     "en": "Reorganized",
-    "vn": "Re đã tổ chức",
+    "vn": "Lại đã tổ chức",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -10440,7 +9976,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1305",
     "en": "Reoriented",
-    "vn": "Re đã định hướng",
+    "vn": "Lại đã định hướng",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -10448,7 +9984,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1306",
     "en": "Repackaged",
-    "vn": "Re đã đóng gói",
+    "vn": "Lại đã đóng gói",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -10464,7 +10000,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1308",
     "en": "Reparsed",
-    "vn": "Re đã phân tích cú pháp",
+    "vn": "Lại đã phân tích cú pháp",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -10472,7 +10008,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1309",
     "en": "Reperformed",
-    "vn": "Re đã thực hiện",
+    "vn": "Lại đã thực hiện",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -10480,7 +10016,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1310",
     "en": "Replanned",
-    "vn": "Re đã lên kế hoạch",
+    "vn": "Lại đã lên kế hoạch",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -10504,7 +10040,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1313",
     "en": "Reprepared",
-    "vn": "Re đã chuẩn bị",
+    "vn": "Lại đã chuẩn bị",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -10512,7 +10048,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1314",
     "en": "Reprocessed",
-    "vn": "Re đã xử lý",
+    "vn": "Lại đã xử lý",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -10520,7 +10056,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1315",
     "en": "Reproduced",
-    "vn": "Re đã sản xuất",
+    "vn": "Lại đã sản xuất",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -10528,7 +10064,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1316",
     "en": "Reprogrammed",
-    "vn": "Re đã lập trình",
+    "vn": "Lại đã lập trình",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -10536,7 +10072,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1317",
     "en": "Republished",
-    "vn": "Re đã xuất bản",
+    "vn": "Lại đã xuất bản",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -10544,7 +10080,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1318",
     "en": "Requalified",
-    "vn": "Re đủ điều kiện",
+    "vn": "Lại đủ điều kiện",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -10552,7 +10088,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1319",
     "en": "Rereacted",
-    "vn": "Re đã phản ứng",
+    "vn": "Lại đã phản ứng",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -10560,7 +10096,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1320",
     "en": "Rerecorded",
-    "vn": "Re đã ghi lại",
+    "vn": "Lại đã ghi lại",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -10568,7 +10104,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1321",
     "en": "Rereduced",
-    "vn": "Re đã giảm bớt",
+    "vn": "Lại đã giảm bớt",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -10576,7 +10112,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1322",
     "en": "Rerefined",
-    "vn": "Re đã tinh chế",
+    "vn": "Lại đã tinh chế",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -10584,7 +10120,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1323",
     "en": "Rerelated",
-    "vn": "Re có liên quan",
+    "vn": "Lại có liên quan",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -10592,7 +10128,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1324",
     "en": "Rereleased",
-    "vn": "Re đã phát hành",
+    "vn": "Lại đã phát hành",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -10600,7 +10136,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1325",
     "en": "Rerendered",
-    "vn": "Re đã kết xuất",
+    "vn": "Lại đã kết xuất",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -10608,7 +10144,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1326",
     "en": "Rerepaired",
-    "vn": "Re đã sửa chữa",
+    "vn": "Lại đã sửa chữa",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -10616,7 +10152,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1327",
     "en": "Rereported",
-    "vn": "Re đã báo cáo",
+    "vn": "Lại đã báo cáo",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -10624,7 +10160,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1328",
     "en": "Reresolved",
-    "vn": "Re đã giải quyết",
+    "vn": "Lại đã giải quyết",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -10632,7 +10168,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1329",
     "en": "Rerestored",
-    "vn": "Re đã phục hồi",
+    "vn": "Lại đã phục hồi",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -10640,7 +10176,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1330",
     "en": "Rerestricted",
-    "vn": "Re bị hạn chế",
+    "vn": "Lại bị hạn chế",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -10648,7 +10184,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1331",
     "en": "Rereviewed",
-    "vn": "Re đã đánh giá",
+    "vn": "Lại đã đánh giá",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -10656,7 +10192,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1332",
     "en": "Rerouted",
-    "vn": "Re đã định tuyến",
+    "vn": "Lại đã định tuyến",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -10664,7 +10200,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1333",
     "en": "Rescheduled",
-    "vn": "Re đã lên lịch",
+    "vn": "Lại đã lên lịch",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -10680,7 +10216,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1335",
     "en": "Researched",
-    "vn": "Re đã tìm kiếm",
+    "vn": "Lại đã tìm kiếm",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -10688,7 +10224,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1336",
     "en": "Reseparated",
-    "vn": "Re bị tách rời",
+    "vn": "Lại bị tách rời",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -10696,7 +10232,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1337",
     "en": "Reserved",
-    "vn": "Re đã phục vụ",
+    "vn": "Lại đã phục vụ",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -10704,7 +10240,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1338",
     "en": "Reshaped",
-    "vn": "Re định hình",
+    "vn": "Lại định hình",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -10712,7 +10248,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1339",
     "en": "Reshared",
-    "vn": "Re đã chia sẻ",
+    "vn": "Lại đã chia sẻ",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -10728,7 +10264,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1341",
     "en": "Resimplified",
-    "vn": "Re đã giản hóa",
+    "vn": "Lại đã giản hóa",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -10736,7 +10272,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1342",
     "en": "Resimulated",
-    "vn": "Re đã mô phỏng",
+    "vn": "Lại đã mô phỏng",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -10760,7 +10296,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1345",
     "en": "Respecified",
-    "vn": "Re đã chỉ định",
+    "vn": "Lại đã chỉ định",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -10776,7 +10312,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1347",
     "en": "Restandardized",
-    "vn": "Re đã chuẩn hóa",
+    "vn": "Lại đã chuẩn hóa",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -10800,7 +10336,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1350",
     "en": "Restructured",
-    "vn": "Re có cấu trúc",
+    "vn": "Lại có cấu trúc",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -10808,7 +10344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1351",
     "en": "Resubmitted",
-    "vn": "Re đã nộp",
+    "vn": "Lại đã nộp",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -10824,7 +10360,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1353",
     "en": "Resynchronized",
-    "vn": "Re đã đồng bộ",
+    "vn": "Lại đã đồng bộ",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -10832,7 +10368,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1354",
     "en": "Resynthesized",
-    "vn": "Re đã tổng hợp",
+    "vn": "Lại đã tổng hợp",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -10840,7 +10376,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1355",
     "en": "Retested",
-    "vn": "Re đã kiểm thử",
+    "vn": "Lại đã kiểm thử",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -10848,7 +10384,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1356",
     "en": "Retransformed",
-    "vn": "Re đã biến đổi",
+    "vn": "Lại đã biến đổi",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -10856,7 +10392,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1357",
     "en": "Retranslated",
-    "vn": "Re đã dịch",
+    "vn": "Lại đã dịch",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -10864,7 +10400,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1358",
     "en": "Reupdated",
-    "vn": "Re đã cập nhật",
+    "vn": "Lại đã cập nhật",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -10872,7 +10408,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1359",
     "en": "Revalidated",
-    "vn": "Re đã xác minh",
+    "vn": "Lại đã xác minh",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -10888,7 +10424,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1361",
     "en": "Revisualized",
-    "vn": "Re đã trực quan hóa",
+    "vn": "Lại đã trực quan hóa",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -11134,22 +10670,6 @@ export const VOCAB_BANK = [
     "level": "B2"
   },
   {
-    "id": "v-1392",
-    "en": "Subable",
-    "vn": "Sub có khả năng",
-    "pool": "toeic",
-    "category": "TOEIC Mastery",
-    "level": "B2"
-  },
-  {
-    "id": "v-1393",
-    "en": "Subactive",
-    "vn": "Sub chủ động",
-    "pool": "common",
-    "category": "Intermediate",
-    "level": "B1"
-  },
-  {
     "id": "v-1394",
     "en": "Subject",
     "vn": "Possessive Adjective (+ Noun)",
@@ -11179,22 +10699,6 @@ export const VOCAB_BANK = [
     "vn": "Siêu",
     "pool": "ielts",
     "category": "Tech & AI",
-    "level": "C1"
-  },
-  {
-    "id": "v-1398",
-    "en": "Superable",
-    "vn": "Super có khả năng",
-    "pool": "ielts",
-    "category": "Environment",
-    "level": "C1"
-  },
-  {
-    "id": "v-1399",
-    "en": "Superactive",
-    "vn": "Super chủ động",
-    "pool": "ielts",
-    "category": "Law & Ethics",
     "level": "C1"
   },
   {
@@ -11408,7 +10912,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1426",
     "en": "Unable",
-    "vn": "Un có khả năng",
+    "vn": "Không thể, không có khả năng",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -11416,79 +10920,23 @@ export const VOCAB_BANK = [
   {
     "id": "v-1427",
     "en": "Unacceptable",
-    "vn": "Un có thể chấp nhận",
+    "vn": "Không thể chấp nhận",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
   },
   {
-    "id": "v-1428",
-    "en": "Unactive",
-    "vn": "Un chủ động",
-    "pool": "common",
-    "category": "Advanced Vocab",
-    "level": "C1"
-  },
-  {
-    "id": "v-1429",
-    "en": "Unadapted",
-    "vn": "Un đã thích nghi",
-    "pool": "common",
-    "category": "Intermediate",
-    "level": "B1"
-  },
-  {
-    "id": "v-1430",
-    "en": "Unadjusted",
-    "vn": "Un đã điều chỉnh",
-    "pool": "common",
-    "category": "Beginner",
-    "level": "A2"
-  },
-  {
     "id": "v-1431",
     "en": "Unaffected",
-    "vn": "Un bị ảnh hưởng",
+    "vn": "Không bị ảnh hưởng",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
   },
   {
-    "id": "v-1432",
-    "en": "Unaligned",
-    "vn": "Un đã căn chỉnh",
-    "pool": "common",
-    "category": "Home & Living",
-    "level": "B1"
-  },
-  {
-    "id": "v-1433",
-    "en": "Unallocated",
-    "vn": "Un đã phân bổ",
-    "pool": "toeic",
-    "category": "Work & Career",
-    "level": "B2"
-  },
-  {
-    "id": "v-1434",
-    "en": "Unaltered",
-    "vn": "Un đã sửa đổi",
-    "pool": "common",
-    "category": "Education",
-    "level": "A2"
-  },
-  {
-    "id": "v-1435",
-    "en": "Unanalyzed",
-    "vn": "Un đã phân tích",
-    "pool": "common",
-    "category": "Food & Dining",
-    "level": "B1"
-  },
-  {
     "id": "v-1436",
     "en": "Unapproved",
-    "vn": "Un đã phê duyệt",
+    "vn": "Không đã phê duyệt",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -11496,7 +10944,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1437",
     "en": "Unarranged",
-    "vn": "Un đã sắp xếp",
+    "vn": "Không đã sắp xếp",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -11504,7 +10952,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1438",
     "en": "Unassembled",
-    "vn": "Un đã lắp ráp",
+    "vn": "Không đã lắp ráp",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -11512,7 +10960,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1439",
     "en": "Unassigned",
-    "vn": "Un đã phân công",
+    "vn": "Không đã phân công",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -11520,7 +10968,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1440",
     "en": "Unattached",
-    "vn": "Un đã đính kèm",
+    "vn": "Độc thân, không gắn kết",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -11528,7 +10976,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1441",
     "en": "Unbalanced",
-    "vn": "Un cân bằng",
+    "vn": "Mất cân bằng",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -11536,7 +10984,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1442",
     "en": "Uncalculated",
-    "vn": "Un đã tính toán",
+    "vn": "Không đã tính toán",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -11544,7 +10992,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1443",
     "en": "Unclassified",
-    "vn": "Un đã phân loại",
+    "vn": "Không đã phân loại",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -11552,7 +11000,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1444",
     "en": "Uncombined",
-    "vn": "Un kết hợp",
+    "vn": "Không kết hợp",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -11560,7 +11008,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1445",
     "en": "Uncompleted",
-    "vn": "Un đã hoàn thành",
+    "vn": "Không đã hoàn thành",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -11568,7 +11016,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1446",
     "en": "Uncomposed",
-    "vn": "Un đã soạn thảo",
+    "vn": "Không đã soạn thảo",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -11576,7 +11024,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1447",
     "en": "Unconfigured",
-    "vn": "Un đã cấu hình",
+    "vn": "Không đã cấu hình",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -11584,7 +11032,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1448",
     "en": "Unconnected",
-    "vn": "Un đã kết nối",
+    "vn": "Không đã kết nối",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -11592,7 +11040,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1449",
     "en": "Uncontrolled",
-    "vn": "Un đã kiểm soát",
+    "vn": "Không kiểm soát được",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -11600,7 +11048,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1450",
     "en": "Unconverted",
-    "vn": "Un đã chuyển đổi",
+    "vn": "Không đã chuyển đổi",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -11608,7 +11056,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1451",
     "en": "Uncooked",
-    "vn": "Un đã nấu",
+    "vn": "Không đã nấu",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -11616,7 +11064,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1452",
     "en": "Uncorrected",
-    "vn": "Un đã sửa đúng",
+    "vn": "Không đã sửa đúng",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -11624,7 +11072,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1453",
     "en": "Uncreated",
-    "vn": "Un đã tạo ra",
+    "vn": "Không đã tạo ra",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -11632,7 +11080,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1454",
     "en": "Undefined",
-    "vn": "Un đã định nghĩa",
+    "vn": "Chưa xác định",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -11640,7 +11088,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1455",
     "en": "Undelivered",
-    "vn": "Un đã giao hàng",
+    "vn": "Không đã giao hàng",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -11654,193 +11102,9 @@ export const VOCAB_BANK = [
     "level": "C1"
   },
   {
-    "id": "v-1457",
-    "en": "Underable",
-    "vn": "Under có khả năng",
-    "pool": "common",
-    "category": "Health & Mind",
-    "level": "B1"
-  },
-  {
-    "id": "v-1458",
-    "en": "Underacceptable",
-    "vn": "Under có thể chấp nhận",
-    "pool": "common",
-    "category": "Travel & Tourism",
-    "level": "B1"
-  },
-  {
-    "id": "v-1459",
-    "en": "Underactive",
-    "vn": "Under chủ động",
-    "pool": "ielts",
-    "category": "Tech & AI",
-    "level": "C1"
-  },
-  {
-    "id": "v-1460",
-    "en": "Underaffected",
-    "vn": "Under bị ảnh hưởng",
-    "pool": "ielts",
-    "category": "Law & Ethics",
-    "level": "C1"
-  },
-  {
-    "id": "v-1461",
-    "en": "Underbalanced",
-    "vn": "Under cân bằng",
-    "pool": "toeic",
-    "category": "Work & Career",
-    "level": "B2"
-  },
-  {
-    "id": "v-1462",
-    "en": "Undercombined",
-    "vn": "Under kết hợp",
-    "pool": "common",
-    "category": "Travel & Tourism",
-    "level": "B1"
-  },
-  {
-    "id": "v-1463",
-    "en": "Undereducated",
-    "vn": "Under có học thức",
-    "pool": "ielts",
-    "category": "Environment",
-    "level": "C1"
-  },
-  {
-    "id": "v-1464",
-    "en": "Underemployed",
-    "vn": "Under có việc làm",
-    "pool": "toeic",
-    "category": "Finance",
-    "level": "B2"
-  },
-  {
-    "id": "v-1465",
-    "en": "Underfocused",
-    "vn": "Under tập trung",
-    "pool": "common",
-    "category": "Food & Dining",
-    "level": "B1"
-  },
-  {
-    "id": "v-1466",
-    "en": "Underinformed",
-    "vn": "Under có thông tin",
-    "pool": "common",
-    "category": "Advanced Vocab",
-    "level": "C1"
-  },
-  {
-    "id": "v-1467",
-    "en": "Underinterested",
-    "vn": "Under thích thú",
-    "pool": "common",
-    "category": "Health & Mind",
-    "level": "B1"
-  },
-  {
-    "id": "v-1468",
-    "en": "Underinvolved",
-    "vn": "Under có liên quan",
-    "pool": "ielts",
-    "category": "Law & Ethics",
-    "level": "C1"
-  },
-  {
-    "id": "v-1469",
-    "en": "Underisolated",
-    "vn": "Under bị cô lập",
-    "pool": "ielts",
-    "category": "Science & Space",
-    "level": "C1"
-  },
-  {
-    "id": "v-1470",
-    "en": "Underlearned",
-    "vn": "Under có học vấn",
-    "pool": "common",
-    "category": "History & World",
-    "level": "B1"
-  },
-  {
-    "id": "v-1471",
-    "en": "Underlimited",
-    "vn": "Under bị hạn chế",
-    "pool": "common",
-    "category": "Advanced Vocab",
-    "level": "C1"
-  },
-  {
-    "id": "v-1472",
-    "en": "Underlocated",
-    "vn": "Under nằm ở vị trí",
-    "pool": "common",
-    "category": "Beginner",
-    "level": "A2"
-  },
-  {
-    "id": "v-1473",
-    "en": "Undermotivated",
-    "vn": "Under có động lực",
-    "pool": "ielts",
-    "category": "Tech & AI",
-    "level": "C1"
-  },
-  {
-    "id": "v-1474",
-    "en": "Underqualified",
-    "vn": "Under đủ điều kiện",
-    "pool": "ielts",
-    "category": "Law & Ethics",
-    "level": "C1"
-  },
-  {
-    "id": "v-1475",
-    "en": "Underrelated",
-    "vn": "Under có liên quan",
-    "pool": "common",
-    "category": "Intermediate",
-    "level": "B1"
-  },
-  {
-    "id": "v-1476",
-    "en": "Underrestricted",
-    "vn": "Under bị hạn chế",
-    "pool": "common",
-    "category": "Health & Mind",
-    "level": "B1"
-  },
-  {
-    "id": "v-1477",
-    "en": "Underseparated",
-    "vn": "Under bị tách rời",
-    "pool": "common",
-    "category": "Arts & Culture",
-    "level": "B1"
-  },
-  {
-    "id": "v-1478",
-    "en": "Undershaped",
-    "vn": "Under định hình",
-    "pool": "common",
-    "category": "History & World",
-    "level": "B1"
-  },
-  {
-    "id": "v-1479",
-    "en": "Understructured",
-    "vn": "Under có cấu trúc",
-    "pool": "common",
-    "category": "Education",
-    "level": "A2"
-  },
-  {
     "id": "v-1480",
     "en": "Undesigned",
-    "vn": "Un đã thiết kế",
+    "vn": "Không đã thiết kế",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -11848,7 +11112,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1481",
     "en": "Undeveloped",
-    "vn": "Un đã phát triển",
+    "vn": "Không đã phát triển",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -11856,7 +11120,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1482",
     "en": "Undirected",
-    "vn": "Un đã chỉ đạo",
+    "vn": "Không đã chỉ đạo",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -11864,7 +11128,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1483",
     "en": "Undiscovered",
-    "vn": "Un đã phát hiện",
+    "vn": "Không đã phát hiện",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -11872,7 +11136,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1484",
     "en": "Undisplayed",
-    "vn": "Un đã hiển thị",
+    "vn": "Không đã hiển thị",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -11880,7 +11144,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1485",
     "en": "Undistributed",
-    "vn": "Un đã phân phối",
+    "vn": "Không đã phân phối",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -11888,7 +11152,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1486",
     "en": "Undivided",
-    "vn": "Un đã chia nhỏ",
+    "vn": "Không đã chia nhỏ",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -11896,7 +11160,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1487",
     "en": "Undocumented",
-    "vn": "Un đã ghi hồ sơ",
+    "vn": "Không đã ghi hồ sơ",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -11904,7 +11168,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1488",
     "en": "Unedited",
-    "vn": "Un đã chỉnh sửa",
+    "vn": "Không đã chỉnh sửa",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -11912,7 +11176,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1489",
     "en": "Uneducated",
-    "vn": "Un có học thức",
+    "vn": "Không có học thức",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -11920,7 +11184,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1490",
     "en": "Unemployed",
-    "vn": "Un có việc làm",
+    "vn": "Thất nghiệp",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -11928,7 +11192,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1491",
     "en": "Unencoded",
-    "vn": "Un đã mã hóa",
+    "vn": "Không đã mã hóa",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -11936,7 +11200,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1492",
     "en": "Unengaged",
-    "vn": "Un đã đính hôn/tham gia",
+    "vn": "Không đã đính hôn/tham gia",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -11944,7 +11208,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1493",
     "en": "Unestablished",
-    "vn": "Un đã thành lập",
+    "vn": "Không đã thành lập",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -11952,7 +11216,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1494",
     "en": "Unexpanded",
-    "vn": "Un đã mở rộng",
+    "vn": "Không đã mở rộng",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -11960,7 +11224,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1495",
     "en": "Unexported",
-    "vn": "Un đã xuất khẩu",
+    "vn": "Không đã xuất khẩu",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -11968,7 +11232,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1496",
     "en": "Unexpressed",
-    "vn": "Un đã bộc lộ",
+    "vn": "Không đã bộc lộ",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -11976,7 +11240,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1497",
     "en": "Unfiltered",
-    "vn": "Un đã lọc",
+    "vn": "Không đã lọc",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -11984,7 +11248,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1498",
     "en": "Unfinished",
-    "vn": "Un đã hoàn tất",
+    "vn": "Không đã hoàn tất",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -11992,7 +11256,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1499",
     "en": "Unfocused",
-    "vn": "Un tập trung",
+    "vn": "Không tập trung",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -12000,7 +11264,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1500",
     "en": "Unformatted",
-    "vn": "Un đã định dạng",
+    "vn": "Không đã định dạng",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -12008,7 +11272,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1501",
     "en": "Ungenerated",
-    "vn": "Un đã tạo ra",
+    "vn": "Không đã tạo ra",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -12016,7 +11280,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1502",
     "en": "Unidentified",
-    "vn": "Un đã xác định",
+    "vn": "Chưa xác định danh tính",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -12024,7 +11288,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1503",
     "en": "Unimported",
-    "vn": "Un đã nhập khẩu",
+    "vn": "Không đã nhập khẩu",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -12032,7 +11296,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1504",
     "en": "Unimproved",
-    "vn": "Un đã cải thiện",
+    "vn": "Không đã cải thiện",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -12040,7 +11304,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1505",
     "en": "Unincreased",
-    "vn": "Un đã gia tăng",
+    "vn": "Không đã gia tăng",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -12048,7 +11312,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1506",
     "en": "Unindexed",
-    "vn": "Un đã đánh mục lục",
+    "vn": "Không đã đánh mục lục",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -12056,7 +11320,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1507",
     "en": "Uninformed",
-    "vn": "Un có thông tin",
+    "vn": "Không có thông tin",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -12064,7 +11328,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1508",
     "en": "Uninitiated",
-    "vn": "Un đã khởi xướng",
+    "vn": "Không đã khởi xướng",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -12072,7 +11336,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1509",
     "en": "Uninnovated",
-    "vn": "Un đã đổi mới",
+    "vn": "Không đã đổi mới",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -12080,7 +11344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1510",
     "en": "Uninspected",
-    "vn": "Un đã kiểm tra",
+    "vn": "Không đã kiểm tra",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -12088,7 +11352,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1511",
     "en": "Uninstalled",
-    "vn": "Un đã cài đặt",
+    "vn": "Không đã cài đặt",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -12096,7 +11360,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1512",
     "en": "Uninstructed",
-    "vn": "Un đã hướng dẫn",
+    "vn": "Không đã hướng dẫn",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -12104,7 +11368,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1513",
     "en": "Unintegrated",
-    "vn": "Un đã tích hợp",
+    "vn": "Không đã tích hợp",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -12112,7 +11376,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1514",
     "en": "Unintended",
-    "vn": "Un đã dự định",
+    "vn": "Không đã dự định",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -12120,7 +11384,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1515",
     "en": "Uninterested",
-    "vn": "Un thích thú",
+    "vn": "Không thích thú",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -12128,7 +11392,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1516",
     "en": "Uninterpreted",
-    "vn": "Un đã diễn giải",
+    "vn": "Không đã diễn giải",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -12136,7 +11400,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1517",
     "en": "Unintroduced",
-    "vn": "Un đã giới thiệu",
+    "vn": "Không đã giới thiệu",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -12144,7 +11408,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1518",
     "en": "Uninvented",
-    "vn": "Un đã phát minh",
+    "vn": "Không đã phát minh",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -12152,7 +11416,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1519",
     "en": "Uninvested",
-    "vn": "Un đã đầu tư",
+    "vn": "Không đã đầu tư",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -12160,7 +11424,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1520",
     "en": "Uninvolved",
-    "vn": "Un có liên quan",
+    "vn": "Không có liên quan",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -12168,7 +11432,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1521",
     "en": "Unisolated",
-    "vn": "Un bị cô lập",
+    "vn": "Không bị cô lập",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -12176,7 +11440,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1522",
     "en": "Unlabeled",
-    "vn": "Un đã dán nhãn",
+    "vn": "Không đã dán nhãn",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -12184,7 +11448,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1523",
     "en": "Unlaunched",
-    "vn": "Un đã ra mắt",
+    "vn": "Không đã ra mắt",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -12192,7 +11456,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1524",
     "en": "Unlearned",
-    "vn": "Un có học vấn",
+    "vn": "Không có học vấn",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -12200,7 +11464,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1525",
     "en": "Unlimited",
-    "vn": "Un bị hạn chế",
+    "vn": "Không bị hạn chế",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -12208,7 +11472,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1526",
     "en": "Unlinked",
-    "vn": "Un đã liên kết",
+    "vn": "Không đã liên kết",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -12216,7 +11480,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1527",
     "en": "Unlocated",
-    "vn": "Un nằm ở vị trí",
+    "vn": "Không nằm ở vị trí",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -12224,7 +11488,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1528",
     "en": "Unmanaged",
-    "vn": "Un đã quản lý",
+    "vn": "Không đã quản lý",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -12232,7 +11496,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1529",
     "en": "Unmanufactured",
-    "vn": "Un đã sản xuất",
+    "vn": "Không đã sản xuất",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -12240,7 +11504,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1530",
     "en": "Unmapped",
-    "vn": "Un đã lập bản đồ",
+    "vn": "Không đã lập bản đồ",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -12248,7 +11512,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1531",
     "en": "Unmatched",
-    "vn": "Un đã ghép nối",
+    "vn": "Không đã ghép nối",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -12256,7 +11520,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1532",
     "en": "Unmeasured",
-    "vn": "Un đã đo lường",
+    "vn": "Không đã đo lường",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -12264,7 +11528,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1533",
     "en": "Unmodified",
-    "vn": "Un đã chỉnh sửa",
+    "vn": "Không đã chỉnh sửa",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -12272,7 +11536,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1534",
     "en": "Unmotivated",
-    "vn": "Un có động lực",
+    "vn": "Không có động lực",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -12280,7 +11544,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1535",
     "en": "Unnavigated",
-    "vn": "Un đã điều hướng",
+    "vn": "Không đã điều hướng",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -12288,7 +11552,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1536",
     "en": "Unnegotiated",
-    "vn": "Un đã thương lượng",
+    "vn": "Không đã thương lượng",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -12296,7 +11560,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1537",
     "en": "Unnormalized",
-    "vn": "Un đã chuẩn hóa",
+    "vn": "Không đã chuẩn hóa",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -12304,7 +11568,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1538",
     "en": "Unobserved",
-    "vn": "Un đã quan sát",
+    "vn": "Không đã quan sát",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -12312,7 +11576,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1539",
     "en": "Unobtained",
-    "vn": "Un đã thu được",
+    "vn": "Không đã thu được",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -12320,7 +11584,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1540",
     "en": "Unoccupied",
-    "vn": "Un đã chiếm giữ",
+    "vn": "Trống, không có người ở, nhàn rỗi",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -12328,7 +11592,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1541",
     "en": "Unoperated",
-    "vn": "Un đã vận hành",
+    "vn": "Chưa vận hành",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -12336,7 +11600,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1542",
     "en": "Unoptimized",
-    "vn": "Un đã tối ưu hóa",
+    "vn": "Không đã tối ưu hóa",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -12344,7 +11608,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1543",
     "en": "Unorganized",
-    "vn": "Un đã tổ chức",
+    "vn": "Không đã tổ chức",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -12352,7 +11616,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1544",
     "en": "Unoriented",
-    "vn": "Un đã định hướng",
+    "vn": "Không đã định hướng",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -12360,7 +11624,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1545",
     "en": "Unpackaged",
-    "vn": "Un đã đóng gói",
+    "vn": "Không đã đóng gói",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -12368,7 +11632,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1546",
     "en": "Unparsed",
-    "vn": "Un đã phân tích cú pháp",
+    "vn": "Không đã phân tích cú pháp",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -12376,7 +11640,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1547",
     "en": "Unperformed",
-    "vn": "Un đã thực hiện",
+    "vn": "Không đã thực hiện",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -12384,7 +11648,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1548",
     "en": "Unplanned",
-    "vn": "Un đã lên kế hoạch",
+    "vn": "Ngoài kế hoạch",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -12392,7 +11656,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1549",
     "en": "Unprepared",
-    "vn": "Un đã chuẩn bị",
+    "vn": "Chưa chuẩn bị",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -12400,7 +11664,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1550",
     "en": "Unprocessed",
-    "vn": "Un đã xử lý",
+    "vn": "Không đã xử lý",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -12408,7 +11672,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1551",
     "en": "Unproduced",
-    "vn": "Un đã sản xuất",
+    "vn": "Không đã sản xuất",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -12416,7 +11680,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1552",
     "en": "Unprogrammed",
-    "vn": "Un đã lập trình",
+    "vn": "Không đã lập trình",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -12424,7 +11688,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1553",
     "en": "Unpublished",
-    "vn": "Un đã xuất bản",
+    "vn": "Không đã xuất bản",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -12432,7 +11696,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1554",
     "en": "Unqualified",
-    "vn": "Un đủ điều kiện",
+    "vn": "Không đủ điều kiện",
     "pool": "common",
     "category": "Family & Life",
     "level": "A2"
@@ -12440,7 +11704,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1555",
     "en": "Unreacted",
-    "vn": "Un đã phản ứng",
+    "vn": "Không đã phản ứng",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -12448,7 +11712,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1556",
     "en": "Unrecorded",
-    "vn": "Un đã ghi lại",
+    "vn": "Không đã ghi lại",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -12456,7 +11720,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1557",
     "en": "Unreduced",
-    "vn": "Un đã giảm bớt",
+    "vn": "Không đã giảm bớt",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -12464,7 +11728,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1558",
     "en": "Unrefined",
-    "vn": "Un đã tinh chế",
+    "vn": "Không đã tinh chế",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -12472,7 +11736,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1559",
     "en": "Unrelated",
-    "vn": "Un có liên quan",
+    "vn": "Không có liên quan",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -12480,7 +11744,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1560",
     "en": "Unreleased",
-    "vn": "Un đã phát hành",
+    "vn": "Không đã phát hành",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -12488,7 +11752,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1561",
     "en": "Unrendered",
-    "vn": "Un đã kết xuất",
+    "vn": "Không đã kết xuất",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -12496,7 +11760,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1562",
     "en": "Unrepaired",
-    "vn": "Un đã sửa chữa",
+    "vn": "Không đã sửa chữa",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -12504,7 +11768,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1563",
     "en": "Unreported",
-    "vn": "Un đã báo cáo",
+    "vn": "Không đã báo cáo",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -12512,7 +11776,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1564",
     "en": "Unresolved",
-    "vn": "Un đã giải quyết",
+    "vn": "Không đã giải quyết",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -12520,7 +11784,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1565",
     "en": "Unrestored",
-    "vn": "Un đã phục hồi",
+    "vn": "Không đã phục hồi",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -12528,7 +11792,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1566",
     "en": "Unrestricted",
-    "vn": "Un bị hạn chế",
+    "vn": "Không bị hạn chế",
     "pool": "common",
     "category": "History & World",
     "level": "B1"
@@ -12536,7 +11800,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1567",
     "en": "Unreviewed",
-    "vn": "Un đã đánh giá",
+    "vn": "Không đã đánh giá",
     "pool": "toeic",
     "category": "TOEIC Mastery",
     "level": "B2"
@@ -12544,7 +11808,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1568",
     "en": "Unrouted",
-    "vn": "Un đã định tuyến",
+    "vn": "Không đã định tuyến",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -12552,7 +11816,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1569",
     "en": "Unscheduled",
-    "vn": "Un đã lên lịch",
+    "vn": "Không đã lên lịch",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -12560,7 +11824,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1570",
     "en": "Unsearched",
-    "vn": "Un đã tìm kiếm",
+    "vn": "Không đã tìm kiếm",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -12568,7 +11832,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1571",
     "en": "Unseparated",
-    "vn": "Un bị tách rời",
+    "vn": "Không bị tách rời",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -12576,7 +11840,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1572",
     "en": "Unserved",
-    "vn": "Un đã phục vụ",
+    "vn": "Không đã phục vụ",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -12584,7 +11848,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1573",
     "en": "Unshaped",
-    "vn": "Un định hình",
+    "vn": "Không định hình",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -12592,7 +11856,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1574",
     "en": "Unshared",
-    "vn": "Un đã chia sẻ",
+    "vn": "Không đã chia sẻ",
     "pool": "common",
     "category": "Health & Mind",
     "level": "B1"
@@ -12600,7 +11864,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1575",
     "en": "Unsimplified",
-    "vn": "Un đã giản hóa",
+    "vn": "Không đã giản hóa",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -12608,7 +11872,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1576",
     "en": "Unsimulated",
-    "vn": "Un đã mô phỏng",
+    "vn": "Không đã mô phỏng",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -12616,7 +11880,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1577",
     "en": "Unsolved",
-    "vn": "Un đã giải quyết",
+    "vn": "Không đã giải quyết",
     "pool": "ielts",
     "category": "Environment",
     "level": "C1"
@@ -12624,7 +11888,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1578",
     "en": "Unspecified",
-    "vn": "Un đã chỉ định",
+    "vn": "Không đã chỉ định",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -12632,7 +11896,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1579",
     "en": "Unstandardized",
-    "vn": "Un đã chuẩn hóa",
+    "vn": "Không đã chuẩn hóa",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -12640,7 +11904,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1580",
     "en": "Unstored",
-    "vn": "Un đã lưu trữ",
+    "vn": "Không đã lưu trữ",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -12648,7 +11912,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1581",
     "en": "Unstructured",
-    "vn": "Un có cấu trúc",
+    "vn": "Không có cấu trúc",
     "pool": "common",
     "category": "Arts & Culture",
     "level": "B1"
@@ -12656,7 +11920,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1582",
     "en": "Unsubmitted",
-    "vn": "Un đã nộp",
+    "vn": "Không đã nộp",
     "pool": "ielts",
     "category": "Psychology",
     "level": "C1"
@@ -12664,7 +11928,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1583",
     "en": "Unsynchronized",
-    "vn": "Un đã đồng bộ",
+    "vn": "Không đã đồng bộ",
     "pool": "common",
     "category": "Advanced Vocab",
     "level": "C1"
@@ -12672,7 +11936,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1584",
     "en": "Unsynthesized",
-    "vn": "Un đã tổng hợp",
+    "vn": "Không đã tổng hợp",
     "pool": "common",
     "category": "Intermediate",
     "level": "B1"
@@ -12680,7 +11944,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1585",
     "en": "Untested",
-    "vn": "Un đã kiểm thử",
+    "vn": "Không đã kiểm thử",
     "pool": "common",
     "category": "Beginner",
     "level": "A2"
@@ -12688,7 +11952,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1586",
     "en": "Untransformed",
-    "vn": "Un đã biến đổi",
+    "vn": "Không đã biến đổi",
     "pool": "common",
     "category": "Home & Living",
     "level": "B1"
@@ -12696,7 +11960,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1587",
     "en": "Untranslated",
-    "vn": "Un đã dịch",
+    "vn": "Không đã dịch",
     "pool": "toeic",
     "category": "Work & Career",
     "level": "B2"
@@ -12704,7 +11968,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1588",
     "en": "Unupdated",
-    "vn": "Un đã cập nhật",
+    "vn": "Không đã cập nhật",
     "pool": "common",
     "category": "Education",
     "level": "A2"
@@ -12712,7 +11976,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1589",
     "en": "Unvalidated",
-    "vn": "Un đã xác minh",
+    "vn": "Không đã xác minh",
     "pool": "common",
     "category": "Food & Dining",
     "level": "B1"
@@ -12720,7 +11984,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1590",
     "en": "Unvisualized",
-    "vn": "Un đã trực quan hóa",
+    "vn": "Không đã trực quan hóa",
     "pool": "common",
     "category": "Travel & Tourism",
     "level": "B1"
@@ -19064,7 +18328,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2383",
     "en": "Discharge",
-    "vn": "Sự sa thải, giải phóng hàng",
+    "vn": "Phóng xuất, xuất viện, bốc hàng",
     "pool": "toeic",
     "category": "HR & Logistics",
     "level": "B2"
@@ -19080,7 +18344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2385",
     "en": "Disclose",
-    "vn": "Tiết lộ thông tin",
+    "vn": "Tiết lộ, vạch trần",
     "pool": "toeic",
     "category": "Legal & PR",
     "level": "B2"
@@ -19088,7 +18352,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2386",
     "en": "Discount",
-    "vn": "Sự giảm giá",
+    "vn": "Giảm giá, chiết khấu",
     "pool": "toeic",
     "category": "Sales & Retail",
     "level": "A1"
@@ -19096,7 +18360,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2387",
     "en": "Discrepancy",
-    "vn": "Sự sai lệch, bất đồng sổ sách",
+    "vn": "Sự khác biệt, sự bất đồng",
     "pool": "toeic",
     "category": "Finance & Accounting",
     "level": "C1"
@@ -19112,7 +18376,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2389",
     "en": "Dispatch",
-    "vn": "Gửi đi, điều động",
+    "vn": "Gửi đi, phái đi, điều động",
     "pool": "toeic",
     "category": "Logistics & Operations",
     "level": "B2"
@@ -19120,7 +18384,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2390",
     "en": "Display",
-    "vn": "Trưng bày sản phẩm",
+    "vn": "Hiển thị, trưng bày",
     "pool": "toeic",
     "category": "Retail & Marketing",
     "level": "A2"
@@ -19128,7 +18392,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2391",
     "en": "Disposal",
-    "vn": "Sự thanh lý tài sản, xử lý rác",
+    "vn": "Sự vứt bỏ, xử lý",
     "pool": "toeic",
     "category": "Operations & Corporate",
     "level": "B2"
@@ -19136,7 +18400,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-2392",
     "en": "Dispute",
-    "vn": "Tranh chấp thương mại",
+    "vn": "Cuộc tranh chấp, tranh luận",
     "pool": "toeic",
     "category": "Contracts & Legal",
     "level": "B2"
@@ -29752,7 +29016,6 @@ export const VOCAB_BANK = [
   {
     "id": "v-3719",
     "en": "Constructor",
-    "vn": "Nhà thầu xây dựng, hàm khởi tạo",
     "pool": "toeic",
     "category": "Construction & IT",
     "level": "B2"
@@ -35928,7 +35191,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-4491",
     "en": "Underground",
-    "vn": "Dưới mặt đất, hệ thống tàu ngầm",
+    "vn": "Dưới mặt đất, ngầm",
     "pool": "common",
     "category": "Transport & Geography",
     "level": "A2"
@@ -36855,9 +36118,58 @@ export const VOCAB_BANK = [
   }
 ];
 
-/**
- * Fisher-Yates Uniform Shuffle Algorithm
- */
+export function getVocabPool({ pool = 'all', level = 'all' } = {}) {
+  let items = VOCAB_BANK;
+
+  if (pool && pool !== 'all') {
+    items = items.filter(item => item.pool === pool);
+  }
+
+  if (level && level !== 'all') {
+    if (level === 'A1-A2') {
+      items = items.filter(item => item.level === 'A1' || item.level === 'A2');
+    } else if (level === 'B1-B2') {
+      items = items.filter(item => item.level === 'B1' || item.level === 'B2');
+    } else if (level === 'C1-C2') {
+      items = items.filter(item => item.level === 'C1' || item.level === 'C2');
+    } else {
+      items = items.filter(item => item.level === level);
+    }
+  }
+
+  return items;
+}
+
+export function getVocabStats() {
+  const stats = {
+    total: VOCAB_BANK.length,
+    toeic: 0,
+    ielts: 0,
+    common: 0,
+    byLevel: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 }
+  };
+
+  VOCAB_BANK.forEach(item => {
+    if (item.pool === 'toeic') stats.toeic++;
+    else if (item.pool === 'ielts') stats.ielts++;
+    else if (item.pool === 'common') stats.common++;
+
+    if (stats.byLevel[item.level] !== undefined) {
+      stats.byLevel[item.level]++;
+    }
+  });
+
+  return stats;
+}
+
+export function getAvailableCategories() {
+  const cats = new Set();
+  VOCAB_BANK.forEach(item => {
+    if (item.category) cats.add(item.category);
+  });
+  return Array.from(cats).sort();
+}
+
 export function shuffleArray(array) {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -36865,101 +36177,4 @@ export function shuffleArray(array) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
-}
-
-/**
- * Filter vocabulary by Pool, Level, Category, and Count
- */
-export function getVocabPool({ pool = 'all', level = 'all', category = 'all', count = null } = {}) {
-  let filtered = VOCAB_BANK;
-
-  // Pool Filtering
-  if (pool && pool !== 'all') {
-    filtered = filtered.filter(item => item.pool === pool);
-  }
-
-  // Level Filtering with Range Matching
-  if (level && level !== 'all') {
-    const lvl = level.toUpperCase();
-    if (lvl === 'A1-A2') {
-      filtered = filtered.filter(item => item.level === 'A1' || item.level === 'A2');
-    } else if (lvl === 'B1-B2') {
-      filtered = filtered.filter(item => item.level === 'B1' || item.level === 'B2');
-    } else if (lvl === 'C1-C2') {
-      filtered = filtered.filter(item => item.level === 'C1' || item.level === 'C2');
-    } else {
-      filtered = filtered.filter(item => item.level.toUpperCase() === lvl);
-    }
-  }
-
-  // Category Filtering
-  if (category && category !== 'all') {
-    filtered = filtered.filter(item => item.category && item.category.toLowerCase().includes(category.toLowerCase()));
-  }
-
-  // Fallback Protection: If level+pool filter yields fewer than 12 items, fall back to pool filter so game never breaks!
-  if (filtered.length < 12) {
-    if (pool && pool !== 'all') {
-      filtered = VOCAB_BANK.filter(item => item.pool === pool);
-    } else {
-      filtered = VOCAB_BANK;
-    }
-  }
-
-  if (count && typeof count === 'number' && count > 0) {
-    return shuffleArray(filtered).slice(0, count);
-  }
-
-  return shuffleArray(filtered);
-}
-
-/**
- * Get pairs for Speed Word Match Game
- */
-export function getSpeedMatchPairs({ pool = 'all', level = 'all', category = 'all', count = 10 } = {}) {
-  const poolItems = getVocabPool({ pool, level, category, count });
-  return poolItems.map(item => ({
-    id: item.id,
-    en: item.en,
-    vn: item.vn,
-    pool: item.pool,
-    category: item.category,
-    level: item.level
-  }));
-}
-
-/**
- * Get Databank Stats Summary
- */
-export function getVocabStats() {
-  const total = VOCAB_BANK.length;
-  const toeic = VOCAB_BANK.filter(item => item.pool === 'toeic').length;
-  const ielts = VOCAB_BANK.filter(item => item.pool === 'ielts').length;
-  const common = VOCAB_BANK.filter(item => item.pool === 'common').length;
-
-  const levels = {
-    A1: VOCAB_BANK.filter(i => i.level === 'A1').length,
-    A2: VOCAB_BANK.filter(i => i.level === 'A2').length,
-    B1: VOCAB_BANK.filter(i => i.level === 'B1').length,
-    B2: VOCAB_BANK.filter(i => i.level === 'B2').length,
-    C1: VOCAB_BANK.filter(i => i.level === 'C1').length,
-    C2: VOCAB_BANK.filter(i => i.level === 'C2').length,
-  };
-
-  return { total, toeic, ielts, common, levels };
-}
-
-/**
- * Get Available Categories for a Pool
- */
-export function getAvailableCategories(pool = 'all') {
-  let items = VOCAB_BANK;
-  if (pool !== 'all') {
-    items = items.filter(i => i.pool === pool);
-  }
-  const cats = new Set();
-  items.forEach(i => {
-    if (i.category) cats.add(i.category);
-  });
-  return Array.from(cats).sort();
 }

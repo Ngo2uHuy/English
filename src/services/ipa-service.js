@@ -120,6 +120,22 @@ const IPA_DICT = {
   'think': 'θɪŋk', 'sink': 'sɪŋk',
   'three': 'θriː', 'tree': 'triː',
   
+  // Specific Oxford Learner's Dictionary Transcriptions
+  'ballroom': 'ˈbɔːlruːm',
+  'improved': 'ɪmˈpruːvd',
+  'archery': 'ˈɑːtʃəri',
+  'unoccupied': 'ˌʌnˈɒkjupaɪd',
+  'abrupt': 'əˈbrʌpt',
+  'audio': 'ˈɔːdiəʊ',
+  'unable': 'ʌnˈeɪbl',
+  'unacceptable': 'ˌʌnəkˈseptəbl',
+  'acquired': 'əˈkwaɪəd',
+  'occupied': 'ˈɒkjupaɪd',
+  'operated': 'ˈɒpəreɪtɪd',
+  'interactive': 'ˌɪntərˈæktɪv',
+  'disable': 'dɪsˈeɪbl',
+  'disinterested': 'dɪsˈɪntrestɪd',
+
   // Grammar Terms
   'grammar': 'ˈɡræmə(r)', 'verb': 'vɜːb', 'noun': 'naʊn', 'adjective': 'ˈædʒɪktɪv', 'adverb': 'ˈædvɜːb',
   'preposition': 'ˌprepəˈzɪʃn', 'pronoun': 'ˈprəʊnaʊn', 'conjunction': 'kənˈdʒʌŋkʃn',
@@ -140,12 +156,21 @@ export function formatToOxfordIPA(ipaStr) {
   let clean = isEnclosed ? str.slice(1, -1) : str;
 
   clean = clean
+    // Replace non-standard IPA symbols
+    .replace(/∫/g, 'ʃ')
+    .replace(/'/g, 'ˈ')
     // Oxford BrE Diphthong: oʊ -> əʊ
     .replace(/oʊ/g, 'əʊ')
     // Oxford Latin g -> IPA script ɡ
     .replace(/g/g, 'ɡ')
     // Oxford short e sound: ɛ -> e
     .replace(/ɛ/g, 'e')
+    // Clean up double consonants created by naive rule concatenation
+    .replace(/ll/g, 'l')
+    .replace(/kk/g, 'k')
+    .replace(/pp/g, 'p')
+    .replace(/tt/g, 't')
+    .replace(/bb/g, 'b')
     // Clean up internal syllable dots while preserving stress marks (ˈ, ˌ)
     .replace(/\./g, '')
     // Oxford r notation (non-rhotic Linking R: ər -> ə(r), etc.)
