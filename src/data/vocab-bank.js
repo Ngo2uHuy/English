@@ -4928,7 +4928,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-616",
     "en": "Adjective",
-    "vn": "Comparative",
+    "vn": "Tính từ",
     "pool": "common",
     "category": "Superlative",
     "level": "B1"
@@ -4992,7 +4992,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-624",
     "en": "Another",
-    "vn": "Determiner/Pronoun",
+    "vn": "Khác, người/cái khác",
     "pool": "common",
     "category": "thêm 1 cái khác (số ít)",
     "level": "B1"
@@ -5040,7 +5040,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-632",
     "en": "At",
-    "vn": "Specific point/location",
+    "vn": "Tại, ở (thời gian/địa điểm)",
     "pool": "toeic",
     "category": "at the bus stop, at home, at work",
     "level": "B2"
@@ -5064,7 +5064,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-635",
     "en": "Bad",
-    "vn": "Worse",
+    "vn": "Tệ, xấu, kém",
     "pool": "common",
     "category": "worst",
     "level": "B1"
@@ -5440,7 +5440,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-682",
     "en": "Break down",
-    "vn": "Stop working (machine)",
+    "vn": "Hỏng hóc (máy móc), suy sụp",
     "pool": "common",
     "category": "My car broke down on the highway.",
     "level": "B1"
@@ -5544,7 +5544,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-695",
     "en": "Can",
-    "vn": "Ability / Permission",
+    "vn": "Có thể (khả năng / cho phép)",
     "pool": "common",
     "category": "I can swim. / Can I go?",
     "level": "B1"
@@ -5880,7 +5880,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-737",
     "en": "Complimentary",
-    "vn": "Free of charge / no cost",
+    "vn": "Miễn phí, ngợi khen",
     "pool": "common",
     "category": "miễn phí",
     "level": "B1"
@@ -5992,7 +5992,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-751",
     "en": "Could",
-    "vn": "Past ability / Polite request",
+    "vn": "Có thể (quá khứ của can)",
     "pool": "common",
     "category": "I could swim when I was 5. / Could you help me?",
     "level": "B1"
@@ -6000,7 +6000,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-752",
     "en": "Countable",
-    "vn": "Uncountable",
+    "vn": "Đếm được (danh từ)",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -6008,7 +6008,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-753",
     "en": "Counter",
-    "vn": "Phản",
+    "vn": "Quầy hàng, phản bác",
     "pool": "ielts",
     "category": "Law & Ethics",
     "level": "C1"
@@ -6392,7 +6392,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-805",
     "en": "Easy",
-    "vn": "Easily",
+    "vn": "Dễ dàng, đơn giản",
     "pool": "common",
     "category": "An easy test. / Passed easily.",
     "level": "B1"
@@ -6728,7 +6728,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-847",
     "en": "Exempt from",
-    "vn": "From (+ N)",
+    "vn": "Được miễn, không phải chịu",
     "pool": "common",
     "category": "được miễn",
     "level": "B1"
@@ -6912,7 +6912,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-870",
     "en": "Far",
-    "vn": "Farther/further",
+    "vn": "Xa, xa xôi",
     "pool": "common",
     "category": "farthest/furthest",
     "level": "B1"
@@ -6920,7 +6920,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-871",
     "en": "Fast",
-    "vn": "Fast (irregular)",
+    "vn": "Nhanh, nhanh chóng",
     "pool": "common",
     "category": "A fast car. / Drives fast.",
     "level": "B1"
@@ -6968,7 +6968,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-877",
     "en": "Formal",
-    "vn": "Informal",
+    "vn": "Trang trọng, chính thức",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -7007,8 +7007,8 @@ export const VOCAB_BANK = [
   },
   {
     "id": "v-882",
-    "en": "Future (will)",
-    "vn": "Thì tương lai (với từ Will)",
+    "en": "Future",
+    "vn": "Tương lai, thì tương lai",
     "pool": "common",
     "category": "The road will be repaired.",
     "level": "B1"
@@ -7016,7 +7016,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-883",
     "en": "Future Perfect",
-    "vn": "By the time + S+V(pres), by + [future time point]",
+    "vn": "Thì tương lai hoàn thành",
     "pool": "common",
     "category": "By next December, we will have opened 50 new stores.",
     "level": "B1"
@@ -7168,7 +7168,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-902",
     "en": "GET",
-    "vn": "Get + Subject (người) + To-V",
+    "vn": "Nhận, lấy, nhờ/bắt ai làm gì",
     "pool": "common",
     "category": "Get + Object (vật) + V3/ed (được làm)",
     "level": "B1"
@@ -7176,7 +7176,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-903",
     "en": "Good",
-    "vn": "Better",
+    "vn": "Tốt, giỏi, hay",
     "pool": "common",
     "category": "best",
     "level": "B1"
@@ -7336,7 +7336,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-923",
     "en": "HELP",
-    "vn": "Help + Subject + (To) V-bare (giúp ai làm gì)",
+    "vn": "Giúp đỡ, sự giúp đỡ",
     "pool": "common",
     "category": "—",
     "level": "B1"
@@ -7344,7 +7344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-924",
     "en": "Here",
-    "vn": "There",
+    "vn": "Ở đây, tại đây",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -7440,7 +7440,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-938",
     "en": "Idiom",
-    "vn": "Meaning",
+    "vn": "Thành ngữ",
     "pool": "common",
     "category": "Context / Example",
     "level": "B1"
@@ -8008,7 +8008,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1056",
     "en": "Knit",
-    "vn": "Đan đan len",
+    "vn": "Đan len",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -8096,7 +8096,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1067",
     "en": "LET",
-    "vn": "Let + Subject (người) + V-bare (cho phép ai làm gì)",
+    "vn": "Cho phép, để cho",
     "pool": "common",
     "category": "Be allowed + To-V",
     "level": "B1"
@@ -8128,7 +8128,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1071",
     "en": "Little",
-    "vn": "Less",
+    "vn": "Ít, nhỏ bé",
     "pool": "common",
     "category": "least",
     "level": "B1"
@@ -8152,7 +8152,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1074",
     "en": "Macro",
-    "vn": "Vĩ",
+    "vn": "Tiền tố: Vĩ mô, lớn",
     "pool": "toeic",
     "category": "Finance",
     "level": "B2"
@@ -8160,7 +8160,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1077",
     "en": "MAKE",
-    "vn": "Make + Subject (người) + V-bare (bắt buộc ai làm gì)",
+    "vn": "Làm, chế tạo, bắt buộc",
     "pool": "common",
     "category": "Be made + To-V",
     "level": "B1"
@@ -8192,7 +8192,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1081",
     "en": "Many",
-    "vn": "Much",
+    "vn": "Nhiều (danh từ đếm được)",
     "pool": "common",
     "category": "some / any",
     "level": "B1"
@@ -8232,7 +8232,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1086",
     "en": "May",
-    "vn": "Permission / Possibility",
+    "vn": "Có thể, có lẽ",
     "pool": "common",
     "category": "May I come in? / It may rain.",
     "level": "B1"
@@ -8240,7 +8240,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1087",
     "en": "Meaning",
-    "vn": "Preposition (+ Noun / V-ing)",
+    "vn": "Ý nghĩa",
     "pool": "common",
     "category": "Conjunction (+ Subject + Verb)",
     "level": "B1"
@@ -8256,7 +8256,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1089",
     "en": "Micro",
-    "vn": "Vi",
+    "vn": "Vi (siêu nhỏ)",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -8264,7 +8264,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1092",
     "en": "Modal",
-    "vn": "Use",
+    "vn": "Động từ khuyết thiếu",
     "pool": "common",
     "category": "Example",
     "level": "B1"
@@ -8320,7 +8320,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1099",
     "en": "Must",
-    "vn": "Strong obligation / Certainty",
+    "vn": "Phải, bắt buộc",
     "pool": "common",
     "category": "You must wear a seatbelt. / She must be tired.",
     "level": "B1"
@@ -8368,7 +8368,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1121",
     "en": "Now",
-    "vn": "Then",
+    "vn": "Bây giờ, hiện tại",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -8448,7 +8448,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1131",
     "en": "Order",
-    "vn": "Category",
+    "vn": "Đơn hàng, thứ tự, ra lệnh",
     "pool": "toeic",
     "category": "Sales & Retail",
     "level": "A1"
@@ -8480,7 +8480,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1135",
     "en": "Other",
-    "vn": "Determiner",
+    "vn": "Khác, người/cái khác",
     "pool": "common",
     "category": "những cái khác (số nhiều + N)",
     "level": "B1"
@@ -8488,7 +8488,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1136",
     "en": "Others",
-    "vn": "Pronoun",
+    "vn": "Những người/cái khác",
     "pool": "common",
     "category": "những người/cái khác (thay N)",
     "level": "B1"
@@ -8512,7 +8512,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1162",
     "en": "Pair",
-    "vn": "Example",
+    "vn": "Cặp, đôi",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -8528,7 +8528,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1164",
     "en": "Pattern",
-    "vn": "Meaning",
+    "vn": "Mẫu, mô hình, kiểu",
     "pool": "common",
     "category": "Example",
     "level": "B1"
@@ -8552,7 +8552,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1167",
     "en": "Phrasal Verb",
-    "vn": "Meaning",
+    "vn": "Cụm động từ",
     "pool": "common",
     "category": "Example",
     "level": "B1"
@@ -8592,7 +8592,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1172",
     "en": "Post",
-    "vn": "Sau",
+    "vn": "Bài đăng; đăng tải; sau",
     "pool": "ielts",
     "category": "Academic",
     "level": "C1"
@@ -8680,7 +8680,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1188",
     "en": "Prone to",
-    "vn": "To (+ N/V-ing)",
+    "vn": "Dễ bị, thiên về",
     "pool": "common",
     "category": "dễ bị (bệnh/tai nạn)",
     "level": "B1"
@@ -8704,7 +8704,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1191",
     "en": "Purchase",
-    "vn": "Buy",
+    "vn": "Mua, sự mua sắm",
     "pool": "toeic",
     "category": "Sales & Finance",
     "level": "B2"
@@ -8712,7 +8712,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1192",
     "en": "Put off",
-    "vn": "Postpone",
+    "vn": "Hoãn lại, trì hoãn",
     "pool": "common",
     "category": "They put off the meeting until Friday.",
     "level": "B1"
@@ -8736,7 +8736,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1195",
     "en": "Question",
-    "vn": "Did + subject + base form?",
+    "vn": "Câu hỏi, thắc mắc",
     "pool": "common",
     "category": "Did you see the movie?",
     "level": "B1"
@@ -8744,7 +8744,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1196",
     "en": "Quick",
-    "vn": "Quickly",
+    "vn": "Nhanh, nhanh chóng",
     "pool": "common",
     "category": "She is a quick runner. / She runs quickly.",
     "level": "B1"
@@ -9104,7 +9104,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1375",
     "en": "She",
-    "vn": "Go",
+    "vn": "Cô ấy, bà ấy",
     "pool": "common",
     "category": "to school every morning.",
     "level": "B1"
@@ -9112,7 +9112,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1376",
     "en": "Should",
-    "vn": "Advice / Recommendation",
+    "vn": "Nên, cần phải",
     "pool": "common",
     "category": "You should see a doctor.",
     "level": "B1"
@@ -9136,7 +9136,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1379",
     "en": "Since Monday",
-    "vn": "For 3 days",
+    "vn": "Từ thứ Hai",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -9184,7 +9184,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1385",
     "en": "Stop",
-    "vn": "He stopped smoking. (= quit)",
+    "vn": "Dừng lại, ngừng",
     "pool": "common",
     "category": "He stopped to smoke. (= paused in order to smoke)",
     "level": "B1"
@@ -9240,7 +9240,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1394",
     "en": "Subject",
-    "vn": "Possessive Adjective (+ Noun)",
+    "vn": "Chủ đề, môn học, chủ ngữ",
     "pool": "common",
     "category": "Possessive Pronoun (No Noun)",
     "level": "B1"
@@ -9264,7 +9264,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1397",
     "en": "Super",
-    "vn": "Siêu",
+    "vn": "Tiền tố: Siêu, cực kỳ",
     "pool": "ielts",
     "category": "Tech & AI",
     "level": "C1"
@@ -9280,7 +9280,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1401",
     "en": "Susceptible to",
-    "vn": "To (+ N)",
+    "vn": "Dễ bị ảnh hưởng, nhạy cảm với",
     "pool": "common",
     "category": "nhạy cảm/dễ bị ảnh hưởng",
     "level": "B1"
@@ -9336,7 +9336,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1408",
     "en": "Tense",
-    "vn": "Active",
+    "vn": "Thì (ngữ pháp); căng thẳng",
     "pool": "common",
     "category": "Passive",
     "level": "B1"
@@ -9352,7 +9352,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1410",
     "en": "The other",
-    "vn": "Determiner/Pronoun",
+    "vn": "Người/cái còn lại",
     "pool": "common",
     "category": "cái còn lại (trong nhóm 2)",
     "level": "B1"
@@ -9376,7 +9376,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1413",
     "en": "This",
-    "vn": "That",
+    "vn": "Đây, cái này",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -9384,7 +9384,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1414",
     "en": "Time Frame",
-    "vn": "Structure",
+    "vn": "Khung thời gian",
     "pool": "common",
     "category": "Example",
     "level": "B1"
@@ -9424,7 +9424,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1419",
     "en": "Try",
-    "vn": "Try calling her. (= experiment)",
+    "vn": "Thử, cố gắng",
     "pool": "common",
     "category": "I tried to call her. (= attempted)",
     "level": "B1"
@@ -9440,7 +9440,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1421",
     "en": "Type",
-    "vn": "Structure",
+    "vn": "Loại, kiểu; gõ phím",
     "pool": "common",
     "category": "Example",
     "level": "B1"
@@ -9448,7 +9448,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1422",
     "en": "Ultra",
-    "vn": "Siêu",
+    "vn": "Tiền tố: Siêu, cực kỳ",
     "pool": "ielts",
     "category": "Science & Space",
     "level": "C1"
@@ -9672,7 +9672,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1592",
     "en": "Used to",
-    "vn": "✅ I used to swim every day",
+    "vn": "Đã từng (thói quen quá khứ)",
     "pool": "common",
     "category": "✅ I used to live in Paris",
     "level": "B1"
@@ -9696,7 +9696,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1595",
     "en": "Verb",
-    "vn": "Gerund (V-ing)",
+    "vn": "Động từ",
     "pool": "common",
     "category": "Infinitive (to + V)",
     "level": "B1"
@@ -9712,7 +9712,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1597",
     "en": "Very big",
-    "vn": "Absolutely huge / enormous",
+    "vn": "Rất to lớn, khổng lồ",
     "pool": "common",
     "category": "Common B1",
     "level": "B1"
@@ -9736,7 +9736,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1600",
     "en": "When",
-    "vn": "Times",
+    "vn": "Khi nào, khi",
     "pool": "common",
     "category": "I remember the day when we first met.",
     "level": "B1"
@@ -9744,7 +9744,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1601",
     "en": "Where",
-    "vn": "Places",
+    "vn": "Ở đâu, nơi",
     "pool": "common",
     "category": "The restaurant where we met is closing.",
     "level": "B1"
@@ -9752,7 +9752,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1602",
     "en": "Whose",
-    "vn": "Possession",
+    "vn": "Của ai",
     "pool": "common",
     "category": "The girl whose father is a doctor won.",
     "level": "B1"
@@ -9776,7 +9776,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-1605",
     "en": "Would",
-    "vn": "✅ We would visit grandma on Sundays",
+    "vn": "Sẽ, đã thường (quá khứ của will)",
     "pool": "common",
     "category": "❌ I would have long hair (SAI)",
     "level": "B1"
@@ -21464,7 +21464,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3075",
     "en": "Believable",
-    "vn": "Đáng tin tin được",
+    "vn": "Đáng tin cậy",
     "pool": "common",
     "category": "Daily Life",
     "level": "B1"
@@ -21672,7 +21672,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3101",
     "en": "Biographer",
-    "vn": "Nhà viết viết tiểu sử",
+    "vn": "Nhà viết tiểu sử",
     "pool": "common",
     "category": "Books & Literature",
     "level": "B2"
@@ -21872,7 +21872,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3126",
     "en": "Blender",
-    "vn": "Máy máy sinh tố",
+    "vn": "Máy sinh tố",
     "pool": "common",
     "category": "Home & Appliances",
     "level": "A2"
@@ -21984,7 +21984,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3140",
     "en": "Boastful",
-    "vn": "Khoe khoang khoác khoác",
+    "vn": "Khoe khoang, khoác lác",
     "pool": "common",
     "category": "Personal Qualities",
     "level": "B2"
@@ -23344,7 +23344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3311",
     "en": "Cardigan",
-    "vn": "Áo len len đan có hàng nút",
+    "vn": "Áo len đan có hàng nút",
     "pool": "common",
     "category": "Fashion & Style",
     "level": "A2"
@@ -23648,7 +23648,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3349",
     "en": "Catapult",
-    "vn": "Súng súng phóng, bệ phóng",
+    "vn": "Súng phóng, bệ phóng",
     "pool": "common",
     "category": "History & Tech",
     "level": "B2"
@@ -23792,7 +23792,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3367",
     "en": "Caveman",
-    "vn": "Người người ngầm cổ xưa",
+    "vn": "Người hang động",
     "pool": "common",
     "category": "History",
     "level": "A2"
@@ -25024,7 +25024,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3523",
     "en": "Clarinet",
-    "vn": "Kèn kèn dăm đơn clarinet",
+    "vn": "Kèn dăm đơn clarinet",
     "pool": "common",
     "category": "Music & Culture",
     "level": "B1"
@@ -25960,7 +25960,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3641",
     "en": "Compatible",
-    "vn": "Tương thích thích hợp",
+    "vn": "Tương thích, phù hợp",
     "pool": "toeic",
     "category": "IT & Relationships",
     "level": "B2"
@@ -26128,7 +26128,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3662",
     "en": "Comprise",
-    "vn": "Bao gồm gồm có",
+    "vn": "Bao gồm, gồm có",
     "pool": "ielts",
     "category": "Academic & Writing",
     "level": "B2"
@@ -26184,7 +26184,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-3669",
     "en": "Concealment",
-    "vn": "Sự che giấu giấu giếm",
+    "vn": "Sự che giấu",
     "pool": "ielts",
     "category": "Law & Safety",
     "level": "B2"
@@ -31344,7 +31344,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-4315",
     "en": "Scooter",
-    "vn": "Xe tay ga, xe xe đẩy chân",
+    "vn": "Xe tay ga, xe đẩy chân",
     "pool": "common",
     "category": "Transport",
     "level": "A1"
@@ -31560,7 +31560,7 @@ export const VOCAB_BANK = [
   {
     "id": "v-4342",
     "en": "Show",
-    "vn": "Show diễn, cho xem",
+    "vn": "Cho xem, trình diễn, chương trình",
     "pool": "common",
     "category": "Entertainment",
     "level": "A1"

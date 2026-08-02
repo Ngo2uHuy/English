@@ -3082,7 +3082,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Adjective",
-    "vn": "Comparative",
+    "vn": "Tính từ",
     "category": "Superlative"
   },
   {
@@ -3122,7 +3122,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Another",
-    "vn": "Determiner/Pronoun",
+    "vn": "Khác, người/cái khác",
     "category": "thêm 1 cái khác (số ít)"
   },
   {
@@ -3152,7 +3152,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "At",
-    "vn": "Specific point/location",
+    "vn": "Tại, ở (thời gian/địa điểm)",
     "category": "at the bus stop, at home, at work"
   },
   {
@@ -3167,7 +3167,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Bad",
-    "vn": "Worse",
+    "vn": "Tệ, xấu, kém",
     "category": "worst"
   },
   {
@@ -3402,7 +3402,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Break down",
-    "vn": "Stop working (machine)",
+    "vn": "Hỏng hóc (máy móc), suy sụp",
     "category": "My car broke down on the highway."
   },
   {
@@ -3467,7 +3467,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Can",
-    "vn": "Ability / Permission",
+    "vn": "Có thể (khả năng / cho phép)",
     "category": "I can swim. / Can I go?"
   },
   {
@@ -3677,7 +3677,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Complimentary",
-    "vn": "Free of charge / no cost",
+    "vn": "Miễn phí, ngợi khen",
     "category": "miễn phí"
   },
   {
@@ -3747,17 +3747,17 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Could",
-    "vn": "Past ability / Polite request",
+    "vn": "Có thể (quá khứ của can)",
     "category": "I could swim when I was 5. / Could you help me?"
   },
   {
     "en": "Countable",
-    "vn": "Uncountable",
+    "vn": "Đếm được (danh từ)",
     "category": "Common B1"
   },
   {
     "en": "Counter",
-    "vn": "Phản",
+    "vn": "Quầy hàng, phản bác",
     "category": "Law & Ethics"
   },
   {
@@ -3997,7 +3997,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Easy",
-    "vn": "Easily",
+    "vn": "Dễ dàng, đơn giản",
     "category": "An easy test. / Passed easily."
   },
   {
@@ -4207,7 +4207,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Exempt from",
-    "vn": "From (+ N)",
+    "vn": "Được miễn, không phải chịu",
     "category": "được miễn"
   },
   {
@@ -4322,12 +4322,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Far",
-    "vn": "Farther/further",
+    "vn": "Xa, xa xôi",
     "category": "farthest/furthest"
   },
   {
     "en": "Fast",
-    "vn": "Fast (irregular)",
+    "vn": "Nhanh, nhanh chóng",
     "category": "A fast car. / Drives fast."
   },
   {
@@ -4357,7 +4357,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Formal",
-    "vn": "Informal",
+    "vn": "Trang trọng, chính thức",
     "category": "Common B1"
   },
   {
@@ -4387,7 +4387,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Future Perfect",
-    "vn": "By the time + S+V(pres), by + [future time point]",
+    "vn": "Thì tương lai hoàn thành",
     "category": "By next December, we will have opened 50 new stores."
   },
   {
@@ -4482,12 +4482,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "GET",
-    "vn": "Get + Subject (người) + To-V",
+    "vn": "Nhận, lấy, nhờ/bắt ai làm gì",
     "category": "Get + Object (vật) + V3/ed (được làm)"
   },
   {
     "en": "Good",
-    "vn": "Better",
+    "vn": "Tốt, giỏi, hay",
     "category": "best"
   },
   {
@@ -4587,12 +4587,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "HELP",
-    "vn": "Help + Subject + (To) V-bare (giúp ai làm gì)",
+    "vn": "Giúp đỡ, sự giúp đỡ",
     "category": "—"
   },
   {
     "en": "Here",
-    "vn": "There",
+    "vn": "Ở đây, tại đây",
     "category": "Common B1"
   },
   {
@@ -4652,7 +4652,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Idiom",
-    "vn": "Meaning",
+    "vn": "Thành ngữ",
     "category": "Context / Example"
   },
   {
@@ -5007,7 +5007,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Knit",
-    "vn": "Đan đan len",
+    "vn": "Đan len",
     "category": "Common B1"
   },
   {
@@ -5062,7 +5062,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "LET",
-    "vn": "Let + Subject (người) + V-bare (cho phép ai làm gì)",
+    "vn": "Cho phép, để cho",
     "category": "Be allowed + To-V"
   },
   {
@@ -5082,7 +5082,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Little",
-    "vn": "Less",
+    "vn": "Ít, nhỏ bé",
     "category": "least"
   },
   {
@@ -5097,12 +5097,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Macro",
-    "vn": "Vĩ",
+    "vn": "Tiền tố: Vĩ mô, lớn",
     "category": "Finance"
   },
   {
     "en": "MAKE",
-    "vn": "Make + Subject (người) + V-bare (bắt buộc ai làm gì)",
+    "vn": "Làm, chế tạo, bắt buộc",
     "category": "Be made + To-V"
   },
   {
@@ -5122,7 +5122,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Many",
-    "vn": "Much",
+    "vn": "Nhiều (danh từ đếm được)",
     "category": "some / any"
   },
   {
@@ -5147,12 +5147,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "May",
-    "vn": "Permission / Possibility",
+    "vn": "Có thể, có lẽ",
     "category": "May I come in? / It may rain."
   },
   {
     "en": "Meaning",
-    "vn": "Preposition (+ Noun / V-ing)",
+    "vn": "Ý nghĩa",
     "category": "Conjunction (+ Subject + Verb)"
   },
   {
@@ -5162,12 +5162,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Micro",
-    "vn": "Vi",
+    "vn": "Vi (siêu nhỏ)",
     "category": "Tech & AI"
   },
   {
     "en": "Modal",
-    "vn": "Use",
+    "vn": "Động từ khuyết thiếu",
     "category": "Example"
   },
   {
@@ -5202,7 +5202,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Must",
-    "vn": "Strong obligation / Certainty",
+    "vn": "Phải, bắt buộc",
     "category": "You must wear a seatbelt. / She must be tired."
   },
   {
@@ -5232,7 +5232,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Now",
-    "vn": "Then",
+    "vn": "Bây giờ, hiện tại",
     "category": "Common B1"
   },
   {
@@ -5282,7 +5282,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Order",
-    "vn": "Category",
+    "vn": "Đơn hàng, thứ tự, ra lệnh",
     "category": "Sales & Retail"
   },
   {
@@ -5302,12 +5302,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Other",
-    "vn": "Determiner",
+    "vn": "Khác, người/cái khác",
     "category": "những cái khác (số nhiều + N)"
   },
   {
     "en": "Others",
-    "vn": "Pronoun",
+    "vn": "Những người/cái khác",
     "category": "những người/cái khác (thay N)"
   },
   {
@@ -5322,7 +5322,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Pair",
-    "vn": "Example",
+    "vn": "Cặp, đôi",
     "category": "Common B1"
   },
   {
@@ -5332,7 +5332,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Pattern",
-    "vn": "Meaning",
+    "vn": "Mẫu, mô hình, kiểu",
     "category": "Example"
   },
   {
@@ -5347,7 +5347,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Phrasal Verb",
-    "vn": "Meaning",
+    "vn": "Cụm động từ",
     "category": "Example"
   },
   {
@@ -5372,7 +5372,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Post",
-    "vn": "Sau",
+    "vn": "Bài đăng; đăng tải; sau",
     "category": "Academic"
   },
   {
@@ -5427,7 +5427,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Prone to",
-    "vn": "To (+ N/V-ing)",
+    "vn": "Dễ bị, thiên về",
     "category": "dễ bị (bệnh/tai nạn)"
   },
   {
@@ -5442,12 +5442,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Purchase",
-    "vn": "Buy",
+    "vn": "Mua, sự mua sắm",
     "category": "Sales & Finance"
   },
   {
     "en": "Put off",
-    "vn": "Postpone",
+    "vn": "Hoãn lại, trì hoãn",
     "category": "They put off the meeting until Friday."
   },
   {
@@ -5462,12 +5462,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Question",
-    "vn": "Did + subject + base form?",
+    "vn": "Câu hỏi, thắc mắc",
     "category": "Did you see the movie?"
   },
   {
     "en": "Quick",
-    "vn": "Quickly",
+    "vn": "Nhanh, nhanh chóng",
     "category": "She is a quick runner. / She runs quickly."
   },
   {
@@ -5692,12 +5692,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "She",
-    "vn": "Go",
+    "vn": "Cô ấy, bà ấy",
     "category": "to school every morning."
   },
   {
     "en": "Should",
-    "vn": "Advice / Recommendation",
+    "vn": "Nên, cần phải",
     "category": "You should see a doctor."
   },
   {
@@ -5712,7 +5712,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Since Monday",
-    "vn": "For 3 days",
+    "vn": "Từ thứ Hai",
     "category": "Common B1"
   },
   {
@@ -5742,7 +5742,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Stop",
-    "vn": "He stopped smoking. (= quit)",
+    "vn": "Dừng lại, ngừng",
     "category": "He stopped to smoke. (= paused in order to smoke)"
   },
   {
@@ -5777,7 +5777,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Subject",
-    "vn": "Possessive Adjective (+ Noun)",
+    "vn": "Chủ đề, môn học, chủ ngữ",
     "category": "Possessive Pronoun (No Noun)"
   },
   {
@@ -5792,7 +5792,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Super",
-    "vn": "Siêu",
+    "vn": "Tiền tố: Siêu, cực kỳ",
     "category": "Tech & AI"
   },
   {
@@ -5802,7 +5802,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Susceptible to",
-    "vn": "To (+ N)",
+    "vn": "Dễ bị ảnh hưởng, nhạy cảm với",
     "category": "nhạy cảm/dễ bị ảnh hưởng"
   },
   {
@@ -5837,7 +5837,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Tense",
-    "vn": "Active",
+    "vn": "Thì (ngữ pháp); căng thẳng",
     "category": "Passive"
   },
   {
@@ -5847,7 +5847,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "The other",
-    "vn": "Determiner/Pronoun",
+    "vn": "Người/cái còn lại",
     "category": "cái còn lại (trong nhóm 2)"
   },
   {
@@ -5862,12 +5862,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "This",
-    "vn": "That",
+    "vn": "Đây, cái này",
     "category": "Common B1"
   },
   {
     "en": "Time Frame",
-    "vn": "Structure",
+    "vn": "Khung thời gian",
     "category": "Example"
   },
   {
@@ -5892,7 +5892,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Try",
-    "vn": "Try calling her. (= experiment)",
+    "vn": "Thử, cố gắng",
     "category": "I tried to call her. (= attempted)"
   },
   {
@@ -5902,12 +5902,12 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Type",
-    "vn": "Structure",
+    "vn": "Loại, kiểu; gõ phím",
     "category": "Example"
   },
   {
     "en": "Ultra",
-    "vn": "Siêu",
+    "vn": "Tiền tố: Siêu, cực kỳ",
     "category": "Science & Space"
   },
   {
@@ -6047,7 +6047,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Used to",
-    "vn": "✅ I used to swim every day",
+    "vn": "Đã từng (thói quen quá khứ)",
     "category": "✅ I used to live in Paris"
   },
   {
@@ -6062,7 +6062,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Verb",
-    "vn": "Gerund (V-ing)",
+    "vn": "Động từ",
     "category": "Infinitive (to + V)"
   },
   {
@@ -6072,7 +6072,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Very big",
-    "vn": "Absolutely huge / enormous",
+    "vn": "Rất to lớn, khổng lồ",
     "category": "Common B1"
   },
   {
@@ -6087,17 +6087,17 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "When",
-    "vn": "Times",
+    "vn": "Khi nào, khi",
     "category": "I remember the day when we first met."
   },
   {
     "en": "Where",
-    "vn": "Places",
+    "vn": "Ở đâu, nơi",
     "category": "The restaurant where we met is closing."
   },
   {
     "en": "Whose",
-    "vn": "Possession",
+    "vn": "Của ai",
     "category": "The girl whose father is a doctor won."
   },
   {
@@ -6112,7 +6112,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Would",
-    "vn": "✅ We would visit grandma on Sundays",
+    "vn": "Sẽ, đã thường (quá khứ của will)",
     "category": "❌ I would have long hair (SAI)"
   },
   {
@@ -13417,7 +13417,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Believable",
-    "vn": "Đáng tin tin được",
+    "vn": "Đáng tin cậy",
     "category": "Daily Life"
   },
   {
@@ -13547,7 +13547,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Biographer",
-    "vn": "Nhà viết viết tiểu sử",
+    "vn": "Nhà viết tiểu sử",
     "category": "Books & Literature"
   },
   {
@@ -13672,7 +13672,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Blender",
-    "vn": "Máy máy sinh tố",
+    "vn": "Máy sinh tố",
     "category": "Home & Appliances"
   },
   {
@@ -13742,7 +13742,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Boastful",
-    "vn": "Khoe khoang khoác khoác",
+    "vn": "Khoe khoang, khoác lác",
     "category": "Personal Qualities"
   },
   {
@@ -14592,7 +14592,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Cardigan",
-    "vn": "Áo len len đan có hàng nút",
+    "vn": "Áo len đan có hàng nút",
     "category": "Fashion & Style"
   },
   {
@@ -14782,7 +14782,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Catapult",
-    "vn": "Súng súng phóng, bệ phóng",
+    "vn": "Súng phóng, bệ phóng",
     "category": "History & Tech"
   },
   {
@@ -14872,7 +14872,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Caveman",
-    "vn": "Người người ngầm cổ xưa",
+    "vn": "Người hang động",
     "category": "History"
   },
   {
@@ -15642,7 +15642,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Clarinet",
-    "vn": "Kèn kèn dăm đơn clarinet",
+    "vn": "Kèn dăm đơn clarinet",
     "category": "Music & Culture"
   },
   {
@@ -16227,7 +16227,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Compatible",
-    "vn": "Tương thích thích hợp",
+    "vn": "Tương thích, phù hợp",
     "category": "IT & Relationships"
   },
   {
@@ -16332,7 +16332,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Comprise",
-    "vn": "Bao gồm gồm có",
+    "vn": "Bao gồm, gồm có",
     "category": "Academic & Writing"
   },
   {
@@ -16367,7 +16367,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Concealment",
-    "vn": "Sự che giấu giấu giếm",
+    "vn": "Sự che giấu",
     "category": "Law & Safety"
   },
   {
@@ -17912,7 +17912,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Future",
-    "vn": "Tương lai",
+    "vn": "Tương lai, thì tương lai",
     "category": "Time"
   },
   {
@@ -19592,7 +19592,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Scooter",
-    "vn": "Xe tay ga, xe xe đẩy chân",
+    "vn": "Xe tay ga, xe đẩy chân",
     "category": "Transport"
   },
   {
@@ -19727,7 +19727,7 @@ export const SPEED_MATCH_PAIRS = [
   },
   {
     "en": "Show",
-    "vn": "Show diễn, cho xem",
+    "vn": "Cho xem, trình diễn, chương trình",
     "category": "Entertainment"
   },
   {
@@ -22253,7 +22253,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Adjective",
-    "targetMeaning": "Comparative",
+    "targetMeaning": "Tính từ",
     "type": "SYNONYM",
     "options": [
       "Tomorrow",
@@ -25084,7 +25084,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Another",
-    "targetMeaning": "Determiner/Pronoun",
+    "targetMeaning": "Khác, người/cái khác",
     "type": "ANTONYM",
     "options": [
       "Antiformatted",
@@ -26374,7 +26374,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Arduous",
-    "targetMeaning": "gian gian, cực khổ",
+    "targetMeaning": "Gian khổ, vất vả",
     "type": "ANTONYM",
     "options": [
       "Light",
@@ -26383,7 +26383,7 @@ export const SYNONYM_ANTONYM_DATA = [
       "Programmed"
     ],
     "correctAnswer": "Light",
-    "explanation": "Trái nghĩa với Arduous (gian gian, cực khổ) là Light."
+    "explanation": "Trái nghĩa với Arduous (Gian khổ, vất vả) là Light."
   },
   {
     "word": "Area",
@@ -27079,7 +27079,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Aspire",
-    "targetMeaning": "khao khao, hướng tới",
+    "targetMeaning": "Khao khát, hướng tới",
     "type": "ANTONYM",
     "options": [
       "Non-Aspire",
@@ -27088,7 +27088,7 @@ export const SYNONYM_ANTONYM_DATA = [
       "Bottom"
     ],
     "correctAnswer": "Non-Aspire",
-    "explanation": "Trái nghĩa với Aspire (khao khao, hướng tới) là Non-Aspire."
+    "explanation": "Trái nghĩa với Aspire (Khao khát, hướng tới) là Non-Aspire."
   },
   {
     "word": "Aspirin",
@@ -27601,7 +27601,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "At",
-    "targetMeaning": "Tại, ở (chỉ địa điểm/thời gian)",
+    "targetMeaning": "Tại, ở (thời gian/địa điểm)",
     "type": "ANTONYM",
     "options": [
       "Unrendered",
@@ -28751,7 +28751,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Bad",
-    "targetMeaning": "worse",
+    "targetMeaning": "Tệ, xấu, kém",
     "type": "ANTONYM",
     "options": [
       "Undirected",
@@ -29390,7 +29390,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Break down",
-    "targetMeaning": "Hỏng hóc, bị hư (máy móc)",
+    "targetMeaning": "Hỏng hóc (máy móc), suy sụp",
     "type": "SYNONYM",
     "options": [
       "Apathy",
@@ -29442,7 +29442,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Brother",
-    "targetMeaning": "Anh/em trai",
+    "targetMeaning": "Anh hoặc em trai",
     "type": "SYNONYM",
     "options": [
       "Athletics",
@@ -30197,7 +30197,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Complimentary",
-    "targetMeaning": "Miễn phí, tặng kèm",
+    "targetMeaning": "Miễn phí, ngợi khen",
     "type": "SYNONYM",
     "options": [
       "Essential Complimentary",
@@ -30379,7 +30379,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Could",
-    "targetMeaning": "Có thể (quá khứ / lịch sự)",
+    "targetMeaning": "Có thể (quá khứ của can)",
     "type": "ANTONYM",
     "options": [
       "Amenable",
@@ -30392,7 +30392,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Countable",
-    "targetMeaning": "Uncountable",
+    "targetMeaning": "Đếm được (danh từ)",
     "type": "SYNONYM",
     "options": [
       "Counterintended",
@@ -30405,7 +30405,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Counter",
-    "targetMeaning": "Phản",
+    "targetMeaning": "Quầy hàng, phản bác",
     "type": "ANTONYM",
     "options": [
       "Superapplied",
@@ -30965,7 +30965,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Direct",
-    "targetMeaning": "Reported",
+    "targetMeaning": "Trực tiếp",
     "type": "SYNONYM",
     "options": [
       "Essential Direct",
@@ -31776,7 +31776,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Easy",
-    "targetMeaning": "easily",
+    "targetMeaning": "Dễ dàng, đơn giản",
     "type": "ANTONYM",
     "options": [
       "Analyst",
@@ -32089,7 +32089,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Either... or...",
-    "targetMeaning": "You can pay either by credit card or in cash.",
+    "targetMeaning": "Hoặc... hoặc...",
     "type": "ANTONYM",
     "options": [
       "Superendorsed",
@@ -32324,7 +32324,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Example",
-    "targetMeaning": "for example, for instance, such as",
+    "targetMeaning": "Ví dụ, minh họa",
     "type": "ANTONYM",
     "options": [
       "Oversupported",
@@ -32350,7 +32350,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Exemplifying",
-    "targetMeaning": "for instance, namely, in particular",
+    "targetMeaning": "Ví dụ minh họa, chẳng hạn như",
     "type": "ANTONYM",
     "options": [
       "Non-Exemplifying",
@@ -32363,7 +32363,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Exempt from",
-    "targetMeaning": "from (+ N)",
+    "targetMeaning": "Được miễn, không phải chịu",
     "type": "SYNONYM",
     "options": [
       "Hyperendorsed",
@@ -32688,7 +32688,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Far",
-    "targetMeaning": "farther/further",
+    "targetMeaning": "Xa, xa xôi",
     "type": "ANTONYM",
     "options": [
       "Ultrapowered",
@@ -32701,7 +32701,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Fast",
-    "targetMeaning": "fast (irregular)",
+    "targetMeaning": "Nhanh, nhanh chóng",
     "type": "SYNONYM",
     "options": [
       "Essential Fast",
@@ -32805,7 +32805,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Formal",
-    "targetMeaning": "Informal",
+    "targetMeaning": "Trang trọng, chính thức",
     "type": "SYNONYM",
     "options": [
       "Essential Formal",
@@ -32857,7 +32857,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Furthermore",
-    "targetMeaning": "also, plus",
+    "targetMeaning": "Hơn nữa, ngoài ra",
     "type": "SYNONYM",
     "options": [
       "Essential Furthermore",
@@ -32870,7 +32870,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Future (will)",
-    "targetMeaning": "They will repair the road.",
+    "targetMeaning": "Thì tương lai (với Will)",
     "type": "ANTONYM",
     "options": [
       "Ascend",
@@ -33105,7 +33105,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "GET",
-    "targetMeaning": "Get + Subject (người) + To-V",
+    "targetMeaning": "Nhận, lấy, nhờ/bắt ai làm gì",
     "type": "ANTONYM",
     "options": [
       "Non-GET",
@@ -33118,7 +33118,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Good",
-    "targetMeaning": "better",
+    "targetMeaning": "Tốt, giỏi, hay",
     "type": "SYNONYM",
     "options": [
       "Essential Good",
@@ -33417,7 +33417,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "He",
-    "targetMeaning": "his coat",
+    "targetMeaning": "Anh ấy, ông ấy",
     "type": "ANTONYM",
     "options": [
       "Non-He",
@@ -33430,7 +33430,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "HELP",
-    "targetMeaning": "Help + Subject + (To) V-bare (giúp ai làm gì)",
+    "targetMeaning": "Giúp đỡ, sự giúp đỡ",
     "type": "SYNONYM",
     "options": [
       "Essential HELP",
@@ -33443,7 +33443,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Here",
-    "targetMeaning": "there",
+    "targetMeaning": "Ở đây, tại đây",
     "type": "ANTONYM",
     "options": [
       "Unsimplified",
@@ -33482,7 +33482,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "However",
-    "targetMeaning": "but, though",
+    "targetMeaning": "Tuy nhiên, mặc dù vậy",
     "type": "SYNONYM",
     "options": [
       "Essential However",
@@ -34212,7 +34212,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Idiom",
-    "targetMeaning": "Meaning",
+    "targetMeaning": "Thành ngữ",
     "type": "SYNONYM",
     "options": [
       "Disincreased",
@@ -34459,7 +34459,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "In",
-    "targetMeaning": "Months, years, seasons, long periods",
+    "targetMeaning": "Trong, ở trong (chỉ tháng, năm, mùa)",
     "type": "ANTONYM",
     "options": [
       "Alchemy",
@@ -34472,7 +34472,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "In addition",
-    "targetMeaning": "on top of that",
+    "targetMeaning": "Ngoài ra, thêm vào đó",
     "type": "SYNONYM",
     "options": [
       "Antiattached",
@@ -34628,7 +34628,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Insist",
-    "targetMeaning": "She insisted that he be present at the ceremony.",
+    "targetMeaning": "Khăng khăng, đòi hỏi",
     "type": "ANTONYM",
     "options": [
       "Sist",
@@ -34706,7 +34706,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Inter",
-    "targetMeaning": "Liên",
+    "targetMeaning": "Tiền tố: Liên, giữa các...",
     "type": "ANTONYM",
     "options": [
       "Civilization",
@@ -35259,7 +35259,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Knit",
-    "targetMeaning": "Đan đan len",
+    "targetMeaning": "Đan len",
     "type": "SYNONYM",
     "options": [
       "Reprotected",
@@ -35268,7 +35268,7 @@ export const SYNONYM_ANTONYM_DATA = [
       "Supertrained"
     ],
     "correctAnswer": "Essential Knit",
-    "explanation": "Knit (Đan đan len) mang ý nghĩa tương đồng với Essential Knit."
+    "explanation": "Knit (Đan len) mang ý nghĩa tương đồng với Essential Knit."
   },
   {
     "word": "Knockout",
@@ -35403,7 +35403,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "LET",
-    "targetMeaning": "Let + Subject (người) + V-bare (cho phép ai làm gì)",
+    "targetMeaning": "Cho phép, để cho",
     "type": "ANTONYM",
     "options": [
       "Alteration",
@@ -35416,7 +35416,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Let's go",
-    "targetMeaning": "..., shall we?",
+    "targetMeaning": "Đi thôi nào",
     "type": "SYNONYM",
     "options": [
       "Essential Let's go",
@@ -35468,7 +35468,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Little",
-    "targetMeaning": "less",
+    "targetMeaning": "Ít, nhỏ bé",
     "type": "SYNONYM",
     "options": [
       "Essential Little",
@@ -35520,7 +35520,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Macro",
-    "targetMeaning": "Vĩ",
+    "targetMeaning": "Tiền tố: Vĩ mô, lớn",
     "type": "SYNONYM",
     "options": [
       "Abstract",
@@ -36133,7 +36133,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "MAKE",
-    "targetMeaning": "Make + Subject (người) + V-bare (bắt buộc ai làm gì)",
+    "targetMeaning": "Làm, chế tạo, bắt buộc",
     "type": "ANTONYM",
     "options": [
       "Allegation",
@@ -36198,7 +36198,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Many",
-    "targetMeaning": "much",
+    "targetMeaning": "Nhiều (danh từ đếm được)",
     "type": "SYNONYM",
     "options": [
       "Prelinked",
@@ -36263,7 +36263,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "May",
-    "targetMeaning": "Permission / Possibility",
+    "targetMeaning": "Có thể, có lẽ",
     "type": "ANTONYM",
     "options": [
       "Non-May",
@@ -36276,7 +36276,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Meaning",
-    "targetMeaning": "Preposition (+ Noun / V-ing)",
+    "targetMeaning": "Ý nghĩa",
     "type": "SYNONYM",
     "options": [
       "Essential Meaning",
@@ -36315,7 +36315,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Micro",
-    "targetMeaning": "Vi",
+    "targetMeaning": "Vi (siêu nhỏ)",
     "type": "ANTONYM",
     "options": [
       "Non-Micro",
@@ -36931,7 +36931,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Modal",
-    "targetMeaning": "Use",
+    "targetMeaning": "Động từ khuyết thiếu",
     "type": "SYNONYM",
     "options": [
       "Anticertified",
@@ -36944,7 +36944,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Modal Verbs",
-    "targetMeaning": "You must submit the report.",
+    "targetMeaning": "Động từ khuyết thiếu",
     "type": "ANTONYM",
     "options": [
       "Non-Modal Verbs",
@@ -37035,7 +37035,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Must",
-    "targetMeaning": "Strong obligation / Certainty",
+    "targetMeaning": "Phải, bắt buộc",
     "type": "SYNONYM",
     "options": [
       "Counterplanned",
@@ -37087,7 +37087,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Neither... nor...",
-    "targetMeaning": "The product is neither expensive nor poor quality.",
+    "targetMeaning": "Không... mà cũng không...",
     "type": "SYNONYM",
     "options": [
       "Appease",
@@ -37113,7 +37113,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Nevertheless",
-    "targetMeaning": "still, anyway",
+    "targetMeaning": "Tuy nhiên, dù sao đi nữa",
     "type": "ANTONYM",
     "options": [
       "Preapplied",
@@ -37139,7 +37139,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Nobody phoned",
-    "targetMeaning": "..., did they?",
+    "targetMeaning": "Không ai gọi điện cả",
     "type": "ANTONYM",
     "options": [
       "Subobserved",
@@ -37516,7 +37516,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Now",
-    "targetMeaning": "then",
+    "targetMeaning": "Bây giờ, hiện tại",
     "type": "ANTONYM",
     "options": [
       "Countershaped",
@@ -37555,7 +37555,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Object Pronoun",
-    "targetMeaning": "me, you, him, her, it, us, them",
+    "targetMeaning": "Đại từ tân ngữ",
     "type": "SYNONYM",
     "options": [
       "Renovation",
@@ -37621,7 +37621,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "On",
-    "targetMeaning": "Days, dates",
+    "targetMeaning": "Trở trên, vào (chỉ ngày, thứ)",
     "type": "ANTONYM",
     "options": [
       "Preapplied",
@@ -37699,7 +37699,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Order",
-    "targetMeaning": "Category",
+    "targetMeaning": "Đơn hàng, thứ tự, ra lệnh",
     "type": "ANTONYM",
     "options": [
       "Non-Order",
@@ -37751,7 +37751,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Other",
-    "targetMeaning": "Determiner",
+    "targetMeaning": "Khác, người/cái khác",
     "type": "ANTONYM",
     "options": [
       "Non-Other",
@@ -37764,7 +37764,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Others",
-    "targetMeaning": "Pronoun",
+    "targetMeaning": "Những người/cái khác",
     "type": "SYNONYM",
     "options": [
       "Isolated",
@@ -37790,7 +37790,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Pair",
-    "targetMeaning": "Example",
+    "targetMeaning": "Cặp, đôi",
     "type": "ANTONYM",
     "options": [
       "Architect",
@@ -37829,7 +37829,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Past Simple",
-    "targetMeaning": "She wrote the letter.",
+    "targetMeaning": "Thì quá quá khứ đơn",
     "type": "SYNONYM",
     "options": [
       "Disoperated",
@@ -37855,7 +37855,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Pattern",
-    "targetMeaning": "Meaning",
+    "targetMeaning": "Mẫu, mô hình, kiểu",
     "type": "SYNONYM",
     "options": [
       "Axis",
@@ -37894,7 +37894,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Phrasal Verb",
-    "targetMeaning": "Meaning",
+    "targetMeaning": "Cụm động từ",
     "type": "ANTONYM",
     "options": [
       "Non-Phrasal Verb",
@@ -37959,7 +37959,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Possessive Adj",
-    "targetMeaning": "my, your, his, her, its, our, their",
+    "targetMeaning": "Tính từ sở hữu",
     "type": "SYNONYM",
     "options": [
       "Aware",
@@ -37972,7 +37972,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Possessive Pronoun",
-    "targetMeaning": "mine, yours, his, hers, ours, theirs",
+    "targetMeaning": "Đại từ sở hữu",
     "type": "ANTONYM",
     "options": [
       "Overactive",
@@ -37985,7 +37985,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Post",
-    "targetMeaning": "Sau",
+    "targetMeaning": "Bài đăng; đăng tải; sau",
     "type": "SYNONYM",
     "options": [
       "Superprotected",
@@ -38064,7 +38064,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Preposition",
-    "targetMeaning": "Used for",
+    "targetMeaning": "Giới từ",
     "type": "ANTONYM",
     "options": [
       "Aquarium",
@@ -38104,7 +38104,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Present Continuous",
-    "targetMeaning": "currently, now, at present, at the moment",
+    "targetMeaning": "Thì hiện tại tiếp diễn",
     "type": "ANTONYM",
     "options": [
       "Postnegotiated",
@@ -38117,7 +38117,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Present Perfect",
-    "targetMeaning": "They have built a bridge.",
+    "targetMeaning": "Thì hiện tại hoàn thành",
     "type": "SYNONYM",
     "options": [
       "Subapplied",
@@ -38130,7 +38130,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Present Simple",
-    "targetMeaning": "They make cars here.",
+    "targetMeaning": "Thì hiện tại đơn",
     "type": "ANTONYM",
     "options": [
       "Non-Present Simple",
@@ -38247,7 +38247,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Prone to",
-    "targetMeaning": "to (+ N/V-ing)",
+    "targetMeaning": "Dễ bị, thiên về",
     "type": "SYNONYM",
     "options": [
       "Prelaunched",
@@ -38260,7 +38260,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Pronoun",
-    "targetMeaning": "Used for",
+    "targetMeaning": "Đại từ nhân xưng",
     "type": "ANTONYM",
     "options": [
       "Disrelated",
@@ -38312,7 +38312,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Punctuation",
-    "targetMeaning": "Primary Function",
+    "targetMeaning": "Dấu câu",
     "type": "ANTONYM",
     "options": [
       "Redistributed",
@@ -38325,7 +38325,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Purchase",
-    "targetMeaning": "buy",
+    "targetMeaning": "Mua, sự mua sắm",
     "type": "SYNONYM",
     "options": [
       "Disrestored",
@@ -38338,7 +38338,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Purpose",
-    "targetMeaning": "so that, in order that",
+    "targetMeaning": "Mục đích, ý định",
     "type": "ANTONYM",
     "options": [
       "Non-Purpose",
@@ -38351,7 +38351,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Put off",
-    "targetMeaning": "postpone",
+    "targetMeaning": "Hoãn lại, trì hoãn",
     "type": "SYNONYM",
     "options": [
       "Restandardized",
@@ -38390,7 +38390,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Question",
-    "targetMeaning": "Did + subject + base form?",
+    "targetMeaning": "Câu hỏi, thắc mắc",
     "type": "ANTONYM",
     "options": [
       "Postrestored",
@@ -38403,7 +38403,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Quick",
-    "targetMeaning": "quickly",
+    "targetMeaning": "Nhanh, nhanh chóng",
     "type": "SYNONYM",
     "options": [
       "Interbalanced",
@@ -38429,7 +38429,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Re",
-    "targetMeaning": "Lại",
+    "targetMeaning": "Tiền tố: Lại, làm lại",
     "type": "SYNONYM",
     "options": [
       "Antistructured",
@@ -38482,7 +38482,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Reason",
-    "targetMeaning": "because, since, as",
+    "targetMeaning": "Lý do, nguyên nhân",
     "type": "SYNONYM",
     "options": [
       "Submapped",
@@ -38495,7 +38495,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Recommend",
-    "targetMeaning": "The board recommended that Mr. Lee submit the report.",
+    "targetMeaning": "Khuyên bảo, đề xuất",
     "type": "ANTONYM",
     "options": [
       "Postinterested",
@@ -38560,7 +38560,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Reflexive Pronoun",
-    "targetMeaning": "myself, yourself, himself, itself, themselves",
+    "targetMeaning": "Đại từ phản thân",
     "type": "ANTONYM",
     "options": [
       "Unperformed",
@@ -38730,7 +38730,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Request",
-    "targetMeaning": "The client requested that the contract be revised.",
+    "targetMeaning": "Yêu cầu, thỉnh cầu",
     "type": "SYNONYM",
     "options": [
       "Superexpected",
@@ -38925,7 +38925,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Security",
-    "targetMeaning": "an ninh",
+    "targetMeaning": "An ninh, sự bảo toàn",
     "type": "ANTONYM",
     "options": [
       "Non-Security",
@@ -38990,7 +38990,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Sequencing",
-    "targetMeaning": "firstly, subsequently, finally, meanwhile",
+    "targetMeaning": "Sự sắp xếp thứ tự",
     "type": "SYNONYM",
     "options": [
       "Postlaunched",
@@ -39016,7 +39016,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Several",
-    "targetMeaning": "—",
+    "targetMeaning": "Một vài, một số",
     "type": "SYNONYM",
     "options": [
       "Counterengaged",
@@ -39055,7 +39055,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Should",
-    "targetMeaning": "Advice / Recommendation",
+    "targetMeaning": "Nên, cần phải",
     "type": "SYNONYM",
     "options": [
       "Essential Should",
@@ -39107,7 +39107,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Since Monday",
-    "targetMeaning": "for 3 days",
+    "targetMeaning": "Từ thứ Hai",
     "type": "SYNONYM",
     "options": [
       "Superformed",
@@ -39172,7 +39172,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Statement",
-    "targetMeaning": "Question Tag",
+    "targetMeaning": "Câu phát biểu, câu khẳng định",
     "type": "ANTONYM",
     "options": [
       "Overapplied",
@@ -39263,7 +39263,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Subject",
-    "targetMeaning": "Possessive Adjective (+ Noun)",
+    "targetMeaning": "Chủ đề, môn học, chủ ngữ",
     "type": "SYNONYM",
     "options": [
       "Essential Subject",
@@ -39291,7 +39291,7 @@ export const SYNONYM_ANTONYM_DATA = [
   {
     "word": "Tense",
     "type": "SYNONYM",
-    "targetMeaning": "Active",
+    "targetMeaning": "Thì trong ngữ pháp",
     "options": [
       "basic",
       "Tense",
@@ -39580,7 +39580,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Summarizing",
-    "targetMeaning": "in conclusion, to sum up, overall, in short",
+    "targetMeaning": "Tóm tắt, tổng kết",
     "type": "ANTONYM",
     "options": [
       "Antiassembled",
@@ -39634,7 +39634,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Susceptible to",
-    "targetMeaning": "to (+ N)",
+    "targetMeaning": "Dễ bị ảnh hưởng, nhạy cảm với",
     "type": "SYNONYM",
     "options": [
       "Unrecorded",
@@ -39725,7 +39725,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Tense",
-    "targetMeaning": "Active",
+    "targetMeaning": "Thì trong ngữ pháp",
     "type": "ANTONYM",
     "options": [
       "Non-Tense",
@@ -39751,7 +39751,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "The other",
-    "targetMeaning": "Determiner/Pronoun",
+    "targetMeaning": "Người/cái còn lại",
     "type": "ANTONYM",
     "options": [
       "Apologize",
@@ -39764,7 +39764,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Therefore",
-    "targetMeaning": "so",
+    "targetMeaning": "Do đó, vì vậy",
     "type": "SYNONYM",
     "options": [
       "Micropowered",
@@ -39777,7 +39777,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "They",
-    "targetMeaning": "is working",
+    "targetMeaning": "Họ, chúng nó",
     "type": "ANTONYM",
     "options": [
       "Remanufactured",
@@ -39803,7 +39803,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "This",
-    "targetMeaning": "that",
+    "targetMeaning": "Đây, cái này",
     "type": "ANTONYM",
     "options": [
       "Alternate",
@@ -39829,7 +39829,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Time Frame",
-    "targetMeaning": "Structure",
+    "targetMeaning": "Khung thời gian",
     "type": "ANTONYM",
     "options": [
       "Reluctant",
@@ -39842,7 +39842,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Today",
-    "targetMeaning": "that day",
+    "targetMeaning": "Hôm nay",
     "type": "SYNONYM",
     "options": [
       "Created",
@@ -39855,7 +39855,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Tomorrow",
-    "targetMeaning": "the next day",
+    "targetMeaning": "Ngày mai",
     "type": "ANTONYM",
     "options": [
       "Non-Tomorrow",
@@ -39920,7 +39920,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Trigger Verb",
-    "targetMeaning": "Example Sentence",
+    "targetMeaning": "Động từ kích hoạt",
     "type": "SYNONYM",
     "options": [
       "Reinvested",
@@ -39933,7 +39933,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Try",
-    "targetMeaning": "Try calling her. (= experiment)",
+    "targetMeaning": "Thử, cố gắng",
     "type": "ANTONYM",
     "options": [
       "Hyperrated",
@@ -39959,7 +39959,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Two-Object Verbs",
-    "targetMeaning": "They offered her a promotion.",
+    "targetMeaning": "Động từ hai tân ngữ",
     "type": "ANTONYM",
     "options": [
       "Documented",
@@ -39972,7 +39972,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Type",
-    "targetMeaning": "Structure",
+    "targetMeaning": "Loại, kiểu; gõ phím",
     "type": "SYNONYM",
     "options": [
       "Essential Type",
@@ -39985,7 +39985,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Ultra",
-    "targetMeaning": "Siêu",
+    "targetMeaning": "Tiền tố: Siêu, cực kỳ",
     "type": "ANTONYM",
     "options": [
       "Prelabeled",
@@ -40771,7 +40771,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Very big",
-    "targetMeaning": "Rất lớn, đồ sộ",
+    "targetMeaning": "Rất to lớn, khổng lồ",
     "type": "SYNONYM",
     "options": [
       "Average",
@@ -40876,7 +40876,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Where",
-    "targetMeaning": "Places",
+    "targetMeaning": "Ở đâu, nơi",
     "type": "SYNONYM",
     "options": [
       "Essential Where",
@@ -40889,7 +40889,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Whose",
-    "targetMeaning": "Possession",
+    "targetMeaning": "Của ai",
     "type": "ANTONYM",
     "options": [
       "Available",
@@ -40954,7 +40954,7 @@ export const SYNONYM_ANTONYM_DATA = [
   },
   {
     "word": "Would",
-    "targetMeaning": "Sẽ, đã từng",
+    "targetMeaning": "Sẽ, đã thường (quá khứ của will)",
     "type": "SYNONYM",
     "options": [
       "Superincluded",
@@ -47265,7 +47265,7 @@ export const SENTENCE_DASH_DATA = [
       "arduous"
     ],
     "hint": "Giới từ đi kèm danh từ: report about + N (Arduous)",
-    "translation": "Quản lý đã yêu cầu một báo cáo chi tiết về gian gian, cực khổ.",
+    "translation": "Quản lý đã yêu cầu một báo cáo chi tiết về Gian khổ, vất vả.",
     "level": "TOEIC"
   },
   {
@@ -73677,7 +73677,7 @@ export const ERROR_HUNTER_DATA = [
     ],
     "correctChoice": 0,
     "explanation": "Dùng \"for\" cho khoảng thời gian (for five years), \"since\" chỉ dùng cho mốc thời gian.",
-    "translation": "Anh ấy đã làm việc về gian gian, cực khổ được 5 năm mà không dừng lại."
+    "translation": "Anh ấy đã làm việc về Gian khổ, vất vả được 5 năm mà không dừng lại."
   },
   {
     "sentenceParts": [

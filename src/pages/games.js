@@ -45,6 +45,9 @@ export function renderGamesPage(selectedMode = null) {
   const container = document.getElementById('page-container');
   if (!container) return;
 
+  // Pre-load heavy games-data module in background so game startup is 100% instant
+  getGamesDataModule();
+
   if (selectedMode) {
     currentGame = selectedMode;
   } else {

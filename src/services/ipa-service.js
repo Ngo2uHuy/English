@@ -4375,7 +4375,7 @@ export const IpaService = {
    */
   getIPA(text) {
     if (!text) return '';
-    const words = text.trim().split(/s+/);
+    const words = text.trim().split(/\s+/);
     const ipaParts = words.map(w => {
       const match = w.match(/^([^a-zA-Z]*)([a-zA-Z'-]+)([^a-zA-Z]*)$/);
       if (match) {
