@@ -702,6 +702,7 @@ function initSpeedMatch(container, targetPairsCount = selectedQuestionCount, gam
           c2.classList.remove('selected');
           c1.classList.add('matched');
           c2.classList.add('matched');
+          selectedCards = [];
 
           const scoreEl = document.getElementById('game-score');
           const comboEl = document.getElementById('combo-badge');
@@ -897,6 +898,7 @@ function finishSpeedMatchGame(results) {
 }
 
 // --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
 // GAME 2: SENTENCE BUILDER DASH
 // --------------------------------------------------------------------------
 function initSentenceDash(container, targetCount = selectedQuestionCount, gamesData) {
@@ -915,7 +917,9 @@ function initSentenceDash(container, targetCount = selectedQuestionCount, gamesD
     }
 
     const q = dataset[currentIndex];
-    let selectedWords = [];
+    const targetSentence = q.target || q.originalSentence || '';
+    const scrambledWords = q.scrambled || q.scrambledWords || [];
+    let selectedIndices = [];
 
     function renderStage() {
       container.innerHTML = `
@@ -931,26 +935,27 @@ function initSentenceDash(container, targetCount = selectedQuestionCount, gamesD
             <div class="combo-badge">COMBO: x${Math.max(1, combo)}</div>
           </div>
 
-          <div class="dash-hint-box">
-            <div class="hint-text">💡 Nghĩa: <strong>${q.translation}</strong></div>
-            <span class="badge badge-blue">${q.category || 'Grammar'}</span>
+          <div class="dash-hint-box" style="margin-bottom: 20px;">
+            <div class="hint-text">💡 Nghĩa: <strong>${q.translation || ''}</strong></div>
+            ${q.hint ? `<div style="font-size:0.85rem;color:#a855f7;margin-top:6px;font-weight:600;">🎯 Gợi ý: ${q.hint}</div>` : ''}
+            <span class="badge badge-blue" style="margin-top:8px;display:inline-block;">${q.level || 'Grammar'}</span>
           </div>
 
-          <div class="target-sentence-zone" id="target-zone">
-            ${selectedWords.map((w, idx) => `
-              <button class="word-chip in-target" data-idx="${idx}">${w}</button>
+          <div class="target-sentence-zone" id="target-zone" style="min-height:64px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px;border:2px dashed var(--border-color);border-radius:14px;margin-bottom:20px;background:var(--bg-secondary);">
+            ${selectedIndices.map((sIdx, targetIdx) => `
+              <button class="word-chip in-target" data-target-idx="${targetIdx}">${scrambledWords[sIdx]}</button>
             `).join('')}
           </div>
 
-          <div class="scrambled-words-pool" id="source-zone">
-            ${q.scrambledWords.map((w, idx) => `
-              <button class="word-chip ${selectedWords.includes(w) ? 'used' : ''}" data-word="${w}" data-idx="${idx}">${w}</button>
+          <div class="scrambled-words-pool" id="source-zone" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:24px;">
+            ${scrambledWords.map((w, sIdx) => `
+              <button class="word-chip ${selectedIndices.includes(sIdx) ? 'used' : ''}" data-sidx="${sIdx}">${w}</button>
             `).join('')}
           </div>
 
-          <div style="display:flex;justify-content:center;gap:12px;margin-top:24px;">
+          <div style="display:flex;justify-content:center;gap:12px;">
             <button class="btn btn-secondary" id="clear-btn">🔄 Làm lại</button>
-            <button class="btn btn-primary" id="submit-btn" ${selectedWords.length === 0 ? 'disabled' : ''}>✅ Kiểm tra câu</button>
+            <button class="btn btn-primary" id="submit-btn" ${selectedIndices.length === 0 ? 'disabled' : ''}>✅ Kiểm tra câu</button>
           </div>
         </div>
       `;
@@ -961,7 +966,7 @@ function initSentenceDash(container, targetCount = selectedQuestionCount, gamesD
       });
 
       document.getElementById('clear-btn')?.addEventListener('click', () => {
-        selectedWords = [];
+        selectedIndices = [];
         renderStage();
       });
 
@@ -971,35 +976,41 @@ function initSentenceDash(container, targetCount = selectedQuestionCount, gamesD
       sourceZone?.addEventListener('click', (e) => {
         const chip = e.target.closest('.word-chip:not(.used)');
         if (!chip) return;
-        selectedWords.push(chip.dataset.word);
-        renderStage();
+        const sIdx = parseInt(chip.dataset.sidx, 10);
+        if (!isNaN(sIdx) && !selectedIndices.includes(sIdx)) {
+          selectedIndices.push(sIdx);
+          renderStage();
+        }
       });
 
       const targetZone = document.getElementById('target-zone');
       targetZone?.addEventListener('click', (e) => {
         const chip = e.target.closest('.word-chip.in-target');
         if (!chip) return;
-        const removeIdx = parseInt(chip.dataset.idx, 10);
-        selectedWords.splice(removeIdx, 1);
-        renderStage();
+        const removeTargetIdx = parseInt(chip.dataset.targetIdx, 10);
+        if (!isNaN(removeTargetIdx)) {
+          selectedIndices.splice(removeTargetIdx, 1);
+          renderStage();
+        }
       });
     }
 
     function checkAnswer() {
-      const userSentence = selectedWords.join(' ').trim();
+      const userSentence = selectedIndices.map(idx => scrambledWords[idx]).join(' ').trim();
       const targetZone = document.getElementById('target-zone');
 
-      if (userSentence === q.originalSentence) {
+      if (userSentence.toLowerCase() === targetSentence.trim().toLowerCase()) {
         combo++;
         if (combo > maxCombo) maxCombo = combo;
         score += 150 * Math.min(combo, 5);
         SoundService.playCorrect();
+        speakEnglishWord(targetSentence);
         if (targetZone) targetZone.classList.add('correct-glow');
 
         setTimeout(() => {
           currentIndex++;
           loadQuestion();
-        }, 50);
+        }, 500);
       } else {
         combo = 0;
         SoundService.playError();
@@ -1016,6 +1027,7 @@ function initSentenceDash(container, targetCount = selectedQuestionCount, gamesD
   loadQuestion();
 }
 
+// --------------------------------------------------------------------------
 // --------------------------------------------------------------------------
 // GAME 3: ERROR HUNTER
 // --------------------------------------------------------------------------
@@ -1035,6 +1047,8 @@ function initErrorHunter(container, targetCount = selectedQuestionCount, gamesDa
     }
 
     const item = dataset[currentIndex];
+    const sentenceParts = item.sentenceParts || [];
+    let answered = false;
 
     function renderStage() {
       container.innerHTML = `
@@ -1052,11 +1066,19 @@ function initErrorHunter(container, targetCount = selectedQuestionCount, gamesDa
 
           <p class="game-instruction">Chạm vào từ/cụm từ sai ngữ pháp duy nhất trong câu dưới đây:</p>
 
-          <div class="error-hunter-sentence-box" id="sentence-box">
-            ${item.tokens.map(token => `
-              <span class="error-token ${token.isErrorTarget ? 'error-target' : ''}" data-id="${token.id}">${token.text}</span>
-            `).join(' ')}
+          <div class="dash-hint-box" style="margin-bottom:20px;">
+            <div class="hint-text">💡 Nghĩa câu: <strong>${item.translation || ''}</strong></div>
           </div>
+
+          <div class="error-hunter-sentence-box" id="sentence-box" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:24px;background:var(--bg-secondary);border-radius:16px;margin-bottom:20px;border:1px solid var(--border-color);">
+            ${sentenceParts.map((part, idx) => `
+              <button class="error-token-chip" data-idx="${idx}" style="padding:12px 18px;font-size:1.1rem;font-weight:600;border-radius:10px;cursor:pointer;border:2px solid var(--border-subtle);background:var(--bg-tertiary);color:var(--text-primary);transition:all 0.2s;">
+                ${part}
+              </button>
+            `).join('')}
+          </div>
+
+          <div id="explanation-box" style="display:none;padding:18px;border-radius:12px;background:rgba(16,185,129,0.1);border:1px solid #10b981;color:var(--text-primary);font-size:0.95rem;text-align:left;line-height:1.5;"></div>
         </div>
       `;
 
@@ -1067,27 +1089,40 @@ function initErrorHunter(container, targetCount = selectedQuestionCount, gamesDa
 
       const box = document.getElementById('sentence-box');
       box?.addEventListener('click', (e) => {
-        const tokenEl = e.target.closest('.error-token');
-        if (!tokenEl || tokenEl.classList.contains('clicked')) return;
+        const btn = e.target.closest('.error-token-chip');
+        if (!btn || answered) return;
 
-        const isWrong = tokenEl.classList.contains('error-target');
-        tokenEl.classList.add('clicked');
+        const idx = parseInt(btn.dataset.idx, 10);
+        if (isNaN(idx)) return;
 
-        if (isWrong) {
+        if (idx === item.errorIndex) {
+          answered = true;
           combo++;
           if (combo > maxCombo) maxCombo = combo;
           score += 150 * Math.min(combo, 5);
           SoundService.playCorrect();
-          tokenEl.classList.add('correct');
+          btn.style.borderColor = '#10b981';
+          btn.style.background = 'rgba(16,185,129,0.2)';
+          btn.style.color = '#10b981';
+
+          const expBox = document.getElementById('explanation-box');
+          if (expBox) {
+            expBox.style.display = 'block';
+            expBox.innerHTML = `<strong>✅ Giải thích ngữ pháp:</strong> ${item.explanation}`;
+          }
 
           setTimeout(() => {
             currentIndex++;
             loadQuestion();
-          }, 50);
+          }, 1200);
         } else {
           combo = 0;
           SoundService.playError();
-          tokenEl.classList.add('wrong');
+          btn.style.borderColor = '#ef4444';
+          btn.style.background = 'rgba(239,68,68,0.2)';
+          btn.style.color = '#ef4444';
+          const comboEl = document.querySelector('.combo-badge');
+          if (comboEl) comboEl.textContent = `COMBO: x1`;
         }
       });
     }
@@ -1098,6 +1133,7 @@ function initErrorHunter(container, targetCount = selectedQuestionCount, gamesDa
   loadQuestion();
 }
 
+// --------------------------------------------------------------------------
 // --------------------------------------------------------------------------
 // GAME 4: PHONEME BLITZ
 // --------------------------------------------------------------------------
@@ -1117,6 +1153,9 @@ function initPhonemeBlitz(container, targetCount = selectedQuestionCount, gamesD
     }
 
     const item = dataset[currentIndex];
+    const targetWord = item.wordTarget || item.audioText || '';
+    const options = shuffleArray([targetWord, item.distractor]);
+    let answered = false;
 
     function renderStage() {
       container.innerHTML = `
@@ -1133,16 +1172,16 @@ function initPhonemeBlitz(container, targetCount = selectedQuestionCount, gamesD
           </div>
 
           <div class="audio-challenge-card card" style="text-align:center;padding:32px;margin-bottom:24px;">
-            <button class="audio-play-big-btn" id="play-audio-btn" style="font-size:2rem;padding:20px 32px;border-radius:50px;cursor:pointer;background:var(--color-primary);color:white;border:none;">
-              🔊 Phản Xạ Âm Thanh
+            <button class="audio-play-big-btn" id="play-audio-btn" style="font-size:1.3rem;padding:16px 32px;border-radius:50px;cursor:pointer;background:var(--color-primary);color:white;border:none;font-weight:700;">
+              🔊 Bấm để nghe âm thanh phát âm
             </button>
-            <p style="margin-top:16px;color:var(--text-secondary);font-weight:600;">${item.meaning}</p>
+            <p style="margin-top:16px;color:var(--text-secondary);font-weight:600;font-size:1rem;">💡 ${item.soundHint || item.translation || ''}</p>
           </div>
 
           <div class="options-grid" id="options-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;">
-            ${item.options.map(opt => `
-              <button class="option-btn" data-word="${opt}" style="padding:20px;font-size:1.1rem;font-weight:700;border-radius:12px;cursor:pointer;">
-                ${opt}
+            ${options.map(opt => `
+              <button class="option-btn" data-word="${opt}" style="padding:20px;font-size:1.2rem;font-weight:700;border-radius:12px;cursor:pointer;border:2px solid var(--border-subtle);background:var(--bg-secondary);color:var(--text-primary);">
+                ${opt} <span style="font-size:0.85rem;color:#a855f7;display:block;margin-top:4px;">${IpaService.getIPA(opt)}</span>
               </button>
             `).join('')}
           </div>
@@ -1155,33 +1194,38 @@ function initPhonemeBlitz(container, targetCount = selectedQuestionCount, gamesD
       });
 
       document.getElementById('play-audio-btn')?.addEventListener('click', () => {
-        speakEnglishWord(item.targetWord);
+        speakEnglishWord(targetWord);
       });
 
       // Auto speak target word on load
-      speakEnglishWord(item.targetWord);
+      speakEnglishWord(targetWord);
 
       const grid = document.getElementById('options-grid');
       grid?.addEventListener('click', (e) => {
         const btn = e.target.closest('.option-btn');
-        if (!btn || btn.disabled) return;
+        if (!btn || answered) return;
 
         const chosen = btn.dataset.word;
-        if (chosen === item.targetWord) {
+        if (chosen === targetWord) {
+          answered = true;
           combo++;
           if (combo > maxCombo) maxCombo = combo;
           score += 100 * Math.min(combo, 5);
           SoundService.playCorrect();
-          btn.classList.add('correct');
+          btn.style.borderColor = '#10b981';
+          btn.style.background = 'rgba(16,185,129,0.2)';
+          btn.style.color = '#10b981';
 
           setTimeout(() => {
             currentIndex++;
             loadQuestion();
-          }, 50);
+          }, 500);
         } else {
           combo = 0;
           SoundService.playError();
-          btn.classList.add('wrong');
+          btn.style.borderColor = '#ef4444';
+          btn.style.background = 'rgba(239,68,68,0.2)';
+          btn.style.color = '#ef4444';
         }
       });
     }
@@ -1192,6 +1236,7 @@ function initPhonemeBlitz(container, targetCount = selectedQuestionCount, gamesD
   loadQuestion();
 }
 
+// --------------------------------------------------------------------------
 // --------------------------------------------------------------------------
 // GAME 5: SYNONYM & ANTONYM CHALLENGE
 // --------------------------------------------------------------------------
@@ -1211,6 +1256,8 @@ function initSynonymAntonym(container, targetCount = selectedQuestionCount, game
     }
 
     const item = dataset[currentIndex];
+    const isSynonym = (item.type || '').toUpperCase() === 'SYNONYM';
+    let answered = false;
 
     function renderStage() {
       container.innerHTML = `
@@ -1228,19 +1275,19 @@ function initSynonymAntonym(container, targetCount = selectedQuestionCount, game
 
           <div class="card" style="text-align:center;padding:32px 24px;margin-bottom:24px;">
             <div style="margin-bottom:8px;">
-              <span class="badge ${item.type === 'synonym' ? 'badge-blue' : 'badge-rose'}" style="font-size:0.9rem;padding:6px 16px;text-transform:uppercase;">
-                ${item.type === 'synonym' ? '🔍 Tìm từ ĐỒNG NGHĨA (Synonym)' : '⚡ Tìm từ TRÁI NGHĨA (Antonym)'}
+              <span class="badge ${isSynonym ? 'badge-blue' : 'badge-rose'}" style="font-size:0.9rem;padding:6px 16px;text-transform:uppercase;">
+                ${isSynonym ? '🔍 Tìm từ ĐỒNG NGHĨA (Synonym)' : '⚡ Tìm từ TRÁI NGHĨA (Antonym)'}
               </span>
             </div>
             <h2 style="font-size:2.2rem;font-weight:800;color:var(--text-primary);margin:12px 0 4px 0;">${item.word}</h2>
             <div class="ipa-text" style="font-size:1.05rem;color:#a855f7;font-weight:700;margin-bottom:8px;">${IpaService.getIPA(item.word)}</div>
-            <p style="font-size:1rem;color:var(--text-secondary);font-weight:600;">Nghĩa: ${item.translation}</p>
+            <p style="font-size:1rem;color:var(--text-secondary);font-weight:600;">Nghĩa: ${item.targetMeaning || item.translation || ''}</p>
           </div>
 
           <div class="options-grid" id="synonym-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;">
-            ${item.options.map(opt => `
-              <button class="option-btn" data-opt="${opt}" style="padding:18px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;">
-                ${opt}
+            ${(item.options || []).map(opt => `
+              <button class="option-btn" data-opt="${opt}" style="padding:18px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;border:2px solid var(--border-subtle);background:var(--bg-secondary);color:var(--text-primary);">
+                ${opt} <span style="font-size:0.8rem;color:#a855f7;display:block;margin-top:2px;">${IpaService.getIPA(opt)}</span>
               </button>
             `).join('')}
           </div>
@@ -1255,24 +1302,30 @@ function initSynonymAntonym(container, targetCount = selectedQuestionCount, game
       const grid = document.getElementById('synonym-grid');
       grid?.addEventListener('click', (e) => {
         const btn = e.target.closest('.option-btn');
-        if (!btn || btn.disabled) return;
+        if (!btn || answered) return;
 
         const chosen = btn.dataset.opt;
         if (chosen === item.correctAnswer) {
+          answered = true;
           combo++;
           if (combo > maxCombo) maxCombo = combo;
           score += 120 * Math.min(combo, 5);
           SoundService.playCorrect();
-          btn.classList.add('correct');
+          speakEnglishWord(chosen);
+          btn.style.borderColor = '#10b981';
+          btn.style.background = 'rgba(16,185,129,0.2)';
+          btn.style.color = '#10b981';
 
           setTimeout(() => {
             currentIndex++;
             loadQuestion();
-          }, 50);
+          }, 500);
         } else {
           combo = 0;
           SoundService.playError();
-          btn.classList.add('wrong');
+          btn.style.borderColor = '#ef4444';
+          btn.style.background = 'rgba(239,68,68,0.2)';
+          btn.style.color = '#ef4444';
         }
       });
     }
@@ -1283,6 +1336,7 @@ function initSynonymAntonym(container, targetCount = selectedQuestionCount, game
   loadQuestion();
 }
 
+// --------------------------------------------------------------------------
 // --------------------------------------------------------------------------
 // GAME 6: IRREGULAR VERBS MASTER
 // --------------------------------------------------------------------------
@@ -1302,6 +1356,7 @@ function initIrregularVerbs(container, targetCount = selectedQuestionCount, game
     }
 
     const item = dataset[currentIndex];
+    let answered = false;
 
     function renderStage() {
       container.innerHTML = `
@@ -1329,8 +1384,8 @@ function initIrregularVerbs(container, targetCount = selectedQuestionCount, game
           </div>
 
           <div class="options-grid" id="verbs-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
-            ${item.options.map(opt => `
-              <button class="option-btn" data-opt="${opt}" style="padding:16px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+            ${(item.options || []).map(opt => `
+              <button class="option-btn" data-opt="${opt}" style="padding:16px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;border:2px solid var(--border-subtle);background:var(--bg-secondary);color:var(--text-primary);">
                 <span>${opt}</span>
                 <span class="ipa-badge" style="font-size:0.8rem;color:#a855f7;">${IpaService.getIPA(opt)}</span>
               </button>
@@ -1347,27 +1402,32 @@ function initIrregularVerbs(container, targetCount = selectedQuestionCount, game
       const grid = document.getElementById('verbs-grid');
       grid?.addEventListener('click', (e) => {
         const btn = e.target.closest('.option-btn');
-        if (!btn || btn.disabled) return;
+        if (!btn || answered) return;
 
-        grid.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
         const chosen = btn.dataset.opt;
+        answered = true;
 
         if (chosen === item.correctAnswer) {
           combo++;
           if (combo > maxCombo) maxCombo = combo;
           score += 150 * Math.min(combo, 4);
           SoundService.playCorrect();
-          btn.classList.add('correct');
+          speakEnglishWord(chosen);
+          btn.style.borderColor = '#10b981';
+          btn.style.background = 'rgba(16,185,129,0.2)';
+          btn.style.color = '#10b981';
         } else {
           combo = 0;
           SoundService.playError();
-          btn.classList.add('wrong');
+          btn.style.borderColor = '#ef4444';
+          btn.style.background = 'rgba(239,68,68,0.2)';
+          btn.style.color = '#ef4444';
         }
 
         setTimeout(() => {
           currentIndex++;
           loadQuestion();
-        }, 50);
+        }, 500);
       });
     }
 
