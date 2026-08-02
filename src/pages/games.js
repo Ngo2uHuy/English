@@ -325,6 +325,9 @@ function getGameMemoryTip(mode) {
 // Game Question Count / Setup Modal
 // --------------------------------------------------------------------------
 function renderGameSetup(container, mode) {
+  // Pre-load heavy games-data module in background so game launch is 100% instant
+  getGamesDataModule();
+
   const modeName = getModeName(mode);
   const emoji = getGameEmoji(mode);
   const memoryTip = getGameMemoryTip(mode);
@@ -902,7 +905,7 @@ function initSentenceDash(container, targetCount = selectedQuestionCount, gamesD
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = gamesData.getSentenceDashData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  const dataset = shuffleArray(gamesData.getSentenceDashData()).slice(0, targetCount);
   if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
@@ -1022,7 +1025,7 @@ function initErrorHunter(container, targetCount = selectedQuestionCount, gamesDa
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = gamesData.getErrorHunterData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  const dataset = shuffleArray(gamesData.getErrorHunterData()).slice(0, targetCount);
   if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
@@ -1104,7 +1107,7 @@ function initPhonemeBlitz(container, targetCount = selectedQuestionCount, gamesD
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = gamesData.getPhonemeBlitzData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  const dataset = shuffleArray(gamesData.getPhonemeBlitzData()).slice(0, targetCount);
   if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
@@ -1198,7 +1201,7 @@ function initSynonymAntonym(container, targetCount = selectedQuestionCount, game
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = gamesData.getSynonymAntonymData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  const dataset = shuffleArray(gamesData.getSynonymAntonymData()).slice(0, targetCount);
   if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
@@ -1289,7 +1292,7 @@ function initIrregularVerbs(container, targetCount = selectedQuestionCount, game
   let maxCombo = 0;
   let currentIndex = 0;
 
-  const dataset = gamesData.getIrregularVerbsGameData().sort(() => 0.5 - Math.random()).slice(0, targetCount);
+  const dataset = shuffleArray(gamesData.getIrregularVerbsGameData()).slice(0, targetCount);
   if (!dataset || dataset.length === 0) return;
 
   function loadQuestion() {
