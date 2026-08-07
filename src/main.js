@@ -6,6 +6,7 @@ import './style.css';
 import { StorageService } from './services/storage-service.js';
 import { renderNavbar } from './components/navbar.js';
 import { renderSidebar, showSidebar, hideSidebar } from './components/sidebar.js';
+import { initAiChat } from './components/ai-chat.js';
 
 // Router Cache for Dynamic Imports
 const moduleCache = new Map();
@@ -69,6 +70,9 @@ async function loadPageModule(routeKey) {
     case 'exam-center':
       modulePromise = import('./pages/exam-center.js');
       break;
+    case 'scan':
+      modulePromise = import('./pages/scan.js');
+      break;
     default:
       modulePromise = import('./pages/dashboard.js');
       break;
@@ -84,6 +88,9 @@ async function init() {
   // Apply saved theme
   const theme = StorageService.getTheme();
   document.documentElement.setAttribute('data-theme', theme);
+
+  // Initialize Sticky AI Chat Tutor
+  initAiChat();
 
   // Initialize Supabase Cloud Sync asynchronously
   StorageService.initSupabaseSync().then(() => {
@@ -135,6 +142,10 @@ async function handleRoute() {
   document.querySelectorAll('.modal-backdrop, #word-modal, .modal').forEach(m => {
     if (m) m.style.display = 'none';
   });
+  document.getElementById('mobile-nav-drawer')?.classList.remove('open');
+  document.getElementById('sidebar')?.classList.remove('open');
+  document.getElementById('sidebar-backdrop')?.classList.remove('visible');
+  document.body.style.overflow = '';
 
   try {
     switch (route) {
@@ -265,6 +276,15 @@ async function handleRoute() {
         hideSidebar();
         const mod = await loadPageModule('settings');
         mod.renderSettings();
+        break;
+      }
+
+      case 'scan': {
+        activePage = 'scan';
+        renderNavbar(activePage);
+        hideSidebar();
+        const mod = await loadPageModule('scan');
+        mod.renderScanPage();
         break;
       }
 

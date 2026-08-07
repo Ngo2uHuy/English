@@ -1,5 +1,5 @@
 // ==========================================================================
-// Sidebar Component — Modern Accordion Curriculum Navigation
+// Sidebar Component — Modern Accordion Curriculum Navigation & Mobile Drawer
 // ==========================================================================
 
 import { LEVELS, getTopicsByLevel } from '../data/grammar-data.js';
@@ -11,8 +11,13 @@ export function renderSidebar(activeTopicId = null) {
 
   const progress = StorageService.getProgress();
 
-  let html = `<div class="sidebar-section">
-    <div class="sidebar-section-title">Curriculum Modules</div>`;
+  let html = `
+    <div class="sidebar-header-mobile">
+      <span class="sidebar-mobile-title">📚 Curriculum Index</span>
+      <button class="icon-btn btn-sm" id="close-sidebar-mobile">✕</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Curriculum Modules</div>`;
 
   LEVELS.forEach(level => {
     const topics = getTopicsByLevel(level.id);
@@ -44,7 +49,7 @@ export function renderSidebar(activeTopicId = null) {
             return `<li>
               <a class="sidebar-item ${topic.id === activeTopicId ? 'active' : ''}" href="#/lessons/${topic.id}">
                 <span class="progress-dot ${dotClass}"></span>
-                <span style="truncate">${topic.title}</span>
+                <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${topic.title}</span>
               </a>
             </li>`;
           }).join('')}
@@ -63,6 +68,21 @@ export function renderSidebar(activeTopicId = null) {
       header.classList.toggle('open');
       items?.classList.toggle('open');
     });
+  });
+
+  // Close sidebar on mobile when topic link tapped
+  sidebar.querySelectorAll('.sidebar-item').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      backdrop?.classList.remove('visible');
+    });
+  });
+
+  document.getElementById('close-sidebar-mobile')?.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    backdrop?.classList.remove('visible');
   });
 }
 
