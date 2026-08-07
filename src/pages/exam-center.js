@@ -66,17 +66,21 @@ function renderExamHub(container) {
           </div>
           <h3 style="font-size:1.25rem;margin-bottom:8px;">Đề Thi Thử TOEIC Full 7 Parts</h3>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin-bottom:16px;">Gồm đầy đủ Part 1 (Hình ảnh), Part 2 (Hỏi đáp), Part 3 (Hội thoại), Part 4 (Bài nói), Part 5 (Điền câu), Part 6 (Điền đoạn) & Part 7 (Đọc hiểu single/double).</p>
-          <div style="display:flex;gap:12px;font-size:0.8rem;color:var(--text-secondary);margin-bottom:20px;">
+          <div style="display:flex;gap:12px;font-size:0.8rem;color:var(--text-secondary);margin-bottom:16px;">
             <span>⏱️ 45 - 120 Phút</span>
             <span>📊 Thang điểm 10 - 990</span>
           </div>
         </div>
-        <div>
-          ${toeic.map(paper => `
-            <button class="btn btn-primary btn-start-exam" style="width:100%;margin-top:8px;" data-exam-id="${paper.id}">
-              📝 Bắt Đầu Làm Đề TOEIC (${paper.timeLimitMinutes} Phút)
-            </button>
-          `).join('')}
+        <div class="flex-col gap-sm">
+          <label class="form-label" for="select-toeic-paper">Chọn Bộ Đề TOEIC (Kho 20 Đề):</label>
+          <select id="select-toeic-paper" class="input-field">
+            ${toeic.map((paper, idx) => `
+              <option value="${paper.id}">${idx + 1}. ${paper.title} (${paper.timeLimitMinutes}p)</option>
+            `).join('')}
+          </select>
+          <button class="btn btn-primary" id="btn-start-toeic-selected" style="width:100%;">
+            🚀 Bắt Đầu Làm Đề TOEIC Đã Chọn
+          </button>
         </div>
       </div>
 
@@ -89,17 +93,21 @@ function renderExamHub(container) {
           </div>
           <h3 style="font-size:1.25rem;margin-bottom:8px;">Đề Thi Thử IELTS Full 4 Kỹ Năng</h3>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.5;margin-bottom:16px;">Listening Sec 1-4, Reading Passage 1-3 (True/False/Not Given, Headings), Writing Task 1 & 2 kèm bài mẫu Band 8+ và Speaking Cue Card.</p>
-          <div style="display:flex;gap:12px;font-size:0.8rem;color:var(--text-secondary);margin-bottom:20px;">
+          <div style="display:flex;gap:12px;font-size:0.8rem;color:var(--text-secondary);margin-bottom:16px;">
             <span>⏱️ 165 Phút</span>
             <span>🏆 Thang điểm Band 1.0 - 9.0</span>
           </div>
         </div>
-        <div>
-          ${ielts.map(paper => `
-            <button class="btn btn-primary btn-start-exam" style="width:100%;margin-top:8px;background:var(--color-rose);" data-exam-id="${paper.id}">
-              📝 Bắt Đầu Làm Đề IELTS (${paper.timeLimitMinutes} Phút)
-            </button>
-          `).join('')}
+        <div class="flex-col gap-sm">
+          <label class="form-label" for="select-ielts-paper">Chọn Bộ Đề IELTS (Kho Đề Thi):</label>
+          <select id="select-ielts-paper" class="input-field">
+            ${ielts.map((paper, idx) => `
+              <option value="${paper.id}">${idx + 1}. ${paper.title} (${paper.timeLimitMinutes}p)</option>
+            `).join('')}
+          </select>
+          <button class="btn btn-primary" id="btn-start-ielts-selected" style="width:100%;background:var(--color-rose);">
+            🚀 Bắt Đầu Làm Đề IELTS Đã Chọn
+          </button>
         </div>
       </div>
 
@@ -142,6 +150,16 @@ function renderExamHub(container) {
   `;
 
   // Bind Start Exam Buttons
+  document.getElementById('btn-start-toeic-selected')?.addEventListener('click', () => {
+    const selectedId = document.getElementById('select-toeic-paper')?.value;
+    if (selectedId) startExamSession(selectedId);
+  });
+
+  document.getElementById('btn-start-ielts-selected')?.addEventListener('click', () => {
+    const selectedId = document.getElementById('select-ielts-paper')?.value;
+    if (selectedId) startExamSession(selectedId);
+  });
+
   container.querySelectorAll('.btn-start-exam').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const examId = e.currentTarget.dataset.examId;
