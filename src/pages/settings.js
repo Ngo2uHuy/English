@@ -75,50 +75,74 @@ export function renderSettings() {
       <div id="supabase-status-msg" style="margin-top:14px;font-size:0.85rem;display:none;padding:10px 14px;border-radius:var(--radius-md);"></div>
     </div>
 
-    <!-- AI Provider & API Key -->
+    <!-- AI Providers & Free API Keys Management -->
     <div class="card" style="margin-bottom: 24px;">
-      <h3 style="font-size:1.15rem;margin-bottom:6px;">AI Provider & Free API Key</h3>
-      <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:20px;">
-        Choose an AI provider. All options below offer 100% Free API Keys without requiring a credit card.
-      </p>
-
-      <!-- Provider Selector -->
-      <div style="margin-bottom:20px;">
-        <label style="font-size:0.8rem;font-weight:700;color:var(--text-secondary);margin-bottom:6px;display:block;">AI Provider</label>
-        <select class="input-field" id="provider-select">
-          ${PROVIDERS.map(p => `
-            <option value="${p.id}" ${currentProvider === p.id ? 'selected' : ''}>
-              ${p.name} — (${p.badge})
-            </option>
-          `).join('')}
-        </select>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h3 style="font-size:1.2rem;margin:0;">Cấu Hình Key AI Chat & Vision (100% Miễn Phí)</h3>
+          <p style="font-size:0.88rem;color:var(--text-secondary);margin-top:4px;">
+            Hệ thống hỗ trợ 4 nhà cung cấp AI miễn phí hàng đầu không cần thẻ tín dụng. Hãy dán API Key để kích hoạt AI Tutor & Máy ảnh quét tài liệu.
+          </p>
+        </div>
+        <span class="badge badge-indigo" style="font-size:0.85rem;padding:6px 12px;">
+          Active: ${activeProviderObj.name} (${currentModel})
+        </span>
       </div>
 
-      <!-- API Key Input -->
-      <div style="margin-bottom:20px;">
-        <label style="font-size:0.8rem;font-weight:700;color:var(--text-secondary);margin-bottom:6px;display:block;">API Key for ${activeProviderObj.name}</label>
-        <div style="display:flex;gap:10px;">
-          <input type="password" class="input-field" id="api-key-input" 
-                 value="${apiKey}" placeholder="Paste API Key for ${activeProviderObj.name}..." style="flex:1;" />
-          <button class="btn btn-secondary" id="toggle-key-visibility" style="padding:0 16px;">Show</button>
-          <button class="btn btn-primary" id="save-api-key">Save Key</button>
-        </div>
-        <div style="font-size:0.84rem;color:var(--text-secondary);margin-top:10px;padding:10px 14px;background:var(--bg-secondary);border-radius:var(--radius-md);display:flex;align-items:center;gap:8px;">
-          <span>Get Free API Key:</span>
-          <a href="${activeProviderObj.freeKeyUrl}" target="_blank" rel="noopener" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">
-            ${activeProviderObj.name} Portal ↗
-          </a>
-        </div>
-      </div>
+      <!-- Provider Grid -->
+      <div class="grid-2-cols gap-md" style="margin-top:16px;">
+        ${PROVIDERS.map(p => {
+          const providerKey = StorageService.getApiKey(p.id);
+          const providerModel = StorageService.getModel(p.id) || p.defaultModel;
+          const isSelected = currentProvider === p.id;
+          const hasKey = !!providerKey;
 
-      <!-- Model Selection -->
-      <div>
-        <label style="font-size:0.8rem;font-weight:700;color:var(--text-secondary);margin-bottom:6px;display:block;">Model (${activeProviderObj.name})</label>
-        <select class="input-field" id="model-select">
-          ${activeProviderObj.models.map(m => `
-            <option value="${m.id}" ${currentModel === m.id ? 'selected' : ''}>${m.name}</option>
-          `).join('')}
-        </select>
+          return `
+            <div class="card p-md border-subtle flex-col gap-sm" style="background:${isSelected ? 'var(--color-primary-light)' : 'var(--bg-secondary)'};border-color:${isSelected ? 'var(--color-primary)' : 'var(--border-subtle)'};">
+              <div class="flex-between align-center">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <span style="font-size:1.3rem;">${p.id === 'gemini' ? '💎' : p.id === 'groq' ? '⚡' : p.id === 'openrouter' ? '🌐' : '🇫🇷'}</span>
+                  <span style="font-weight:700;font-size:1.05rem;">${p.name}</span>
+                </div>
+                <span class="badge ${p.id === 'gemini' ? 'badge-indigo' : p.id === 'groq' ? 'badge-emerald' : p.id === 'openrouter' ? 'badge-rose' : 'badge-neutral'}">
+                  ${p.badge}
+                </span>
+              </div>
+
+              <div style="font-size:0.82rem;color:var(--text-secondary);display:flex;align-items:center;justify-content:space-between;">
+                <span>Trạng thái: ${hasKey ? '<strong style="color:var(--color-success);">✓ Đã có Key</strong>' : '<span style="color:var(--color-warning);">⚠️ Chưa nhập Key</span>'}</span>
+                <a href="${p.freeKeyUrl}" target="_blank" rel="noopener" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">
+                  🔗 Lấy Free Key ↗
+                </a>
+              </div>
+
+              <!-- API Key Input -->
+              <div class="flex-col gap-2xs">
+                <label class="form-label" style="font-size:0.78rem;">API Key (${p.name}):</label>
+                <div style="display:flex;gap:6px;">
+                  <input type="password" class="input-field provider-key-input" data-provider="${p.id}"
+                         value="${providerKey}" placeholder="Dán API Key ${p.name}..." style="flex:1;font-size:0.85rem;" />
+                  <button class="btn btn-secondary btn-sm btn-save-provider-key" data-provider="${p.id}">Lưu</button>
+                </div>
+              </div>
+
+              <!-- Model Selector -->
+              <div class="flex-col gap-2xs">
+                <label class="form-label" style="font-size:0.78rem;">Mô Hình AI (Model):</label>
+                <select class="input-field provider-model-select" data-provider="${p.id}" style="font-size:0.85rem;">
+                  ${p.models.map(m => `
+                    <option value="${m.id}" ${providerModel === m.id ? 'selected' : ''}>${m.name}</option>
+                  `).join('')}
+                </select>
+              </div>
+
+              <!-- Select Provider Action Button -->
+              <button class="btn ${isSelected ? 'btn-primary' : 'btn-outline'} btn-sm btn-set-active-provider" data-provider="${p.id}" style="width:100%;margin-top:4px;">
+                ${isSelected ? '✓ Đang Sử Dụng Nhà Cung Cấp Này' : '👉 Dùng AI Provider Này'}
+              </button>
+            </div>
+          `;
+        }).join('')}
       </div>
     </div>
 
@@ -206,31 +230,34 @@ export function renderSettings() {
     }
   });
 
-  // Bind AI & Appearance Events
-  document.getElementById('provider-select')?.addEventListener('change', (e) => {
-    StorageService.setProvider(e.target.value);
-    renderSettings();
-    showToast('AI Provider updated');
+  // Bind AI Grid Events
+  container.querySelectorAll('.btn-save-provider-key').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const providerId = e.currentTarget.dataset.provider;
+      const input = container.querySelector(`.provider-key-input[data-provider="${providerId}"]`);
+      const val = input ? input.value.trim() : '';
+      StorageService.setApiKey(val, providerId);
+      showToast(`Đã lưu API Key cho ${providerId.toUpperCase()}!`, 'success');
+      renderSettings();
+    });
   });
 
-  document.getElementById('toggle-key-visibility')?.addEventListener('click', (e) => {
-    const input = document.getElementById('api-key-input');
-    if (input) {
-      const isPass = input.type === 'password';
-      input.type = isPass ? 'text' : 'password';
-      e.target.textContent = isPass ? 'Hide' : 'Show';
-    }
+  container.querySelectorAll('.provider-model-select').forEach(select => {
+    select.addEventListener('change', (e) => {
+      const providerId = e.currentTarget.dataset.provider;
+      StorageService.setModel(e.currentTarget.value, providerId);
+      showToast(`Đã đổi Model cho ${providerId.toUpperCase()}!`, 'info');
+      renderSettings();
+    });
   });
 
-  document.getElementById('save-api-key')?.addEventListener('click', () => {
-    const key = document.getElementById('api-key-input')?.value.trim() || '';
-    StorageService.setApiKey(key, currentProvider);
-    showToast('API Key saved successfully');
-  });
-
-  document.getElementById('model-select')?.addEventListener('change', (e) => {
-    StorageService.setModel(e.target.value, currentProvider);
-    showToast('AI Model updated');
+  container.querySelectorAll('.btn-set-active-provider').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const providerId = e.currentTarget.dataset.provider;
+      StorageService.setProvider(providerId);
+      showToast(`Đã chuyển sang sử dụng AI Provider: ${providerId.toUpperCase()}!`, 'success');
+      renderSettings();
+    });
   });
 
   document.getElementById('toggle-theme-btn')?.addEventListener('click', () => {

@@ -36,8 +36,14 @@ export function initAiChat() {
         <div class="ai-avatar">🤖</div>
         <div>
           <div class="ai-header-title">Aesthete AI Tutor</div>
-          <div class="ai-header-subtitle">
-            <span class="ai-status-dot"></span> Online (${provider.toUpperCase()})
+          <div class="ai-header-subtitle" style="display:flex;align-items:center;gap:6px;">
+            <span class="ai-status-dot"></span>
+            <select id="ai-chat-provider-quickselect" style="background:transparent;border:none;color:inherit;font-size:0.75rem;font-weight:700;cursor:pointer;padding:0;">
+              <option value="gemini" ${provider === 'gemini' ? 'selected' : ''}>Google Gemini</option>
+              <option value="groq" ${provider === 'groq' ? 'selected' : ''}>Groq Cloud</option>
+              <option value="openrouter" ${provider === 'openrouter' ? 'selected' : ''}>OpenRouter (Free)</option>
+              <option value="mistral" ${provider === 'mistral' ? 'selected' : ''}>Mistral AI</option>
+            </select>
           </div>
         </div>
       </div>
@@ -89,6 +95,10 @@ export function initAiChat() {
 
   document.getElementById('ai-chat-close')?.addEventListener('click', () => {
     chatWindow.classList.remove('open');
+  });
+
+  document.getElementById('ai-chat-provider-quickselect')?.addEventListener('change', (e) => {
+    StorageService.setProvider(e.target.value);
   });
 
   document.getElementById('ai-chat-clear')?.addEventListener('click', () => {
