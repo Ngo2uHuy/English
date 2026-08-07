@@ -18,6 +18,15 @@ export default defineConfig({
           if (id.includes('src/data/games-data.js')) {
             return 'data-games';
           }
+          if (id.includes('src/data/vocab-bank.js')) {
+            return 'data-vocab';
+          }
+          if (id.includes('src/data/exam-bank/')) {
+            return 'data-exams';
+          }
+          if (id.includes('src/data/exercise-bank/')) {
+            return 'data-exercises';
+          }
           if (id.includes('src/data/grammar-data.js') || id.includes('src/data/skills-exercises-data.js')) {
             return 'data-core';
           }

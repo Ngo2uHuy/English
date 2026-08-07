@@ -114,16 +114,24 @@ async function flushSupabaseSync() {
   }
 }
 
+const memoryCache = new Map();
+
 function get(key, fallback = null) {
+  if (memoryCache.has(key)) {
+    return memoryCache.get(key);
+  }
   try {
     const val = localStorage.getItem(key);
-    return val ? JSON.parse(val) : fallback;
+    const parsed = val ? JSON.parse(val) : fallback;
+    memoryCache.set(key, parsed);
+    return parsed;
   } catch {
     return fallback;
   }
 }
 
 function set(key, value) {
+  memoryCache.set(key, value);
   try {
     localStorage.setItem(key, JSON.stringify(value));
     // Asynchronously debounced sync with Supabase cloud storage

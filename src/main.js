@@ -127,8 +127,14 @@ async function handleRoute() {
   // Determine active page for navbar
   let activePage = route || 'dashboard';
 
-  // Close mobile sidebar on navigation
-  document.getElementById('sidebar')?.classList.remove('open');
+  // Global navigation cleanup
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+  }
+  window.scrollTo(0, 0);
+  document.querySelectorAll('.modal-backdrop, #word-modal, .modal').forEach(m => {
+    if (m) m.style.display = 'none';
+  });
 
   try {
     switch (route) {
