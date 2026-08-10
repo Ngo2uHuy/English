@@ -117,12 +117,17 @@ async function init() {
 
   // Start router
   window.addEventListener('hashchange', handleRoute);
-  handleRoute();
+  
+  if (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/') {
+    window.location.hash = '#/dashboard';
+  } else {
+    handleRoute();
+  }
 }
 
 // ---- Router ----
 async function handleRoute() {
-  const hash = window.location.hash || '#/';
+  const hash = window.location.hash || '#/dashboard';
   const [path, queryString] = hash.slice(1).split('?');
   const params = new URLSearchParams(queryString || '');
 

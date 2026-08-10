@@ -1881,7 +1881,11 @@ const PRESET_WRITING_EXERCISES = [
 // Merged 1000+ Exercise Data Bank Exports
 export const LISTENING_EXERCISES = [...PRESET_LISTENING_EXERCISES, ...BANK_LISTENING_EXERCISES];
 export const SPEAKING_EXERCISES = [...PRESET_SPEAKING_EXERCISES, ...BANK_SPEAKING_EXERCISES];
-export const READING_EXERCISES = [...PRESET_READING_EXERCISES, ...BANK_READING_EXERCISES];
+export const READING_EXERCISES = [...PRESET_READING_EXERCISES, ...BANK_READING_EXERCISES].map(item => ({
+  ...item,
+  passage: item.passage || item.content || '',
+  content: item.content || item.passage || ''
+}));
 export const WRITING_EXERCISES = [...PRESET_WRITING_EXERCISES, ...BANK_WRITING_EXERCISES];
 
 export const ALL_1000_EXERCISES = [

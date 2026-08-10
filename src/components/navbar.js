@@ -16,7 +16,7 @@ export function renderNavbar(activePage) {
   const xp = stats.totalExercises * 15 + stats.topicsCompleted * 100 + (stats.arcadeXP || 0);
 
   const navItems = [
-    { id: 'dashboard', href: '#/', label: 'Dashboard', icon: '<path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>' },
+    { id: 'dashboard', href: '#/dashboard', label: 'Dashboard', icon: '<path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>' },
     { id: 'lessons', href: '#/lessons', label: 'Curriculum', icon: '<path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.82 9L12 4.54 20.18 9 12 13.46 3.82 9zM5 13.25v3.42C6.84 17.57 9.28 18 12 18s7.16-.43 9-1.33v-3.42c-2.17 1.17-5.32 1.75-9 1.75s-6.83-.58-9-1.75z"/>' },
     { id: 'games', href: '#/games', label: 'Arcade 🎮', icon: '<path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>' },
     { id: 'listening', href: '#/listening', label: 'Listening', icon: '<path d="M12 3a9 9 0 00-9 9v7c0 1.1.9 2 2 2h3v-8H5v-1a7 7 0 0114 0v1h-3v8h3c1.1 0 2-.9 2-2v-7a9 9 0 00-9-9z"/>' },
@@ -33,7 +33,7 @@ export function renderNavbar(activePage) {
 
   // 1. Render Top Desktop Navbar
   navbar.innerHTML = `
-    <div class="navbar-brand" onclick="window.location.hash='#/'">
+    <div class="navbar-brand" onclick="window.location.hash='#/dashboard'">
       <div class="navbar-logo-badge">A</div>
       <span class="navbar-brand-title">Aesthete</span>
       <span class="navbar-brand-tag">Suite</span>
@@ -63,13 +63,7 @@ export function renderNavbar(activePage) {
         </div>
       </div>
 
-      <button class="icon-btn" id="theme-toggle" title="Toggle theme">
-        ${theme === 'dark' ? `
-          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
-        ` : `
-          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.2 19.54 10.55 20 12 20c4.97 0 9-4.03 9-9 0-4.97-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
-        `}
-      </button>
+      <button class="icon-btn" id="theme-toggle" title="Toggle theme">${theme === 'dark' ? '<svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>' : '<svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.2 19.54 10.55 20 12 20c4.97 0 9-4.03 9-9 0-4.97-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>'}</button>
 
       <a class="icon-btn" href="#/settings" title="Settings">
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
@@ -133,7 +127,7 @@ export function renderNavbar(activePage) {
   // 3. Render Mobile Floating Bottom Navigation Bar
   if (bottomNav) {
     bottomNav.innerHTML = `
-      <a class="bottom-nav-item ${activePage === 'dashboard' ? 'active' : ''}" href="#/">
+      <a class="bottom-nav-item ${activePage === 'dashboard' ? 'active' : ''}" href="#/dashboard">
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
         <span>Home</span>
       </a>
@@ -145,10 +139,10 @@ export function renderNavbar(activePage) {
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2z"/></svg>
         <span>Arcade</span>
       </a>
-      <a class="bottom-nav-item ${activePage === 'exam-center' ? 'active' : ''}" href="#/exam-center">
-        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6z"/></svg>
-        <span>Exams</span>
-      </a>
+      <button class="bottom-nav-item ai-btn" id="bottom-ai-trigger" title="Hỏi AI Assistant">
+        <div class="ai-nav-badge">🤖</div>
+        <span>Hỏi AI</span>
+      </button>
       <button class="bottom-nav-item" id="bottom-menu-trigger">
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         <span>Menu</span>
@@ -198,6 +192,16 @@ export function renderNavbar(activePage) {
 
   document.getElementById('mobile-menu-btn')?.addEventListener('click', toggleDrawer);
   document.getElementById('bottom-menu-trigger')?.addEventListener('click', toggleDrawer);
+  document.getElementById('bottom-ai-trigger')?.addEventListener('click', () => {
+    closeMobileDrawer();
+    const chatWindow = document.getElementById('ai-chat-window');
+    if (chatWindow) {
+      chatWindow.classList.toggle('open');
+      if (chatWindow.classList.contains('open')) {
+        document.getElementById('ai-chat-input')?.focus();
+      }
+    }
+  });
   document.getElementById('close-drawer-btn')?.addEventListener('click', closeMobileDrawer);
   backdrop?.addEventListener('click', () => {
     closeMobileDrawer();

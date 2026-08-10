@@ -355,6 +355,10 @@ a {
 .icon-btn {
   width: 38px;
   height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0;
+  margin: 0;
   border-radius: var(--radius-md);
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
@@ -365,6 +369,19 @@ a {
   cursor: pointer;
   transition: all var(--transition-fast);
   flex-shrink: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.icon-btn svg,
+.icon-btn .svg-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+  fill: currentColor;
 }
 
 .icon-btn:hover {
@@ -689,6 +706,31 @@ a {
 .bottom-nav-item:hover,
 .bottom-nav-item.active {
   color: var(--color-primary);
+}
+
+.bottom-nav-item.ai-btn {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.bottom-nav-item.ai-btn .ai-nav-badge {
+  font-size: 1.15rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(168, 85, 247, 0.25));
+  border: 1px solid var(--color-primary-light);
+  transition: transform var(--transition-fast);
+}
+
+.bottom-nav-item.ai-btn:hover .ai-nav-badge,
+.bottom-nav-item.ai-btn:active .ai-nav-badge {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #6366f1, #a855f7);
 }
 
 /* --- Common UI Components --- */
@@ -2555,7 +2597,11 @@ textarea.input-field:focus {
     display: none;
   }
   .navbar-actions {
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
     width: auto;
     padding-top: 0;
     border-top: none;
@@ -2563,6 +2609,8 @@ textarea.input-field:focus {
   }
   .mobile-menu-btn {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   .main-content {
     margin-left: 0;
@@ -2763,19 +2811,18 @@ textarea.input-field:focus {
 
   /* Sticky AI Chat Mobile Adjustments */
   .ai-chat-trigger-btn {
-    bottom: 78px;
-    right: 16px;
-    padding: 10px 16px;
+    display: none !important;
   }
 
   .ai-chat-window {
-    bottom: 76px;
+    bottom: calc(var(--mobile-bottom-nav-height, 60px) + 10px);
     right: 12px;
     left: 12px;
     width: auto;
     max-width: none;
     height: 480px;
-    max-height: calc(100vh - 150px);
+    max-height: calc(100vh - 140px);
+    z-index: 1001;
   }
 }
 
