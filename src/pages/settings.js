@@ -84,7 +84,7 @@ export function renderSettings() {
             Hệ thống hỗ trợ 4 nhà cung cấp AI miễn phí hàng đầu không cần thẻ tín dụng. Hãy dán API Key để kích hoạt AI Tutor & Máy ảnh quét tài liệu.
           </p>
         </div>
-        <span class="badge badge-indigo" style="font-size:0.85rem;padding:6px 12px;">
+        <span class="badge badge-indigo" style="font-size:0.8rem;padding:6px 12px;max-width:100%;white-space:normal;word-break:break-word;display:inline-block;">
           Active: ${activeProviderObj.name} (${currentModel})
         </span>
       </div>

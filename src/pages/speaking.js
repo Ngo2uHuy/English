@@ -165,6 +165,9 @@ function renderCurrentMode() {
   const workspace = document.getElementById('speaking-workspace');
   if (!workspace || !currentPrompt) return;
 
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.querySelector('.main-content')?.scrollTo({ top: 0, behavior: 'smooth' });
+
   if (currentMode === 'pronunciation') {
     renderPronunciationMode(workspace);
   } else if (currentMode === 'cuecard') {

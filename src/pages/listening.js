@@ -187,6 +187,9 @@ function renderCurrentMode() {
   const workspace = document.getElementById('listening-workspace');
   if (!workspace || !currentPassage) return;
 
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.querySelector('.main-content')?.scrollTo({ top: 0, behavior: 'smooth' });
+
   if (currentMode === 'dictation') {
     renderDictationMode(workspace);
   } else if (currentMode === 'shadowing') {

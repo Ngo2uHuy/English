@@ -39,8 +39,8 @@ export function renderExercisesPage(preselectedTopic = null) {
 
     <!-- Config Form -->
     <div class="card mb-lg">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;">
-        <div class="form-group" style="margin-bottom:0;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:16px;width:100%;">
+        <div class="form-group" style="margin-bottom:0;min-width:0;">
           <label class="form-label">Grammar Topic</label>
           <select class="form-select" id="exercise-topic">
             <option value="">Select a topic...</option>
@@ -53,7 +53,7 @@ export function renderExercisesPage(preselectedTopic = null) {
             `).join('')}
           </select>
         </div>
-        <div class="form-group" style="margin-bottom:0;">
+        <div class="form-group" style="margin-bottom:0;min-width:0;">
           <label class="form-label">Exercise Type</label>
           <select class="form-select" id="exercise-type">
             ${EXERCISE_TYPES.map(t => `
@@ -61,7 +61,7 @@ export function renderExercisesPage(preselectedTopic = null) {
             `).join('')}
           </select>
         </div>
-        <div class="form-group" style="margin-bottom:0;">
+        <div class="form-group" style="margin-bottom:0;min-width:0;">
           <label class="form-label">Number of Questions</label>
           <select class="form-select" id="exercise-count">
             <option value="3" selected>3 questions</option>
@@ -204,6 +204,8 @@ function renderExercisesArea(topicId, type, exercises, checkedResult = null) {
   const area = document.getElementById('exercise-area');
   const topic = getTopicById(topicId);
   if (!topic || !area) return;
+
+  area.scrollIntoView({ behavior: 'smooth', block: 'start' });
   const levelInfo = LEVELS.find(l => l.id === topic.level);
 
   area.innerHTML = `

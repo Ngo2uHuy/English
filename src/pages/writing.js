@@ -60,7 +60,7 @@ export function renderWritingPage() {
             </div>
           </div>
 
-          <textarea id="essay-textarea" class="input-field" rows="12" style="font-size:1rem;line-height:1.7;padding:16px;resize:vertical;margin-bottom:16px;" placeholder="Draft your response here..."></textarea>
+          <textarea id="essay-textarea" class="input-field" rows="12" style="width:100%;box-sizing:border-box;font-size:1rem;line-height:1.7;padding:16px;resize:vertical;margin-bottom:16px;" placeholder="Draft your response here..."></textarea>
 
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <button id="btn-save-draft" class="btn btn-secondary btn-sm">Save Draft</button>
@@ -194,7 +194,17 @@ async function loadNewPrompt() {
   const presetSel = document.getElementById('writing-preset-select');
   if (presetSel) presetSel.value = '';
 
-  currentPrompt = await GeminiService.generateWritingPrompt(category);
+  try {
+    currentPrompt = await GeminiService.generateWritingPrompt(category);
+  } catch (err) {
+    currentPrompt = null;
+  }
+
+  if (!currentPrompt || !currentPrompt.prompt) {
+    const matched = WRITING_EXERCISES.find(ex => ex.category === category || (ex.topic && ex.topic.toLowerCase().includes((category || '').toLowerCase())));
+    currentPrompt = matched || WRITING_EXERCISES[0];
+  }
+
   StorageService.saveWritingSession(currentPrompt, category);
   renderPromptContent();
 }
@@ -206,13 +216,20 @@ function renderPromptContent() {
 
   if (!card || !currentPrompt) return;
 
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.querySelector('.main-content')?.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const categoryText = currentPrompt.category || currentPrompt.topic || 'Writing Topic';
+  const titleText = currentPrompt.title || currentPrompt.topic || currentPrompt.category || 'Writing Prompt';
+  const promptText = currentPrompt.prompt || currentPrompt.instructions || 'Write a detailed response based on the prompt topic.';
+
   card.innerHTML = `
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-      <span class="badge badge-amber">${currentPrompt.category || 'Writing Topic'}</span>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;">
+      <span class="badge badge-amber">${categoryText}</span>
       ${currentPrompt.level ? `<span class="badge badge-cyan">${currentPrompt.level}</span>` : ''}
     </div>
-    <h3 style="font-size:1.2rem;margin-bottom:8px;">${currentPrompt.title || currentPrompt.topic}</h3>
-    <p style="font-size:0.95rem;line-height:1.6;color:var(--text-primary);margin-bottom:12px;">${currentPrompt.prompt}</p>
+    <h3 style="font-size:1.2rem;margin-bottom:8px;color:var(--text-primary);">${titleText}</h3>
+    <p style="font-size:0.95rem;line-height:1.6;color:var(--text-primary);margin-bottom:12px;">${promptText}</p>
 
     ${currentPrompt.sampleModelEssay ? `
       <details style="margin-top:12px;background:var(--bg-tertiary);padding:12px 16px;border-radius:var(--radius-md);">

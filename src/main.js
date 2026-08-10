@@ -143,7 +143,8 @@ async function handleRoute() {
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     try { window.speechSynthesis.cancel(); } catch (e) {}
   }
-  window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.querySelector('.main-content')?.scrollTo({ top: 0, behavior: 'smooth' });
   document.querySelectorAll('.modal-backdrop, #word-modal, .modal').forEach(m => {
     if (m) m.style.display = 'none';
   });

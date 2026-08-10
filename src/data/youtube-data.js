@@ -98,6 +98,84 @@ export const YOUTUBE_VIDEOS = [
       { start: 25, end: 32, en: "For example: 'I am a dedicated software developer with over 4 years of experience building scalable web apps.'", vi: "Ví dụ: 'Tôi là một nhà phát triển phần mềm tận tâm với hơn 4 năm kinh nghiệm xây dựng ứng dụng web có thể mở rộng.'" },
       { start: 32, end: 40, en: "Finish strong by explaining why you are excited about this specific company.", vi: "Kết thúc thật ấn tượng bằng cách giải thích tại sao bạn lại hào hứng với công ty cụ thể này." }
     ]
+  },
+  {
+    id: 'bbc-spicy-food',
+    youtubeId: 'bV6-f6-M0nE',
+    title: '"My whole head was on fire!" 🌶️🤬 Real Easy English with Neil and Georgie',
+    channel: 'BBC Learning English',
+    category: 'daily',
+    level: 'Elementary',
+    duration: '05:42',
+    thumbnail: 'https://img.youtube.com/vi/bV6-f6-M0nE/hqdefault.jpg',
+    description: 'Learn everyday English expressions for talking about spicy food with Neil and Georgie from BBC Learning English.',
+    subtitles: [
+      { start: 0, end: 6, en: "Welcome to Real Easy English from BBC Learning English!", vi: "Chào mừng các bạn đến với Real Easy English từ BBC Learning English!" },
+      { start: 6, end: 12, en: "Today we are talking about spicy food and extreme flavors.", vi: "Hôm nay chúng ta sẽ nói về đồ ăn cay và các hương vị đậm đà." },
+      { start: 12, end: 18, en: "Neil said 'My whole head was on fire!' after eating a hot chili pepper.", vi: "Neil nói 'Cả đầu tôi như bốc cháy!' sau khi ăn một quả ớt cay." },
+      { start: 18, end: 24, en: "Notice how we use idiom expressions to exaggerate feelings in English.", vi: "Hãy chú ý cách chúng ta dùng các thành ngữ để nói quá cảm xúc trong tiếng Anh." }
+    ]
+  },
+  {
+    id: 'bbc-climate-predictions',
+    youtubeId: 'W1YmZ6K9Kk4',
+    title: 'How do climate scientists make predictions? ⏱️ 6 Minute English',
+    channel: 'BBC Learning English',
+    category: 'education',
+    level: 'Intermediate',
+    duration: '06:16',
+    thumbnail: 'https://img.youtube.com/vi/W1YmZ6K9Kk4/hqdefault.jpg',
+    description: 'Climate change models predict future weather patterns. Neil and Sam discuss the science in 6 minutes of English vocabulary.',
+    subtitles: [
+      { start: 0, end: 7, en: "Hello and welcome to 6 Minute English from BBC Learning English.", vi: "Xin chào và chào mừng bạn đến với 6 Minute English từ BBC Learning English." },
+      { start: 7, end: 14, en: "How do climate scientists know what the weather will be like in 50 years?", vi: "Làm thế nào các nhà khoa học khí hậu biết thời tiết sẽ ra sao trong 50 năm nữa?" },
+      { start: 14, end: 21, en: "They use supercomputers and complex mathematical models to make predictions.", vi: "Họ sử dụng siêu máy tính và các mô hình toán học phức tạp để đưa ra dự báo." }
+    ]
+  },
+  {
+    id: 'bbc-migrants-news',
+    youtubeId: 'Z_rQY2sL2n4',
+    title: '60,000 migrants cross Spanish border: BBC Learning English from the News',
+    channel: 'BBC Learning English',
+    category: 'culture',
+    level: 'Upper-Intermediate',
+    duration: '08:04',
+    thumbnail: 'https://img.youtube.com/vi/Z_rQY2sL2n4/hqdefault.jpg',
+    description: 'Learn news vocabulary and formal English reporting terms with BBC Learning English from the News.',
+    subtitles: [
+      { start: 0, end: 6, en: "This is BBC Learning English from the News.", vi: "Đây là chương trình Học tiếng Anh qua tin tức của BBC." },
+      { start: 6, end: 13, en: "We look at key headlines and break down useful vocabulary for English learners.", vi: "Chúng tôi điểm qua các tiêu đề chính và phân tích từ vựng hữu ích cho người học." }
+    ]
+  },
+  {
+    id: 'bbc-box-set-psychology',
+    youtubeId: 'K9j1gL8vQ4m',
+    title: 'BOX SET: 6 Minute English - \'Psychology\' English mega-class!',
+    channel: 'BBC Learning English',
+    category: 'education',
+    level: 'Intermediate',
+    duration: '30:32',
+    thumbnail: 'https://img.youtube.com/vi/K9j1gL8vQ4m/hqdefault.jpg',
+    description: '30 minutes of new vocabulary focused on psychology, human behavior, and mental health from BBC Learning English.',
+    subtitles: [
+      { start: 0, end: 8, en: "Welcome to this 6 Minute English mega-class on Psychology!", vi: "Chào mừng các bạn đến với lớp học 6 Minute English chuyên đề Tâm lý học!" },
+      { start: 8, end: 15, en: "In this compilation, we explore how human minds process emotions and decisions.", vi: "Trong tuyển tập này, chúng ta sẽ khám phá cách trí óc con người xử lý cảm xúc và quyết định." }
+    ]
+  },
+  {
+    id: 'bbc-pros-cons-city',
+    youtubeId: 'L8m9aP2vQ6X',
+    title: 'What are the pros and cons of living in a city? 🏙️ Real Easy English',
+    channel: 'BBC Learning English',
+    category: 'daily',
+    level: 'Elementary',
+    duration: '05:42',
+    thumbnail: 'https://img.youtube.com/vi/L8m9aP2vQ6X/hqdefault.jpg',
+    description: 'Discussing city life vs countryside living with Real Easy English from BBC Learning English.',
+    subtitles: [
+      { start: 0, end: 6, en: "Living in a big city has both advantages and disadvantages.", vi: "Sống ở thành phố lớn có cả ưu điểm lẫn nhược điểm." },
+      { start: 6, end: 12, en: "Let's learn how to debate pros and cons in natural everyday English.", vi: "Hãy cùng học cách thảo luận về ưu và nhược điểm bằng tiếng Anh tự nhiên." }
+    ]
   }
 ];
 
@@ -133,4 +211,58 @@ export function extractYouTubeId(urlOrId) {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
   const match = clean.match(regExp);
   return (match && match[2] && match[2].length === 11) ? match[2] : null;
+}
+
+export const POPULAR_YOUTUBERS = [
+  { id: 'bbc', handle: '@bbclearningenglish', name: 'BBC Learning English', url: 'https://www.youtube.com/@bbclearningenglish', icon: '🇬🇧', tag: 'Everyday English' },
+  { id: 'teded', handle: '@TEDEd', name: 'TED-Ed', url: 'https://www.youtube.com/@TEDEd', icon: '🧠', tag: 'Science & Ideas' },
+  { id: 'rachel', handle: '@RachelsEnglish', name: "Rachel's English", url: 'https://www.youtube.com/@RachelsEnglish', icon: '🗣️', tag: 'American Accent' },
+  { id: 'vanessa', handle: '@SpeakEnglishWithVanessa', name: 'Speak English With Vanessa', url: 'https://www.youtube.com/@SpeakEnglishWithVanessa', icon: '💬', tag: 'Conversational' },
+  { id: 'kurzgesagt', handle: '@kurzgesagt', name: 'Kurzgesagt – In a Nutshell', url: 'https://www.youtube.com/@kurzgesagt', icon: '🔬', tag: 'Science & World' },
+  { id: 'careervidz', handle: '@CareerVidz', name: 'CareerVidz', url: 'https://www.youtube.com/@CareerVidz', icon: '💼', tag: 'Job Interview' },
+  { id: 'lukesenglish', handle: '@LukesEnglishPodcast', name: "Luke's English Podcast", url: 'https://www.youtube.com/@LukesEnglishPodcast', icon: '🎙️', tag: 'British English' },
+  { id: 'english101', handle: '@EnglishClass101', name: 'EnglishClass101', url: 'https://www.youtube.com/@EnglishClass101', icon: '🌐', tag: 'Grammar & Vocab' }
+];
+
+export function extractChannelQuery(input) {
+  if (!input) return '';
+  let str = input.trim();
+
+  // If user pasted a full URL
+  if (str.includes('youtube.com/') || str.includes('youtu.be/')) {
+    // 1. @handle format: https://www.youtube.com/@bbclearningenglish or https://www.youtube.com/@bbclearningenglish/videos
+    const handleMatch = str.match(/youtube\.com\/@([a-zA-Z0-9_\-\.]+)/i);
+    if (handleMatch) return `@${handleMatch[1]}`;
+
+    // 2. /channel/ ID format: https://www.youtube.com/channel/UCsooa4yRKGN_zEE8iknghZA
+    const channelMatch = str.match(/youtube\.com\/channel\/([a-zA-Z0-9_\-]+)/i);
+    if (channelMatch) return channelMatch[1];
+
+    // 3. /c/ or /user/ format: https://www.youtube.com/c/TEDEd or https://www.youtube.com/user/TEDEd
+    const cMatch = str.match(/youtube\.com\/(?:c|user)\/([a-zA-Z0-9_\-\.]+)/i);
+    if (cMatch) return cMatch[1];
+
+    // 4. Any trailing path segment
+    const parts = str.split('youtube.com/')[1];
+    if (parts) {
+      const seg = parts.split('/')[0].replace(/^\/+|\/+$/g, '');
+      if (seg) return seg;
+    }
+  }
+
+  return str;
+}
+
+export function getChannelVideosByQuery(query) {
+  if (!query) return YOUTUBE_VIDEOS;
+  const extracted = extractChannelQuery(query);
+  const clean = extracted.trim().toLowerCase().replace('@', '');
+
+  const matched = YOUTUBE_VIDEOS.filter(v => 
+    v.channel.toLowerCase().includes(clean) ||
+    v.title.toLowerCase().includes(clean) ||
+    v.description.toLowerCase().includes(clean)
+  );
+
+  return matched.length > 0 ? matched : YOUTUBE_VIDEOS;
 }

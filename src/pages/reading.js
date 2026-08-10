@@ -199,6 +199,9 @@ function renderArticleContent() {
   const card = document.getElementById('reading-article-card');
   if (!card || !currentArticle) return;
 
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.querySelector('.main-content')?.scrollTo({ top: 0, behavior: 'smooth' });
+
   readingStartTime = Date.now();
 
   const wordsHtml = currentArticle.content.split(/\s+/).map(word => {

@@ -47,8 +47,8 @@ export function renderScanPage() {
           </div>
         </div>
 
-        <div class="scan-controls-bar">
-          <button class="btn btn-primary btn-lg flex-1" id="btn-capture-photo">
+        <div class="scan-controls-bar" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;width:100%;">
+          <button class="btn btn-primary btn-lg" id="btn-capture-photo" style="flex:1;min-width:160px;">
             📸 Chụp Ảnh Tài Liệu
           </button>
           <button class="icon-btn" id="btn-switch-cam" title="Đổi máy ảnh trước/sau">🔄</button>
@@ -58,8 +58,8 @@ export function renderScanPage() {
           </label>
         </div>
 
-        <div id="captured-actions-bar" style="display:none;" class="flex-center gap-sm">
-          <button class="btn btn-primary btn-lg flex-1" id="btn-start-scan">
+        <div id="captured-actions-bar" style="display:none;flex-wrap:wrap;width:100%;" class="flex-center gap-sm">
+          <button class="btn btn-primary btn-lg" id="btn-start-scan" style="flex:1;min-width:180px;">
             ⚡ Trích Xuất & Dịch Tiếng Anh
           </button>
           <button class="btn btn-secondary" id="btn-retake-photo">📸 Chụp Lại</button>

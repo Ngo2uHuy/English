@@ -5,6 +5,7 @@
 import { IpaService } from './ipa-service.js';
 import { StorageService } from './storage-service.js';
 import { SoundService } from './sound-service.js';
+import { TranslationService } from './translation-service.js';
 import { showToast } from '../components/toast.js';
 
 const dictionaryCache = new Map();
@@ -35,21 +36,14 @@ export const DictionaryService = {
     };
 
     try {
-      // Fetch English Dictionary API + MyMemory Vietnamese Translation API in parallel
-      const [dictRes, transRes] = await Promise.allSettled([
-        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord)}`),
-        fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(cleanWord)}&langpair=en|vi`),
+      // Fetch English Dictionary API & Translation via TranslationService in parallel
+      const [dictRes, translatedVi] = await Promise.all([
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord)}`).catch(() => null),
+        TranslationService.translateText(cleanWord, 'en', 'vi')
       ]);
 
-      // 1. Process Translation
-      if (transRes.status === 'fulfilled' && transRes.value.ok) {
-        const transData = await transRes.value.json();
-        if (transData && transData.responseData && transData.responseData.translatedText) {
-          const text = transData.responseData.translatedText.trim();
-          if (text) {
-            result.vietnamese = text;
-          }
-        }
+      if (translatedVi && !translatedVi.toLowerCase().includes('mymemory')) {
+        result.vietnamese = translatedVi;
       }
 
       // 2. Process English Dictionary Data

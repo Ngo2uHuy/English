@@ -4,6 +4,7 @@
 
 import { StorageService, PROVIDERS } from './storage-service.js';
 import { getRandomPresetExercise, getPresetExercisesBySkill } from '../data/skills-exercises-data.js';
+import { getChannelVideosByQuery } from '../data/youtube-data.js';
 
 const EXERCISE_PROMPTS = {
   'fill-blanks': (topic, level, count) => `You are an English grammar exercise generator. Create exactly ${count} fill-in-the-blank exercises about "${topic}" at ${level} level.
@@ -485,6 +486,43 @@ Return ONLY valid JSON (no markdown, no code fences):
       const presetList = getPresetExercisesBySkill('writing');
       const matched = presetList.find(item => item.category === category || item.topic.toLowerCase().includes((category || '').toLowerCase()));
       return matched || getRandomPresetExercise('writing');
+    }
+  },
+
+  async crawlYoutuberChannel(channelQuery = 'BBC Learning English', page = 1) {
+    const prompt = `You are a YouTube English learning video content extractor.
+Extract and return 6 additional distinct popular real-world English learning video lessons (page ${page}) from YouTuber channel or topic "${channelQuery}".
+Each video should have a realistic video title, valid YouTube video ID, duration, CEFR level, English description, and line-by-line English-Vietnamese dual subtitles.
+
+Return ONLY valid JSON (no markdown, no code fences):
+{
+  "channelName": "${channelQuery}",
+  "channelHandle": "@${channelQuery.replace(/[^a-zA-Z0-9]/g, '')}",
+  "videos": [
+    {
+      "id": "vid-1",
+      "youtubeId": "1Lp-JsmS930",
+      "title": "Video Title",
+      "channel": "${channelQuery}",
+      "category": "education",
+      "level": "Intermediate",
+      "duration": "08:30",
+      "thumbnail": "https://img.youtube.com/vi/1Lp-JsmS930/hqdefault.jpg",
+      "description": "Video summary...",
+      "subtitles": [
+        { "start": 0, "end": 5, "en": "English sentence...", "vi": "Nghĩa tiếng Việt..." }
+      ]
+    }
+  ]
+}`;
+    try {
+      return await this.callAPI(prompt);
+    } catch (err) {
+      return {
+        channelName: channelQuery,
+        channelHandle: `@${channelQuery}`,
+        videos: getChannelVideosByQuery(channelQuery)
+      };
     }
   },
 

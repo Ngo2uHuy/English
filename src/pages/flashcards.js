@@ -27,10 +27,10 @@ export function renderFlashcardsPage(preselectedTopic = null) {
 
     <!-- Configuration Panel -->
     <div class="card" style="margin-bottom: 28px;">
-      <div style="display:grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));gap:16px;">
-        <div>
+      <div style="display:grid;grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:16px;width:100%;">
+        <div style="min-width:0;width:100%;">
           <label style="font-size:0.8rem;font-weight:700;color:var(--text-secondary);margin-bottom:6px;display:block;">Grammar Topic</label>
-          <select class="input-field" id="fc-topic">
+          <select class="input-field" id="fc-topic" style="width:100%;box-sizing:border-box;">
             <option value="">Select a topic...</option>
             ${LEVELS.map(level => `
               <optgroup label="${level.name}">
@@ -92,6 +92,8 @@ async function generateDeck() {
 function renderCard() {
   const container = document.getElementById('flashcard-deck-container');
   if (!container || flashcards.length === 0) return;
+
+  container.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   const cardData = flashcards[currentIndex];
 
